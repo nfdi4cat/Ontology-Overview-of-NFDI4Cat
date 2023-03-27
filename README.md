@@ -5,7 +5,7 @@ Repository which lists several Ontologies relevant for Catalysis research.
 For remarks, additions, or general questions either use the issues or contact the responsible person.
 For Contributions Please download the [markup file](https://github.com/HendrikBorgelt/Software-Collection-from-NFDI4Cat/blob/6edfd8f526362bbf89cbe736e94cc52d7cebd407/General_Template.md) called [Gernal_Template](https://github.com/HendrikBorgelt/Software-Collection-from-NFDI4Cat/blob/6edfd8f526362bbf89cbe736e94cc52d7cebd407/General_Template.md) and contact us either via mail, issue or pull request.
 
-Contact: <a href="mailto:hendrik.borgelt@tu-dortmund.de?subject=Contact for Software Collection from NFDI4Cat">hendrik.borgelt@tu-dortmund.de</a>
+Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Software Collection from NFDI4Cat">alexander.behr@tu-dortmund.de</a>
 
 ## Table of general topics
 
