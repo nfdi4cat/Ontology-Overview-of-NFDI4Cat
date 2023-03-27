@@ -1,6 +1,6 @@
-This File Represens a general Template to be filled for new software tools
+This File Represens a general Template to be filled for new ontologies which should be added into the collection
 
-#Please Replace with Software name e.g. Protégé 5.6 
+# Please Replace with Ontology name e.g. BFO (Basic Formal Ontology)
 
 ## Ontology
 |Aspect                                |Description                                                                        |
@@ -72,4 +72,4 @@ General Editig tool with multiple plugins for reasoners, visualisations a.s.o. I
 
 Several plugins are faulty, such as the fact++ Reasoner, which needs a special patch to be able o run. It has a unique owl2 syntax and interpreation format which advanced from the regular owl-manchester syntax into an openly defined structure, which often requires workarounds, such as using SWRL-rules for representing left hand side logic.
 
-###General Remarks & Comments
+### General Remarks & Comments
