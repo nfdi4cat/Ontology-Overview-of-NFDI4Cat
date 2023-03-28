@@ -13,7 +13,7 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 ## Ontology Metadata files
 
 | Link to Markdown | Ontology name                               |
-|:----------------:|---------------------------------------------|
+|:----------------:|:---------------------------------------------|
 |     [AFO]        |Allotrope Foundation Ontology                |
 |     [BFO]        |Basic Formal Ontology                        |
 |     [EMMO]	     |Elementary Multiperspective Material Ontology|
@@ -23,7 +23,7 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
 ## Ontologies considered in NFDI4Cat
 | Ontology Name | Considered in NFDI4Cat? |
-|---------------|-------------------------|
+|:---------------:|:-------------------------:|
 | [AFO]           | yes                       |
 | [BAO]           |                         |
 | [BFO]           | yes                       |
