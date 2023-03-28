@@ -15,16 +15,16 @@ This File Represens a general Template to be filled for new ontologies which sho
 ## References
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Organisational Website                |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Persistent URI of Ontology File       |Java                                                                               |
-|Link to Documentation                 |                                                                                   |
-|Link to Version directory             |                                                                                   |
-|Optional Links (Papers, Repos,...)    |                                                                                   |
+|Organisational Website                |https://emmc.eu/                                                                   |
+|Persistent URI of Ontology File       |http://emmo.info/emmo                                                              |
+|Link to Documentation                 |https://emmo-repo.github.io/                                                       |
+|Link to Version directory             |https://emmo-repo.github.io/                                                       |
+|Optional Links (Papers, Repos,...)    |GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;   |
 
 ## Ontology Modeling and Availability
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Ontology Formats Provided             |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
+|Ontology Formats Provided             |rdf/xml; ttl                                                                       |
 |Degree of Inference/Composition       |Java                                                                               |
 |Validated Resoning with               |                                                                                   |
 |Shortest reasoning time               |                                                                                   |
