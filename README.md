@@ -18,6 +18,9 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 |     [EMMO]	   |Elementary Multiperspective Material Ontology|
 
 
+
+
 [AFO]: ./Ontology_Metadata/AFO.md
+[EMMO]: ./Ontology_Metadata/EMMO.md
 
 [General Template]: ./General_Template.md
