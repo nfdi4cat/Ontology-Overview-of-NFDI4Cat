@@ -30,52 +30,49 @@ Please delete this first section until here, as it should only provide an descri
 |Degree of Inference/Composition       |non inferred                                                                       |
 |License                               |[CC-BY-4.0 license]                                                                |
 |Validated Resoning with               |Fact++, HermiT                                                                     |
-|Shortest reasoning time               |                                                                                   |
-|Aligned with Top Level Ontology       |                                                                                   |
-|Prefixes used                         |                                                                                   |
-|Class annotation types                |                                                                                   |
+|Shortest reasoning time               |25 ms mit Fact++                                                                   |
+|Aligned with Top Level Ontology       |Is a TLO itself                                                                    |
+|Imports Ontology(ies)                 | -                                                                                 |
+|Prefixes used                         |dc elements, rdfs, foaf, obo                                                       |
+|Class annotation types                |rdfs:label, Definition: obo:IAO_0000115 (http://purl.obolibrary.org/obo/IAO_0000115)|
 
 ## Domain of Interest Represented
 this will be categorized from contained, related:broader/narrower to missing
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Biocatalysis                          |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Heterogenous catalysis                |Java                                                                               |
-|Homogenous Catalysis                  |                                                                                   |
-|Chemical Substance Modeling           |                                                                                   |
-|Material Modeling                     |                                                                                   |
-|Process Modeling                      |                                                                                   |
-|Synthesis Data                        |                                                                                   |
-|Operando Data                         |                                                                                   |
-|Performance Data                      |                                                                                   |
-|Characterisation Data                 |                                                                                   |
-|Heat, Transport and Kinetic Data      |                                                                                   |
-|Process Design, Energy and Cost Data  |                                                                                   |
-|Top Level Ontology                    |                                                                                   |
+|Biocatalysis                          |missing                                                                            |
+|Heterogenous catalysis                |missing                                                                            |
+|Homogenous Catalysis                  |missing                                                                            |
+|Chemical Substance Modeling           |missing                                                                            |
+|Material Modeling                     |missing                                                                            |
+|Process Modeling                      |missing                                                                            |
+|Synthesis Data                        |missing                                                                            |
+|Operando Data                         |missing                                                                            |
+|Performance Data                      |missing                                                                            |
+|Characterisation Data                 |missing                                                                            |
+|Heat, Transport and Kinetic Data      |missing                                                                            |
+|Process Design, Energy and Cost Data  |missing                                                                            |
+|Top Level Ontology                    |contained                                                                          |
 
 ## Ontology Characterisation
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Axioms                                |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Logical Axioms                        |Java                                                                               |
-|Declaration Axioms                    |                                                                                   |
-|Class count                           |                                                                                   |
-|Object property count                 |                                                                                   |
-|Data property count                   |                                                                                   |
-|Individual count                      |                                                                                   |
-|Annotation Property count             |                                                                                   |
+|Axioms                                |575                                                                                |
+|Logical Axioms                        |52                                                                                 |
+|Declaration Axioms                    |55                                                                                 |
+|Class count                           |35                                                                                 |
+|Object property count                 |0                                                                                  |
+|Data property count                   |0                                                                                  |
+|Individual count                      |0                                                                                  |
+|Annotation Property count             |24                                                                                 |
 
 ### General Description
 
-Example:
-General Editig tool with multiple plugins for reasoners, visualisations a.s.o. It is the go to software for starters and often serves as a validation tool even after changing to other editing software. Thus it is considered basicly as a benchmark in the fashion, that if an Ontology cant be opend and handeled with protege, it is not sufficent for the regular consumer.
-
 ### Known Issues:
-(please always contact the founders of a specific software and wait for their response before publishing an issue here. Please also link to any issue you have send to them, to allow later contributors to check whether they arte solved)
-
-Several plugins are faulty, such as the fact++ Reasoner, which needs a special patch to be able o run. It has a unique owl2 syntax and interpreation format which advanced from the regular owl-manchester syntax into an openly defined structure, which often requires workarounds, such as using SWRL-rules for representing left hand side logic.
 
 ### General Remarks & Comments
-
+Please see the project site https://github.com/BFO-ontology/BFO, the bfo2 owl discussion group http://groups.google.com/group/bfo-owl-devel, the bfo2 discussion group http://groups.google.com/group/bfo-devel, the tracking google doc http://goo.gl/IlrEE, and the current version of the bfo2 reference http://purl.obolibrary.org/obo/bfo/dev/bfo2-reference.docx. This ontology is generated from a specification at https://github.com/BFO-ontology/BFO/tree/master/src/ontology/owl-group/specification/ and with the code that generates the OWL version in https://github.com/BFO-ontology/BFO/tree/master/src/tools/. A very early version of BFO version 2 in CLIF is at http://purl.obolibrary.org/obo/bfo/dev/bfo.clif.
+This BFO 2.0 version represents a major update to BFO and is not strictly backwards compatible with BFO 1.1. The previous OWL version of BFO, version 1.1.1 will remain available at http://ifomis.org/bfo/1.1 and will no longer be updated. The BFO 2.0 OWL is a classes-only specification. The incorporation of core relations has been held over for a later version.
+No object properties contained in BFO
 
 [CC-BY-4.0 license]: https://creativecommons.org/licenses/by/4.0/
