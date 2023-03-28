@@ -10,12 +10,48 @@ The respective markdown files for each Ontology listed in the table below are lo
 
 Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Software Collection from NFDI4Cat">alexander.behr@tu-dortmund.de</a>
 
-## Ontologies
+## Ontology Metadata files
 
 | Link to Markdown | Ontology name |
 |------------------|---------------|
 |     [AFO]        |Allotrope Foundation Ontology|
 |     [EMMO]	   |Elementary Multiperspective Material Ontology|
+
+
+
+
+## Ontologies considered in NFDI4Cat
+| Ontology Name | Considered in NFDI4Cat? |
+|---------------|-------------------------|
+| [AFO]           | yes                       |
+| [BAO]           |                         |
+| [BFO]           | yes                       |
+| [CAO]           | yes                       |
+| [ChEBI]         | yes                       |
+| [CHEMINF]       | yes                       |
+| [CHMO]          | yes                       |
+| [CIF-Ontology]  |                         |
+| [DOLCE]         | no                       |
+| [EDAM]          |                         |
+| [EMMO]          | yes                       |
+| [ENVO]          | yes                       |
+| [ISO 15926]     | no                       |
+| [ISO 15926-14]  | no                       |
+| [M3]            |                         |
+| [MS]            |                         |
+| [NFDI4Ing]      |                         |
+| [OFM]           |                         |
+| [OM]            |                         |
+| [OntoCAPE]      | yes                       |
+| [OntoCompChem]  | no                       |
+| [OntoKin]       | no                       |
+| [OSMO]          | yes                       |
+| [PIMS-II]       |                         |
+| [REX]           | yes                       |
+| [RXNO]          |                         |
+| [SBO]           | yes                       |
+| [VIMMP]         | yes                       |
+
 
 
 
