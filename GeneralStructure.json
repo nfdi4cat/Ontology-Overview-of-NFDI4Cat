@@ -13,11 +13,11 @@
 			"Persistent URI of Ontology File (or perma link to latest Version)": [],
 			"Link to Documentation": [],
 			"Link to Version directory": [],
-			"Optional links (Papers, Additional GitHub Repo,…)": []			
+			"Optional links (Papers, Additional GitHub Repo,...)": []			
 		},
 	"Ontology Modeling And Availability":
 		{
-			"Ontology Dataformats provided": [],
+			"Ontology Dataformats provided (ttl, owl, rdf/xml, n3)": [],
 			"Degree of Inference/Composition (possible entries: non inferred/preinferred; compacted/non-compacted (import statements in file))": [],
 			"License": [],
 			"Reasonable with": [],
@@ -26,7 +26,38 @@
 			"Imports Ontology(ies)": [],
 			"Prefixes used": [],
 			"Class annotation types": []
-		}		
-		
+		},
+	"Domain of Interest Represented (contained, related: broader/narrower, missing)":
+		{
+			"Biocatalysis":[],
+			"Heterogenous catalysis":[],
+			"Homogenous catalysis":[],
+			"Chemical Substance Modeling":[],
+			"Material Modeling":[],
+			"Process Modeling":[],
+			"Synthesis Data":[],
+			"Operando Data":[],
+			"Performance Data":[],
+			"Characterisation Data":[],
+			"Heat, Transport and Kinetic Data":[],
+			"Process Design, Energy and Cost Data":[],
+			"Top Level Ontology":[]
+		},
+	"Ontology Characteristics":
+		{
+			"Axioms":[],
+			"Logical":[],
+			"Declaration":[],
+			"Class count":[],
+			"Object property count":[],
+			"Data property count":[],
+			"Individual count":[],
+			"Annotation Property count":[]
+		},
+	"Comments":
+		{
+		}
+
+	
 	
 }
