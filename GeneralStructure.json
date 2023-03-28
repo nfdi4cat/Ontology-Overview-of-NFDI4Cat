@@ -1,0 +1,32 @@
+{
+	"Ontology":
+		{
+			"Ontology Name": [],
+			"Synonyms/Alternative Names": [],
+			"Ontology Acronym": [],
+			"Creator(s) & Issuing Organisation": [],
+			"Kind Of Organisational Structure (maintainability & Sustainability)": []			
+		},
+	"References":
+		{
+			"Organisational Website": [],
+			"Persistent URI of Ontology File (or perma link to latest Version)": [],
+			"Link to Documentation": [],
+			"Link to Version directory": [],
+			"Optional links (Papers, Additional GitHub Repo,…)": []			
+		},
+	"Ontology Modeling And Availability":
+		{
+			"Ontology Dataformats provided": [],
+			"Degree of Inference/Composition (possible entries: non inferred/preinferred; compacted/non-compacted (import statements in file))": [],
+			"License": [],
+			"Reasonable with": [],
+			"Reasonable Shortest reasoning time": [],
+			"Aligned with Top Level Ontology (BFO, OBO or EMMO ?)": [],
+			"Imports Ontology(ies)": [],
+			"Prefixes used": [],
+			"Class annotation types": []
+		}		
+		
+	
+}

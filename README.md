@@ -16,7 +16,7 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 |:----------------:|:---------------------------------------------|
 |     [AFO]        |Allotrope Foundation Ontology                |
 |     [BFO]        |Basic Formal Ontology                        |
-|     [EMMO]	     |Elementary Multiperspective Material Ontology|
+|     [EMMO]	   |Elementary Multiperspective Material Ontology|
 
 
 
