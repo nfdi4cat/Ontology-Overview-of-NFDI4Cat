@@ -1,32 +1,35 @@
 This File Represens a general Template to be filled for new ontologies which should be added into the collection
+This section is filled with data of the BFO to give an example on how it should be filled out.
+Please delete this first section until here, as it should only provide an description on how the template should be used.
 
 # Please Replace with Ontology name e.g. BFO (Basic Formal Ontology)
 
 ## Ontology
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Full Name                             |General ontology editing tool with Reasoners, SPARQL and other features implemented|
-|Synonyms/Alternative Names            |https://protege.stanford.edu/products.php                                          |
-|Ontology Acronym                      |https://github.com/protegeproject                                                  |
-|Creator(s) & Issuing Organisation     |BSD 2-Clause "Simplified" License                                                  |
-|Nature of Organisational Structure    |https://protegewiki.stanford.edu/wiki/ProtegeDesktopUserDocs                       |
+|Full Name                             |Basic Formal Ontology                                                              |
+|Synonyms/Alternative Names            |Basic Formal Ontology 2.0, BFO2.0                                                  |
+|Ontology Acronym                      |BFO                                                                                |
+|Creator(s) & Issuing Organisation     |Volkswagen Foundation, Barry Smith, and Pierre Grenon initial authors. More important contributions by many people                                                |
+|Nature of Organisational Structure    |ISO Standard                                                                       |
 
 
 ## References
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Organisational Website                |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Persistent URI of Ontology File       |Java                                                                               |
-|Link to Documentation                 |                                                                                   |
+|Organisational Website                |https://basic-formal-ontology.org/|
+|Persistent URI of Ontology File       |http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl                                     |
+|Link to Documentation                 |https://raw.githubusercontent.com/BFO-ontology/BFO/master/docs/bfo2-reference/BFO2-Reference.pdf|
 |Link to Version directory             |                                                                                   |
-|Optional Links (Papers, Repos,...)    |                                                                                   |
+|Optional Links (Papers, Repos,...)    |https://github.com/BFO-ontology/BFO                                                |
 
 ## Ontology Modeling and Availability
 |Aspect                                |Description                                                                        |
 |:-------------------------------------|:----------------------------------------------------------------------------------|
-|Ontology Formats Provided             |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Degree of Inference/Composition       |Java                                                                               |
-|Validated Resoning with               |                                                                                   |
+|Ontology Formats Provided             |owl, obo                                                                           |
+|Degree of Inference/Composition       |non inferred                                                                       |
+|License                               |[CC-BY-4.0 license]                                                                |
+|Validated Resoning with               |Fact++, HermiT                                                                     |
 |Shortest reasoning time               |                                                                                   |
 |Aligned with Top Level Ontology       |                                                                                   |
 |Prefixes used                         |                                                                                   |
@@ -73,3 +76,6 @@ General Editig tool with multiple plugins for reasoners, visualisations a.s.o. I
 Several plugins are faulty, such as the fact++ Reasoner, which needs a special patch to be able o run. It has a unique owl2 syntax and interpreation format which advanced from the regular owl-manchester syntax into an openly defined structure, which often requires workarounds, such as using SWRL-rules for representing left hand side logic.
 
 ### General Remarks & Comments
+
+
+[CC-BY-4.0 license]: https://creativecommons.org/licenses/by/4.0/
