@@ -10,7 +10,8 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
 ## Ontologies
 
+[EMMO - Elementary Multiperspective Material Ontology]
 
 
-
+[EMMO - Elementary Multiperspective Material Ontology]: ./Ontology_Metadata/EMMO.md
 [General Template]: ./General_Template.md
