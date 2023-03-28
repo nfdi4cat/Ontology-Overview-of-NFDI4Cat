@@ -12,10 +12,11 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
 ## Ontology Metadata files
 
-| Link to Markdown | Ontology name |
-|------------------|---------------|
-|     [AFO]        |Allotrope Foundation Ontology|
-|     [EMMO]	   |Elementary Multiperspective Material Ontology|
+| Link to Markdown | Ontology name                               |
+|:----------------:|---------------------------------------------|
+|     [AFO]        |Allotrope Foundation Ontology                |
+|     [BFO]        |Basic Formal Ontology                        |
+|     [EMMO]	     |Elementary Multiperspective Material Ontology|
 
 
 
@@ -57,6 +58,7 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
 
 [AFO]: ./Ontology_Metadata/AFO.md
+[BFO]: ./Ontology_Metadata/BFO.md
 [EMMO]: ./Ontology_Metadata/EMMO.md
 
 [General Template]: ./General_Template.md
