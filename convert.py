@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-onto_list = ['AFO','BFO']#,'EMMO']
+onto_list = ['AFO','BFO','EMMO']
 for onto_name in onto_list:
     table = pd.read_excel('./Master_Table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx',sheet_name = onto_name)
     
@@ -36,7 +36,7 @@ for onto_name in onto_list:
     outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n\n\n"   
     
     table_string = """|Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     """
     
     for key in translator_dict:

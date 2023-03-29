@@ -3,7 +3,7 @@
 
 ## Ontology
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Full Name | Basic Formal Ontology |
 | Synonyms/Alternative Names | Basic Formal Ontology 2.0, BFO2.0 |
 | Ontology Acronym | BFO |
@@ -12,7 +12,7 @@
 
 ## References
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Organisational Website | https://basic-formal-ontology.org/ |
 | Persistent URI of Ontology File | http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl |
 | Link to Documentation | https://raw.githubusercontent.com/BFO-ontology/BFO/master/docs/bfo2-reference/BFO2-Reference.pdf |
@@ -21,7 +21,7 @@
 
 ## Ontology Modeling And Availability
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Ontology Formats Provided | owl, obo |
 | Degree of Inference/Composition | non inferred |
 | License | CC-BY-4.0 license  |
@@ -34,7 +34,7 @@
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Biocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
@@ -51,7 +51,7 @@
 
 ## Ontology Characteristics
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Axioms | 575 |
 | Logical | 52 |
 | Declaration | 55 |

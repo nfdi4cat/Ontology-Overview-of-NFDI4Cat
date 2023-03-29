@@ -3,7 +3,7 @@
 
 ## Ontology
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Full Name | Allotrope Foundation Ontology |
 | Synonyms/Alternative Names | Allotrope Foundation Ontologies |
 | Ontology Acronym | AFO |
@@ -12,7 +12,7 @@
 
 ## References
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Organisational Website | https://www.allotrope.org/ |
 | Persistent URI of Ontology File | http://purl.allotrope.org/voc/afo/merged/REC/2021/09/merged-and-inferred |
 | Link to Documentation | Missing/not found |
@@ -21,7 +21,7 @@
 
 ## Ontology Modeling And Availability
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Ontology Formats Provided | ttl |
 | Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
 | License | Creative Commons Attribution 4.0 International License |
@@ -34,7 +34,7 @@
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Biocatalysis | missing |
 | Heterogenous catalysis | related: broader |
 | Homogenous catalysis | related: broader |
@@ -51,7 +51,7 @@
 
 ## Ontology Characteristics
 |Aspect |Description|
-    |:--|:--|
+    |:---|:---|
     | Axioms | 24686 |
 | Logical | 5299 |
 | Declaration | 3347 |
