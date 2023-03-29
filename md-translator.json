@@ -1,0 +1,60 @@
+{	
+	"Ontology":
+		[
+			{"Ontology Name": "Full Name"},
+			{"Synonyms/Alternative Names": "Synonyms/Alternative Names"},
+			{"Ontology Acronym": "Ontology Acronym"},
+			{"Creator(s) & Issuing Organisation": "Creator(s) & Issuing Organisation"},
+			{"Kind Of Organisational Structure (maintainability & Sustainability)": "Nature of Organisational Structure"}			
+		],
+	"References":
+		[
+			{"Organisational Website": []},
+			{"Persistent URI of Ontology File (or perma link to latest Version)": []},
+			{"Link to Documentation": []},
+			{"Link to Version directory": []},
+			{"Optional links (Papers, Additional GitHub Repo,...)": []}			
+		],
+	"Ontology Modeling And Availability":
+		[
+			{"Ontology Dataformats provided (ttl, owl, rdf/xml, n3)": []},
+			{"Degree of Inference/Composition (possible entries: non inferred/preinferred; compacted/non-compacted (import statements in file))": []},
+			{"License": []},
+			{"Reasonable with": []},
+			{"Reasonable Shortest reasoning time": []},
+			{"Aligned with Top Level Ontology (BFO, OBO or EMMO ?)": []},
+			{"Imports Ontology(ies)": []},
+			{"Prefixes used": []},
+			{"Class annotation types": []}
+		],
+	"Domain of Interest Represented (contained, related: broader/narrower, missing)":
+		[
+			{"Biocatalysis":[]},
+			{"Heterogenous catalysis":[]},
+			{"Homogenous catalysis":[]},
+			{"Chemical Substance Modeling":[]},
+			{"Material Modeling":[]},
+			{"Process Modeling":[]},
+			{"Synthesis Data":[]},
+			{"Operando Data":[]},
+			{"Performance Data":[]},
+			{"Characterisation Data":[]},
+			{"Heat, Transport and Kinetic Data":[]},
+			{"Process Design, Energy and Cost Data":[]},
+			{"Top Level Ontology":[]}
+		],
+	"Ontology Characteristics":
+		[
+			{"Axioms":[]},
+			{"Logical":[]},
+			{"Declaration":[]},
+			{"Class count":[]},
+			{"Object property count":[]},
+			{"Data property count":[]},
+			{"Individual count":[]},
+			{"Annotation Property count":[]}
+		],
+	"Comments":
+		[
+		]
+}

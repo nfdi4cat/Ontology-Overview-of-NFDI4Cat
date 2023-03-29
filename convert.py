@@ -27,3 +27,6 @@ for onto_name in onto_list:
     
     with open("./json/"+onto_name+".json", "w") as f:
         json.dump(trans_dict,f)
+        
+    
+    
