@@ -43,6 +43,10 @@ for onto_name in onto_list:
             
     
     
-    outstring = ""
-    with open('tester.txt', 'w') as f:
+    outstring = """
+    |Aspect                                |Description                                                                        |
+|:--|:--|
+"""
+
+    with open('tester.md', 'w') as f:
         f.write(outstring)
