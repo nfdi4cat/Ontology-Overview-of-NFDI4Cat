@@ -29,4 +29,20 @@ for onto_name in onto_list:
         json.dump(trans_dict,f)
         
     
+    with open("./md-translator.json") as f:     
+        translator_dict = json.load(f)
+        
+    outstring = ""
     
+    for key in translator_dict:
+        if key == "Comments":
+            
+        else:
+            for dict_list in translator_dict[key]:
+                
+            
+    
+    
+    outstring = ""
+    with open('tester.txt', 'w') as f:
+        f.write(outstring)
