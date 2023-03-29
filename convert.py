@@ -35,9 +35,8 @@ for onto_name in onto_list:
         
     outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n\n\n"   
     
-    table_string = """|Aspect |Description|
-    |:---|:---|
-    """
+    table_string = "|Aspect |Description| \n |:---|:---|\n"
+    
     
     for key in translator_dict:
         if key == "Comments":

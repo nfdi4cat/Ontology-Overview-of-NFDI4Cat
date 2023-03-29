@@ -2,27 +2,27 @@
 
 
 ## Ontology
-|Aspect |Description|
-    |:---|:---|
-    | Full Name | Elementary Multiperspective Material Ontology |
+|Aspect |Description| 
+ |:---|:---|
+| Full Name | Elementary Multiperspective Material Ontology |
 | Synonyms/Alternative Names | previously European Material Modeling Ontology |
 | Ontology Acronym | EMMO |
 | Creator(s) & Issuing Organisation | EMMC ASBL, European Materials Modelling Council, Silversquare Stéphanie, Avenue Louise 54, 1050 Brussels, CBE no: 0731 621 312; Creators:Emanuele Ghedini, University of Bologne; Gerhard Goldbeck, Goldbeck Consulting; Jesper Friis, SINTEF; Adham Hashibon, Fraunhofer IWM; Georg Schmitz, ACCESS |
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
-|Aspect |Description|
-    |:---|:---|
-    | Organisational Website | https://emmc.eu/ |
+|Aspect |Description| 
+ |:---|:---|
+| Organisational Website | https://emmc.eu/ |
 | Persistent URI of Ontology File | http://emmo.info/emmo |
 | Link to Documentation | https://emmo-repo.github.io/ |
 | Link to Version directory | https://emmo-repo.github.io/ |
 | Optional links (Papers, Repos,...) | GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;  |
 
 ## Ontology Modeling And Availability
-|Aspect |Description|
-    |:---|:---|
-    | Ontology Formats Provided | rdf/xml; ttl |
+|Aspect |Description| 
+ |:---|:---|
+| Ontology Formats Provided | rdf/xml; ttl |
 | Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
 | License | Creative Commons Attribution 4.0 International Public License |
 | Validated Resoning with | Fact++, HermiT |
@@ -33,9 +33,9 @@
 | Class annotation types | skos:PrefLabel, rdfs:Definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
-|Aspect |Description|
-    |:---|:---|
-    | Biocatalysis | missing |
+|Aspect |Description| 
+ |:---|:---|
+| Biocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
 | Chemical Substance Modeling | related: broader |
@@ -50,9 +50,9 @@
 | Top Level Ontology | contained |
 
 ## Ontology Characteristics
-|Aspect |Description|
-    |:---|:---|
-    | Axioms | 7382 |
+|Aspect |Description| 
+ |:---|:---|
+| Axioms | 7382 |
 | Logical | 2527 |
 | Declaration | 1055 |
 | Class count | 935 |
