@@ -62,4 +62,14 @@
 | Annotation Property count | 116 |
 
 ## Comments
-[]
+Reasoning mit HermiT durchgeführt, zahl hinter verzeichnis sind die Axiome der jeweiligen Ontologie
+kein Reasoning mit FacT++ moglich, da Probleme mit xml:date
+afo/rec/2022/09/afo.ttl -> 15268    INFO  09:43:25  Ontologies processed in 27652 ms by HermiT
+afo/CR/2022/09/afo.ttl -> 54
+afo/WD/2022/09/afo.ttl -> 15365  INFO  09:44:46  Ontologies processed in 5545 ms by HermiT
+afo/merged/REC/2022/09/merged -> 40505
+afo/merged/REC/2022/09/merged-without-qudt -> 24409   INFO  09:49:23  Ontologies processed in 72411 ms by HermiT
+afo/merged/REC/2022/09/merged-without-qudt-inferred -> 24605    INFO  09:52:24  Ontologies processed in 109828 ms by HermiT
+afo/merged/CR/2022/09/merged -> 40526
+afo/merged/CR/2022/09/merged-without-qudt -> 24431  INFO  09:54:34  Ontologies processed in 84000 ms by HermiT
+afo/merged/CR/2022/09/merged-without-qudt-inferred -> 24686 INFO  09:59:11  Ontologies processed in 77669 ms by HermiT

@@ -41,7 +41,8 @@ for onto_name in onto_list:
     for key in translator_dict:
         if key == "Comments":
             outstring = outstring + "## Comments\n"
-            outstring = outstring + str(translator_dict[key]) + "\n"
+            for i in ontodata_dict[key]:
+                outstring = outstring + str(i) + "\n"
         else:
             outstring = outstring + "## "+ key + "\n"
             outstring = outstring + table_string
