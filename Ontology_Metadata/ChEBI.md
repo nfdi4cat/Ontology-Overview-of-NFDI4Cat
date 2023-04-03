@@ -17,8 +17,7 @@
 | Persistent URI of Ontology File | http://purl.obolibrary.org/obo/chebi.owl |
 | Link to Documentation | Documentation available at organisational website (user manual, annotation manual, developer manual), but seem to have no permalinks, but are google documents |
 | Link to Version directory | https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/ |
-| Optional links (Papers, Repos,...) | Hastings J, Owen G, Dekker A, Ennis M, Kale N, Muthukrishnan V, Turner S, Swainston N, Mendes P, Steinbeck C. (2016). ChEBI in 2016: Improved services and an expanding collection of metabolites. Nucleic Acids Res.
-More info on available formats etc.: https://www.ebi.ac.uk/chebi/downloadsForward.do |
+| Optional links (Papers, Repos,...) | Hastings J, Owen G, Dekker A, Ennis M, Kale N, Muthukrishnan V, Turner S, Swainston N, Mendes P, Steinbeck C. (2016). ChEBI in 2016: Improved services and an expanding collection of metabolites. Nucleic Acids Res. More info on available formats etc.: https://www.ebi.ac.uk/chebi/downloadsForward.do |
 
 ## Ontology Modeling And Availability
 |Aspect |Description| 
