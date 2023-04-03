@@ -1,16 +1,17 @@
 [<img src="./logo_NFDI4Cat.jpg" width="300" />](https://nfdi4cat.org/)
 # Ontology World Map of NFDI4Cat
-Repository which lists ontologies relevant for Catalysis research.
+Repository which lists ontologies relevant for catalysis research.
 
-For remarks, additions, or general questions either use the issues or contact the responsible person.
+For remarks, additions, or general questions either use the issues or contact the responsible person (see below).
 For contributions please download the [markdown file](./General_Template.md) called [General Template] and contact us either via mail, issue or pull request with your updated markdown file. 
 A condensed view on the data provided in the markdown-files is given in [master_table](./master_table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx).
-The respective markdown files for each Ontology listed in the table below are located in [ontology_metadata](./ontology_metadata).
-
+The respective markdown files for each ontology listed in the table below are located in [ontology_metadata](./ontology_metadata).
+In the subdirectory [json](./json), the information contained for each ontology is stored in json-format for an ease in access of the data presented in markdown.
 
 Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Software Collection from NFDI4Cat">alexander.behr@tu-dortmund.de</a>
 
 ## Ontology Metadata files
+These are the ontologies and links to the ontology markdown files, NFDI4Cat deems as relevant:
 
 | Link to Markdown | Ontology Name |
  |:---:|:---|
