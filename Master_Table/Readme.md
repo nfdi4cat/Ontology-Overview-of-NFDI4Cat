@@ -1,2 +1,0 @@
-This directory contains the "master table" - our Excel-File we used to collect all the data represented in the Markdown files.
-It gives a condensed overview of the data we represent in this repository and might be the more current one.
