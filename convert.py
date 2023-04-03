@@ -1,12 +1,14 @@
+import pandas as pd
+import json
+import os
+
 def ConvertExcelToMD(PathToExcel):
-    import pandas as pd
-    import json
     
     onto_list = pd.ExcelFile(PathToExcel).sheet_names
     
     # remove Sheet names with non-ontology names:
-    removed_elements = ['Template mit Beispiel', 'List_zu_betrachtende_Ontologien']
-    remove_NonOntologies = lambda x: [x.remove(i) for i in removed_elements]
+    ignore_sheets = ['Template mit Beispiel', 'List_zu_betrachtende_Ontologien']
+    remove_NonOntologies = lambda x: [x.remove(i) for i in ignore_sheets]
     remove_NonOntologies(onto_list)
     
     for onto_name in onto_list:
@@ -46,22 +48,41 @@ def ConvertExcelToMD(PathToExcel):
         
         for key in translator_dict:
             if key == "Comments":
-                outstring = outstring + "## Comments\n"
+                outstring += "## Comments\n"
                 for i in ontodata_dict[key]:
-                    outstring = outstring + str(i) + "\n"
+                    outstring += str(i) + "\n"
             else:
-                outstring = outstring + "## "+ key + "\n"
-                outstring = outstring + table_string
+                outstring += "## "+ key + "\n"
+                outstring += table_string
                 for dict_list in translator_dict[key]:
-                    outstring = outstring + "| " + str(list(dict_list.values())[0]) + " | "+ str(ontodata_dict[key][list(dict_list.keys())[0]]) + " |\n"
-                outstring = outstring + "\n"
+                    outstring += "| " + str(list(dict_list.values())[0]) + " | "+ str(ontodata_dict[key][list(dict_list.keys())[0]]) + " |\n"
+                outstring += "\n"
                 
-        with open('./Ontology_Metadata/'+ onto_name +'.md', 'w') as f:
+        with open('./ontology_metadata/'+ onto_name +'.md', 'w') as f:
             f.write(outstring)
             
+def UpdateMainReadme(): 
+    path = './ontology_metadata/'
+    markdown_list = [s for s in os.listdir(path) if s.endswith('.md')]
+    print_list = "| Link to Markdown | Ontology Name |\n |:---:|:---|\n"
+    
+    for i in markdown_list:
+        ontology_name = i.replace('.md','')
+        with open('./json/' + ontology_name + '.json') as dictFile:
+            onto_dict = json.load(dictFile)
+        
+        print_list += '| [' + ontology_name + '] |' + onto_dict["Ontology"]["Ontology Name"] +' |\n'
+    
+    ###
+    print_list += '\n'
+    for i in markdown_list:
+        print_list += '[' + i.replace('.md','') + ']: ./ontology_metadata/' + i + '\n' 
+    
+    with open('./Main_Readme_Update.txt', 'w') as f:
+        f.write(print_list)
 
-
-Master_Table = './Master_Table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx'
+Master_Table = './master_table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx'
 
 ConvertExcelToMD(Master_Table)
 
+UpdateMainReadme()
