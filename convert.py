@@ -1,9 +1,19 @@
 import pandas as pd
 import json
 
-onto_list = ['AFO','BFO','EMMO']
+
+Master_Table = './Master_Table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx'
+
+
+onto_list = pd.ExcelFile(Master_Table).sheet_names
+
+# remove Sheet names with non-ontology names:
+removed_elements = ['Template mit Beispiel', 'List_zu_betrachtende_Ontologien']
+remove_NonOntologies = lambda x: [x.remove(i) for i in removed_elements]
+remove_NonOntologies(onto_list)
+
 for onto_name in onto_list:
-    table = pd.read_excel('./Master_Table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx',sheet_name = onto_name)
+    table = pd.read_excel(Master_Table,sheet_name = onto_name)
     
     with open("./GeneralStructure.json") as f: 
         ontodata_dict = json.load(f)
