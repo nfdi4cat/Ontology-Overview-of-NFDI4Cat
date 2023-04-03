@@ -22,13 +22,11 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 | [CHMO] |Chemical Methods Ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
 | [ENVO] |Elementary Multiperspective Material Ontology |
-| [OntoCAPE] |OntoCAPE |
+| [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
 | [REX] |Ontology on Physico-chemical Processes |
 | [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
-
-
 
 
 ## Ontologies considered in NFDI4Cat
