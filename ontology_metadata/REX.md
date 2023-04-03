@@ -1,10 +1,10 @@
-## REX - REX
+## REX - Ontology on Physico-chemical Processes
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | REX |
+| Full Name | Ontology on Physico-chemical Processes |
 | Synonyms/Alternative Names | Physico-chemical Process |
 | Ontology Acronym | REX |
 | Creator(s) & Issuing Organisation | - |

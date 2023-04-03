@@ -62,4 +62,4 @@
 | Annotation Property count | 27 |
 
 ## Comments
-Just forget this Ontology ever existed, it is that bad!
+Not really usable, not FAIR

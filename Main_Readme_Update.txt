@@ -10,8 +10,8 @@
 | [ENVO] |Elementary Multiperspective Material Ontology |
 | [OntoCAPE] |OntoCAPE |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
-| [REX] |REX |
-| [SBO] |SBO |
+| [REX] |Ontology on Physico-chemical Processes |
+| [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
 
 [AFO]: ./ontology_metadata/AFO.md
