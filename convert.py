@@ -80,7 +80,13 @@ def UpdateMainReadme():
     
     with open('./Main_Readme_Update.txt', 'w') as f:
         f.write(print_list)
-
+        
+    print('================================================================')
+    print('Parts of Updated README.md written in "./Main_Readme_Update.txt"')
+    print('Please copy and paste the content into the respective parts of  ')
+    print('./README.md to update the linking to the ontology markdown files.')
+    print('================================================================')
+    
 Master_Table = './master_table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx'
 
 ConvertExcelToMD(Master_Table)
