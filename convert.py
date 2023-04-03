@@ -12,7 +12,7 @@ def ConvertExcelToMD(PathToExcel):
     for onto_name in onto_list:
         table = pd.read_excel(PathToExcel,sheet_name = onto_name)
         
-        with open("./GeneralStructure.json") as f: 
+        with open("./json/GeneralStructure.json") as f: 
             ontodata_dict = json.load(f)
         
         #a = table.Ontology.dropna(how='all')
@@ -36,14 +36,13 @@ def ConvertExcelToMD(PathToExcel):
             json.dump(ontodata_dict,f)
             
         
-        with open("./md-translator.json") as f:     
+        with open("./json/md-translator.json") as f:     
             translator_dict = json.load(f)
             
             
         outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n\n\n"   
         
         table_string = "|Aspect |Description| \n |:---|:---|\n"
-        
         
         for key in translator_dict:
             if key == "Comments":
@@ -57,7 +56,7 @@ def ConvertExcelToMD(PathToExcel):
                     outstring = outstring + "| " + str(list(dict_list.values())[0]) + " | "+ str(ontodata_dict[key][list(dict_list.keys())[0]]) + " |\n"
                 outstring = outstring + "\n"
                 
-        with open('./Ontology_Metadata_out/'+ onto_name +'.md', 'w') as f:
+        with open('./Ontology_Metadata/'+ onto_name +'.md', 'w') as f:
             f.write(outstring)
             
 

@@ -1,75 +1,64 @@
-This File Represens a general Template to be filled for new ontologies which should be added into the collection
+## EMMO - Elementary Multiperspective Material Ontology
 
-# EMMO - Elementary Multiperspective Material Ontology
 
 ## Ontology
-|Aspect                                |Description                                                                        |
-|:-------------------------------------|:----------------------------------------------------------------------------------|
-|Full Name                             |Elementary Multiperspective Material Ontology                                      |
-|Synonyms/Alternative Names            |European Material Modeling Ontology                                                |
-|Ontology Acronym                      |EMMO                                                                               |
-|Creator(s) & Issuing Organisation     |EMMC ASBL, European Materials Modelling Council, Silversquare StÃ©phanie, Avenue Louise 54, 1050 Brussels, CBE no:Â 0731 621 312; Creators:Emanuele Ghedini, University of Bologne; Gerhard Goldbeck, Goldbeck Consulting; Jesper Friis, SINTEF; Adham Hashibon, Fraunhofer IWM; Georg Schmitz, ACCESS                                                 |
-|Nature of Organisational Structure    |Standardization Body                                                               |
-
+|Aspect |Description| 
+ |:---|:---|
+| Full Name | Elementary Multiperspective Material Ontology |
+| Synonyms/Alternative Names | previously European Material Modeling Ontology |
+| Ontology Acronym | EMMO |
+| Creator(s) & Issuing Organisation | EMMC ASBL, European Materials Modelling Council, Silversquare Stéphanie, Avenue Louise 54, 1050 Brussels, CBE no: 0731 621 312; Creators:Emanuele Ghedini, University of Bologne; Gerhard Goldbeck, Goldbeck Consulting; Jesper Friis, SINTEF; Adham Hashibon, Fraunhofer IWM; Georg Schmitz, ACCESS |
+| Nature of Organisational Structure | Standardization Body |
 
 ## References
-|Aspect                                |Description                                                                        |
-|:-------------------------------------|:----------------------------------------------------------------------------------|
-|Organisational Website                |https://emmc.eu/                                                                   |
-|Persistent URI of Ontology File       |http://emmo.info/emmo                                                              |
-|Link to Documentation                 |https://emmo-repo.github.io/                                                       |
-|Link to Version directory             |https://emmo-repo.github.io/                                                       |
-|Optional Links (Papers, Repos,...)    |GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;   |
+|Aspect |Description| 
+ |:---|:---|
+| Organisational Website | https://emmc.eu/ |
+| Persistent URI of Ontology File | http://emmo.info/emmo |
+| Link to Documentation | https://emmo-repo.github.io/ |
+| Link to Version directory | https://emmo-repo.github.io/ |
+| Optional links (Papers, Repos,...) | GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;  |
 
-## Ontology Modeling and Availability
-|Aspect                                |Description                                                                        |
-|:-------------------------------------|:----------------------------------------------------------------------------------|
-|Ontology Formats Provided             |rdf/xml; ttl                                                                       |
-|Degree of Inference/Composition       |Java                                                                               |
-|Validated Resoning with               |                                                                                   |
-|Shortest reasoning time               |                                                                                   |
-|Aligned with Top Level Ontology       |                                                                                   |
-|Prefixes used                         |                                                                                   |
-|Class annotation types                |                                                                                   |
+## Ontology Modeling And Availability
+|Aspect |Description| 
+ |:---|:---|
+| Ontology Formats Provided | rdf/xml; ttl |
+| Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
+| License | Creative Commons Attribution 4.0 International Public License |
+| Validated Resoning with | Fact++, HermiT |
+| Shortest reasoning time | Aligned with Top Level Ontology (BFO, OBO or EMMO ?) |
+| Aligned with Top Level Ontology | Imports Ontology(ies) |
+| Imports Ontology(ies) | Prefixes used |
+| Prefixes used | dcterms; skos; |
+| Class annotation types | skos:PrefLabel, rdfs:Definition |
 
-## Domain of Interest Represented
-this will be categorized from contained, related:broader/narrower to missing
-|Aspect                                |Description                                                                        |
-|:-------------------------------------|:----------------------------------------------------------------------------------|
-|Biocatalysis                          |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Heterogenous catalysis                |Java                                                                               |
-|Homogenous Catalysis                  |                                                                                   |
-|Chemical Substance Modeling           |                                                                                   |
-|Material Modeling                     |                                                                                   |
-|Process Modeling                      |                                                                                   |
-|Synthesis Data                        |                                                                                   |
-|Operando Data                         |                                                                                   |
-|Performance Data                      |                                                                                   |
-|Characterisation Data                 |                                                                                   |
-|Heat, Transport and Kinetic Data      |                                                                                   |
-|Process Design, Energy and Cost Data  |                                                                                   |
-|Top Level Ontology                    |                                                                                   |
+## Domain of Interest Represented (contained, related: broader/narrower, missing)
+|Aspect |Description| 
+ |:---|:---|
+| Biocatalysis | missing |
+| Heterogenous catalysis | missing |
+| Homogenous catalysis | missing |
+| Chemical Substance Modeling | related: broader |
+| Material Modeling | contained |
+| Process Modeling | related: narrower |
+| Synthesis Data | missing |
+| Operando Data | missing |
+| Performance Data | missing |
+| Characterisation Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Process Design, Energy and Cost Data | missing |
+| Top Level Ontology | contained |
 
-## Ontology Characterisation
-|Aspect                                |Description                                                                        |
-|:-------------------------------------|:----------------------------------------------------------------------------------|
-|Axioms                                |https://protege.stanford.edu/support.php#mailing-lists; https://github.com/protegeproject/protege-distribution/issues|
-|Logical Axioms                        |Java                                                                               |
-|Declaration Axioms                    |                                                                                   |
-|Class count                           |                                                                                   |
-|Object property count                 |                                                                                   |
-|Data property count                   |                                                                                   |
-|Individual count                      |                                                                                   |
-|Annotation Property count             |                                                                                   |
+## Ontology Characteristics
+|Aspect |Description| 
+ |:---|:---|
+| Axioms | 7382 |
+| Logical | 2527 |
+| Declaration | 1055 |
+| Class count | 935 |
+| Object property count | 90 |
+| Data property count | 5 |
+| Individual count | 1 |
+| Annotation Property count | 32 |
 
-### General Description
-
-Example:
-General Editig tool with multiple plugins for reasoners, visualisations a.s.o. It is the go to software for starters and often serves as a validation tool even after changing to other editing software. Thus it is considered basicly as a benchmark in the fashion, that if an Ontology cant be opend and handeled with protege, it is not sufficent for the regular consumer.
-
-### Known Issues:
-(please always contact the founders of a specific software and wait for their response before publishing an issue here. Please also link to any issue you have send to them, to allow later contributors to check whether they arte solved)
-
-Several plugins are faulty, such as the fact++ Reasoner, which needs a special patch to be able o run. It has a unique owl2 syntax and interpreation format which advanced from the regular owl-manchester syntax into an openly defined structure, which often requires workarounds, such as using SWRL-rules for representing left hand side logic.
-
-### General Remarks & Comments
+## Comments
