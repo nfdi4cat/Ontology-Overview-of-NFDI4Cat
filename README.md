@@ -1,4 +1,4 @@
-[<img src="./logo_NFDI4Cat.jpg" width="300" />](https://nfdi4cat.org/wp-content/themes/nfdi4cat/images/logos/logo_text.svg)
+[<img src="./logo_NFDI4Cat.jpg" width="300" />](https://nfdi4cat.org/)
 # Ontology World Map of NFDI4Cat
 Repository which lists ontologies relevant for Catalysis research.
 
