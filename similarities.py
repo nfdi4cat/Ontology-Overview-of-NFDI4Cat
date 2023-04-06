@@ -11,38 +11,119 @@ def ontology_comparison(onto_name1, onto_name2):
     # Create sets of class labels for each ontology
     ## using label depending on ontology!
     
+    # label
     try:
         onto1_labels = set([cls.label.first() for cls in onto1.classes()])
     except:
         print("Class labels of ontology " + onto_name1 + "not well defined and could not be read!")
+        onto1_labels= set()
     
+    # prefLabel
+    try:
+        onto1_prefLabels = set([cls.prefLabel.first() for cls in onto1.classes()])
+    except:
+        print("Class prefLabels of ontology " + onto_name1 + "not well defined and could not be read!")
+        onto1_prefLabels= set()
+        
+    # altLabel
+    try:
+        onto1_altLabels = set([cls.altLabel.first() for cls in onto1.classes()])
+    except:
+        print("Class altLabels of ontology " + onto_name1 + "not well defined and could not be read!")
+        onto1_altLabels= set()
+        
+    # name
+    try:
+        onto1_names = set([cls.name for cls in onto1.classes()])
+    except:
+        print("Class names of ontology " + onto_name1 + "not well defined and could not be read!")
+        onto1_names= set()
+        
+    # Concatenate prefLabels, labels and altLabels
+    onto1_combined = ((onto1_labels.union(onto1_prefLabels)).union(onto1_altLabels)).union(onto1_names)
+    
+    ## 
+    # Onto 2: 
+    # label
     try:
         onto2_labels = set([cls.label.first() for cls in onto2.classes()])
-    
     except:
         print("Class labels of ontology " + onto_name2 + "not well defined and could not be read!")
+        onto2_labels= set()
+        
+    # prefLabel
+    try:
+        onto2_prefLabels = set([cls.prefLabel.first() for cls in onto2.classes()])
+    except:
+        print("Class prefLabels of ontology " + onto_name2 + "not well defined and could not be read!")
+        onto2_prefLabels= set()
+        
+    # altLabel
+    try:
+        onto2_altLabels = set([cls.altLabel.first() for cls in onto2.classes()])
+    except:
+        print("Class altLabels of ontology " + onto_name2 + "not well defined and could not be read!")
+        onto2_altLabels = set()
+        
+    # name
+    try:
+        onto2_names = set([cls.name for cls in onto2.classes()])
+    except:
+        print("Class names of ontology " + onto_name2 + "not well defined and could not be read!")
+        onto2_names = set()
+        
+    # Concatenate prefLabels, labels and altLabels
+    onto2_combined = ((onto2_labels.union(onto2_prefLabels)).union(onto2_altLabels)).union(onto2_names)
     
+    ## 
     # Find the intersection of the two sets of class labels
     
     try:
-        common_labels = onto1_labels.intersection(onto2_labels)
+        common_labels = onto1_combined.intersection(onto2_combined)
     except:
         print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing!")
     
+    # delete none entries
+    common_labels = [i for i in common_labels if i is not None]
+    
+    
     # Find the classes in each ontology with the common labels
+    # label
     try:
-        onto1_classes = [onto1.search_one(label=label) for label in common_labels if label is not None]
+        onto1_classes_label = [onto1.search_one(label=label) for label in common_labels if label is not None]
     except:
         print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing! len(common_labels)= " + str(len(common_labels)))
         print(common_labels)
-    #onto2_classes = [onto2.search_one(label=label) for label in common_labels]
+    # prefLabel
+    try:
+        onto1_classes_prefLabel = [onto1.search_one(prefLabel=label) for label in common_labels if label is not None]
+    except:
+        print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing! len(common_labels)= " + str(len(common_labels)))
+        print(common_labels)
+    # altLabel
+    try:
+        onto1_classes_altLabel = [onto1.search_one(altLabel=label) for label in common_labels if label is not None]
+    except:
+        print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing! len(common_labels)= " + str(len(common_labels)))
+        print(common_labels)
+    # name
+    try:        
+        onto1_classes_name = [onto1.search_one(name=label) for label in common_labels if label is not None]
+    except:
+        print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing! len(common_labels)= " + str(len(common_labels)))
+        print(common_labels)        
     
+    
+    concat_list = [onto1_classes_label,onto1_classes_prefLabel,onto1_classes_altLabel,onto1_classes_name]
+    
+    onto1_classes = set().union(*concat_list)
+    onto1_classes = set([i for i in onto1_classes if i is not None])
     # Print out the matching classes
    # for i, cls1 in enumerate(onto1_classes):
    #     cls2 = onto2_classes[i]
    #     print(f"{cls1.name} ({cls1.label.first()}) in Ontology 1 matches {cls2.name} ({cls2.label.first()}) in Ontology 2")
         
-    return onto1_classes
+    return onto1_classes, common_labels
 
 
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
@@ -55,17 +136,18 @@ onto_combinations = list(itertools.combinations(onto_list, 2))
 for onto_name in onto_list:
     onto = get_ontology("file://./ontology_files/" + onto_name).load()
     try:
-        onto_labels = set([cls.label.first() for cls in onto.classes()])
-        df_numbers[onto_name][onto_name] = len(onto_labels)
+        #onto_labels = set([cls.label.first() for cls in onto.classes()])
+        df_numbers[onto_name][onto_name] = len(list(onto.classes()))+1 # +1 for owl:Thing
     except: 
         print("Class labels of ontology " + onto_name + "not well defined and could not be read!")
 
 
 for comb in onto_combinations:
     try:
-        df_numbers[comb[0]][comb[1]] = len(ontology_comparison(comb[0],comb[1]))
+        df_numbers[comb[0]][comb[1]] = len(ontology_comparison(comb[0],comb[1])[0])
     except:
         df_numbers[comb[0]][comb[1]] = 0
         print(comb)
+
         
 print(df_numbers)
