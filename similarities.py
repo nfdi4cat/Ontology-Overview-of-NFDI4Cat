@@ -82,11 +82,12 @@ def ontology_comparison(onto_name1, onto_name2):
         common_labels = onto1_combined.intersection(onto2_combined)
     except:
         print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing!")
+    ######
     
     # delete none entries
     common_labels = [i for i in common_labels if i is not None]
     
-    
+    ######
     # Find the classes in each ontology with the common labels
     # label
     try:
@@ -112,7 +113,7 @@ def ontology_comparison(onto_name1, onto_name2):
     except:
         print("No common labels found for ontologies " + onto_name1 + " and " + onto_name2 +".\n Might also be caused by wrong label accessing! len(common_labels)= " + str(len(common_labels)))
         print(common_labels)        
-    
+    ######
     
     concat_list = [onto1_classes_label,onto1_classes_prefLabel,onto1_classes_altLabel,onto1_classes_name]
     
@@ -122,8 +123,60 @@ def ontology_comparison(onto_name1, onto_name2):
    # for i, cls1 in enumerate(onto1_classes):
    #     cls2 = onto2_classes[i]
    #     print(f"{cls1.name} ({cls1.label.first()}) in Ontology 1 matches {cls2.name} ({cls2.label.first()}) in Ontology 2")
+   
+    result_dict = {}
+    for i in common_labels:
+        labeldict1 ={"label":None,
+                     "prefLabel":None,
+                     "altLabel":None,
+                     "name":None}
         
-    return onto1_classes, common_labels
+        labeldict2 ={"label":None,
+                     "prefLabel":None,
+                     "altLabel":None,
+                     "name":None}
+        
+        try:
+            labeldict1["label"] = onto1.search_one(label = i)
+        except:
+            pass
+        try:
+            labeldict1["prefLabel"] = onto1.search_one(prefLabel = i)
+        except:
+            pass
+        try:
+            labeldict1["altLabel"] = onto1.search_one(altLabel = i)
+        except:
+            pass
+        try:
+            labeldict1["name"] = onto1.search_one(name = i)
+        except:
+            pass
+        
+        
+        try:
+            labeldict2["label"] = onto2.search_one(label = i)
+        except:
+            pass
+        try:
+            labeldict2["prefLabel"] = onto2.search_one(prefLabel = i)
+        except:
+            pass
+        try:
+            labeldict2["altLabel"] = onto2.search_one(altLabel = i)
+        except:
+            pass
+        try:
+            labeldict2["name"] = onto2.search_one(name = i)
+        except:
+            pass
+        
+        result_dict[i] = {onto_name1:labeldict1,
+                          onto_name2:labeldict2}
+   
+    
+      
+    return onto1_classes, common_labels, result_dict
 
 
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
