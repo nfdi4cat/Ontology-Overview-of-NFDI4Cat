@@ -204,3 +204,8 @@ for comb in onto_combinations:
 
         
 print(df_numbers)
+
+##
+#a1,b1,c1 = ontology_comparison("AFO.owl","BFO.owl")
+#with open("tester123.json", "w") as f:
+#    print(c1, file =f)
