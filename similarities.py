@@ -15,28 +15,28 @@ def ontology_comparison(onto_name1, onto_name2):
     try:
         onto1_labels = set([cls.label.first() for cls in onto1.classes()])
     except:
-        print("Class labels of ontology " + onto_name1 + "not well defined and could not be read!")
+        print("Class labels of ontology " + onto_name1 + " not (well) defined and could not be read!")
         onto1_labels= set()
     
     # prefLabel
     try:
         onto1_prefLabels = set([cls.prefLabel.first() for cls in onto1.classes()])
     except:
-        print("Class prefLabels of ontology " + onto_name1 + "not well defined and could not be read!")
+        print("Class prefLabels of ontology " + onto_name1 + " not (well) defined and could not be read!")
         onto1_prefLabels= set()
         
     # altLabel
     try:
         onto1_altLabels = set([cls.altLabel.first() for cls in onto1.classes()])
     except:
-        print("Class altLabels of ontology " + onto_name1 + "not well defined and could not be read!")
+        print("Class altLabels of ontology " + onto_name1 + " not (well) defined and could not be read!")
         onto1_altLabels= set()
         
     # name
     try:
         onto1_names = set([cls.name for cls in onto1.classes()])
     except:
-        print("Class names of ontology " + onto_name1 + "not well defined and could not be read!")
+        print("Class names of ontology " + onto_name1 + " not (well) defined and could not be read!")
         onto1_names= set()
         
     # Concatenate prefLabels, labels and altLabels
@@ -48,28 +48,28 @@ def ontology_comparison(onto_name1, onto_name2):
     try:
         onto2_labels = set([cls.label.first() for cls in onto2.classes()])
     except:
-        print("Class labels of ontology " + onto_name2 + "not well defined and could not be read!")
+        print("Class labels of ontology " + onto_name2 + " not (well) defined and could not be read!")
         onto2_labels= set()
         
     # prefLabel
     try:
         onto2_prefLabels = set([cls.prefLabel.first() for cls in onto2.classes()])
     except:
-        print("Class prefLabels of ontology " + onto_name2 + "not well defined and could not be read!")
+        print("Class prefLabels of ontology " + onto_name2 + " not (well) defined and could not be read!")
         onto2_prefLabels= set()
         
     # altLabel
     try:
         onto2_altLabels = set([cls.altLabel.first() for cls in onto2.classes()])
     except:
-        print("Class altLabels of ontology " + onto_name2 + "not well defined and could not be read!")
+        print("Class altLabels of ontology " + onto_name2 + " not (well) defined and could not be read!")
         onto2_altLabels = set()
         
     # name
     try:
         onto2_names = set([cls.name for cls in onto2.classes()])
     except:
-        print("Class names of ontology " + onto_name2 + "not well defined and could not be read!")
+        print("Class names of ontology " + onto_name2 + " not (well) defined and could not be read!")
         onto2_names = set()
         
     # Concatenate prefLabels, labels and altLabels
@@ -206,6 +206,6 @@ for comb in onto_combinations:
 print(df_numbers)
 
 ##
-#a1,b1,c1 = ontology_comparison("AFO.owl","BFO.owl")
-#with open("tester123.json", "w") as f:
-#    print(c1, file =f)
+classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
+with open("tester123.json", "w") as f:
+    print(resDict, file =f)
