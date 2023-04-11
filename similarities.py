@@ -129,45 +129,98 @@ def ontology_comparison(onto_name1, onto_name2):
         labeldict1 ={"label":None,
                      "prefLabel":None,
                      "altLabel":None,
-                     "name":None}
+                     "name":None,
+                     "iri":None}
         
         labeldict2 ={"label":None,
                      "prefLabel":None,
                      "altLabel":None,
-                     "name":None}
-        
-        try:
-            labeldict1["label"] = onto1.search_one(label = i)
-        except:
-            pass
-        try:
-            labeldict1["prefLabel"] = onto1.search_one(prefLabel = i)
-        except:
-            pass
-        try:
-            labeldict1["altLabel"] = onto1.search_one(altLabel = i)
-        except:
-            pass
-        try:
-            labeldict1["name"] = onto1.search_one(name = i)
-        except:
-            pass
+                     "name":None,
+                     "iri":None}
         
         
+        # searching for each label, prefLabel, altLabel and name in the ontology.
+        # first for label, then for prefLabel, ... and listing all the other 
+        # descriptors in the dict
         try:
-            labeldict2["label"] = onto2.search_one(label = i)
+            labeldict1["label"] = {"label": onto1.search_one(label = i).label.first(),
+                                   "prefLabel": onto1.search_one(label = i).prefLabel.first(),
+                                   "altLabel": onto1.search_one(label = i).altLabel.first(),
+                                   "name": onto1.search_one(label = i).name,
+                                   "iri": onto1.search_one(label = i).get_iri(onto1.search_one(label = i))
+                                   }
+        except:
+            pass
+
+        try:
+            #labeldict1["prefLabel"] = onto1.search_one(prefLabel = i)
+            labeldict1["prefLabel"] = {"label": onto1.search_one(prefLabel = i).label.first(),
+                                       "prefLabel": onto1.search_one(prefLabel = i).prefLabel.first(),
+                                       "altLabel": onto1.search_one(prefLabel = i).altLabel.first(),
+                                       "name": onto1.search_one(prefLabel = i).name,
+                                       "iri": onto1.search_one(prefLabel = i).get_iri(onto1.search_one(prefLabel = i))
+                                       }
+        except:
+            pass
+       
+        try:
+            labeldict1["altLabel"] = {"label": onto1.search_one(altLabel = i).label.first(),
+                           "prefLabel": onto1.search_one(altLabel = i).prefLabel.first(),
+                           "altLabel": onto1.search_one(altLabel = i).altLabel.first(),
+                           "name": onto1.search_one(altLabel = i).name,
+                           "iri": onto1.search_one(altLabel = i).get_iri(onto1.search_one(altLabel = i))
+                           }
+        except:
+            pass
+        
+        try:
+            labeldict1["name"] = {"label": onto1.search_one(name = i).label.first(),
+                                   "prefLabel": onto1.search_one(name = i).prefLabel.first(),
+                                   "altLabel": onto1.search_one(name = i).altLabel.first(),
+                                   "name": onto1.search_one(name = i).name,
+                                   "iri": onto1.search_one(name = i).get_iri(onto1.search_one(name = i))
+                                   }
+        except:
+            pass
+        
+        
+        ## same with onto 2
+        try:
+            labeldict2["label"] = {"label": onto2.search_one(label = i).label.first(),
+                           "prefLabel": onto2.search_one(label = i).prefLabel.first(),
+                           "altLabel": onto2.search_one(label = i).altLabel.first(),
+                           "name": onto2.search_one(label = i).name,
+                           "iri": onto2.search_one(label = i).get_iri(onto2.search_one(label = i))
+                           }
         except:
             pass
         try:
-            labeldict2["prefLabel"] = onto2.search_one(prefLabel = i)
+            labeldict2["prefLabel"] = {"label": onto2.search_one(prefLabel = i).label.first(),
+                           "prefLabel": onto2.search_one(prefLabel = i).prefLabel.first(),
+                           "altLabel": onto2.search_one(prefLabel = i).altLabel.first(),
+                           "name": onto2.search_one(prefLabel = i).name,
+                           "iri": onto2.search_one(prefLabel = i).get_iri(onto2.search_one(prefLabel = i))
+                           }
         except:
             pass
+        
         try:
-            labeldict2["altLabel"] = onto2.search_one(altLabel = i)
+            labeldict2["altLabel"] = {"label": onto2.search_one(altLabel = i).label.first(),
+                           "prefLabel": onto2.search_one(altLabel = i).prefLabel.first(),
+                           "altLabel": onto2.search_one(altLabel = i).altLabel.first(),
+                           "name": onto2.search_one(altLabel = i).name,
+                           "iri": onto2.search_one(altLabel = i).get_iri(onto2.search_one(altLabel = i))
+                           }
         except:
             pass
+        
         try:
-            labeldict2["name"] = onto2.search_one(name = i)
+            labeldict2["name"] = {"label": onto2.search_one(name = i).label.first(),
+                           "prefLabel": onto2.search_one(name = i).prefLabel.first(),
+                           "altLabel": onto2.search_one(name = i).altLabel.first(),
+                           "name": onto2.search_one(name = i).name,
+                           "iri": onto2.search_one(name = i).get_iri(onto2.search_one(name = i))
+                           }
         except:
             pass
         
@@ -209,3 +262,15 @@ print(df_numbers)
 classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
 with open("tester123.json", "w") as f:
     print(resDict, file =f)
+    
+
+##
+# Ab hier: Dict Entries vergleichen
+# bspw: resDict["temporal region"]
+# müsste eigentlich das selbe sein wie resDict["BFO_0000008"]??
+
+same_list = []
+for label in resDict:
+    if resDict[label]["AFO.owl"] == resDict[label]["BFO.owl"]:
+        same_list += [label]
+        
