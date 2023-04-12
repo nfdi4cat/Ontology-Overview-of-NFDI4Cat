@@ -248,12 +248,68 @@ def ontology_comparison(onto_name1, onto_name2):
             
             result_dict[str(label)][onto_name2] = condensed_dict_list
     
-    # removing empty entries:
+    ##
+    # removing empty entries: 
     temp_dict = dict(result_dict)
     for label in result_dict:
         if result_dict[str(label)][onto_name1] == [] and result_dict[str(label)][onto_name2] == []:
             del temp_dict[str(label)]
     
+    # another cleaning step for comparison of different labeling types in list:
+    key_set = set(list(temp_dict.keys()))
+    temp_dict_cleaned = dict(temp_dict)
+    
+    for label in temp_dict:
+        if temp_dict[label][onto_name1] == temp_dict[label][onto_name2]:
+            dict_list = []
+            for entries in temp_dict[label][onto_name1]:
+                for keys in entries:
+                    if entries[keys] != None and keys != "iri":
+                        dict_list.append(entries[keys])
+            
+            
+            throw_list = list(key_set.intersection(dict_list))
+    # ab hier:        
+            if len(throw_list) > 1:
+                
+                for i in list(temp_dict_cleaned.keys()):
+                    for dicts in temp_dict_cleaned[i][onto_name1]:
+                        if dicts["label"] != None:
+                            throw_list.remove(dicts["label"])
+                            for i in throw_list:
+                                del temp_dict_cleaned[str(i)]
+                                key_set = set(list(temp_dict_cleaned.keys()))
+                        else:
+                            for i in throw_list[1:]:
+                                del temp_dict_cleaned[str(i)]
+                                key_set = set(list(temp_dict_cleaned.keys()))
+              
+    
+    """
+    temp_dict = dict(temp_dict_cleaned)
+    for i in list(temp_dict_cleaned.keys()):
+        for dicts in temp_dict_cleaned[i][onto_name1]:
+            if dicts["label"] != None:
+                try: 
+                    temp_dict[dicts["label"]] = temp_dict_cleaned[dicts["prefLabel"]]
+                    del temp_dict[dicts["prefLabel"]]
+                    
+                except:
+                    
+                    try:
+                        temp_dict[dicts["label"]] = temp_dict_cleaned[dicts["altLabel"]]
+                        del temp_dict[dicts["altLabel"]]
+                    except:
+                        try:
+                            temp_dict[dicts["label"]] = temp_dict_cleaned[dicts["name"]]
+                            del temp_dict[dicts["name"]]
+                        except:    
+                            pass
+      """              
+                #onto_class = onto1.search_one(label = str(i))
+                #if onto_class == None:
+                #    print("class '{}' not existent in AFO.owl".format(i))
+        
     
     return onto1_classes, common_labels, result_dict, temp_dict
 
