@@ -129,14 +129,12 @@ def ontology_comparison(onto_name1, onto_name2):
         labeldict1 ={"label":None,
                      "prefLabel":None,
                      "altLabel":None,
-                     "name":None,
-                     "iri":None}
+                     "name":None}
         
         labeldict2 ={"label":None,
                      "prefLabel":None,
                      "altLabel":None,
-                     "name":None,
-                     "iri":None}
+                     "name":None}
         
         
         # searching for each label, prefLabel, altLabel and name in the ontology.
@@ -228,6 +226,10 @@ def ontology_comparison(onto_name1, onto_name2):
                           onto_name2:labeldict2}
    
     
+    for label in result_dict:
+        if result_dict[label][onto_name1] != result_dict[label][onto_name1]:
+            print("Class '{}' detected as not similar for ontologies {} and {}".format(label, onto_name1, onto_name2))
+    
       
     return onto1_classes, common_labels, result_dict
 
@@ -259,9 +261,9 @@ for comb in onto_combinations:
 print(df_numbers)
 
 ##
-classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
-with open("tester123.json", "w") as f:
-    print(resDict, file =f)
+#classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
+#with open("tester123.json", "w") as f:
+#    print(resDict, file =f)
     
 
 ##
@@ -269,8 +271,15 @@ with open("tester123.json", "w") as f:
 # bspw: resDict["temporal region"]
 # müsste eigentlich das selbe sein wie resDict["BFO_0000008"]??
 
-same_list = []
-for label in resDict:
-    if resDict[label]["AFO.owl"] == resDict[label]["BFO.owl"]:
-        same_list += [label]
+#same_list = []
+#for label in resDict:
+    #if resDict[label]["AFO.owl"] == resDict[label]["BFO.owl"]:
+    #    same_list += [label]
+    
+#    list(resDict[label].keys())
+    
+    
+    
+    
+    
         
