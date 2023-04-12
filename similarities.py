@@ -293,7 +293,7 @@ resDict["temporal region"]
 #with open("tester123.json", "w") as f:
 #    print(resDict, file =f)
 
-
+"""
 for labelStr in resDict:
     for onto in resDict[labelStr]:
         for subdict in resDict[labelStr][onto]:
@@ -312,8 +312,12 @@ for labelStr in resDict:
                 except:
                     pass
                 
-            
-print(len(list(resDict.keys())))
+ """           
+onto_bfo = get_ontology("./ontology_files/BFO.owl").load()
+for i in list(condDict.keys()):
+    
+    
+    
 
 ##
 # Ab hier: Dict Entries vergleichen
