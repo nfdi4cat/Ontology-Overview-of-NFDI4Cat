@@ -228,9 +228,26 @@ def ontology_comparison(onto_name1, onto_name2):
     
     for label in result_dict:
         if result_dict[label][onto_name1] != result_dict[label][onto_name1]:
-            print("Class '{}' detected as not similar for ontologies {} and {}".format(label, onto_name1, onto_name2))
+            print("Multiple Classes detected for label '{}' in ontologies {} and {}".format(label, onto_name1, onto_name2))
+            
+        else:
+            # If all entries in subdict of label, onto_name1 are same, 
+            # The entries are "condensed" to remove duplicates 
+            condensed_dict_list = []
+            for key in result_dict[label][onto_name1]:
+                if result_dict[label][onto_name1][key] not in condensed_dict_list and result_dict[label][onto_name1][key] != None:
+                    condensed_dict_list.append(result_dict[label][onto_name1][key])
+        
+            result_dict[label][onto_name1] = condensed_dict_list
+            
+            # same for onto_name2
+            condensed_dict_list = []
+            for key in result_dict[label][onto_name2]:
+                if result_dict[label][onto_name2][key] not in condensed_dict_list and result_dict[label][onto_name2][key] != None:
+                    condensed_dict_list.append(result_dict[label][onto_name2][key])
+            
+            result_dict[label][onto_name2] = condensed_dict_list
     
-      
     return onto1_classes, common_labels, result_dict
 
 
