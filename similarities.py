@@ -222,37 +222,37 @@ def ontology_comparison(onto_name1, onto_name2):
         except:
             pass
         
-        result_dict[i] = {onto_name1:labeldict1,
+        result_dict[str(i)] = {onto_name1:labeldict1,
                           onto_name2:labeldict2}
    
     
     for label in result_dict:
-        if result_dict[label][onto_name1] != result_dict[label][onto_name1]:
+        if result_dict[str(label)][onto_name1] != result_dict[str(label)][onto_name1]:
             print("Multiple Classes detected for label '{}' in ontologies {} and {}".format(label, onto_name1, onto_name2))
             
         else:
             # If all entries in subdict of label, onto_name1 are same, 
             # The entries are "condensed" to remove duplicates 
             condensed_dict_list = []
-            for key in result_dict[label][onto_name1]:
-                if result_dict[label][onto_name1][key] not in condensed_dict_list and result_dict[label][onto_name1][key] != None:
-                    condensed_dict_list.append(result_dict[label][onto_name1][key])
+            for key in result_dict[str(label)][onto_name1]:
+                if result_dict[str(label)][onto_name1][key] not in condensed_dict_list and result_dict[str(label)][onto_name1][key] != None:
+                    condensed_dict_list.append(result_dict[str(label)][onto_name1][key])
         
-            result_dict[label][onto_name1] = condensed_dict_list
+            result_dict[str(label)][onto_name1] = condensed_dict_list
             
             # same for onto_name2
             condensed_dict_list = []
-            for key in result_dict[label][onto_name2]:
-                if result_dict[label][onto_name2][key] not in condensed_dict_list and result_dict[label][onto_name2][key] != None:
-                    condensed_dict_list.append(result_dict[label][onto_name2][key])
+            for key in result_dict[str(label)][onto_name2]:
+                if result_dict[str(label)][onto_name2][key] not in condensed_dict_list and result_dict[str(label)][onto_name2][key] != None:
+                    condensed_dict_list.append(result_dict[str(label)][onto_name2][key])
             
-            result_dict[label][onto_name2] = condensed_dict_list
+            result_dict[str(label)][onto_name2] = condensed_dict_list
     
     # removing empty entries:
     temp_dict = dict(result_dict)
     for label in result_dict:
-        if result_dict[label][onto_name1] == [] and result_dict[label][onto_name2] == []:
-            del temp_dict[label]
+        if result_dict[str(label)][onto_name1] == [] and result_dict[str(label)][onto_name2] == []:
+            del temp_dict[str(label)]
     
     
     return onto1_classes, common_labels, result_dict, temp_dict
@@ -287,7 +287,7 @@ print(df_numbers)
 
 classList, labelList, resDict, condDict = ontology_comparison("AFO.owl","BFO.owl")
 
-resDict["temporal region"]
+#resDict["temporal region"]
 ##
 #classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
 #with open("tester123.json", "w") as f:
@@ -315,7 +315,9 @@ for labelStr in resDict:
  """           
 onto_bfo = get_ontology("./ontology_files/BFO.owl").load()
 for i in list(condDict.keys()):
-    
+    onto_class = onto_bfo.search_one(label = str(i))
+    if onto_class == None:
+        print("class '{}' not existent in BFO.owl".format(i))
     
     
 
