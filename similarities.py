@@ -248,7 +248,14 @@ def ontology_comparison(onto_name1, onto_name2):
             
             result_dict[label][onto_name2] = condensed_dict_list
     
-    return onto1_classes, common_labels, result_dict
+    # removing empty entries:
+    temp_dict = dict(result_dict)
+    for label in result_dict:
+        if result_dict[label][onto_name1] == [] and result_dict[label][onto_name2] == []:
+            del temp_dict[label]
+    
+    
+    return onto1_classes, common_labels, result_dict, temp_dict
 
 
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
@@ -277,11 +284,36 @@ for comb in onto_combinations:
         
 print(df_numbers)
 
+
+classList, labelList, resDict, condDict = ontology_comparison("AFO.owl","BFO.owl")
+
+resDict["temporal region"]
 ##
 #classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
 #with open("tester123.json", "w") as f:
 #    print(resDict, file =f)
-    
+
+
+for labelStr in resDict:
+    for onto in resDict[labelStr]:
+        for subdict in resDict[labelStr][onto]:
+                try:
+                    resDict[subdict["prefLabel"]][onto] = None
+                except:
+                    pass
+                
+                try:
+                    resDict[subdict["altLabel"]][onto] = None
+                except:
+                    pass
+                
+                try:
+                    resDict[subdict["name"]][onto] = None
+                except:
+                    pass
+                
+            
+print(len(list(resDict.keys())))
 
 ##
 # Ab hier: Dict Entries vergleichen
