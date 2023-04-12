@@ -258,6 +258,8 @@ def ontology_comparison(onto_name1, onto_name2):
     return onto1_classes, common_labels, result_dict, temp_dict
 
 
+
+
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
 onto_list = [s for s in os.listdir('./ontology_files/') if s.endswith('.owl')]
 
@@ -313,11 +315,11 @@ for labelStr in resDict:
                     pass
                 
  """           
-onto_bfo = get_ontology("./ontology_files/BFO.owl").load()
+onto_bfo = get_ontology("./ontology_files/AFO.owl").load()
 for i in list(condDict.keys()):
     onto_class = onto_bfo.search_one(label = str(i))
     if onto_class == None:
-        print("class '{}' not existent in BFO.owl".format(i))
+        print("class '{}' not existent in AFO.owl".format(i))
     
     
 
