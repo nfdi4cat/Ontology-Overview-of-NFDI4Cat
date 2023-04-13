@@ -257,7 +257,7 @@ def ontology_comparison(onto_name1, onto_name2):
     
     # another cleaning step for comparison of different labeling types in list:
     key_set = set(list(temp_dict.keys()))
-    temp_dict_cleaned = dict(temp_dict)
+    temp_dict_out = dict(temp_dict)
     
     for label in temp_dict:
         if temp_dict[label][onto_name1] == temp_dict[label][onto_name2]:
@@ -267,23 +267,26 @@ def ontology_comparison(onto_name1, onto_name2):
                     if entries[keys] != None and keys != "iri":
                         dict_list.append(entries[keys])
             
-            
             throw_list = list(key_set.intersection(dict_list))
     # ab hier:        
             if len(throw_list) > 1:
-                
-                for i in list(temp_dict_cleaned.keys()):
-                    for dicts in temp_dict_cleaned[i][onto_name1]:
+                for i in list(temp_dict.keys()):
+                    for dicts in temp_dict[i][onto_name1]:
                         if dicts["label"] != None:
-                            throw_list.remove(dicts["label"])
-                            for i in throw_list:
-                                del temp_dict_cleaned[str(i)]
-                                key_set = set(list(temp_dict_cleaned.keys()))
+                            try:
+                                throw_list.remove(dicts["label"])
+                                for i in throw_list:
+                                    del temp_dict_out[str(i)]
+                                    key_set = set(list(temp_dict_out.keys()))
+                            except:
+                                pass
+                            
+                        """             
                         else:
                             for i in throw_list[1:]:
                                 del temp_dict_cleaned[str(i)]
                                 key_set = set(list(temp_dict_cleaned.keys()))
-              
+                        """
     
     """
     temp_dict = dict(temp_dict_cleaned)
@@ -311,7 +314,7 @@ def ontology_comparison(onto_name1, onto_name2):
                 #    print("class '{}' not existent in AFO.owl".format(i))
         
     
-    return onto1_classes, common_labels, result_dict, temp_dict
+    return onto1_classes, common_labels, temp_dict_out, result_dict
 
 
 
@@ -334,7 +337,8 @@ for onto_name in onto_list:
 
 for comb in onto_combinations:
     try:
-        df_numbers[comb[0]][comb[1]] = len(ontology_comparison(comb[0],comb[1])[0])
+        classList, labelList, compDict, resDict = ontology_comparison(comb[0],comb[1])
+        df_numbers[comb[0]][comb[1]] = len(list(compDict.keys()))
     except:
         df_numbers[comb[0]][comb[1]] = 0
         print(comb)
@@ -343,13 +347,28 @@ for comb in onto_combinations:
 print(df_numbers)
 
 
-classList, labelList, resDict, condDict = ontology_comparison("AFO.owl","BFO.owl")
+#classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
 
 #resDict["temporal region"]
 ##
-#classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
+classList, labelList, compDict, resDict = ontology_comparison("AFO.owl","CHMO.owl")
+
+df_resIRIs = pd.DataFrame(columns = ["label","AFO.owl","CHMO.owl"])
+labelList = []
+onto1List = []
+onto2List = []
+
+for i in resDict:
+    labelList.append(i)
+    for subdict in resDict[i]["AFO.owl"]:
+        onto1List.append(subdict["iri"])
+        
+df_resIRIs["label"] = labelList
+
 #with open("tester123.json", "w") as f:
 #    print(resDict, file =f)
+
+
 
 """
 for labelStr in resDict:
@@ -371,11 +390,11 @@ for labelStr in resDict:
                     pass
                 
  """           
-onto_bfo = get_ontology("./ontology_files/AFO.owl").load()
-for i in list(condDict.keys()):
-    onto_class = onto_bfo.search_one(label = str(i))
-    if onto_class == None:
-        print("class '{}' not existent in AFO.owl".format(i))
+#onto_bfo = get_ontology("./ontology_files/AFO.owl").load()
+#for i in list(resDict.keys()):
+#    onto_class = onto_bfo.search_one(label = str(i))
+#    if onto_class == None:
+#        print("class '{}' not existent in AFO.owl".format(i))
     
     
 
