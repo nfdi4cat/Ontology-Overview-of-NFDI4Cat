@@ -7,3 +7,10 @@ Traceback (most recent call last):
     resDict["plan specification"]
 
 KeyError: 'plan specification'
+
+
+CHMO_onto_owl.search_one(label="plan specification")
+Out[54]: result.AFR_0001501
+
+AFO_onto_owl.search_one(label="plan specification")
+Out[55]: result.AFR_0001501
