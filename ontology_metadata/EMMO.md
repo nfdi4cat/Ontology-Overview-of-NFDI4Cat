@@ -26,9 +26,9 @@
 | Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
 | License | Creative Commons Attribution 4.0 International Public License |
 | Validated Resoning with | Fact++, HermiT |
-| Shortest reasoning time | Aligned with Top Level Ontology (BFO, OBO or EMMO ?) |
-| Aligned with Top Level Ontology | Imports Ontology(ies) |
-| Imports Ontology(ies) | Prefixes used |
+| Shortest reasoning time | - |
+| Aligned with Top Level Ontology | - |
+| Imports Ontology(ies) | - |
 | Prefixes used | dcterms; skos; |
 | Class annotation types | skos:PrefLabel, rdfs:Definition |
 

@@ -13,7 +13,7 @@
 ## References
 |Aspect |Description| 
  |:---|:---|
-| Organisational Website | Persistent URI of Ontology File (or perma link to latest Version) |
+| Organisational Website | - |
 | Persistent URI of Ontology File | http://ontologies.berkeleybop.org/rex.owl |
 | Link to Documentation | - |
 | Link to Version directory | https://ontobee.org/ontology/REX |
