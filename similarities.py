@@ -327,7 +327,9 @@ df_numbers = pd.DataFrame(index = onto_list, columns = onto_list)
 onto_combinations = list(itertools.combinations(onto_list, 2))
 
 for onto_name in onto_list:
+    print("current ontology: {}".format(onto_name))
     onto = get_ontology("file://./ontology_files/" + onto_name).load()
+    print("... loaded successfully")
     try:
         #onto_labels = set([cls.label.first() for cls in onto.classes()])
         df_numbers[onto_name][onto_name] = len(list(onto.classes()))+1 # +1 for owl:Thing
@@ -351,7 +353,8 @@ print(df_numbers)
 
 #resDict["temporal region"]
 ##
-classList, labelList, compDict, resDict = ontology_comparison("AFO.owl","CHMO.owl")
+#classList, labelList, compDict, resDict = ontology_comparison("AFO.owl","CHMO.owl")
+classList, labelList, compDict, resDict = ontology_comparison("AFO.owl","BFO.owl")
 
 df_resIRIs = pd.DataFrame(columns = ["label","AFO.owl","CHMO.owl"])
 labelList = []
