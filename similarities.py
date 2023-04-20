@@ -2,6 +2,7 @@ from owlready2 import *
 import itertools
 import pandas as pd
 import os
+import seaborn as sns
 
 def ontology_comparison(onto_name1, onto_name2):
     # Load the two ontologies
@@ -349,6 +350,7 @@ for comb in onto_combinations:
 print(df_numbers)
 df_numbers.to_excel("MappingHeatmap.xlsx")
 
+sns.heatmap(df_numbers.fillna(0), annot=True, fmt='.1f', cmap='YlGnBu')
 
 #classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
 
