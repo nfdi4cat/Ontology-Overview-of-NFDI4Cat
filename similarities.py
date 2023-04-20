@@ -347,6 +347,7 @@ for comb in onto_combinations:
 
         
 print(df_numbers)
+df_numbers.to_excel("MappingHeatmap.xlsx")
 
 
 #classList, labelList, resDict = ontology_comparison("AFO.owl","BFO.owl")
