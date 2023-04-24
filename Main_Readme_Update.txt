@@ -7,7 +7,7 @@
 | [CHEMINF] |Chemical Information Ontology |
 | [CHMO] |Chemical Methods Ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
-| [ENVO] |Elementary Multiperspective Material Ontology |
+| [ENVO] |The Environment Ontology |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
 | [REX] |Ontology on Physico-chemical Processes |
