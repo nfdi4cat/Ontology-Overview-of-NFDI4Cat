@@ -5,7 +5,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |
-| Synonyms/Alternative Names | Ontology Acronym |
+| Synonyms/Alternative Names | - |
 | Ontology Acronym | PIMS-II |
 | Creator(s) & Issuing Organisation | Martin Thomas Horsch (ORCID 0000-0002-9464-6739) published by Innovation Centre for Process Data Technology (Inprodat e.V.) |
 | Nature of Organisational Structure | Single Maintainer |
@@ -15,8 +15,8 @@
  |:---|:---|
 | Organisational Website | http://www.molmod.info/semantics/pims-ii/ |
 | Persistent URI of Ontology File | http://www.molmod.info/semantics/pims-ii.ttl |
-| Link to Documentation | Link to Version directory |
-| Link to Version directory | Optional links (Papers, Additional GitHub Repo,...) |
+| Link to Documentation | - |
+| Link to Version directory | - |
 | Optional links (Papers, Repos,...) | http://ceur-ws.org/Vol-2969/paper3-FOUST.pdf; http://ceur-ws.org/Vol-3249/paper2-CAOS.pdf |
 
 ## Ontology Modeling And Availability
@@ -29,7 +29,7 @@
 | Shortest reasoning time | 1910 ms |
 | Aligned with Top Level Ontology | None |
 | Imports Ontology(ies) | None |
-| Prefixes used | Class annotation types |
+| Prefixes used | - |
 | Class annotation types | rdfs:Label; rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)

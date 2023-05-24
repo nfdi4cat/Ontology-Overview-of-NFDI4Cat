@@ -14,23 +14,23 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/enegri/OFM |
-| Persistent URI of Ontology File | Link to Documentation |
-| Link to Documentation | Link to Version directory |
-| Link to Version directory | Optional links (Papers, Additional GitHub Repo,...) |
-| Optional links (Papers, Repos,...) | Ontology Modeling And Availability |
+| Persistent URI of Ontology File | - |
+| Link to Documentation | - |
+| Link to Version directory | - |
+| Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | rdf/xml |
 | Degree of Inference/Composition | non-inferred; non-compacted |
-| License | Reasonable with |
+| License | - |
 | Validated Resoning with | Fact++, HermiT |
 | Shortest reasoning time | 41 |
 | Aligned with Top Level Ontology | None |
 | Imports Ontology(ies) | None |
-| Prefixes used | Class annotation types |
-| Class annotation types | Domain of Interest Represented (contained, related: broader/narrower, missing) |
+| Prefixes used | - |
+| Class annotation types | - |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description| 

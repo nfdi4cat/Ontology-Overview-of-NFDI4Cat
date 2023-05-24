@@ -25,8 +25,8 @@
 | Ontology Formats Provided | rdf/xml; ttl |
 | Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
 | License | CC BY 4.0 |
-| Validated Resoning with | Reasonable Shortest reasoning time |
-| Shortest reasoning time | Aligned with Top Level Ontology (BFO, OBO or EMMO ?) |
+| Validated Resoning with | - |
+| Shortest reasoning time | - |
 | Aligned with Top Level Ontology | OBO  |
 | Imports Ontology(ies) | Pato (139.364 axioms, 31.144 logical), stato (11.674 axioms, 2.332 logical) |
 | Prefixes used | rdfs, xsd |

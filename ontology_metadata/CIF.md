@@ -17,7 +17,7 @@
 | Persistent URI of Ontology File | http://emmo.info/domain-crystallography/cif_top |
 | Link to Documentation | https://github.com/emmo-repo/CIF-ontology |
 | Link to Version directory | https://github.com/emmo-repo/CIF-ontology |
-| Optional links (Papers, Repos,...) | Ontology Modeling And Availability |
+| Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
 |Aspect |Description| 
@@ -29,7 +29,7 @@
 | Shortest reasoning time | 15ms |
 | Aligned with Top Level Ontology | EMMO |
 | Imports Ontology(ies) | cif-core and emmo-inferred-chemistry2 |
-| Prefixes used | Class annotation types |
+| Prefixes used | - |
 | Class annotation types | skos:PrefLabel, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)

@@ -5,8 +5,8 @@
 |Aspect |Description| 
  |:---|:---|
 | Full Name | EDAM |
-| Synonyms/Alternative Names | Ontology Acronym |
-| Ontology Acronym | Creator(s) & Issuing Organisation |
+| Synonyms/Alternative Names | - |
+| Ontology Acronym | - |
 | Creator(s) & Issuing Organisation | Melissa Black, Lucie Lamothe, Hager Eldakroury, Mads Kierkegaard, Ankita Priya, Anne Machinda, Uttam Singh Khanduja, Drashti Patoliya, Rashika Rathi, Tawah Peggy Che Nico, Gloria Umutesi, Claudia Blankenburg, Anita Op, Precious Chieke, Omodolapo Babatunde, Steve Laurie, Steffen Neumann, Veit Schwämmle, Ivan Kuzmin, Chris Hunter, Jonathan Karr, Jon Ison, Alban Gaignard, Bryan Brancotte, Hervé Ménager, Matúš Kalaš  |
 | Nature of Organisational Structure | Group of MaintainersMaintainer |
 
@@ -17,7 +17,7 @@
 | Persistent URI of Ontology File | http://www.molmod.info/semantics/pims-ii.ttl |
 | Link to Documentation | https://edamontology.github.io/edam-browser |
 | Link to Version directory | https://github.com/edamontology/edamontology/tree/main/releases |
-| Optional links (Papers, Repos,...) | Ontology Modeling And Availability |
+| Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
 |Aspect |Description| 
@@ -29,7 +29,7 @@
 | Shortest reasoning time | 1910 ms |
 | Aligned with Top Level Ontology | None |
 | Imports Ontology(ies) | None |
-| Prefixes used | Class annotation types |
+| Prefixes used | - |
 | Class annotation types | rdfs:Label; rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
