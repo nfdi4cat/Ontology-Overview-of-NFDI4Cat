@@ -25,7 +25,7 @@
 | Ontology Formats Provided | owl; obo |
 | Degree of Inference/Composition | not defined |
 | License | Creative Commons 4.0 |
-| Validated Resoning with | 360 ms by HermiT; 118 ms by FaCT++_x000D_ |
+| Validated Resoning with | 360 ms by HermiT; 118 ms by FaCT++ |
 | Shortest reasoning time | 118ms |
 | Aligned with Top Level Ontology | OBO |
 | Imports Ontology(ies) | only self |
