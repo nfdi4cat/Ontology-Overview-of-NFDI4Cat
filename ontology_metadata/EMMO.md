@@ -26,9 +26,9 @@
 | Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
 | License | Creative Commons Attribution 4.0 International Public License |
 | Validated Resoning with | Fact++, HermiT |
-| Shortest reasoning time | - |
-| Aligned with Top Level Ontology | - |
-| Imports Ontology(ies) | - |
+| Shortest reasoning time | Aligned with Top Level Ontology (BFO, OBO or EMMO ?) |
+| Aligned with Top Level Ontology | Imports Ontology(ies) |
+| Imports Ontology(ies) | Prefixes used |
 | Prefixes used | dcterms; skos; |
 | Class annotation types | skos:PrefLabel, rdfs:Definition |
 
@@ -62,3 +62,19 @@
 | Annotation Property count | 32 |
 
 ## Comments
+Fragen die das dokument beantworten muss:
+Alles was wir für ein Paper brauchen
+Alles was wir für TA1 brauchen
+Alles was wir für TIB brauchen
+ToDos:
+Word vorbereiten, Zusammenfassung der Ziele an Norbert schicken
+23 ontologien der ontology_collection durcharbeiten und Excel-Template ausfüllen
+Ziele: 
+Ontologie-Sammlung auf TIB-Homepage
+Kategorisierung/Klassifizierung der Ontologien
+TA1-Taskforce "Ontology World Map" abgeschlossen
+Paper: In Coop mit bspw. TIB NFDI4Ing? Nfdi4chem? 
+Das Paper hier nachbauen:
+https://doi.org/10.1515/pac-2021-2007
+BFO Ontologien aligned bleiben
+EMMO zwar gut, aber noch zu sehr in development, daher zzt noch nicht richtig verwendbar. Trotzdem EMMO-Ontologien auflisten

@@ -1,10 +1,10 @@
-## SBO - Systems Biology Ontology
+## SBO - SBO
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | Systems Biology Ontology |
+| Full Name | SBO |
 | Synonyms/Alternative Names | Systems Biology Ontology |
 | Ontology Acronym | SBO |
 | Creator(s) & Issuing Organisation | Tung Nguyen, Jonathan Karr, Rahuman Sheriff |

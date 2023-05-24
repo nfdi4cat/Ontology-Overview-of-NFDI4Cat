@@ -1,11 +1,11 @@
-## OntoCAPE - Ontology for the domain of Computer Aided Process Engineering
+## OntoCAPE - OntoCAPE
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | Ontology for the domain of Computer Aided Process Engineering |
-| Synonyms/Alternative Names | OntoCAPE |
+| Full Name | OntoCAPE |
+| Synonyms/Alternative Names | ontology for the domain of Computer Aided Process Engineering |
 | Ontology Acronym | OntoCAPE |
 | Creator(s) & Issuing Organisation | RWTH Aachen University |
 | Nature of Organisational Structure | University |

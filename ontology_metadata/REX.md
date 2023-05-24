@@ -1,10 +1,10 @@
-## REX - Ontology on Physico-chemical Processes
+## REX - REX
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | Ontology on Physico-chemical Processes |
+| Full Name | REX |
 | Synonyms/Alternative Names | Physico-chemical Process |
 | Ontology Acronym | REX |
 | Creator(s) & Issuing Organisation | - |
@@ -13,7 +13,7 @@
 ## References
 |Aspect |Description| 
  |:---|:---|
-| Organisational Website | - |
+| Organisational Website | Persistent URI of Ontology File (or perma link to latest Version) |
 | Persistent URI of Ontology File | http://ontologies.berkeleybop.org/rex.owl |
 | Link to Documentation | - |
 | Link to Version directory | https://ontobee.org/ontology/REX |
