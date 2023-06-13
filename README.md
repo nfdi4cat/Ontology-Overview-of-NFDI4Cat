@@ -24,7 +24,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [CIF] |Crystallographic Information Framework Ontology |
 | [EDAM] |EDAM - Bioscientific data analysis ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
-| [ENVO] |Elementary Multiperspective Material Ontology |
+| [ENVO] |Environmental Ontology |
 | [M3] |Machine to Machine Measurements Ontology |
 | [MS] |Elementary Multiperspective Material Ontology |
 | [OFM] |Ontology for Manufacturing and Logistics |
