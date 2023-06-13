@@ -16,7 +16,7 @@
 | Organisational Website | https://basic-formal-ontology.org/ |
 | Persistent URI of Ontology File | http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl |
 | Link to Documentation | https://raw.githubusercontent.com/BFO-ontology/BFO/master/docs/bfo2-reference/BFO2-Reference.pdf |
-| Link to Version directory | - |
+| Link to Version directory | Optional links (Papers, Additional GitHub Repo,...) |
 | Optional links (Papers, Repos,...) | https://github.com/BFO-ontology/BFO |
 
 ## Ontology Modeling And Availability

@@ -21,14 +21,19 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [ChEBI] |Chemical Entities of Biological Interest |
 | [CHEMINF] |Chemical Information Ontology |
 | [CHMO] |Chemical Methods Ontology |
+| [CIF] |Crystallographic Information Framework Ontology |
+| [EDAM] |EDAM |
 | [EMMO] |Elementary Multiperspective Material Ontology |
-| [ENVO] |The Environment Ontology |
-| [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
+| [ENVO] |Elementary Multiperspective Material Ontology |
+| [M3] |Machine to Machine Measurements Ontology |
+| [MS] |Elementary Multiperspective Material Ontology |
+| [OFM] |Ontology for Manufacturing and Logistics |
+| [OntoCAPE] |OntoCAPE |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
-| [REX] |Ontology on Physico-chemical Processes |
-| [SBO] |Systems Biology Ontology |
+| [PIMS-II] |Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |
+| [REX] |REX |
+| [SBO] |SBO |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
-
 
 ## Ontologies considered in NFDI4Cat
 | Ontology Name | Considered in NFDI4Cat? |
@@ -40,23 +45,23 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [ChEBI]         | yes                       |
 | [CHEMINF]       | yes                       |
 | [CHMO]          | yes                       |
-| [CIF-Ontology]  |                         |
+| [CIF-Ontology]  | yes                        |
 | [DOLCE]         | no                       |
-| [EDAM]          |                         |
+| [EDAM]          | yes                        |
 | [EMMO]          | yes                       |
 | [ENVO]          | yes                       |
 | [ISO 15926]     | no                       |
 | [ISO 15926-14]  | no                       |
-| [M3]            |                         |
-| [MS]            |                         |
+| [M3]            | yes                        |
+| [MS]            | yes                        |
 | [NFDI4Ing]      |                         |
-| [OFM]           |                         |
+| [OFM]           | yes                        |
 | [OM]            |                         |
 | [OntoCAPE]      | yes                       |
 | [OntoCompChem]  | no                       |
 | [OntoKin]       | no                       |
 | [OSMO]          | yes                       |
-| [PIMS-II]       |                         |
+| [PIMS-II]       | yes                        |
 | [REX]           | yes                       |
 | [RXNO]          |                         |
 | [SBO]           | yes                       |
@@ -71,10 +76,16 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 [ChEBI]: ./ontology_metadata/ChEBI.md
 [CHEMINF]: ./ontology_metadata/CHEMINF.md
 [CHMO]: ./ontology_metadata/CHMO.md
+[CIF]: ./ontology_metadata/CIF.md
+[EDAM]: ./ontology_metadata/EDAM.md
 [EMMO]: ./ontology_metadata/EMMO.md
 [ENVO]: ./ontology_metadata/ENVO.md
+[M3]: ./ontology_metadata/M3.md
+[MS]: ./ontology_metadata/MS.md
+[OFM]: ./ontology_metadata/OFM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
 [OSMO]: ./ontology_metadata/OSMO.md
+[PIMS-II]: ./ontology_metadata/PIMS-II.md
 [REX]: ./ontology_metadata/REX.md
 [SBO]: ./ontology_metadata/SBO.md
 [VIMMP]: ./ontology_metadata/VIMMP.md
