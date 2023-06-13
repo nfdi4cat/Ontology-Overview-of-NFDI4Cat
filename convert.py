@@ -87,7 +87,7 @@ def UpdateMainReadme():
     print('./README.md to update the linking to the ontology markdown files.')
     print('================================================================')
     
-Master_Table = './master_table/Possible_Template_TF_OntoWorldMap_2023-05-17-14-56_HB.xlsx'
+Master_Table = './master_table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx'
 
 ConvertExcelToMD(Master_Table)
 

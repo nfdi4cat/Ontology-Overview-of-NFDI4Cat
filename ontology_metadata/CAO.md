@@ -14,7 +14,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://champ.stuchalk.domains.unf.edu/ |
-| Persistent URI of Ontology File | http://champ-project.org/images/ontology/cao.owl |
+| Persistent URI of Ontology File | https://champ.stuchalk.domains.unf.edu/images/ontology/cao.owl |
 | Link to Documentation | https://champ.stuchalk.domains.unf.edu/best-practices |
 | Link to Version directory | https://champ.stuchalk.domains.unf.edu/project-roadmap |
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/4411422 |
@@ -62,4 +62,4 @@
 | Annotation Property count | 27 |
 
 ## Comments
-Just forget this Ontology ever existed, it is that bad!
+Not really usable, not FAIR

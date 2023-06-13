@@ -1,11 +1,11 @@
-## ENVO - Elementary Multiperspective Material Ontology
+## ENVO - The Environment Ontology
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | Elementary Multiperspective Material Ontology |
-| Synonyms/Alternative Names | Environmental Ontology |
+| Full Name | The Environment Ontology |
+| Synonyms/Alternative Names | - |
 | Ontology Acronym | EnvO |
 | Creator(s) & Issuing Organisation |  Pier Luigi Buttigieg https://orcid.org/0000-0002-4366-3088;   Christopher Mungall https://orcid.org/0000-0002-6601-2165;  Suzanna Lewis https://orcid.org/0000-0002-8343-612X; Norman Morrison https://orcid.org/0000-0003-1604-1512 |
 | Nature of Organisational Structure | small group |

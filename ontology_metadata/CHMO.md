@@ -5,7 +5,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Methods Ontology |
-| Synonyms/Alternative Names | Ontology Acronym |
+| Synonyms/Alternative Names | - |
 | Ontology Acronym | CHMO |
 | Creator(s) & Issuing Organisation | Colin Batchelor |
 | Nature of Organisational Structure | single maintainer |
@@ -17,7 +17,7 @@
 | Persistent URI of Ontology File | http://purl.obolibrary.org/obo/chmo.owl |
 | Link to Documentation | - |
 | Link to Version directory | - |
-| Optional links (Papers, Repos,...) | Ontology Modeling And Availability |
+| Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
 |Aspect |Description| 
@@ -25,7 +25,7 @@
 | Ontology Formats Provided | owl; obo |
 | Degree of Inference/Composition | not defined |
 | License | Creative Commons 4.0 |
-| Validated Resoning with | 360 ms by HermiT; 118 ms by FaCT++_x000D_ |
+| Validated Resoning with | 360 ms by HermiT; 118 ms by FaCT++ |
 | Shortest reasoning time | 118ms |
 | Aligned with Top Level Ontology | OBO |
 | Imports Ontology(ies) | only self |
