@@ -5,7 +5,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Ontology for Manufacturing and Logistics |
-| Synonyms/Alternative Names | Ontology Acronym |
+| Synonyms/Alternative Names | - |
 | Ontology Acronym | OFM |
 | Creator(s) & Issuing Organisation | Beatrice Cabrini |
 | Nature of Organisational Structure | Single Maintainer |
@@ -14,7 +14,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/enegri/OFM |
-| Persistent URI of Ontology File | - |
+| Persistent URI of Ontology File | https://raw.githubusercontent.com/enegri/OFM/master/OFM.owl |
 | Link to Documentation | - |
 | Link to Version directory | - |
 | Optional links (Papers, Repos,...) | - |

@@ -5,7 +5,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Systems Biology Ontology |
-| Synonyms/Alternative Names | Systems Biology Ontology |
+| Synonyms/Alternative Names | - |
 | Ontology Acronym | SBO |
 | Creator(s) & Issuing Organisation | Tung Nguyen, Jonathan Karr, Rahuman Sheriff |
 | Nature of Organisational Structure | Maintained by community via GitHub |

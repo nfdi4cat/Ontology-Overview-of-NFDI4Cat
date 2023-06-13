@@ -25,8 +25,8 @@
 | Ontology Formats Provided | ttl |
 | Degree of Inference/Composition | Inferred & non-inferred; Compacted & non-compacted |
 | License | Creative Commons Attribution 4.0 International License |
-| Validated Resoning with | Reasonable Shortest reasoning time |
-| Shortest reasoning time | Aligned with Top Level Ontology (BFO, OBO or EMMO ?) |
+| Validated Resoning with | - |
+| Shortest reasoning time | - |
 | Aligned with Top Level Ontology | BFO (https://bioportal.bioontology.org/ontologies/AFO) |
 | Imports Ontology(ies) | https://bioportal.bioontology.org/ontologies/AFO/?p=mappings |
 | Prefixes used | dcterms; skos; |

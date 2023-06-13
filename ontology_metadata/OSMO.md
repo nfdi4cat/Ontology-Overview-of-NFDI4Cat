@@ -62,4 +62,5 @@
 | Annotation Property count | 12 |
 
 ## Comments
-A sub ontology not really useable as a standalone ontology but more as a metadata framework, as such referre to the VIMMP to see its surrounding Ontology
+A sub ontology not really useable as a standalone ontology but more as a metadata framework, as such refers to the VIMMP to see its surrounding Ontology
+High reasoning time

@@ -7,17 +7,17 @@
 | [CHEMINF] |Chemical Information Ontology |
 | [CHMO] |Chemical Methods Ontology |
 | [CIF] |Crystallographic Information Framework Ontology |
-| [EDAM] |EDAM |
+| [EDAM] |EDAM - Bioscientific data analysis ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
 | [ENVO] |Elementary Multiperspective Material Ontology |
 | [M3] |Machine to Machine Measurements Ontology |
 | [MS] |Elementary Multiperspective Material Ontology |
 | [OFM] |Ontology for Manufacturing and Logistics |
-| [OntoCAPE] |OntoCAPE |
+| [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
 | [PIMS-II] |Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |
-| [REX] |REX |
-| [SBO] |SBO |
+| [REX] |Physico-chemical process |
+| [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
 
 [AFO]: ./ontology_metadata/AFO.md

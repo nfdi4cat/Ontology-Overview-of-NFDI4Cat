@@ -1,11 +1,11 @@
-## REX - Ontology on Physico-chemical Processes
+## REX - Physico-chemical process
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | Ontology on Physico-chemical Processes |
-| Synonyms/Alternative Names | Physico-chemical Process |
+| Full Name | Physico-chemical process |
+| Synonyms/Alternative Names | - |
 | Ontology Acronym | REX |
 | Creator(s) & Issuing Organisation | - |
 | Nature of Organisational Structure | - |
@@ -62,4 +62,4 @@
 | Annotation Property count | 12 |
 
 ## Comments
-Deprecated ontology, that contains plenty of reaction classes, also catalytic ones, but only classifies broadly and does not contain many relations.
+Orphaned ontology! Contains plenty of reaction classes, also catalytic ones. Only classifies broadly and does not contain many relations.

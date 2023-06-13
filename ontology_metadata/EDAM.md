@@ -1,12 +1,12 @@
-## EDAM - EDAM
+## EDAM - EDAM - Bioscientific data analysis ontology
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | EDAM |
+| Full Name | EDAM - Bioscientific data analysis ontology |
 | Synonyms/Alternative Names | - |
-| Ontology Acronym | - |
+| Ontology Acronym | EDAM |
 | Creator(s) & Issuing Organisation | Melissa Black, Lucie Lamothe, Hager Eldakroury, Mads Kierkegaard, Ankita Priya, Anne Machinda, Uttam Singh Khanduja, Drashti Patoliya, Rashika Rathi, Tawah Peggy Che Nico, Gloria Umutesi, Claudia Blankenburg, Anita Op, Precious Chieke, Omodolapo Babatunde, Steve Laurie, Steffen Neumann, Veit Schwämmle, Ivan Kuzmin, Chris Hunter, Jonathan Karr, Jon Ison, Alban Gaignard, Bryan Brancotte, Hervé Ménager, Matúš Kalaš  |
 | Nature of Organisational Structure | Group of MaintainersMaintainer |
 
@@ -14,10 +14,10 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/edamontology/edamontology |
-| Persistent URI of Ontology File | http://www.molmod.info/semantics/pims-ii.ttl |
+| Persistent URI of Ontology File | http://edamontology.org/EDAM.owl |
 | Link to Documentation | https://edamontology.github.io/edam-browser |
 | Link to Version directory | https://github.com/edamontology/edamontology/tree/main/releases |
-| Optional links (Papers, Repos,...) | - |
+| Optional links (Papers, Repos,...) | https://doi.org/10.7490/f1000research.1118900.1  |
 
 ## Ontology Modeling And Availability
 |Aspect |Description| 
