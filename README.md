@@ -31,11 +31,9 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [MOP] |Molecular Process Ontology |
 | [MS] |Elementary Multiperspective Material Ontology |
 | [OBI] |Ontology for Biomedical Investigations |
-| [OFM] |Ontology for Manufacturing and Logistics |
 | [OM] |Ontology of units of Measure |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
-| [PIMS-II] |Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |
 | [REX] |Physico-chemical process |
 | [RXNO] |RXNO: name reaction ontology |
 | [SBO] |Systems Biology Ontology |
