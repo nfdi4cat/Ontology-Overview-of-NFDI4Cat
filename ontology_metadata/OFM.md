@@ -26,7 +26,7 @@
 | Degree of Inference/Composition | non-inferred; non-compacted |
 | License | - |
 | Validated Resoning with | Fact++, HermiT |
-| Shortest reasoning time | 41 |
+| Shortest reasoning time | 41 ms |
 | Aligned with Top Level Ontology | None |
 | Imports Ontology(ies) | None |
 | Prefixes used | - |
@@ -63,19 +63,3 @@
 
 ## Comments
 Rudimentary Taxonomy with good relations and hierarchy but very compact
-Fragen die das dokument beantworten muss:
-Alles was wir für ein Paper brauchen
-Alles was wir für TA1 brauchen
-Alles was wir für TIB brauchen
-ToDos:
-Word vorbereiten, Zusammenfassung der Ziele an Norbert schicken
-23 ontologien der ontology_collection durcharbeiten und Excel-Template ausfüllen
-Ziele: 
-Ontologie-Sammlung auf TIB-Homepage
-Kategorisierung/Klassifizierung der Ontologien
-TA1-Taskforce "Ontology World Map" abgeschlossen
-Paper: In Coop mit bspw. TIB NFDI4Ing? Nfdi4chem? 
-Das Paper hier nachbauen:
-https://doi.org/10.1515/pac-2021-2007
-BFO Ontologien aligned bleiben
-EMMO zwar gut, aber noch zu sehr in development, daher zzt noch nicht richtig verwendbar. Trotzdem EMMO-Ontologien auflisten

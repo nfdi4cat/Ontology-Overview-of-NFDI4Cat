@@ -25,7 +25,7 @@
 | Ontology Formats Provided | ttl |
 | Degree of Inference/Composition | not defined |
 | License | Creative commons 3.0 |
-| Validated Resoning with | in 431 ms by HermiT; in 39 ms by FaCT++ |
+| Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 39ms |
 | Aligned with Top Level Ontology | BFO v1.1 |
 | Imports Ontology(ies) | obo & cheminfo |

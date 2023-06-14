@@ -24,8 +24,8 @@
  |:---|:---|
 | Ontology Formats Provided | owl, obo |
 | Degree of Inference/Composition | non inferred |
-| License | CC-BY-4.0 license  |
-| Validated Resoning with | 104ms HermiT 1.4.3.456, 25ms FaCT++ 1.6.8 |
+| License | CC-BY-4.0  |
+| Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 25ms |
 | Aligned with Top Level Ontology | is TLO |
 | Imports Ontology(ies) | - |

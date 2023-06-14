@@ -24,9 +24,9 @@
  |:---|:---|
 | Ontology Formats Provided | ttl |
 | Degree of Inference/Composition | unknown |
-| License | CC-BY-4.0 license ? The emmo repo is cc-by-4 the subrepo which should have its own licence has none attached |
+| License | CC-BY-4.0 ? The emmo repo is cc-by-4 the subrepo which should have its own licence has none attached |
 | Validated Resoning with | Fact++, HermiT |
-| Shortest reasoning time | 15ms |
+| Shortest reasoning time | 15 ms |
 | Aligned with Top Level Ontology | EMMO |
 | Imports Ontology(ies) | cif-core and emmo-inferred-chemistry2 |
 | Prefixes used | - |
