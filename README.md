@@ -30,6 +30,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
 | [MOP] |Molecular Process Ontology |
 | [MS] |Elementary Multiperspective Material Ontology |
+| [OBI] |Ontology for Biomedical Investigations |
 | [OFM] |Ontology for Manufacturing and Logistics |
 | [OM] |Ontology of units of Measure |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
@@ -62,6 +63,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [MOP]           | yes						|
 | [MS]            | yes                        |
 | [metadata4ing]      | yes                        |
+| [OBI] | yes |
 | [OFM]           | yes                        |
 | [OM]            | yes                       |
 | [OntoCAPE]      | yes                       |
@@ -95,6 +97,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 [metadata4ing]: ./ontology_metadata/metadata4ing.md
 [MOP]: ./ontology_metadata/MOP.md
 [MS]: ./ontology_metadata/MS.md
+[OBI]: ./ontology_metadata/OBI.md
 [OFM]: ./ontology_metadata/OFM.md
 [OM]: ./ontology_metadata/OM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md

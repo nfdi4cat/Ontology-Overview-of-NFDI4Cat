@@ -1,0 +1,65 @@
+## OBI - Ontology for Biomedical Investigations
+
+
+## Ontology
+|Aspect |Description| 
+ |:---|:---|
+| Full Name | Ontology for Biomedical Investigations |
+| Synonyms/Alternative Names | - |
+| Ontology Acronym | OBI |
+| Creator(s) & Issuing Organisation | OBI Consortium |
+| Nature of Organisational Structure | Consortium, Ontology is still actively maintained |
+
+## References
+|Aspect |Description| 
+ |:---|:---|
+| Organisational Website | https://obi-ontology.org/ |
+| Persistent URI of Ontology File | http://purl.obolibrary.org/obo/obi.owl |
+| Link to Documentation | https://obi-ontology.org/docs/ |
+| Link to Version directory | https://github.com/obi-ontology/obi |
+| Optional links (Papers, Repos,...) | doi: 10.1371/journal.pone.0154556; https://en.wikipedia.org/wiki/Ontology_for_Biomedical_Investigations |
+
+## Ontology Modeling And Availability
+|Aspect |Description| 
+ |:---|:---|
+| Ontology Formats Provided | owl, obo |
+| Degree of Inference/Composition | non inferred, available as core version |
+| License | CC-BY-4.0 |
+| Validated Resoning with | HermiT |
+| Shortest reasoning time | - |
+| Aligned with Top Level Ontology | BFO |
+| Imports Ontology(ies) | - |
+| Prefixes used | dc,foaf,obo,oboInOwl,owl,protege,rdf,rdfs,terms,xml |
+| Class annotation types | rdfs:label, OBO:IAO_0000115 for textual definitions |
+
+## Domain of Interest Represented (contained, related: broader/narrower, missing)
+|Aspect |Description| 
+ |:---|:---|
+| Biocatalysis | related:narrower |
+| Heterogenous catalysis | missing |
+| Homogenous catalysis | missing |
+| Chemical Substance Modeling | related: narrower |
+| Material Modeling | related: broader |
+| Process Modeling | related: narrower |
+| Synthesis Data | missing |
+| Operando Data | related: broader |
+| Performance Data | related: broader |
+| Characterisation Data | related: broader |
+| Heat, Transport and Kinetic Data | missing |
+| Process Design, Energy and Cost Data | missing |
+| Top Level Ontology | contained |
+
+## Ontology Characteristics
+|Aspect |Description| 
+ |:---|:---|
+| Axioms | 51910 |
+| Logical | 10122 |
+| Declaration | 5354 |
+| Class count | 4866 |
+| Object property count | 98 |
+| Data property count | 8 |
+| Individual count | 306 |
+| Annotation Property count | 73 |
+
+## Comments
+Quite well formed ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation.
