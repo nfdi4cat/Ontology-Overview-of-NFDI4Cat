@@ -64,13 +64,13 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [MS]            | yes                        |
 | [metadata4ing]      | yes                        |
 | [OBI] | yes |
-| [OFM]           | yes                        |
+| [OFM]           | no                        |
 | [OM]            | yes                       |
 | [OntoCAPE]      | yes                       |
 | [OntoCompChem]  | no                       |
 | [OntoKin]       | no                       |
 | [OSMO]          | yes                       |
-| [PIMS-II]       | yes                        |
+| [PIMS-II]       | no                        |
 | [REX]           | yes                       |
 | [RXNO]          | yes                        |
 | [SBO]           | yes                       |
