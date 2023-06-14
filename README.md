@@ -16,6 +16,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | Link to Markdown | Ontology Name |
  |:---:|:---|
 | [AFO] |Allotrope Foundation Ontology |
+| [BAO] |BioAssay Ontology |
 | [BFO] |Basic Formal Ontology |
 | [CAO] |Chemical Analysis Ontology |
 | [ChEBI] |Chemical Entities of Biological Interest |
@@ -26,20 +27,25 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [EMMO] |Elementary Multiperspective Material Ontology |
 | [ENVO] |Environmental Ontology |
 | [M3] |Machine to Machine Measurements Ontology |
+| [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
+| [MOP] |Molecular Process Ontology |
 | [MS] |Elementary Multiperspective Material Ontology |
 | [OFM] |Ontology for Manufacturing and Logistics |
+| [OM] |Ontology of units of Measure |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
 | [PIMS-II] |Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |
 | [REX] |Physico-chemical process |
+| [RXNO] |RXNO: name reaction ontology |
 | [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
+
 
 ## Ontologies considered in NFDI4Cat
 | Ontology Name | Considered in NFDI4Cat? |
 |:---------------:|:-------------------------:|
 | [AFO]           | yes                       |
-| [BAO]           |                         |
+| [BAO]           | yes                        |
 | [BFO]           | yes                       |
 | [CAO]           | yes                       |
 | [ChEBI]         | yes                       |
@@ -53,17 +59,18 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [ISO 15926]     | no                       |
 | [ISO 15926-14]  | no                       |
 | [M3]            | yes                        |
+| [MOP]           | yes						|
 | [MS]            | yes                        |
-| [NFDI4Ing]      |                         |
+| [metadata4ing]      | yes                        |
 | [OFM]           | yes                        |
-| [OM]            |                         |
+| [OM]            | yes                       |
 | [OntoCAPE]      | yes                       |
 | [OntoCompChem]  | no                       |
 | [OntoKin]       | no                       |
 | [OSMO]          | yes                       |
 | [PIMS-II]       | yes                        |
 | [REX]           | yes                       |
-| [RXNO]          |                         |
+| [RXNO]          | yes                        |
 | [SBO]           | yes                       |
 | [VIMMP]         | yes                       |
 
@@ -71,6 +78,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 
 
 [AFO]: ./ontology_metadata/AFO.md
+[BAO]: ./ontology_metadata/BAO.md
 [BFO]: ./ontology_metadata/BFO.md
 [CAO]: ./ontology_metadata/CAO.md
 [ChEBI]: ./ontology_metadata/ChEBI.md
@@ -81,14 +89,19 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 [EMMO]: ./ontology_metadata/EMMO.md
 [ENVO]: ./ontology_metadata/ENVO.md
 [M3]: ./ontology_metadata/M3.md
+[metadata4ing]: ./ontology_metadata/metadata4ing.md
+[MOP]: ./ontology_metadata/MOP.md
 [MS]: ./ontology_metadata/MS.md
 [OFM]: ./ontology_metadata/OFM.md
+[OM]: ./ontology_metadata/OM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
 [OSMO]: ./ontology_metadata/OSMO.md
 [PIMS-II]: ./ontology_metadata/PIMS-II.md
 [REX]: ./ontology_metadata/REX.md
+[RXNO]: ./ontology_metadata/RXNO.md
 [SBO]: ./ontology_metadata/SBO.md
 [VIMMP]: ./ontology_metadata/VIMMP.md
+
 
 
 [General Template]: ./General_Template.md

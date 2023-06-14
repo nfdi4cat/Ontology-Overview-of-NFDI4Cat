@@ -25,7 +25,7 @@
 | Ontology Formats Provided | owl, obo |
 | Degree of Inference/Composition | non inferred |
 | License | Artistic-2.0 license  |
-| Validated Resoning with | 48 ms by HermiT; 11 ms by FaCT++ |
+| Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 11 ms |
 | Aligned with Top Level Ontology | OBO |
 | Imports Ontology(ies) | Prefixes used |
