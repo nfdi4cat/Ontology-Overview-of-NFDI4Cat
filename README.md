@@ -51,7 +51,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [ChEBI]         | yes                       |
 | [CHEMINF]       | yes                       |
 | [CHMO]          | yes                       |
-| [CIF-Ontology]  | yes                        |
+| [CIF]  		  | yes        					|                
 | [DOLCE]         | no                       |
 | [EDAM]          | yes                        |
 | [EMMO]          | yes                       |
@@ -85,6 +85,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 [CHEMINF]: ./ontology_metadata/CHEMINF.md
 [CHMO]: ./ontology_metadata/CHMO.md
 [CIF]: ./ontology_metadata/CIF.md
+[DOLCE]: <a href="http://www.loa.istc.cnr.it/dolce/overview.html">
 [EDAM]: ./ontology_metadata/EDAM.md
 [EMMO]: ./ontology_metadata/EMMO.md
 [ENVO]: ./ontology_metadata/ENVO.md
