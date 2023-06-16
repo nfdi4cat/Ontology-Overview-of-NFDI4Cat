@@ -380,12 +380,19 @@ def load_ontology_from_URL(onto_name, URL):
 onto_URLs = get_ontology_URLs()
 
 
-### Conversion of ontologies
+## download non-owl files:
+import urllib  # the lib that handles the url stuff
+
+data = urllib.request("https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl") # it's a file like object and works just like a file
+for line in data: # files are iterable
+    print(line)
+
+### Conversion of ontologies with ROBOT
 #helpful robot: https://github.com/protegeproject/protege/issues/1098
 # to convert ttl files to owl on the fly
 #robot convert --input <INPUT_FILE> --format <FORMAT> --output <OUTPUT_FILE>
 # robot convert --input bfo.owl --format ttl --output bfo.ttl
-#robot convert --input https://purl.vimmp.eu/semantics/osmo/osmo.ttl --format owl --output osmo.owl
+#robot convert --input https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl --format owl --output osmo.owl
 path_to_file = 'data/2019-12-12/'
 file = 'ADAZ19.json'
 
