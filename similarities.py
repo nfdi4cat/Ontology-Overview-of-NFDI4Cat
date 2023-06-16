@@ -394,14 +394,15 @@ def ttl_to_owl(url):
 
     #url = "https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl"
     filename = url.rpartition('/')[-1]
+    onto_name = filename.split('.')[0]
     onto_txt = urllib.request.urlopen(url)
     onto_txt = onto_txt.read()#readlines()
 
-    with open('./ontologies/'+filename.split('.')[0]+'.ttl', 'wb') as onto_file:
+    with open('./ontologies/'+onto_name+'.ttl', 'wb') as onto_file:
         onto_file.write(onto_txt)
     
     #os.chdir("robot")
-    os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output test.owl".format(filename))
+    os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}.owl".format(filename, onto_name))
     
 
 
