@@ -3,6 +3,7 @@ import itertools
 import pandas as pd
 import os
 import seaborn as sns
+import json
 
 def ontology_comparison(onto_name1, onto_name2):
     # Load the two ontologies
@@ -317,9 +318,36 @@ def ontology_comparison(onto_name1, onto_name2):
     
     return onto1_classes, common_labels, temp_dict_out, result_dict
 
+####
 
+def load_ontologies_metadata():
+    ## Reads in the metadata-json files of each ontology, omitting the 
+    #  GeneralStructure and md-translator files as they do not contain metadata.
+    #  output: metadata_dict that contains the acronyms of the ontologies as keys
+    #          and the respective json-file as dictionary are the values
+    json_list = [f for f in os.listdir('./json/') if (f.endswith('.json') and f != "GeneralStructure.json" and f!= "md-translator.json")]
+    metadata_dict = {}
+    for json_name in json_list:
+        with open('./json/' + json_name) as file:
+            onto_metadata = json.load(file)
+            metadata_dict[onto_metadata["Ontology"]["Ontology Acronym"]] = onto_metadata
+  
+    return metadata_dict        
 
+####
 
+####
+
+def get_ontology_URLs():
+    ## Reads in the URLs of the ontology files and returns returns them as 
+    #  dictionary with {ontology name : URL}
+    md_dict = load_ontologies_metadata()
+    for keys in md_dict:
+        URL = md_dict[keys]["References"]["Persistent URI of Ontology File (or perma link to latest Version)"]        
+        
+####
+
+"""
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
 onto_list = [s for s in os.listdir('./ontology_files/') if s.endswith('.owl')]
 
@@ -374,7 +402,7 @@ df_resIRIs["label"] = labelList
 #with open("tester123.json", "w") as f:
 #    print(resDict, file =f)
 
-
+"""
 
 """
 for labelStr in resDict:
