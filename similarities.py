@@ -383,9 +383,15 @@ onto_URLs = get_ontology_URLs()
 ## download non-owl files:
 import urllib  # the lib that handles the url stuff
 
-data = urllib.request("https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl") # it's a file like object and works just like a file
-for line in data: # files are iterable
-    print(line)
+url = "https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl"
+
+onto_txt = urllib.request.urlopen(url)
+onto_txt = onto_txt.read()#readlines()
+
+
+with open('./test.txt', 'wb') as download:
+    download.write(onto_txt)
+    
 
 ### Conversion of ontologies with ROBOT
 #helpful robot: https://github.com/protegeproject/protege/issues/1098
@@ -393,7 +399,8 @@ for line in data: # files are iterable
 #robot convert --input <INPUT_FILE> --format <FORMAT> --output <OUTPUT_FILE>
 # robot convert --input bfo.owl --format ttl --output bfo.ttl
 #robot convert --input https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl --format owl --output osmo.owl
-path_to_file = 'data/2019-12-12/'
+
+"""path_to_file = 'data/2019-12-12/'
 file = 'ADAZ19.json'
 
 cur_dir = os.getcwd()
@@ -405,7 +412,7 @@ os.system(f'tar -czf {file}.tar.gz {file}')
 os.chdir(cur_dir) # go back
 
 os.system(" ./robot/robot --input {} --format owl --output ./ontologies/OSMO.owl".format(onto_URLs["OSMO"]))
-
+"""
 
 #for key in onto_URLs:
 #    load_ontology_from_URL(key, onto_URLs[key])
