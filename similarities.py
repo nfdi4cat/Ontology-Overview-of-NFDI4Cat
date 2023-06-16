@@ -397,8 +397,11 @@ def ttl_to_owl(url):
     onto_txt = urllib.request.urlopen(url)
     onto_txt = onto_txt.read()#readlines()
 
-    with open('./ontologies/'+filename.split('.')[0]+'.ttl', 'wb') as download:
-        download.write(onto_txt)
+    with open('./ontologies/'+filename.split('.')[0]+'.ttl', 'wb') as onto_file:
+        onto_file.write(onto_txt)
+    
+    #os.chdir("robot")
+    os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output test.owl".format(filename))
     
 
 
