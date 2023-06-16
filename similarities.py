@@ -383,14 +383,15 @@ onto_URLs = get_ontology_URLs()
 ## download non-owl files:
 import urllib  # the lib that handles the url stuff
 
-url = "https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl"
 
-onto_txt = urllib.request.urlopen(url)
-onto_txt = onto_txt.read()#readlines()
+def ttl_to_owl(url):
+    #url = "https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl"
+    filename = url.rpartition('/')[-1]
+    onto_txt = urllib.request.urlopen(url)
+    onto_txt = onto_txt.read()#readlines()
 
-
-with open('./test.txt', 'wb') as download:
-    download.write(onto_txt)
+    with open('./ontologies/'+filename.split('.')[0]+'.ttl', 'wb') as download:
+        download.write(onto_txt)
     
 
 ### Conversion of ontologies with ROBOT
