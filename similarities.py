@@ -342,10 +342,32 @@ def get_ontology_URLs():
     ## Reads in the URLs of the ontology files and returns returns them as 
     #  dictionary with {ontology name : URL}
     md_dict = load_ontologies_metadata()
-    for keys in md_dict:
-        URL = md_dict[keys]["References"]["Persistent URI of Ontology File (or perma link to latest Version)"]        
-        
+    URL_dict = {}
+    for key in md_dict:
+        URL = md_dict[key]["References"]["Persistent URI of Ontology File (or perma link to latest Version)"]        
+        URL_dict[key] = URL
+    
+    return URL_dict    
+
 ####
+
+####
+def load_ontologies_from_URLs():
+    ## Tries to load in the ontologies obtained by the function 
+    #  get_ontology_URLs using owlready2. 
+    onto_URLs = get_ontology_URLs()
+    for key in onto_URLs:
+        try: 
+            onto_loaded = get_ontology(onto_URLs[key]).load()
+            print("onto successfull: {}".format(key))
+        except:
+            if onto_URLs[key].endswith('.ttl'):
+                print("Ontology {} is provided as ttl and could not be read in".format(key))
+            else:
+                print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}".format(key, onto_URLs[key]))
+####
+
+load_ontologies_from_URLs()
 
 """
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
