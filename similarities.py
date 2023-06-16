@@ -352,22 +352,39 @@ def get_ontology_URLs():
 ####
 
 ####
-def load_ontologies_from_URLs():
-    ## Tries to load in the ontologies obtained by the function 
-    #  get_ontology_URLs using owlready2. 
-    onto_URLs = get_ontology_URLs()
-    for key in onto_URLs:
+def load_ontology_from_URL(onto_name, URL):
+    ## Tries to load in the ontology by accessing the URL to an owl-file
+    
+    if URL.endswith('.owl'):
         try: 
-            onto_loaded = get_ontology(onto_URLs[key]).load()
-            print("onto successfull: {}".format(key))
+            onto_loaded = get_ontology(URL).load()
+            print("Successfully loaded Ontology: {}".format(onto_name))
         except:
-            if onto_URLs[key].endswith('.ttl'):
-                print("Ontology {} is provided as ttl and could not be read in".format(key))
-            else:
-                print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}".format(key, onto_URLs[key]))
+            print("something went wrong, onto_name: ".format(onto_name))
+            onto_loaded = None
+            pass
+        
+    elif URL.endswith('.ttl'):
+        print("Ontology {} is provided as ttl and could not be read in".format(URL))
+        onto_loaded = None
+
+    else:
+        print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}".format(onto_name, URL))
+        onto_loaded = None   
+    
+    
+    return onto_loaded
 ####
 
-load_ontologies_from_URLs()
+
+#helpful robot: https://github.com/protegeproject/protege/issues/1098
+# to convert ttl files to owl on the fly
+
+
+onto_URLs = get_ontology_URLs()
+
+#for key in onto_URLs:
+#    load_ontology_from_URL(key, onto_URLs[key])
 
 """
 #onto_list = ["AFO.owl", "BFO.owl", "BAO.owl", "CHMO.owl"]
