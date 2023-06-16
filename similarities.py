@@ -385,6 +385,13 @@ import urllib  # the lib that handles the url stuff
 
 
 def ttl_to_owl(url):
+    ### Conversion of ontologies with ROBOT
+    #helpful robot: https://github.com/protegeproject/protege/issues/1098
+    # to convert ttl files to owl on the fly
+    #robot convert --input <INPUT_FILE> --format <FORMAT> --output <OUTPUT_FILE>
+    # robot convert --input bfo.owl --format ttl --output bfo.ttl
+    #robot convert --input https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl --format owl --output osmo.owl
+
     #url = "https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl"
     filename = url.rpartition('/')[-1]
     onto_txt = urllib.request.urlopen(url)
@@ -394,12 +401,6 @@ def ttl_to_owl(url):
         download.write(onto_txt)
     
 
-### Conversion of ontologies with ROBOT
-#helpful robot: https://github.com/protegeproject/protege/issues/1098
-# to convert ttl files to owl on the fly
-#robot convert --input <INPUT_FILE> --format <FORMAT> --output <OUTPUT_FILE>
-# robot convert --input bfo.owl --format ttl --output bfo.ttl
-#robot convert --input https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl --format owl --output osmo.owl
 
 """path_to_file = 'data/2019-12-12/'
 file = 'ADAZ19.json'
