@@ -377,11 +377,28 @@ def load_ontology_from_URL(onto_name, URL):
 ####
 
 
+onto_URLs = get_ontology_URLs()
+
+
+### Conversion of ontologies
 #helpful robot: https://github.com/protegeproject/protege/issues/1098
 # to convert ttl files to owl on the fly
+#robot convert --input <INPUT_FILE> --format <FORMAT> --output <OUTPUT_FILE>
+# robot convert --input bfo.owl --format ttl --output bfo.ttl
+#robot convert --input https://purl.vimmp.eu/semantics/osmo/osmo.ttl --format owl --output osmo.owl
+path_to_file = 'data/2019-12-12/'
+file = 'ADAZ19.json'
 
+cur_dir = os.getcwd()
 
-onto_URLs = get_ontology_URLs()
+os.chdir(path_to_file) # change folder
+
+os.system(f'tar -czf {file}.tar.gz {file}')
+
+os.chdir(cur_dir) # go back
+
+os.system(" ./robot/robot --input {} --format owl --output ./ontologies/OSMO.owl".format(onto_URLs["OSMO"]))
+
 
 #for key in onto_URLs:
 #    load_ontology_from_URL(key, onto_URLs[key])
