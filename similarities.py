@@ -411,13 +411,24 @@ def onto_format_validation(onto_name, URL):
         print("Non-Conform: {}, {} -> not compatible".format(onto_name, URL))
     
 ####
-
-
-
+#print out ontologies without proper URLs -> 
+#TODO: fix those links
 onto_URLs = get_ontology_URLs()
 
 for i in onto_URLs:
-    onto_format_validation(i, onto_URLs[i])    
+    onto_format_validation(i, onto_URLs[i])   
+###    
+    
+md_dict = load_ontologies_metadata()
+key_dom_interest = "Domain of Interest Represented (contained, related: broader/narrower, missing)"
+
+#list the domains of interest
+domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+domain_dict = {}
+
+for onto_abbrev in md_dict:
+    if md_dict[onto_abbrev][key_dom_interest] != "missing":
+        
 
 
 #for key in onto_URLs:
