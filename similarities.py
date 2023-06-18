@@ -397,23 +397,28 @@ def load_ontology_from_URL(onto_name, URL):
     return onto_loaded
 ####
 
+####
+def onto_format_validation(onto_name, URL):
+    ## prints compatibility of provided links with owlready2
+    #  
+    if URL.endswith('.owl'):
+        #print("OWL: {}, {}".format(onto_name, URL))
+        pass
+    elif URL.endswith('.ttl'):
+        #print("TTL: {}, {} -> will need formatting".format(onto_name, URL))
+        pass
+    else:
+        print("Non-Conform: {}, {} -> not compatible".format(onto_name, URL))
+    
+####
+
+
+
 onto_URLs = get_ontology_URLs()
 
+for i in onto_URLs:
+    onto_format_validation(i, onto_URLs[i])    
 
-
-"""path_to_file = 'data/2019-12-12/'
-file = 'ADAZ19.json'
-
-cur_dir = os.getcwd()
-
-os.chdir(path_to_file) # change folder
-
-os.system(f'tar -czf {file}.tar.gz {file}')
-
-os.chdir(cur_dir) # go back
-
-os.system(" ./robot/robot --input {} --format owl --output ./ontologies/OSMO.owl".format(onto_URLs["OSMO"]))
-"""
 
 #for key in onto_URLs:
 #    load_ontology_from_URL(key, onto_URLs[key])
