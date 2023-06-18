@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import seaborn as sns
 import json
+import urllib  # the lib that handles the url stuff
 
 def ontology_comparison(onto_name1, onto_name2):
     # Load the two ontologies
@@ -337,7 +338,6 @@ def load_ontologies_metadata():
 ####
 
 ####
-
 def get_ontology_URLs():
     ## Reads in the URLs of the ontology files and returns returns them as 
     #  dictionary with {ontology name : URL}
@@ -348,25 +348,46 @@ def get_ontology_URLs():
         URL_dict[key] = URL
     
     return URL_dict    
+####
 
+####
+def ttl_to_owl(url):
+    ## Conversion of ttl-ontology to owl-ontology with ROBOT
+    #  Input: URL of ontology file
+    #  Output: File name of ontology downloaded into subdirectory ./ontologies/ as str
+    ##
+    filename = url.rpartition('/')[-1] # gets last bit of URL after / to obtain "filename.ttl"
+    onto_name = filename.split('.')[0]
+    ontology_output_filename = onto_name + '.owl'
+    
+    onto_txt = urllib.request.urlopen(url)
+    onto_txt = onto_txt.read()#readlines()
+
+    with open('./ontologies/'+onto_name+'.ttl', 'wb') as onto_file:
+        onto_file.write(onto_txt)
+    
+    os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
+    
+    return ontology_output_filename
 ####
 
 ####
 def load_ontology_from_URL(onto_name, URL):
     ## Tries to load in the ontology by accessing the URL to an owl-file
-    
+    #  
     if URL.endswith('.owl'):
         try: 
             onto_loaded = get_ontology(URL).load()
             print("Successfully loaded Ontology: {}".format(onto_name))
         except:
-            print("something went wrong, onto_name: ".format(onto_name))
+            print("Something went wrong, ontology name: ".format(onto_name))
             onto_loaded = None
             pass
         
     elif URL.endswith('.ttl'):
-        print("Ontology {} is provided as ttl and could not be read in".format(URL))
-        onto_loaded = None
+        print("Ontology {} is provided as ttl, attempting download".format(URL))
+        ontology_in_owl = ttl_to_owl(URL)
+        onto_loaded = get_ontology('./ontologies./' + ontology_in_owl).load()
 
     else:
         print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}".format(onto_name, URL))
@@ -376,34 +397,8 @@ def load_ontology_from_URL(onto_name, URL):
     return onto_loaded
 ####
 
-
 onto_URLs = get_ontology_URLs()
 
-
-## download non-owl files:
-import urllib  # the lib that handles the url stuff
-
-
-def ttl_to_owl(url):
-    ### Conversion of ontologies with ROBOT
-    #helpful robot: https://github.com/protegeproject/protege/issues/1098
-    # to convert ttl files to owl on the fly
-    #robot convert --input <INPUT_FILE> --format <FORMAT> --output <OUTPUT_FILE>
-    # robot convert --input bfo.owl --format ttl --output bfo.ttl
-    #robot convert --input https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl --format owl --output osmo.owl
-
-    #url = "https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/raw/develop/metadata4ing.ttl"
-    filename = url.rpartition('/')[-1]
-    onto_name = filename.split('.')[0]
-    onto_txt = urllib.request.urlopen(url)
-    onto_txt = onto_txt.read()#readlines()
-
-    with open('./ontologies/'+onto_name+'.ttl', 'wb') as onto_file:
-        onto_file.write(onto_txt)
-    
-    #os.chdir("robot")
-    os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}.owl".format(filename, onto_name))
-    
 
 
 """path_to_file = 'data/2019-12-12/'
