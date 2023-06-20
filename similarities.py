@@ -430,9 +430,13 @@ key_dom_interest = "Domain of Interest Represented (contained, related: broader/
 domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
 domain_dict = {}
 
-#for onto_abbrev in md_dict:
-#    if md_dict[onto_abbrev][key_dom_interest] != "missing":
-        
+for domain in domains_of_interest:
+    onto_list = []
+    for onto_abbrev in md_dict:
+        if "contained" in md_dict[onto_abbrev][key_dom_interest][domain]:
+            onto_list.append(onto_abbrev)
+    
+    domain_dict[domain] = onto_list
 ####
 
 #for key in onto_URLs:
