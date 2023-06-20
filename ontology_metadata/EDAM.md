@@ -35,17 +35,17 @@
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | related: broader |
+| Biocatalysis | related: narrower |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: narrower |
+| Chemical Substance Modeling | related: broader |
 | Material Modeling | missing |
 | Process Modeling | missing |
 | Synthesis Data | related: broader |
 | Operando Data | missing |
-| Performance Data | related: broader |
-| Characterisation Data | related: broader |
-| Heat, Transport and Kinetic Data | related: broader |
+| Performance Data | related: narrower |
+| Characterisation Data | contained |
+| Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
 | Top Level Ontology | missing |
 
@@ -62,4 +62,5 @@
 | Annotation Property count | 70 |
 
 ## Comments
-An Ontology consisting of several Terms relevant for DANN and Enzymatic activity. Imports OBO Ontology terms and classes while not being alligned to an Ontology
+An Ontology consisting of several Terms relevant for DANN and Enzymatic activity. Imports OBO Ontology terms and classes while not being alligned to an Ontology. Good representation for description of proteins and enzyme kinetics.
+EDAM is a domain ontology of data analysis and data management in bio- and other sciences, and science-based applications. It comprises concepts related to analysis, modelling, optimisation, and data life-cycle. 

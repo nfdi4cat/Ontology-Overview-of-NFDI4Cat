@@ -14,7 +14,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.vimmp.eu/ |
-| Persistent URI of Ontology File | https://purl.vimmp.eu/semantics/combined/combined-vimmp-ontologies.ttl |
+| Persistent URI of Ontology File | https://gitlab.com/vimmp-semantics/vimmp-ontologies/-/raw/master/combined/combined-vimmp-ontologies.ttl |
 | Link to Documentation | https://zenodo.org/record/4411422 |
 | Link to Version directory | https://gitlab.com/vimmp-semantics/vimmp-ontologies |
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/4411422 |
@@ -38,16 +38,16 @@
 | Biocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: narrower |
-| Material Modeling | contained |
+| Chemical Substance Modeling | related: broader |
+| Material Modeling | related: broader |
 | Process Modeling | contained |
 | Synthesis Data | related: broader |
-| Operando Data | contained |
-| Performance Data | contained |
-| Characterisation Data | related: broader |
+| Operando Data | missing |
+| Performance Data | missing |
+| Characterisation Data | missing |
 | Heat, Transport and Kinetic Data | related: broader |
 | Process Design, Energy and Cost Data | related: broader |
-| Top Level Ontology | contained |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 

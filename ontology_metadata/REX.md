@@ -35,19 +35,19 @@
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | contained |
-| Heterogenous catalysis | contained |
-| Homogenous catalysis | contained |
+| Biocatalysis | missing |
+| Heterogenous catalysis | related: narrower |
+| Homogenous catalysis | related: narrower |
 | Chemical Substance Modeling | related: broader |
 | Material Modeling | missing |
-| Process Modeling | related: broader |
-| Synthesis Data | related: broader |
+| Process Modeling | missing |
+| Synthesis Data | missing |
 | Operando Data | missing |
 | Performance Data | missing |
 | Characterisation Data | missing |
 | Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | OBO? |
+| Top Level Ontology | missing |
 
 ## Ontology Characteristics
 |Aspect |Description| 
@@ -63,3 +63,4 @@
 
 ## Comments
 Orphaned ontology! Contains plenty of reaction classes, also catalytic ones. Only classifies broadly and does not contain many relations.
+However, some catalysis classifications are contained.

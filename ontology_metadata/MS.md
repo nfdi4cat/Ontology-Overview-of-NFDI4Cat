@@ -1,10 +1,10 @@
-## MS - Elementary Multiperspective Material Ontology
+## MS - Mass Spectrometry Ontology
 
 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
-| Full Name | Elementary Multiperspective Material Ontology |
+| Full Name | Mass Spectrometry Ontology |
 | Synonyms/Alternative Names | Proteomics Standards Initiative Mass Spectroscopy Ontology |
 | Ontology Acronym | MS or PSI-MS |
 | Creator(s) & Issuing Organisation | HUPO Proteomics Standards Initiative |
@@ -36,18 +36,18 @@
 |Aspect |Description| 
  |:---|:---|
 | Biocatalysis | related: broader |
-| Heterogenous catalysis | related: broader |
-| Homogenous catalysis | related: broader |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | related: narrower |
-| Process Modeling | related: narrower |
-| Synthesis Data | related: narrower |
+| Heterogenous catalysis | missing |
+| Homogenous catalysis | missing |
+| Chemical Substance Modeling | missing |
+| Material Modeling | missing |
+| Process Modeling | missing |
+| Synthesis Data | missing |
 | Operando Data | related: broader |
 | Performance Data | related: broader |
 | Characterisation Data | contained |
 | Heat, Transport and Kinetic Data | related: broader |
 | Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | contained |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 
@@ -62,4 +62,4 @@
 | Annotation Property count | 249 |
 
 ## Comments
-well implemented and structured ontology
+well implemented and structured ontology. A structured controlled vocabulary for the annotation of experiments concerned with proteomics mass spectrometry.

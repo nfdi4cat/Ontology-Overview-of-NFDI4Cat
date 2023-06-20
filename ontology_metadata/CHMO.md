@@ -25,7 +25,7 @@
 | Ontology Formats Provided | owl; obo |
 | Degree of Inference/Composition | not defined |
 | License | Creative Commons 4.0 |
-| Validated Resoning with | HermiT, FaCT++ |
+| Validated Resoning with | HermiT, FaCT++_x000D_ |
 | Shortest reasoning time | 118ms |
 | Aligned with Top Level Ontology | OBO |
 | Imports Ontology(ies) | only self |
@@ -35,19 +35,19 @@
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | related: broader |
-| Heterogenous catalysis | related: broader |
-| Homogenous catalysis | related: broader |
+| Biocatalysis | missing |
+| Heterogenous catalysis | missing |
+| Homogenous catalysis | missing |
 | Chemical Substance Modeling | related: broader |
-| Material Modeling | related: broader |
+| Material Modeling | missing |
 | Process Modeling | related: broader |
-| Synthesis Data | related: broader |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | related: narrower |
+| Synthesis Data | missing |
+| Operando Data | related: broader |
+| Performance Data | related: narrower |
+| Characterisation Data | contained |
 | Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | contained |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 

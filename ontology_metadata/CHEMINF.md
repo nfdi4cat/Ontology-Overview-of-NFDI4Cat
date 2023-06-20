@@ -47,7 +47,7 @@
 | Characterisation Data | contained |
 | Heat, Transport and Kinetic Data | related: broader |
 | Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | contained |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 

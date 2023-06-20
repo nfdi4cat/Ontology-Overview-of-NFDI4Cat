@@ -14,7 +14,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://emmc.eu/ |
-| Persistent URI of Ontology File | http://emmo.info/emmo |
+| Persistent URI of Ontology File | https://raw.githubusercontent.com/emmo-repo/EMMO/master/emmo.ttl |
 | Link to Documentation | https://emmo-repo.github.io/ |
 | Link to Version directory | https://emmo-repo.github.io/ |
 | Optional links (Papers, Repos,...) | GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;  |

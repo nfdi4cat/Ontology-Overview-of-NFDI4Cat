@@ -14,7 +14,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.vimmp.eu/ |
-| Persistent URI of Ontology File | https://purl.vimmp.eu/semantics/osmo/osmo.ttl |
+| Persistent URI of Ontology File | http://www.molmod.info/semantics/osmo.ttl |
 | Link to Documentation | - |
 | Link to Version directory | https://gitlab.com/vimmp-semantics/vimmp-ontologies |
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/5084394 |
@@ -47,7 +47,7 @@
 | Characterisation Data | related: broader |
 | Heat, Transport and Kinetic Data | related: broader |
 | Process Design, Energy and Cost Data | related: broader |
-| Top Level Ontology | contained |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 

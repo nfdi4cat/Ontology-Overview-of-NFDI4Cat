@@ -41,14 +41,14 @@ More info on available formats etc.: https://www.ebi.ac.uk/chebi/downloadsForwar
 | Homogenous catalysis | related: broader |
 | Chemical Substance Modeling | contained |
 | Material Modeling | related: narrower |
-| Process Modeling | related: broader |
-| Synthesis Data | related: broader |
+| Process Modeling | missing |
+| Synthesis Data | missing |
 | Operando Data | missing |
 | Performance Data | missing |
 | Characterisation Data | missing |
 | Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: broader |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 

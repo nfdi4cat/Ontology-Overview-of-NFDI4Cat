@@ -366,15 +366,20 @@ def ttl_to_owl(url):
     with open('./ontologies/'+onto_name+'.ttl', 'wb') as onto_file:
         onto_file.write(onto_txt)
     
+    #os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
+    os.system(".\\robot\\robot merge --input .\\ontologies\\{} --output .\\ontologies\\{}".format(filename,filename))
     os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
     
     return ontology_output_filename
 ####
 
 ####
-def load_ontology_from_URL(onto_name, URL):
+def load_ontology_from_URL(onto_name):
     ## Tries to load in the ontology by accessing the URL to an owl-file
     #  
+    onto_URLs = get_ontology_URLs()
+    URL = onto_URLs[onto_name]
+    
     if URL.endswith('.owl'):
         try: 
             onto_loaded = get_ontology(URL).load()

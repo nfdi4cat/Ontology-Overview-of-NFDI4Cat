@@ -14,8 +14,8 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.allotrope.org/ |
-| Persistent URI of Ontology File | http://purl.allotrope.org/voc/afo/merged/REC/2021/09/merged-and-inferred |
-| Link to Documentation | Missing/not found |
+| Persistent URI of Ontology File | https://raw.githubusercontent.com/nfdi4cat/Ontology-Overview-of-NFDI4Cat/main/ontologies/AFO.ttl |
+| Link to Documentation | https://www.allotrope.org/resources  |
 | Link to Version directory | https://allotrope.jfrog.io/ui/repos/tree/General/AFO-release-public |
 | Optional links (Papers, Repos,...) | https://www.allotrope.org/resources |
 
@@ -42,12 +42,12 @@
 | Material Modeling | contained |
 | Process Modeling | related: narrower |
 | Synthesis Data | related: broader |
-| Operando Data | related: broader |
+| Operando Data | missing |
 | Performance Data | related: broader |
 | Characterisation Data | contained |
-| Heat, Transport and Kinetic Data | related: narrower |
-| Process Design, Energy and Cost Data | related: narrower |
-| Top Level Ontology | contained BFO |
+| Heat, Transport and Kinetic Data | missing |
+| Process Design, Energy and Cost Data | missing |
+| Top Level Ontology | related: narrower |
 
 ## Ontology Characteristics
 |Aspect |Description| 
@@ -62,8 +62,10 @@
 | Annotation Property count | 116 |
 
 ## Comments
-Reasoning mit HermiT durchgeführt, zahl hinter verzeichnis sind die Axiome der jeweiligen Ontologie
-kein Reasoning mit FacT++ moglich, da Probleme mit xml:date
+No persistant URL to ontology-file available, thus a copy of the ontology is hosted in this github-repo in subdirectory ./ontologies/ 
+No reasoning possible with FacT++ , as problems with xml:date persist.
+
+Reasoning works with HermiT. Listed below are the number of axioms of the respective subview of the AFO
 afo/rec/2022/09/afo.ttl -> 15268    INFO  09:43:25  Ontologies processed in 27652 ms by HermiT
 afo/CR/2022/09/afo.ttl -> 54
 afo/WD/2022/09/afo.ttl -> 15365  INFO  09:44:46  Ontologies processed in 5545 ms by HermiT

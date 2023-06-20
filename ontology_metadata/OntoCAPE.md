@@ -39,15 +39,15 @@
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
 | Chemical Substance Modeling | contained |
-| Material Modeling | contained |
+| Material Modeling | related: broader |
 | Process Modeling | contained |
 | Synthesis Data | missing |
 | Operando Data | missing |
 | Performance Data | related: broader |
 | Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | related: broader |
+| Heat, Transport and Kinetic Data | related: narrower |
 | Process Design, Energy and Cost Data | contained |
-| Top Level Ontology | contains/created own Top Level Ontology |
+| Top Level Ontology | contained |
 
 ## Ontology Characteristics
 |Aspect |Description| 
