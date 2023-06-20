@@ -29,7 +29,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [M3] |Machine to Machine Measurements Ontology |
 | [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
 | [MOP] |Molecular Process Ontology |
-| [MS] |Elementary Multiperspective Material Ontology |
+| [MS] |Mass Spectrometry Ontology |
 | [OBI] |Ontology for Biomedical Investigations |
 | [OM] |Ontology of units of Measure |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
