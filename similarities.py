@@ -1,10 +1,12 @@
 from owlready2 import *
+from tabulate import tabulate
 import itertools
 import pandas as pd
 import os
 import seaborn as sns
 import json
-import urllib  # the lib that handles the url stuff
+import urllib 
+import pandas as pd
 
 def ontology_comparison(onto_name1, onto_name2):
     # Load the two ontologies
@@ -326,7 +328,7 @@ def load_ontologies_metadata():
     #  GeneralStructure and md-translator files as they do not contain metadata.
     #  output: metadata_dict that contains the acronyms of the ontologies as keys
     #          and the respective json-file as dictionary are the values
-    json_list = [f for f in os.listdir('./json/') if (f.endswith('.json') and f != "GeneralStructure.json" and f!= "md-translator.json")]
+    json_list = [f for f in os.listdir('./json/') if (f.endswith('.json') and f != "GeneralStructure.json" and f!= "md-translator.json" and f!= "ontology_domains.json")]
     metadata_dict = {}
     for json_name in json_list:
         with open('./json/' + json_name) as file:
@@ -438,10 +440,28 @@ domain_dict = {}
 for domain in domains_of_interest:
     onto_list = []
     for onto_abbrev in md_dict:
-        if "contained" in md_dict[onto_abbrev][key_dom_interest][domain]:
-            onto_list.append(onto_abbrev)
-    
+        dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
+        if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+            onto_list.append(onto_abbrev) 
     domain_dict[domain] = onto_list
+# domain_dict now contains all domains of interest and the respective ontologies
+# that contain this domain or are at least narrow related to the domain.
+##
+
+df = pd.DataFrame.from_dict(domain_dict, orient='index').transpose()    
+
+with open("./json/ontology_domains.json", "w") as f:
+     json.dump(domain_dict,f)
+
+# add [ and ] to ontology name to get link to md file automatically in md
+df = df.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
+# Format df to markdown
+markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
+# Append markdown to Main_Readme_Update
+with open('./Main_Readme_Update.txt', 'a') as f:
+    f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
+    f.write(markdown_table)
+
 ####
 
 #for key in onto_URLs:
