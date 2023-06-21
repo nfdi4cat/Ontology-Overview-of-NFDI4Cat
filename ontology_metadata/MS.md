@@ -5,8 +5,8 @@
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Mass Spectrometry Ontology |
-| Synonyms/Alternative Names | Proteomics Standards Initiative Mass Spectroscopy Ontology |
-| Ontology Acronym | MS or PSI-MS |
+| Synonyms/Alternative Names | PSI-MS, Proteomics Standards Initiative Mass Spectroscopy Ontology |
+| Ontology Acronym | MS |
 | Creator(s) & Issuing Organisation | HUPO Proteomics Standards Initiative |
 | Nature of Organisational Structure | Standardization Body |
 
