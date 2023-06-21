@@ -40,11 +40,11 @@
 | Homogenous catalysis | missing |
 | Chemical Substance Modeling | related: narrower |
 | Material Modeling | related: broader |
-| Process Modeling | related: broader |
+| Process Modeling | related: narrower |
 | Synthesis Data | related: broader |
 | Operando Data | missing |
-| Performance Data | related: narrower |
-| Characterisation Data | related: narrower |
+| Performance Data | missing |
+| Characterisation Data | contained |
 | Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
 | Top Level Ontology | missing |

@@ -40,7 +40,7 @@
 | Homogenous catalysis | missing |
 | Chemical Substance Modeling | missing |
 | Material Modeling | missing |
-| Process Modeling | related: narrower |
+| Process Modeling | contained |
 | Synthesis Data | missing |
 | Operando Data | missing |
 | Performance Data | missing |

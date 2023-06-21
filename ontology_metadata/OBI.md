@@ -42,8 +42,8 @@
 | Material Modeling | related: broader |
 | Process Modeling | related: narrower |
 | Synthesis Data | missing |
-| Operando Data | related: broader |
-| Performance Data | related: broader |
+| Operando Data | missing |
+| Performance Data | missing |
 | Characterisation Data | related: broader |
 | Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
@@ -63,3 +63,4 @@
 
 ## Comments
 Quite well formed ontology for representing biomedical investigations, including study designs, the collection and preparation of the targets of investigation, assays, instrumentation and reagents used, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation.
+The Ontology for Biomedical Investigations (OBI) is build in a collaborative, international effort and will serve as a resource for annotating biomedical investigations, including the study design, protocols and instrumentation used, the data generated and the types of analysis performed on the data. This ontology arose from the Functional Genomics Investigation Ontology (FuGO) and will contain both terms that are common to all biomedical investigations, including functional genomics investigations and those that are more domain specific.

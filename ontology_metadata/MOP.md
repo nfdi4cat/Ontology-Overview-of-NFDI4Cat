@@ -36,15 +36,15 @@
 |Aspect |Description| 
  |:---|:---|
 | Biocatalysis | missing |
-| Heterogenous catalysis | missing |
-| Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: narrower |
-| Material Modeling | related: broader |
-| Process Modeling | missing |
-| Synthesis Data | related: narrower |
+| Heterogenous catalysis | related: narrower |
+| Homogenous catalysis | related: narrower |
+| Chemical Substance Modeling | contained |
+| Material Modeling | missing |
+| Process Modeling | related: narrower |
+| Synthesis Data | missing |
 | Operando Data | missing |
 | Performance Data | missing |
-| Characterisation Data | related: broader |
+| Characterisation Data | missing |
 | Heat, Transport and Kinetic Data | missing |
 | Process Design, Energy and Cost Data | missing |
 | Top Level Ontology | related: narrower |
@@ -62,4 +62,4 @@
 | Annotation Property count | 29 |
 
 ## Comments
- Strongly connected with the RXNO. It contains the underlying molecular processes, for example cyclization, methylation and demethylation.
+Good conceptual description of reactions. Strongly connected with the RXNO. It contains the underlying molecular processes, for example cyclization, methylation and demethylation.
