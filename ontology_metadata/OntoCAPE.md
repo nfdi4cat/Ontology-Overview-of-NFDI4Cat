@@ -52,9 +52,9 @@
 ## Ontology Characteristics
 |Aspect |Description| 
  |:---|:---|
-| Axioms | 4811 |
+| Axioms | 5019 |
 | Logical | 3067 |
-| Declaration | 746 |
+| Declaration | 1048 |
 | Class count | 503 |
 | Object property count | 207 |
 | Data property count | 37 |

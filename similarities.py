@@ -7,6 +7,7 @@ import seaborn as sns
 import json
 import urllib 
 import pandas as pd
+import convert
 
 def ontology_comparison(onto_name1, onto_name2):
     # Load the two ontologies
@@ -327,7 +328,7 @@ def ontology_comparison(onto_name1, onto_name2):
 def get_ontology_URLs():
     ## Reads in the URLs of the ontology files and returns returns them as 
     #  dictionary with {ontology name : URL}
-    md_dict = load_ontologies_metadata()
+    md_dict = convert.load_ontologies_metadata()
     URL_dict = {}
     for key in md_dict:
         URL = md_dict[key]["References"]["Persistent URI of Ontology File (or perma link to latest Version)"]        
@@ -403,14 +404,14 @@ def onto_format_validation(onto_name, URL):
     
 ####
 #print out ontologies without proper URLs -> 
-#TODO: fix those links
+#TODO: find those links and fix it in MasterTable
 onto_URLs = get_ontology_URLs()
 
 for i in onto_URLs:
     onto_format_validation(i, onto_URLs[i])   
 ####    
 
-
+# os.system(".\\robot\\robot merge --input C:\\OntoCAPE\\OntoCAPE_domain+ontology\\OntoCAPE\OntoCAPE.owl --output .\\ontologies\\OntoCAPE_merged.owl")
 ####
 
 #for key in onto_URLs:
