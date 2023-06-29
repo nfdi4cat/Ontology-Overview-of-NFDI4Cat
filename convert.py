@@ -144,9 +144,8 @@ def UpdateMainReadme():
     print('Please copy and paste the content into the respective parts of  ')
     print('./README.md to update the linking to the ontology markdown files.')
     print('================================================================')
-    
-Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'
 
-ConvertExcelToMD(Master_Table)
-
-UpdateMainReadme()
+def run():    
+    Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'
+    ConvertExcelToMD(Master_Table)
+    UpdateMainReadme()

@@ -107,7 +107,7 @@
 @prefix creativecommons: <http://creativecommons.org/ns#> .
 @prefix dimensionalunit: <http://qudt.org/1.1/vocab/dimensionalunit#> .
 @prefix qudt-quantity-1.1: <http://qudt.org/1.1/vocab/quantity#> .
-@base <http://purl.allotrope.org/voc/afo/merged/REC/2023/03/merged-without-qudt-and-inferred#> .
+@base <http://purl.allotrope.org/voc/afo/merged/REC/2023/03/merged-without-qudt-and-inferred> .
 
 <http://purl.allotrope.org/voc/afo/merged/REC/2023/03/merged-without-qudt-and-inferred> rdf:type owl:Ontology ;
                                                                                          owl:versionIRI <http://purl.allotrope.org/voc/afo/merged/REC/2023/03/merged-without-qudt-and-inferred> ;
@@ -531,6 +531,10 @@ dct:conformsTo rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/contributor
 dct:contributor rdf:type owl:AnnotationProperty ;
+                af-x:AFX_0002865 dct: ;
+                rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+                rdfs:label "contributor" ;
+                skos:prefLabel "contributor" ;
                 rdfs:subPropertyOf dc:contributor .
 
 
@@ -725,6 +729,10 @@ dct:isVersionOf rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/issued
 dct:issued rdf:type owl:AnnotationProperty ;
+           af-x:AFX_0002865 dct: ;
+           rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+           rdfs:label "issued" ;
+           skos:prefLabel "issued" ;
            rdfs:subPropertyOf dc:date .
 
 
@@ -739,6 +747,10 @@ dct:language rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/license
 dct:license rdf:type owl:AnnotationProperty ;
+            af-x:AFX_0002865 dct: ;
+            rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+            rdfs:label "license" ;
+            skos:prefLabel "license" ;
             rdfs:subPropertyOf dc:rights .
 
 
@@ -753,11 +765,19 @@ dct:medium rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/modified
 dct:modified rdf:type owl:AnnotationProperty ;
+             af-x:AFX_0002865 dct: ;
+             rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+             rdfs:label "modified" ;
+             skos:prefLabel "modified" ;
              rdfs:subPropertyOf dc:date .
 
 
 ###  http://purl.org/dc/terms/publisher
 dct:publisher rdf:type owl:AnnotationProperty ;
+              af-x:AFX_0002865 dct: ;
+              rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+              rdfs:label "publisher" ;
+              skos:prefLabel "publisher" ;
               rdfs:subPropertyOf dc:publisher .
 
 
@@ -802,6 +822,10 @@ dct:requires rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/rights
 dct:rights rdf:type owl:AnnotationProperty ;
+           af-x:AFX_0002865 dct: ;
+           rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+           rdfs:label "rights" ;
+           skos:prefLabel "rights" ;
            rdfs:subPropertyOf dc:rights .
 
 
@@ -862,6 +886,10 @@ dct:temporal rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/title
 dct:title rdf:type owl:AnnotationProperty ;
+          af-x:AFX_0002865 dct: ;
+          rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
+          rdfs:label "title" ;
+          skos:prefLabel "title" ;
           rdfs:subPropertyOf dc:title .
 
 
@@ -47738,46 +47766,4 @@ bfo:_0000134 iao:_0000600 "To say that each spatiotemporal region s temporally_p
  ] .
 
 
-dct:contributor af-x:AFX_0002865 dct: ;
-                rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-                rdfs:label "contributor" ;
-                skos:prefLabel "contributor" .
-
-
-dct:issued af-x:AFX_0002865 dct: ;
-           rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-           rdfs:label "issued" ;
-           skos:prefLabel "issued" .
-
-
-dct:license af-x:AFX_0002865 dct: ;
-            rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-            rdfs:label "license" ;
-            skos:prefLabel "license" .
-
-
-dct:modified af-x:AFX_0002865 dct: ;
-             rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-             rdfs:label "modified" ;
-             skos:prefLabel "modified" .
-
-
-dct:publisher af-x:AFX_0002865 dct: ;
-              rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-              rdfs:label "publisher" ;
-              skos:prefLabel "publisher" .
-
-
-dct:rights af-x:AFX_0002865 dct: ;
-           rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-           rdfs:label "rights" ;
-           skos:prefLabel "rights" .
-
-
-dct:title af-x:AFX_0002865 dct: ;
-          rdfs:isDefinedBy <http://purl.allotrope.org/voc/afo/REC/2023/03/curation> ;
-          rdfs:label "title" ;
-          skos:prefLabel "title" .
-
-
-###  Generated by the OWL API (version 5.1.19) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi

@@ -9,11 +9,12 @@ import urllib
 import pandas as pd
 import convert
 
-def ontology_comparison(onto_name1, onto_name2):
+def ontology_comparison(onto1, onto2):
     # Load the two ontologies
-    onto1 = get_ontology("file://./ontology_files/" + onto_name1).load()
-    onto2 = get_ontology("file://./ontology_files/" + onto_name2).load()
-    
+    #onto1 = get_ontology("file://./ontology_files/" + onto_name1).load()
+    #onto2 = get_ontology("file://./ontology_files/" + onto_name2).load()
+    onto_name1 = onto1.name
+    onto_name2 = onto2.name
     # Create sets of class labels for each ontology
     ## using label depending on ontology!
     
@@ -347,16 +348,20 @@ def ttl_to_owl(url):
     onto_name = filename.split('.')[0]
     ontology_output_filename = onto_name + '.owl'
     
-    onto_txt = urllib.request.urlopen(url)
-    onto_txt = onto_txt.read()#readlines()
-
-    with open('./ontologies/'+onto_name+'.ttl', 'wb') as onto_file:
-        onto_file.write(onto_txt)
+    # if isfile == true, owl file is already contained in ./ontologies/ and no reload or 
+    # conversion of ttl-ontology from web is necessary. So only if no owl file is 
+    # contained, the merge and convert is executed.
+    if not os.path.isfile('./ontologies/' + ontology_output_filename): 
+        onto_txt = urllib.request.urlopen(url)
+        onto_txt = onto_txt.read()#readlines()
     
-    #os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
-    os.system(".\\robot\\robot merge --input .\\ontologies\\{} --output .\\ontologies\\{}".format(filename,filename))
-    os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
-    
+        with open('./ontologies/'+onto_name+'.ttl', 'wb') as onto_file:
+            onto_file.write(onto_txt)
+        
+        #os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
+        os.system(".\\robot\\robot merge --input .\\ontologies\\{} --output .\\ontologies\\{}".format(filename,filename))
+        os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
+        
     return ontology_output_filename
 ####
 
@@ -377,12 +382,20 @@ def load_ontology_from_URL(onto_name):
             pass
         
     elif URL.endswith('.ttl'):
-        print("Ontology {} is provided as ttl, attempting download".format(URL))
+        print("Ontology {} is provided as ttl, searching for owl verison of ontology in subdir ./ontologies/ and converting ontology from ttl to owl if not found".format(URL))
         ontology_in_owl = ttl_to_owl(URL)
+        
         onto_loaded = get_ontology('./ontologies./' + ontology_in_owl).load()
 
     else:
-        print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}".format(onto_name, URL))
+        #TODO: try to load from ./ontologies/ if there is a manual added version of the OWL, such as for OntoCAPE.
+        print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}\n".format(onto_name, URL))
+              #searching for ontology owl-file in subdirectory ./ontologies/".format(onto_name, URL))
+        #try:
+        #    onto_loaded = get_ontology('./ontologies/' + onto_name + '.owl').load()
+        #   print("Ontology-file found and loaded.")
+        #except:
+        #    print("... failed")
         onto_loaded = None   
     
     
@@ -395,20 +408,60 @@ def onto_format_validation(onto_name, URL):
     #  
     if URL.endswith('.owl'):
         #print("OWL: {}, {}".format(onto_name, URL))
-        pass
+        return True
     elif URL.endswith('.ttl'):
         #print("TTL: {}, {} -> will need formatting".format(onto_name, URL))
-        pass
+        return True
     else:
-        print("Non-Conform: {}, {} -> not compatible".format(onto_name, URL))
+        #print("Non-Conform: {}, {} -> not compatible".format(onto_name, URL))
+        return False
     
 ####
 #print out ontologies without proper URLs -> 
 #TODO: find those links and fix it in MasterTable
 onto_URLs = get_ontology_URLs()
-
 for i in onto_URLs:
     onto_format_validation(i, onto_URLs[i])   
+####
+
+
+####
+onto_URLs = get_ontology_URLs()
+ontoNameList = list(onto_URLs.keys())
+ontoNameList_output = list(onto_URLs.keys())
+
+[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+
+
+onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
+df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
+
+# allocate empty ontologies
+onto1 = get_ontology("http://test.org/onto.owl")
+onto2 = get_ontology("http://test.org/onto.owl")
+
+for comb in onto_combinations:
+    try:
+        if onto1.name != comb[0]:
+            onto1 = load_ontology_from_URL(comb[0])
+
+        onto2 = load_ontology_from_URL(comb[1])
+        
+        classList, labelList, compDict, resDict = ontology_comparison(onto1,onto2)
+        df_numbers[comb[0]][comb[1]] = len(list(compDict.keys()))
+    except:
+        df_numbers[comb[0]][comb[1]] = 0
+        print(comb)
+
+print(df_numbers)
+df_numbers.to_excel("MappingHeatmap.xlsx")
+
+####
+    
+#import sys
+#sys.setrecursionlimit(100000)
+#b = get_ontology('./ontologies/OntoCAPE.owl').load()
+
 ####    
 
 # os.system(".\\robot\\robot merge --input C:\\OntoCAPE\\OntoCAPE_domain+ontology\\OntoCAPE\OntoCAPE.owl --output .\\ontologies\\OntoCAPE_merged.owl")
