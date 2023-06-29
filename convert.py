@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import os
+from tabulate import tabulate
 
 def ConvertExcelToMD(PathToExcel):
     
@@ -60,6 +61,24 @@ def ConvertExcelToMD(PathToExcel):
                 
         with open('./ontology_metadata/'+ onto_name +'.md', 'w') as f:
             f.write(outstring)
+
+####
+
+def load_ontologies_metadata():
+    ## Reads in the metadata-json files of each ontology, omitting the 
+    #  GeneralStructure and md-translator files as they do not contain metadata.
+    #  output: metadata_dict that contains the acronyms of the ontologies as keys
+    #          and the respective json-file as dictionary are the values
+    json_list = [f for f in os.listdir('./json/') if (f.endswith('.json') and f != "GeneralStructure.json" and f!= "md-translator.json" and f!= "ontology_domains.json")]
+    metadata_dict = {}
+    for json_name in json_list:
+        with open('./json/' + json_name) as file:
+            onto_metadata = json.load(file)
+            metadata_dict[onto_metadata["Ontology"]["Ontology Acronym"]] = onto_metadata
+  
+    return metadata_dict        
+
+####
             
 def UpdateMainReadme(): 
     path = './ontology_metadata/'
@@ -80,7 +99,46 @@ def UpdateMainReadme():
     
     with open('./Main_Readme_Update.txt', 'w') as f:
         f.write(print_list)
-        
+   
+    
+    ####
+    # List the most appropiate ontologies for each domain of interest by filtering
+    # out only the entries without missing.
+    md_dict = load_ontologies_metadata()
+    key_dom_interest = "Domain of Interest Represented (contained, related: broader/narrower, missing)"
+
+    #list the domains of interest used in the first key of md_dict, assuming 
+    #every sheet in the template requests the same domains of interest
+    domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+    domain_dict = {}
+
+    for domain in domains_of_interest:
+        onto_list = []
+        for onto_abbrev in md_dict:
+            dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
+            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+                onto_list.append(onto_abbrev) 
+        domain_dict[domain] = onto_list
+    # domain_dict now contains all domains of interest and the respective ontologies
+    # that contain this domain or are at least narrow related to the domain.
+    ##
+
+    df = pd.DataFrame.from_dict(domain_dict, orient='index').transpose()    
+
+    with open("./json/ontology_domains.json", "w") as f:
+         json.dump(domain_dict,f)
+
+    # add [ and ] to ontology name to get link to md file automatically in md
+    df = df.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
+    # Format df to markdown
+    markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
+    # Append markdown to Main_Readme_Update
+    with open('./Main_Readme_Update.txt', 'a') as f:
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
+        f.write(markdown_table)
+
+   
+    
     print('================================================================')
     print('Parts of Updated README.md written in "./Main_Readme_Update.txt"')
     print('Please copy and paste the content into the respective parts of  ')
