@@ -432,6 +432,8 @@ ontoNameList_output = list(onto_URLs.keys())
 
 [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
 
+ontoNameList_output.remove("CHEMINF")
+ontoNameList_output.remove("EMMO")
 
 onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
 df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
@@ -443,9 +445,15 @@ onto2 = get_ontology("http://test.org/onto.owl")
 for comb in onto_combinations:
     try:
         if onto1.name != comb[0]:
-            onto1 = load_ontology_from_URL(comb[0])
+            try:
+                onto1 = load_ontology_from_URL(comb[0])
+            except: 
+                pass
 
-        onto2 = load_ontology_from_URL(comb[1])
+        try:
+            onto2 = load_ontology_from_URL(comb[1])
+        except:
+            pass
         
         classList, labelList, compDict, resDict = ontology_comparison(onto1,onto2)
         df_numbers[comb[0]][comb[1]] = len(list(compDict.keys()))
