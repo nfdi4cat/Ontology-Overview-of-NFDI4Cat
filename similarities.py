@@ -567,6 +567,13 @@ for comb in onto_combinations:
     
     iri_list_dict_1 = list(onto_dict1.keys())
     match_list = []
+    
+    label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1]
+    prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1]
+    altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1]
+    name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1]
+    
+    
     for iri in iri_list_dict_1:
         class_match = None
         try:
@@ -574,11 +581,8 @@ for comb in onto_combinations:
             
         except:
             #durchsuche alle labels, preflabels, etc. in anderer Ontologie
-            try:
-                a = 5
-            except:
-                class_match = None
-            pass
+            class_match = None
+            
         
         if class_match:
             match_list.append(iri)
