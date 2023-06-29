@@ -521,8 +521,8 @@ ontoNameList_output = list(onto_URLs.keys())
 
 [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
 
-#ontoNameList_output.remove("CHEMINF")
-#ontoNameList_output.remove("EMMO")
+ontoNameList_output.remove("CHEMINF")
+ontoNameList_output.remove("EMMO")
 
 onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
 df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
