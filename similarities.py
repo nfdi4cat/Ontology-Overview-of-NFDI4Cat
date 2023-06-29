@@ -9,6 +9,94 @@ import urllib
 import pandas as pd
 import convert
 
+
+import sys
+sys.setrecursionlimit(100000)
+
+
+def ontology_classes_loader(ontology):
+    # Create sets of class labels for each ontology
+    ## using label depending on ontology!
+ 
+    # iris
+    try:
+        onto1_iris = list([cls.iri for cls in ontology.classes()])
+    except:
+        print("IRIs of ontology " + onto_name + " not (well) defined and could not be read!")
+        onto1_iris=[]
+        return None
+    
+    iri_dict ={}
+    
+    for iri in onto1_iris:
+       
+        try:
+            class_label = onto1.search_one(iri = iri).label.first()
+        except:
+            class_label = None
+        
+        try: 
+            class_prefLabel = onto1.search_one(iri = iri).prefLabel.first()
+        except:
+            class_prefLabel = None
+        
+        try:
+            class_altLabel = onto1.search_one(iri = iri).altLabel.first()
+        except:
+            class_altLabel = None
+            
+        try:
+            class_name = onto1.search_one(iri = iri).name
+        except:
+            class_name = None
+        
+        
+        iri_dict[str(iri)] = {"label": class_label,
+                                   "prefLabel": class_prefLabel,
+                                   "altLabel": class_altLabel,
+                                   "name": class_name,
+                                   }
+        
+    
+    """ 
+    
+    # label
+    try:
+        onto1_labels = set([cls.label.first() for cls in ontology.classes()])
+    except:
+        print("Class labels of ontology " + onto_name + " not (well) defined and could not be read!")
+        onto1_labels= set()
+    
+    # prefLabel
+    try:
+        onto1_prefLabels = set([cls.prefLabel.first() for cls in ontology.classes()])
+    except:
+        print("Class prefLabels of ontology " + onto_name + " not (well) defined and could not be read!")
+        onto1_prefLabels= set()
+        
+    # altLabel
+    try:
+        onto1_altLabels = set([cls.altLabel.first() for cls in ontology.classes()])
+    except:
+        print("Class altLabels of ontology " + onto_name + " not (well) defined and could not be read!")
+        onto1_altLabels= set()
+        
+    # name
+    try:
+        onto1_names = set([cls.name for cls in ontology.classes()])
+    except:
+        print("Class names of ontology " + onto_name + " not (well) defined and could not be read!")
+        onto1_names= set()
+
+        
+    
+    # Concatenate prefLabels, labels, names and altLabels
+    onto_combined = (((onto1_labels.union(onto1_prefLabels)).union(onto1_altLabels)).union(onto1_names)).union(onto1_iris)
+    """
+    return iri_dict
+
+
+
 def ontology_comparison(onto1, onto2):
     # Load the two ontologies
     #onto1 = get_ontology("file://./ontology_files/" + onto_name1).load()
@@ -374,6 +462,7 @@ def load_ontology_from_URL(onto_name):
     
     if URL.endswith('.owl'):
         try: 
+            print("Loading Ontology: {}".format(onto_name))
             onto_loaded = get_ontology(URL).load()
             print("Successfully loaded Ontology: {}".format(onto_name))
         except:
@@ -432,8 +521,8 @@ ontoNameList_output = list(onto_URLs.keys())
 
 [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
 
-ontoNameList_output.remove("CHEMINF")
-ontoNameList_output.remove("EMMO")
+#ontoNameList_output.remove("CHEMINF")
+#ontoNameList_output.remove("EMMO")
 
 onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
 df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
@@ -442,8 +531,20 @@ df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_ou
 onto1 = get_ontology("http://test.org/onto.owl")
 onto2 = get_ontology("http://test.org/onto.owl")
 
+iri_dictionary = {}
+
+for ontologyname in ontoNameList_output:
+    ontology = None
+    ontology = load_ontology_from_URL(ontologyname)
+    iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+
+with open('iriDictionary.json', 'w') as fp:
+    json.dump(iri_dictionary, fp)
+"""
 for comb in onto_combinations:
+    print(comb)
     try:
+        
         if onto1.name != comb[0]:
             try:
                 onto1 = load_ontology_from_URL(comb[0])
@@ -459,15 +560,15 @@ for comb in onto_combinations:
         df_numbers[comb[0]][comb[1]] = len(list(compDict.keys()))
     except:
         df_numbers[comb[0]][comb[1]] = 0
-        print(comb)
-
-print(df_numbers)
-df_numbers.to_excel("MappingHeatmap.xlsx")
+        print(comb + 'Something went wrong')
+"""
+#print(df_numbers)
+#df_numbers.to_excel("MappingHeatmap.xlsx")
 
 ####
     
-#import sys
-#sys.setrecursionlimit(100000)
+import sys
+sys.setrecursionlimit(100000)
 #b = get_ontology('./ontologies/OntoCAPE.owl').load()
 
 ####    
