@@ -506,6 +506,10 @@ def onto_format_validation(onto_name, URL):
         return False
     
 ####
+
+
+
+####
 #print out ontologies without proper URLs -> 
 #TODO: find those links and fix it in MasterTable
 onto_URLs = get_ontology_URLs()
@@ -515,6 +519,32 @@ for i in onto_URLs:
 
 
 ####
+
+def class_description_loader():
+    onto_URLs = get_ontology_URLs()
+    ontoNameList = list(onto_URLs.keys())
+    ontoNameList_output = list(onto_URLs.keys())
+    
+    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+    
+    ontoNameList_output.remove("CHEMINF")
+    ontoNameList_output.remove("EMMO")
+    
+    onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
+    df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
+    
+    iri_dictionary = {}
+    
+    for ontologyname in ontoNameList_output:
+        ontology = None
+        ontology = load_ontology_from_URL(ontologyname)
+        iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+    
+    with open('iriDictionary.json', 'w') as fp:
+        json.dump(iri_dictionary, fp)
+
+####
+
 onto_URLs = get_ontology_URLs()
 ontoNameList = list(onto_URLs.keys())
 ontoNameList_output = list(onto_URLs.keys())
@@ -527,19 +557,37 @@ ontoNameList_output.remove("EMMO")
 onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
 df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
 
-# allocate empty ontologies
-onto1 = get_ontology("http://test.org/onto.owl")
-onto2 = get_ontology("http://test.org/onto.owl")
 
-iri_dictionary = {}
+with open("./iriDictionary.json") as f: 
+    iri_dictionary = json.load(f)
 
-for ontologyname in ontoNameList_output:
-    ontology = None
-    ontology = load_ontology_from_URL(ontologyname)
-    iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+for comb in onto_combinations:
+    onto_dict1 = iri_dictionary[comb[0]]
+    onto_dict2 = iri_dictionary[comb[1]]
+    
+    iri_list_dict_1 = list(onto_dict1.keys())
+    match_list = []
+    for iri in iri_list_dict_1:
+        class_match = None
+        try:
+            class_match = onto_dict2[iri]
+            
+        except:
+            #durchsuche alle labels, preflabels, etc. in anderer Ontologie
+            try:
+                a = 5
+            except:
+                class_match = None
+            pass
+        
+        if class_match:
+            match_list.append(iri)
+        
+    df_numbers[comb[0]][comb[1]] = len(match_list)
 
-with open('iriDictionary.json', 'w') as fp:
-    json.dump(iri_dictionary, fp)
+print(df_numbers)
+df_numbers.to_excel("MappingHeatmap.xlsx")
+    
 """
 for comb in onto_combinations:
     print(comb)
