@@ -588,8 +588,9 @@ df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_ou
 with open("./iriDictionary.json") as f: 
     iri_dictionary = json.load(f)
 
-onto_combinations = [('AFO', 'BAO')]
 
+onto_combinations = [('AFO', 'BAO')]
+#TODO: transfer to function
 for comb in onto_combinations:
     onto_dict1 = iri_dictionary[comb[0]]
     onto_dict2 = iri_dictionary[comb[1]]
@@ -611,7 +612,7 @@ for comb in onto_combinations:
             class_match = None   
         
         if class_match:
-            match_list.append({iri,{}})
+            match_list.append({iri:{'iri':iri}})
      
     # delete already found iris from list
     iri_list_dict_1_cleaned = iri_list_dict_1
@@ -627,10 +628,14 @@ for comb in onto_combinations:
     altLabel_list2 = [onto_dict2[iri]["altLabel"] for iri in iri_list_dict_2]
     name_list2 = [onto_dict2[iri]["name"] for iri in iri_list_dict_2]
     """
-    for i in label_list1:
-        append_dict = search_value_in_nested_dict(onto_dict2,i)
-        if append_dict:
-            
+    for i in range(len(label_list1)):
+        string_list = [label_list1[i], prefLabel_list1[i], altLabel_list1[i], name_list1[i]]
+        for value in string_list:
+            if value != None:
+                append_dict = search_value_in_nested_dict(onto_dict2,value)
+    #TODO: Weiter hier: Liste aus append_dicts erstellen, wenn sie nicht leer sind,
+    # sodass liste aus append_dicts für jede Iri an match_list angehangen werden kann
+                if append_dict:        
     
 
     df_numbers[comb[0]][comb[1]] = len(match_list)
