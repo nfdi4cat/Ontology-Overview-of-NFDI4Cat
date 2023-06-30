@@ -502,11 +502,37 @@ def onto_format_validation(onto_name, URL):
         #print("TTL: {}, {} -> will need formatting".format(onto_name, URL))
         return True
     else:
-        #print("Non-Conform: {}, {} -> not compatible".format(onto_name, URL))
+        print("Non-Conform: {}, {} -> not compatible".format(onto_name, URL))
         return False
     
 ####
+# search for same values in nested dicts
+# with input dictionary and value to be searched, it outputs the 
+# path to the searched value for each dictionary
+def search_value_in_nested_dict(dictionary, value, keys=None, path=None):
+    if keys is None:
+        keys = []
+    if path is None:
+        path = []
 
+    for key, val in dictionary.items():
+        current_path = path + [key]  # Update the current key path
+
+        if val == value:
+            keys.append(tuple(current_path))
+
+        if isinstance(val, dict):
+            search_value_in_nested_dict(val, value, keys, current_path)
+    
+    result_dict = {}
+    for key_path in keys:
+        current_dict = result_dict
+        for key in key_path[:-1]:
+            current_dict.setdefault(key, {})
+            current_dict = current_dict[key]
+        current_dict[key_path[-1]] = value
+        
+    return result_dict
 
 
 ####
@@ -542,7 +568,8 @@ def class_description_loader():
     
     with open('iriDictionary.json', 'w') as fp:
         json.dump(iri_dictionary, fp)
-
+    
+    return iri_dictionary
 ####
 
 onto_URLs = get_ontology_URLs()
@@ -557,23 +584,23 @@ ontoNameList_output.remove("EMMO")
 onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
 df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
 
-
+#TODO: substitute with class_description_loader()
 with open("./iriDictionary.json") as f: 
     iri_dictionary = json.load(f)
+
+onto_combinations = [('AFO', 'BAO')]
 
 for comb in onto_combinations:
     onto_dict1 = iri_dictionary[comb[0]]
     onto_dict2 = iri_dictionary[comb[1]]
     
     iri_list_dict_1 = list(onto_dict1.keys())
+    iri_list_dict_2 = list(onto_dict2.keys())
+    
     match_list = []
     
-    label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1]
-    prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1]
-    altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1]
-    name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1]
     
-    
+    # search for same iris 
     for iri in iri_list_dict_1:
         class_match = None
         try:
@@ -581,12 +608,31 @@ for comb in onto_combinations:
             
         except:
             #durchsuche alle labels, preflabels, etc. in anderer Ontologie
-            class_match = None
-            
+            class_match = None   
         
         if class_match:
-            match_list.append(iri)
-        
+            match_list.append({iri,{}})
+     
+    # delete already found iris from list
+    iri_list_dict_1_cleaned = iri_list_dict_1
+    [iri_list_dict_1_cleaned.remove(iri) for iri in match_list]
+    
+    label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1_cleaned]
+    prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1_cleaned]
+    altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1_cleaned]
+    name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1_cleaned]
+    """
+    label_list2 = [onto_dict2[iri]["label"] for iri in iri_list_dict_2]
+    prefLabel_list2 = [onto_dict2[iri]["prefLabel"] for iri in iri_list_dict_2]
+    altLabel_list2 = [onto_dict2[iri]["altLabel"] for iri in iri_list_dict_2]
+    name_list2 = [onto_dict2[iri]["name"] for iri in iri_list_dict_2]
+    """
+    for i in label_list1:
+        append_dict = search_value_in_nested_dict(onto_dict2,i)
+        if append_dict:
+            
+    
+
     df_numbers[comb[0]][comb[1]] = len(match_list)
 
 print(df_numbers)
