@@ -600,7 +600,6 @@ for comb in onto_combinations:
     
     match_list = []
     
-    
     # search for same iris 
     for iri in iri_list_dict_1:
         class_match = None
@@ -614,8 +613,6 @@ for comb in onto_combinations:
      
     # delete already found iris from dict
     iri_list_dict_1_cleaned = iri_list_dict_1
-    
-    #for iri in match_list:
     [iri_list_dict_1_cleaned.remove(list(iri.keys())[0]) for iri in match_list]
     
     label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1_cleaned]
@@ -623,7 +620,7 @@ for comb in onto_combinations:
     altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1_cleaned]
     name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1_cleaned]
 
-
+    #search for same preflabels, labels, altlabels, names
     for i in range(len(label_list1)):
         string_list = [label_list1[i], prefLabel_list1[i], altLabel_list1[i], name_list1[i]]
         append_dict = []
@@ -635,8 +632,11 @@ for comb in onto_combinations:
        
         if append_dict:
             match_list.append(append_dict)
+            
+    # clean match_list for duplicates
+    [iri_list_dict_1_cleaned.remove(list(iri.keys())[0]) for iri in match_list]
+    
         
-
     df_numbers[comb[0]][comb[1]] = len(match_list)
 
 print(df_numbers)
