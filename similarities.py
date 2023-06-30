@@ -518,7 +518,7 @@ def search_value_in_nested_dict(dictionary, value, keys=None, path=None):
     for key, val in dictionary.items():
         current_path = path + [key]  # Update the current key path
 
-        if val == value:
+        if str(val).lower() == str(value).lower():
             keys.append(tuple(current_path))
 
         if isinstance(val, dict):
