@@ -516,12 +516,14 @@ def search_value_in_nested_dict(dictionary, value, keys=None, path=None):
         path = []
 
     for key, val in dictionary.items():
-        current_path = path + [key]  # Update the current key path
+        # Update the current key path
+        current_path = path + [key]  
 
         if str(val).lower() == str(value).lower():
             keys.append(tuple(current_path))
 
-        if isinstance(val, dict):
+        # recursive call of the function such that the lowest part of the nested dict is queried
+        if isinstance(val, dict): 
             search_value_in_nested_dict(val, value, keys, current_path)
     
     result_dict = {}
@@ -609,11 +611,11 @@ for comb in onto_combinations:
             class_match = None   
         
         if class_match:
-            match_list.append({iri:{'iri':iri}})
+            match_list.append([{comb[0]:{iri:{'iri':iri}}},{comb[1]:{iri:{'iri':iri}}}])
      
     # delete already found iris from dict
     iri_list_dict_1_cleaned = iri_list_dict_1
-    [iri_list_dict_1_cleaned.remove(list(iri.keys())[0]) for iri in match_list]
+    [iri_list_dict_1_cleaned.remove(list(entry[0][comb[0]].keys())[0]) for entry in match_list]
     
     label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1_cleaned]
     prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1_cleaned]
@@ -628,14 +630,14 @@ for comb in onto_combinations:
             if value != None:
                 value_dict = search_value_in_nested_dict(onto_dict2,value)
                 if value_dict:        
-                    append_dict.append(value_dict)
+                    if label_list1[i] != None: #try to insert label of first ontology
+                        append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{label_list1[i]}}}, {comb[1]:value_dict}])
+                    else:
+                        append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{value}}}, {comb[1]:value_dict}])
        
         if append_dict:
             match_list.append(append_dict)
-            
-    # clean match_list for duplicates
-    [iri_list_dict_1_cleaned.remove(list(iri.keys())[0]) for iri in match_list]
-    
+
         
     df_numbers[comb[0]][comb[1]] = len(match_list)
 
