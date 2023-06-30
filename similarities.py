@@ -606,37 +606,36 @@ for comb in onto_combinations:
         class_match = None
         try:
             class_match = onto_dict2[iri]
-            
         except:
-            #durchsuche alle labels, preflabels, etc. in anderer Ontologie
             class_match = None   
         
         if class_match:
             match_list.append({iri:{'iri':iri}})
      
-    # delete already found iris from list
+    # delete already found iris from dict
     iri_list_dict_1_cleaned = iri_list_dict_1
-    [iri_list_dict_1_cleaned.remove(iri) for iri in match_list]
+    
+    #for iri in match_list:
+    [iri_list_dict_1_cleaned.remove(list(iri.keys())[0]) for iri in match_list]
     
     label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1_cleaned]
     prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1_cleaned]
     altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1_cleaned]
     name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1_cleaned]
-    """
-    label_list2 = [onto_dict2[iri]["label"] for iri in iri_list_dict_2]
-    prefLabel_list2 = [onto_dict2[iri]["prefLabel"] for iri in iri_list_dict_2]
-    altLabel_list2 = [onto_dict2[iri]["altLabel"] for iri in iri_list_dict_2]
-    name_list2 = [onto_dict2[iri]["name"] for iri in iri_list_dict_2]
-    """
+
+
     for i in range(len(label_list1)):
         string_list = [label_list1[i], prefLabel_list1[i], altLabel_list1[i], name_list1[i]]
+        append_dict = []
         for value in string_list:
             if value != None:
-                append_dict = search_value_in_nested_dict(onto_dict2,value)
-    #TODO: Weiter hier: Liste aus append_dicts erstellen, wenn sie nicht leer sind,
-    # sodass liste aus append_dicts für jede Iri an match_list angehangen werden kann
-                if append_dict:        
-    
+                value_dict = search_value_in_nested_dict(onto_dict2,value)
+                if value_dict:        
+                    append_dict.append(value_dict)
+       
+        if append_dict:
+            match_list.append(append_dict)
+        
 
     df_numbers[comb[0]][comb[1]] = len(match_list)
 
