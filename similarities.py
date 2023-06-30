@@ -574,6 +574,49 @@ def class_description_loader():
     return iri_dictionary
 ####
 
+####
+
+#TODO: Code aufraeumen!
+def store_similarities(onto_combination, match_list):
+    # Initialize lists to store the data
+    onto1_data1 = []
+    onto1_data2 = []
+    
+    onto2_data1 = []
+    onto2_data2 = []
+    
+    # Iterate through the flattened listing and extract data for 'AFO' and 'BAO'
+    for entry in match_list:
+        if type(entry[0]) == list:
+            onto1_entry1 = list(entry[0][0].get(onto_combination[0]).keys())[0]
+            onto1_entry2 = list(entry[0][0].get(onto_combination[0]).values())[0]
+        else: 
+            onto1_entry1 = list(entry[0].get(onto_combination[0]).keys())[0]
+            onto1_entry2 = list(entry[0].get(onto_combination[0]).values())[0]
+      
+        if type(entry[0]) == list:
+            onto2_entry1 = list(entry[0][1].get(onto_combination[1]).keys())[0]
+            onto2_entry2 = list(entry[0][1].get(onto_combination[1]).values())[0]
+        else:
+            onto2_entry1 = list(entry[1].get(onto_combination[1]).keys())[0]
+            onto2_entry2 = list(entry[1].get(onto_combination[1]).values())[0]
+    
+        onto1_data1.append(onto1_entry1)
+        onto1_data2.append(onto1_entry2)
+        
+        onto2_data1.append(onto2_entry1)
+        onto2_data2.append(onto2_entry2)
+    
+    # Create DataFrame from the data
+    df = pd.DataFrame({onto_combination[0]+'_IRI': onto1_data1, onto_combination[0]+'_DESC':onto1_data2, onto_combination[1]+'_IRI': onto2_data1, onto_combination[1]+'_DESC':onto2_data2})
+    
+    df.to_excel("./mapping/"+onto_combination[0]+"_"+onto_combination[1]+".xlsx")
+    
+    return df
+
+####
+
+
 onto_URLs = get_ontology_URLs()
 ontoNameList = list(onto_URLs.keys())
 ontoNameList_output = list(onto_URLs.keys())
@@ -631,18 +674,24 @@ for comb in onto_combinations:
                 value_dict = search_value_in_nested_dict(onto_dict2,value)
                 if value_dict:        
                     if label_list1[i] != None: #try to insert label of first ontology
-                        append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{label_list1[i]}}}, {comb[1]:value_dict}])
+                        append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
                     else:
                         append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{value}}}, {comb[1]:value_dict}])
        
         if append_dict:
             match_list.append(append_dict)
 
-        
+    store_similarities(comb,match_list)
+    
     df_numbers[comb[0]][comb[1]] = len(match_list)
 
 print(df_numbers)
 df_numbers.to_excel("MappingHeatmap.xlsx")
+
+
+
+
+
     
 """
 for comb in onto_combinations:
