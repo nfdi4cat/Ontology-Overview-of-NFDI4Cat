@@ -634,7 +634,7 @@ with open("./iriDictionary.json") as f:
     iri_dictionary = json.load(f)
 
 
-onto_combinations = [('AFO', 'BAO')]
+#onto_combinations = [('AFO', 'BAO')]
 #TODO: transfer to function
 for comb in onto_combinations:
     onto_dict1 = iri_dictionary[comb[0]]
