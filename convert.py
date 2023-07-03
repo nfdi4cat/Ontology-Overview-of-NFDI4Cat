@@ -145,6 +145,41 @@ def UpdateMainReadme():
     print('./README.md to update the linking to the ontology markdown files.')
     print('================================================================')
 
+####
+def Heatmap_to_Markdown():
+    # Read the Excel file
+    df = pd.read_excel('MappingHeatmap.xlsx')
+    md_dict = load_ontologies_metadata()
+    print_list = []
+    df = df.fillna('')
+    # Iterate through each cell in the DataFrame
+    for row in df.index:
+        for col in df.columns:
+            # Get the current cell value
+            cell_value = df.at[row, col]
+            if type(cell_value) != str and cell_value != df.at[row,'Unnamed: 0']:
+                # Write the column and row names behind the cell value
+                new_value = f'[{cell_value}](/mapping/{col}_'+df.at[row,'Unnamed: 0'] +'.xlsx)'
+                df.at[row, col] = new_value
+            
+            if df.at[row,'Unnamed: 0'] == col:
+                df.at[row, col] = md_dict[col]["Ontology Characteristics"]["Class count"]
+                
+    for col in df.columns:
+        df.rename(columns={col: '['+col+']'}, inplace=True)
+    
+    for row in df.index:
+        repl_str = '['+df.at[row,'[Unnamed: 0]']+']'
+        df.at[row,'[Unnamed: 0]'] = repl_str
+        
+    df.rename(columns={'[Unnamed: 0]': ''}, inplace=True)
+    
+    df.to_markdown('Heatmap_Classes.md', index=False)
+    # Save the modified DataFrame to a new Excel file
+    #df.to_excel('output_file1.xlsx', index=False)
+####
+
+
 def run():    
     Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'
     ConvertExcelToMD(Master_Table)
