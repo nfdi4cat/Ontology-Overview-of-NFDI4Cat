@@ -1,3 +1,0 @@
-|    |   Unnamed: 0 | MOP_IRI                                    | MOP_DESC                                                                                                | MS_IRI                                    | MS_DESC                       |
-|---:|-------------:|:-------------------------------------------|:--------------------------------------------------------------------------------------------------------|:------------------------------------------|:------------------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/CHEBI_23367 | {'label': 'molecular entity', 'prefLabel': 'molecular entity', 'altLabel': None, 'name': 'CHEBI_23367'} | http://purl.obolibrary.org/obo/MS_1000881 | {'label': 'molecular entity'} |

@@ -179,13 +179,14 @@ def Heatmap_to_Markdown():
     #df.to_excel('output_file1.xlsx', index=False)
 ####
 
+####
 def Mappings_to_Markdown():
     file_list = [f for f in os.listdir('./mapping/') if f.endswith('.xlsx')]
     
     for file in file_list:
         df = pd.read_excel('./mapping/'+file)
-        df.to_markdown('./mapping/' + file.replace('xlsx','.md'))
-
+        df.to_markdown('./mapping/' + file.replace('xlsx','md'))
+####
 
 def run():    
     Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'

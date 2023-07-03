@@ -1,4 +1,0 @@
-|    |   Unnamed: 0 | CAO_IRI                                    | CAO_DESC                                              | REX_IRI                                    | REX_DESC                                              |
-|---:|-------------:|:-------------------------------------------|:------------------------------------------------------|:-------------------------------------------|:------------------------------------------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/REX_0000002 | {'iri': 'http://purl.obolibrary.org/obo/REX_0000002'} | http://purl.obolibrary.org/obo/REX_0000002 | {'iri': 'http://purl.obolibrary.org/obo/REX_0000002'} |
-|  1 |            1 | http://purl.obolibrary.org/obo/REX_0000001 | {'iri': 'http://purl.obolibrary.org/obo/REX_0000001'} | http://purl.obolibrary.org/obo/REX_0000001 | {'iri': 'http://purl.obolibrary.org/obo/REX_0000001'} |

@@ -1,4 +1,0 @@
-|    |   Unnamed: 0 | CHMO_IRI                                    | CHMO_DESC                                                                        | OFM_IRI                                            | OFM_DESC            |
-|---:|-------------:|:--------------------------------------------|:---------------------------------------------------------------------------------|:---------------------------------------------------|:--------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/CHMO_0002793 | {'label': 'sensor', 'prefLabel': None, 'altLabel': None, 'name': 'CHMO_0002793'} | http://www.ontologies.com/Ontology3197.owl#Sensor  | {'name': 'sensor'}  |
-|  1 |            1 | http://purl.obolibrary.org/obo/OBI_0302893  | {'label': 'storage', 'prefLabel': None, 'altLabel': None, 'name': 'OBI_0302893'} | http://www.ontologies.com/Ontology3197.owl#Storage | {'name': 'storage'} |

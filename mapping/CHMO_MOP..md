@@ -1,5 +1,0 @@
-|    |   Unnamed: 0 | CHMO_IRI                                   | CHMO_DESC                                             | MOP_IRI                                    | MOP_DESC                                              |
-|---:|-------------:|:-------------------------------------------|:------------------------------------------------------|:-------------------------------------------|:------------------------------------------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/BFO_0000015 | {'iri': 'http://purl.obolibrary.org/obo/BFO_0000015'} | http://purl.obolibrary.org/obo/BFO_0000015 | {'iri': 'http://purl.obolibrary.org/obo/BFO_0000015'} |
-|  1 |            1 | http://purl.obolibrary.org/obo/BFO_0000016 | {'iri': 'http://purl.obolibrary.org/obo/BFO_0000016'} | http://purl.obolibrary.org/obo/BFO_0000016 | {'iri': 'http://purl.obolibrary.org/obo/BFO_0000016'} |
-|  2 |            2 | http://purl.obolibrary.org/obo/CHEBI_23367 | {'iri': 'http://purl.obolibrary.org/obo/CHEBI_23367'} | http://purl.obolibrary.org/obo/CHEBI_23367 | {'iri': 'http://purl.obolibrary.org/obo/CHEBI_23367'} |

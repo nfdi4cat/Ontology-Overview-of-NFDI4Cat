@@ -1,3 +1,0 @@
-|    |   Unnamed: 0 | metadata4Ing_IRI                      | metadata4Ing_DESC   | REX_IRI                                    | REX_DESC                 |
-|---:|-------------:|:--------------------------------------|:--------------------|:-------------------------------------------|:-------------------------|
-|  0 |            0 | http://www.w3.org/ns/prov#Association | {'Association'}     | http://purl.obolibrary.org/obo/REX_0000150 | {'label': 'Association'} |

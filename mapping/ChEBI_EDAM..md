@@ -1,5 +1,0 @@
-|    |   Unnamed: 0 | ChEBI_IRI                                  | ChEBI_DESC                                                                          | EDAM_IRI                            | EDAM_DESC               |
-|---:|-------------:|:-------------------------------------------|:------------------------------------------------------------------------------------|:------------------------------------|:------------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/CHEBI_36976 | {'label': 'nucleotide', 'prefLabel': None, 'altLabel': None, 'name': 'CHEBI_36976'} | http://edamontology.org/format_1207 | {'label': 'nucleotide'} |
-|  1 |            1 | http://purl.obolibrary.org/obo/CHEBI_36080 | {'label': 'protein', 'prefLabel': None, 'altLabel': None, 'name': 'CHEBI_36080'}    | http://edamontology.org/format_1208 | {'label': 'protein'}    |
-|  2 |            2 | http://purl.obolibrary.org/obo/CHEBI_6617  | {'label': 'MEGA', 'prefLabel': None, 'altLabel': None, 'name': 'CHEBI_6617'}        | http://edamontology.org/format_1991 | {'label': 'MEGA'}       |

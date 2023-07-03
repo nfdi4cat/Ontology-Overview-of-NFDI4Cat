@@ -1,4 +1,0 @@
-|    |   Unnamed: 0 | BFO_IRI                                    | BFO_DESC                                                                                              | SBO_IRI                              | SBO_DESC                     |
-|---:|-------------:|:-------------------------------------------|:------------------------------------------------------------------------------------------------------|:-------------------------------------|:-----------------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/BFO_0000040 | {'label': 'material entity', 'prefLabel': 'material entity', 'altLabel': None, 'name': 'BFO_0000040'} | http://biomodels.net/SBO/SBO_0000240 | {'label': 'material entity'} |
-|  1 |            1 | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'process', 'prefLabel': 'process', 'altLabel': None, 'name': 'BFO_0000015'}                 | http://biomodels.net/SBO/SBO_0000375 | {'label': 'process'}         |

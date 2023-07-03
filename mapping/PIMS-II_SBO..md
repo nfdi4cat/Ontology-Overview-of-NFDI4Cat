@@ -1,4 +1,0 @@
-|    |   Unnamed: 0 | PIMS-II_IRI                                              | PIMS-II_DESC                                                                         | SBO_IRI                              | SBO_DESC                 |
-|---:|-------------:|:---------------------------------------------------------|:-------------------------------------------------------------------------------------|:-------------------------------------|:-------------------------|
-|  0 |            0 | http://www.molmod.info/semantics/pims-ii.ttl#Process     | {'label': 'Process', 'prefLabel': None, 'altLabel': None, 'name': 'Process'}         | http://biomodels.net/SBO/SBO_0000375 | {'label': 'Process'}     |
-|  1 |            1 | http://www.molmod.info/semantics/pims-ii.ttl#Duplication | {'label': 'Duplication', 'prefLabel': None, 'altLabel': None, 'name': 'Duplication'} | http://biomodels.net/SBO/SBO_0000203 | {'label': 'Duplication'} |

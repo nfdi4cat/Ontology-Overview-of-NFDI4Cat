@@ -1,4 +1,0 @@
-|    |   Unnamed: 0 | OFM_IRI                                              | OFM_DESC      | OSMO_IRI                                                | OSMO_DESC             |
-|---:|-------------:|:-----------------------------------------------------|:--------------|:--------------------------------------------------------|:----------------------|
-|  0 |            0 | http://www.ontologies.com/Ontology3197.owl#Processor | {'Processor'} | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#processor | {'name': 'Processor'} |
-|  1 |            1 | http://www.ontologies.com/Ontology3197.owl#Condition | {'Condition'} | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#condition | {'name': 'Condition'} |

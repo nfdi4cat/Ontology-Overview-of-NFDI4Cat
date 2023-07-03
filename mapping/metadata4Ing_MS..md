@@ -1,3 +1,0 @@
-|    |   Unnamed: 0 | metadata4Ing_IRI                   | metadata4Ing_DESC   | MS_IRI                                     | MS_DESC               |
-|---:|-------------:|:-----------------------------------|:--------------------|:-------------------------------------------|:----------------------|
-|  0 |            0 | http://www.w3.org/ns/prov#Activity | {'Activity'}        | http://purl.obolibrary.org/obo/NCIT_C43431 | {'label': 'Activity'} |
