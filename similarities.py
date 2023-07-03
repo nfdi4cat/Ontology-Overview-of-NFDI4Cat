@@ -571,6 +571,16 @@ def class_description_loader():
 
 #TODO: Code aufraeumen!
 def store_similarities(onto_combination, match_list):
+    # onto_combination = tuple of ontology names
+    # match_list = Nested list of dictionaries, where each list entry contains 
+    # a dictionary with a key for each ontology contained in onto_combination.
+    # The values of these keys contain themselves information on mapped classes 
+    # in form of IRI:{label:<label>, prefLabel:<prefLabel>, altLabel:<altLabel>, name:<name>}
+    # Output: Dataframe with first two columns containing IRI and 
+    # {label, prefLabel, altLabel, name} of each mapped class within the first ontology.
+    # The other two columns contain the same information (IRI and labeling of 
+    # classes) for the second ontology.
+    
     # Initialize lists to store the data
     onto1_data1 = []
     onto1_data2 = []
@@ -578,7 +588,7 @@ def store_similarities(onto_combination, match_list):
     onto2_data1 = []
     onto2_data2 = []
     
-    # Iterate through the flattened listing and extract data for 'AFO' and 'BAO'
+   # iterate through match_list
     for entry in match_list:
         if type(entry[0]) == list:
             onto1_entry1 = list(entry[0][0].get(onto_combination[0]).keys())[0]
@@ -610,9 +620,16 @@ def store_similarities(onto_combination, match_list):
 ####
 
 def Ontology_Mapping():
-    # Generates the Mapping Heatmap, that gets mappings for each combination 
-    # of ontologies.
-    # 
+    # Generates the Mapping Heatmap.xlsx, that gets mappings for each combination 
+    # of ontologies. This is done by comparing each set of classes of the 
+    # combination of ontologies against each other by searching for same iris.
+    # Then, all classes that were not found by same iri, the labels, 
+    # preferred labels, alternate labels and names of the classes of the first 
+    # ontology are searched for in the labels, preferred labels, alternate 
+    # labels and names of the second ontology.
+    # For each combination of ontologies, the function store_similarities() is
+    # called to store the mapping as excel-file in the subdirectory ./mapping/
+    
     onto_URLs = get_ontology_URLs()
     ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
@@ -670,7 +687,7 @@ def Ontology_Mapping():
                     if value_dict:        
                         if label_list1[i] != None: #try to insert label of first ontology
                             append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
-                        else:
+                        else: # iri has no label, thus, no label is inserted
                             append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{value}}}, {comb[1]:value_dict}])
            
             if append_dict:
