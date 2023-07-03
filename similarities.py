@@ -536,13 +536,6 @@ def search_value_in_nested_dict(dictionary, value, keys=None, path=None):
         
     return result_dict
 
-
-####
-#print out ontologies without proper URLs -> 
-#TODO: find those links and fix it in MasterTable
-onto_URLs = get_ontology_URLs()
-for i in onto_URLs:
-    onto_format_validation(i, onto_URLs[i])   
 ####
 
 
@@ -616,78 +609,89 @@ def store_similarities(onto_combination, match_list):
 
 ####
 
-
-onto_URLs = get_ontology_URLs()
-ontoNameList = list(onto_URLs.keys())
-ontoNameList_output = list(onto_URLs.keys())
-
-[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
-
-ontoNameList_output.remove("CHEMINF")
-ontoNameList_output.remove("EMMO")
-
-onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
-df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
-
-#TODO: substitute with class_description_loader()
-with open("./iriDictionary.json") as f: 
-    iri_dictionary = json.load(f)
-
-
-#onto_combinations = [('AFO', 'BAO')]
-#TODO: transfer to function
-for comb in onto_combinations:
-    onto_dict1 = iri_dictionary[comb[0]]
-    onto_dict2 = iri_dictionary[comb[1]]
+def Ontology_Mapping():
+    # Generates the Mapping Heatmap, that gets mappings for each combination 
+    # of ontologies.
+    # 
+    onto_URLs = get_ontology_URLs()
+    ontoNameList = list(onto_URLs.keys())
+    ontoNameList_output = list(onto_URLs.keys())
     
-    iri_list_dict_1 = list(onto_dict1.keys())
-    iri_list_dict_2 = list(onto_dict2.keys())
+    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    match_list = []
+    ontoNameList_output.remove("CHEMINF")
+    ontoNameList_output.remove("EMMO")
     
-    # search for same iris 
-    for iri in iri_list_dict_1:
-        class_match = None
-        try:
-            class_match = onto_dict2[iri]
-        except:
-            class_match = None   
+    onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
+    df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
+    
+    #TODO: substitute with class_description_loader()
+    with open("./iriDictionary.json") as f: 
+        iri_dictionary = json.load(f)
+    
+    
+    #onto_combinations = [('AFO', 'BAO')]
+    #TODO: transfer to function
+    for comb in onto_combinations:
+        onto_dict1 = iri_dictionary[comb[0]]
+        onto_dict2 = iri_dictionary[comb[1]]
         
-        if class_match:
-            match_list.append([{comb[0]:{iri:{'iri':iri}}},{comb[1]:{iri:{'iri':iri}}}])
-     
-    # delete already found iris from dict
-    iri_list_dict_1_cleaned = iri_list_dict_1
-    [iri_list_dict_1_cleaned.remove(list(entry[0][comb[0]].keys())[0]) for entry in match_list]
+        iri_list_dict_1 = list(onto_dict1.keys())
+        
+        match_list = []
+        
+        # search for same iris 
+        for iri in iri_list_dict_1:
+            class_match = None
+            try:
+                class_match = onto_dict2[iri]
+            except:
+                class_match = None   
+            
+            if class_match:
+                match_list.append([{comb[0]:{iri:{'iri':iri}}},{comb[1]:{iri:{'iri':iri}}}])
+         
+        # delete already found iris from dict
+        iri_list_dict_1_cleaned = iri_list_dict_1
+        [iri_list_dict_1_cleaned.remove(list(entry[0][comb[0]].keys())[0]) for entry in match_list]
+        
+        label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1_cleaned]
+        prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1_cleaned]
+        altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1_cleaned]
+        name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1_cleaned]
     
-    label_list1 = [onto_dict1[iri]["label"] for iri in iri_list_dict_1_cleaned]
-    prefLabel_list1 = [onto_dict1[iri]["prefLabel"] for iri in iri_list_dict_1_cleaned]
-    altLabel_list1 = [onto_dict1[iri]["altLabel"] for iri in iri_list_dict_1_cleaned]
-    name_list1 = [onto_dict1[iri]["name"] for iri in iri_list_dict_1_cleaned]
-
-    #search for same preflabels, labels, altlabels, names
-    for i in range(len(label_list1)):
-        string_list = [label_list1[i], prefLabel_list1[i], altLabel_list1[i], name_list1[i]]
-        append_dict = []
-        for value in string_list:
-            if value != None:
-                value_dict = search_value_in_nested_dict(onto_dict2,value)
-                if value_dict:        
-                    if label_list1[i] != None: #try to insert label of first ontology
-                        append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
-                    else:
-                        append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{value}}}, {comb[1]:value_dict}])
-       
-        if append_dict:
-            match_list.append(append_dict)
-
-    store_similarities(comb,match_list)
+        #search for same preflabels, labels, altlabels, names
+        for i in range(len(label_list1)):
+            string_list = [label_list1[i], prefLabel_list1[i], altLabel_list1[i], name_list1[i]]
+            append_dict = []
+            for value in string_list:
+                if value != None:
+                    value_dict = search_value_in_nested_dict(onto_dict2,value)
+                    if value_dict:        
+                        if label_list1[i] != None: #try to insert label of first ontology
+                            append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
+                        else:
+                            append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{value}}}, {comb[1]:value_dict}])
+           
+            if append_dict:
+                match_list.append(append_dict)
     
-    df_numbers[comb[0]][comb[1]] = len(match_list)
-
-print(df_numbers)
-df_numbers.to_excel("MappingHeatmap.xlsx")
-
+        store_similarities(comb,match_list)
+        
+        df_numbers[comb[0]][comb[1]] = len(match_list)
     
+    print(df_numbers)
+    df_numbers.to_excel("MappingHeatmap.xlsx")
+
+####
+
+####
+#print out ontologies without proper URLs -> 
+#TODO: find those links and fix it in MasterTable
+#onto_URLs = get_ontology_URLs()
+#for i in onto_URLs:
+#    onto_format_validation(i, onto_URLs[i])   
+####
+
     
         
