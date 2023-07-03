@@ -1,3 +1,3 @@
-|   Unnamed: 0 | BAO_IRI                                         | BAO_DESC                                                                          | OSMO_IRI                                               | OSMO_DESC            |
-|-------------:|:------------------------------------------------|:----------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------|
-|            0 | http://www.bioassayontology.org/bao#BAO_0003119 | {'label': 'software', 'prefLabel': None, 'altLabel': None, 'name': 'BAO_0003119'} | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#software | {'name': 'software'} |
+|    | BAO_IRI                                         | BAO_DESC                                                                          | OSMO_IRI                                               | OSMO_DESC            |
+|---:|:------------------------------------------------|:----------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------|
+|  0 | http://www.bioassayontology.org/bao#BAO_0003119 | {'label': 'software', 'prefLabel': None, 'altLabel': None, 'name': 'BAO_0003119'} | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#software | {'name': 'software'} |

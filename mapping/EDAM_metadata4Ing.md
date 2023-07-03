@@ -1,3 +1,3 @@
-|   Unnamed: 0 | EDAM_IRI                          | EDAM_DESC                                                                   | metadata4Ing_IRI                           | metadata4Ing_DESC                     |
-|-------------:|:----------------------------------|:----------------------------------------------------------------------------|:-------------------------------------------|:--------------------------------------|
-|            0 | http://edamontology.org/data_0007 | {'label': 'Tool', 'prefLabel': None, 'altLabel': None, 'name': 'data_0007'} | http://w3id.org/nfdi4ing/metadata4ing#Tool | {'prefLabel': 'Tool', 'name': 'Tool'} |
+|    | EDAM_IRI                          | EDAM_DESC                                                                   | metadata4Ing_IRI                           | metadata4Ing_DESC                     |
+|---:|:----------------------------------|:----------------------------------------------------------------------------|:-------------------------------------------|:--------------------------------------|
+|  0 | http://edamontology.org/data_0007 | {'label': 'Tool', 'prefLabel': None, 'altLabel': None, 'name': 'data_0007'} | http://w3id.org/nfdi4ing/metadata4ing#Tool | {'prefLabel': 'Tool', 'name': 'Tool'} |

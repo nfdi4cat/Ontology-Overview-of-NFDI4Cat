@@ -1,3 +1,3 @@
-|   Unnamed: 0 | MOP_IRI                                    | MOP_DESC                                                                              | VIMMP_IRI                                         | VIMMP_DESC          |
-|-------------:|:-------------------------------------------|:--------------------------------------------------------------------------------------|:--------------------------------------------------|:--------------------|
-|            0 | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'process', 'prefLabel': 'process', 'altLabel': None, 'name': 'BFO_0000015'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#process | {'name': 'process'} |
+|    | MOP_IRI                                    | MOP_DESC                                                                              | VIMMP_IRI                                         | VIMMP_DESC          |
+|---:|:-------------------------------------------|:--------------------------------------------------------------------------------------|:--------------------------------------------------|:--------------------|
+|  0 | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'process', 'prefLabel': 'process', 'altLabel': None, 'name': 'BFO_0000015'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#process | {'name': 'process'} |

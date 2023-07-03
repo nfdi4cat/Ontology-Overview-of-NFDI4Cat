@@ -1,4 +1,4 @@
-|   Unnamed: 0 | CAO_IRI                                   | CAO_DESC                                                                     | OSMO_IRI                                           | OSMO_DESC         |
-|-------------:|:------------------------------------------|:-----------------------------------------------------------------------------|:---------------------------------------------------|:------------------|
-|            0 | http://purl.obolibrary.org/obo/UO_0000000 | {'label': 'Unit', 'prefLabel': None, 'altLabel': None, 'name': 'UO_0000000'} | https://purl.vimmp.eu/semantics/vivo/vivo.ttl#unit | {'name': 'Unit'}  |
-|            1 | http://xmlns.com/foaf/0.1/Agent           | {'label': 'Agent', 'prefLabel': None, 'altLabel': None, 'name': 'Agent'}     | https://emmc.eu/semantics/evmpo/evmpo.ttl#agent    | {'name': 'Agent'} |
+|    | CAO_IRI                                   | CAO_DESC                                                                     | OSMO_IRI                                           | OSMO_DESC         |
+|---:|:------------------------------------------|:-----------------------------------------------------------------------------|:---------------------------------------------------|:------------------|
+|  0 | http://purl.obolibrary.org/obo/UO_0000000 | {'label': 'Unit', 'prefLabel': None, 'altLabel': None, 'name': 'UO_0000000'} | https://purl.vimmp.eu/semantics/vivo/vivo.ttl#unit | {'name': 'Unit'}  |
+|  1 | http://xmlns.com/foaf/0.1/Agent           | {'label': 'Agent', 'prefLabel': None, 'altLabel': None, 'name': 'Agent'}     | https://emmc.eu/semantics/evmpo/evmpo.ttl#agent    | {'name': 'Agent'} |

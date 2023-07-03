@@ -185,7 +185,8 @@ def Mappings_to_Markdown():
     
     for file in file_list:
         df = pd.read_excel('./mapping/'+file)
-        df.to_markdown('./mapping/' + file.replace('xlsx','md'), index=False)
+        del df['Unnamed: 0']
+        df.to_markdown('./mapping/' + file.replace('xlsx','md'))
 ####
 
 def run():    

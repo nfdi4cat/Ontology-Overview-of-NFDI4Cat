@@ -1,2 +1,2 @@
-| Unnamed: 0   | ChEBI_IRI   | ChEBI_DESC   | PIMS-II_IRI   | PIMS-II_DESC   |
-|--------------|-------------|--------------|---------------|----------------|
+| ChEBI_IRI   | ChEBI_DESC   | PIMS-II_IRI   | PIMS-II_DESC   |
+|-------------|--------------|---------------|----------------|

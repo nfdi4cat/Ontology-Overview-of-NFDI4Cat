@@ -1,4 +1,4 @@
-|   Unnamed: 0 | OSMO_IRI                                             | OSMO_DESC      | PIMS-II_IRI                                             | PIMS-II_DESC                                  |
-|-------------:|:-----------------------------------------------------|:---------------|:--------------------------------------------------------|:----------------------------------------------|
-|            0 | https://emmc.eu/semantics/evmpo/evmpo.ttl#agent      | {'agent'}      | http://www.molmod.info/semantics/pims-ii.ttl#Agent      | {'label': 'agent', 'name': 'agent'}           |
-|            1 | https://emmc.eu/semantics/evmpo/evmpo.ttl#simulation | {'simulation'} | http://www.molmod.info/semantics/pims-ii.ttl#Simulation | {'label': 'simulation', 'name': 'simulation'} |
+|    | OSMO_IRI                                             | OSMO_DESC      | PIMS-II_IRI                                             | PIMS-II_DESC                                  |
+|---:|:-----------------------------------------------------|:---------------|:--------------------------------------------------------|:----------------------------------------------|
+|  0 | https://emmc.eu/semantics/evmpo/evmpo.ttl#agent      | {'agent'}      | http://www.molmod.info/semantics/pims-ii.ttl#Agent      | {'label': 'agent', 'name': 'agent'}           |
+|  1 | https://emmc.eu/semantics/evmpo/evmpo.ttl#simulation | {'simulation'} | http://www.molmod.info/semantics/pims-ii.ttl#Simulation | {'label': 'simulation', 'name': 'simulation'} |
