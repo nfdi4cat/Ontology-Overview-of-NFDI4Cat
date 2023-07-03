@@ -159,7 +159,7 @@ def Heatmap_to_Markdown():
             cell_value = df.at[row, col]
             if type(cell_value) != str and cell_value != df.at[row,'Unnamed: 0']:
                 # Write the column and row names behind the cell value
-                new_value = f'[' + str(int(cell_value)) +'](/mapping/{col}_'+df.at[row,'Unnamed: 0'] +'.xlsx)'
+                new_value = f'[' + str(int(cell_value)) +'](/mapping/'+col+'_'+df.at[row,'Unnamed: 0'] +'.xlsx)'
                 df.at[row, col] = new_value
             
             if df.at[row,'Unnamed: 0'] == col:
