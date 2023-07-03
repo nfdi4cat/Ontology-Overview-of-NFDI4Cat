@@ -1,3 +1,3 @@
-|    |   Unnamed: 0 | ChEBI_IRI                                  | ChEBI_DESC                                                                    | metadata4Ing_IRI               | metadata4Ing_DESC                     |
-|---:|-------------:|:-------------------------------------------|:------------------------------------------------------------------------------|:-------------------------------|:--------------------------------------|
-|  0 |            0 | http://purl.obolibrary.org/obo/CHEBI_50906 | {'label': 'Role', 'prefLabel': None, 'altLabel': None, 'name': 'CHEBI_50906'} | http://www.w3.org/ns/prov#Role | {'prefLabel': 'Role', 'name': 'Role'} |
+|   Unnamed: 0 | ChEBI_IRI                                  | ChEBI_DESC                                                                    | metadata4Ing_IRI               | metadata4Ing_DESC                     |
+|-------------:|:-------------------------------------------|:------------------------------------------------------------------------------|:-------------------------------|:--------------------------------------|
+|            0 | http://purl.obolibrary.org/obo/CHEBI_50906 | {'label': 'Role', 'prefLabel': None, 'altLabel': None, 'name': 'CHEBI_50906'} | http://www.w3.org/ns/prov#Role | {'prefLabel': 'Role', 'name': 'Role'} |
