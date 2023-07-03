@@ -65,7 +65,7 @@ The ontologies in this table contain the respective domain of knowledge or are n
 |              |  AFO |  BAO | BFO | CAO |  ChEBI | CHMO | EDAM | ENVO | metadata4Ing |  MOP |   MS  |  OBI | OFM | OSMO | PIMS-II | REX | RXNO | SBO | VIMMP |
 |--------------|:----:|:----:|:---:|:---:|:------:|:----:|:----:|:----:|:------------:|:----:|:-----:|:----:|:---:|:----:|:-------:|:---:|:----:|:---:|:-----:|
 |      AFO     | 2876 |      |     |     |        |      |      |      |              |      |       |      |     |      |         |     |      |     |       |
-|      BAO     | [104](/mapping/BAO_AFO.xlsx)  | 7512 |     |     |        |      |      |      |              |      |       |      |     |      |         |     |      |     |       |
+|      BAO     | [104](/mapping/AFO_BAO.xlsx)  | 7512 |     |     |        |      |      |      |              |      |       |      |     |      |         |     |      |     |       |
 |      BFO     | 36   | 4    | 35  |     |        |      |      |      |              |      |       |      |     |      |         |     |      |     |       |
 |      CAO     | 121  | 24   | 14  | 445 |        |      |      |      |              |      |       |      |     |      |         |     |      |     |       |
 |     ChEBI    | 58   | 1489 | 1   | 45  | 176873 |      |      |      |              |      |       |      |     |      |         |     |      |     |       |
