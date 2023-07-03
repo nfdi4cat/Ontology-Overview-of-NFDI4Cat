@@ -55,7 +55,7 @@
 | Axioms | 49216 |
 | Logical | 12270 |
 | Declaration | 6846 |
-| Class count | 6566 (-449 obsoltet classes) |
+| Class count | 6566 |
 | Object property count | 135 |
 | Data property count | 1 |
 | Individual count | 44 |
