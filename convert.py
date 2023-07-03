@@ -159,7 +159,7 @@ def Heatmap_to_Markdown():
             cell_value = df.at[row, col]
             if type(cell_value) != str and cell_value != df.at[row,'Unnamed: 0']:
                 # Write the column and row names behind the cell value
-                new_value = f'[' + str(int(cell_value)) +'](/mapping/'+col+'_'+df.at[row,'Unnamed: 0'] +'.xlsx)'
+                new_value = f'[' + str(int(cell_value)) +'](/mapping/'+col+'_'+df.at[row,'Unnamed: 0'] +'.md)'
                 df.at[row, col] = new_value
             
             if df.at[row,'Unnamed: 0'] == col:
@@ -178,6 +178,13 @@ def Heatmap_to_Markdown():
     # Save the modified DataFrame to a new Excel file
     #df.to_excel('output_file1.xlsx', index=False)
 ####
+
+def Mappings_to_Markdown():
+    file_list = [f for f in os.listdir('./mapping/') if f.endswith('.xlsx')]
+    
+    for file in file_list:
+        df = pd.read_excel('./mapping/'+file)
+        df.to_markdown('./mapping/' + file.replace('xlsx','.md'))
 
 
 def run():    
