@@ -1,0 +1,5 @@
+|    |   Unnamed: 0 | MS_IRI                                    | MS_DESC                                                                          | OSMO_IRI                                               | OSMO_DESC            |
+|---:|-------------:|:------------------------------------------|:---------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------|
+|  0 |            0 | http://purl.obolibrary.org/obo/UO_0000000 | {'label': 'Unit', 'prefLabel': None, 'altLabel': None, 'name': 'UO_0000000'}     | https://purl.vimmp.eu/semantics/vivo/vivo.ttl#unit     | {'name': 'Unit'}     |
+|  1 |            1 | http://purl.obolibrary.org/obo/MS_1000460 | {'label': 'unit', 'prefLabel': None, 'altLabel': None, 'name': 'MS_1000460'}     | https://purl.vimmp.eu/semantics/vivo/vivo.ttl#unit     | {'name': 'unit'}     |
+|  2 |            2 | http://purl.obolibrary.org/obo/MS_1000531 | {'label': 'software', 'prefLabel': None, 'altLabel': None, 'name': 'MS_1000531'} | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#software | {'name': 'software'} |

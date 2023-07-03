@@ -1,0 +1,3 @@
+|    |   Unnamed: 0 | CHMO_IRI                                   | CHMO_DESC                                                                             | PIMS-II_IRI                                          | PIMS-II_DESC                            |
+|---:|-------------:|:-------------------------------------------|:--------------------------------------------------------------------------------------|:-----------------------------------------------------|:----------------------------------------|
+|  0 |            0 | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'process', 'prefLabel': 'process', 'altLabel': None, 'name': 'BFO_0000015'} | http://www.molmod.info/semantics/pims-ii.ttl#Process | {'label': 'process', 'name': 'process'} |
