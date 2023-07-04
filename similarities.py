@@ -700,6 +700,7 @@ def Similarity_Search_from_List(input_list):
 def run_similarity_from_vocabulary(): 
     test_ontology = get_ontology('./ontologies/voc4cat.owl').load()
     ind_list = list(test_ontology.individuals())
+    #prefList = [[str(i.prefLabel[0]),i.altLabel] for i in ind_list]
     prefList = [str(i.prefLabel[0]) for i in ind_list]
     Similarity_Search_from_List(prefList)
 
