@@ -650,7 +650,7 @@ def run():
 ####
 
 ####
-def Similarity_Search_from_List(input_list):
+def Similarity_Search_from_List(input_list,list_name):
     # Uses list of strings as input to output matching classes from ontology 
     # collection.
     onto_URLs = get_ontology_URLs()
@@ -663,7 +663,7 @@ def Similarity_Search_from_List(input_list):
     ontoNameList_output.remove("EMMO")
     
     #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
-    df_numbers = pd.DataFrame(index = ['input_list'], columns = ontoNameList_output)
+    df_numbers = pd.DataFrame(index = [list_name], columns = ontoNameList_output)
 
     
     with open("./iriDictionary.json") as f: 
@@ -672,7 +672,7 @@ def Similarity_Search_from_List(input_list):
     for ontology in ontoNameList_output:
         onto_dict1 = iri_dictionary[ontology]
         
-        comb = ('input_list', ontology)
+        comb = (list_name, ontology)
         
         match_list = []
        
@@ -692,7 +692,7 @@ def Similarity_Search_from_List(input_list):
         df_numbers[comb[1]][comb[0]] = len(match_list)
     
     #print(df_numbers)
-    df_numbers.to_excel("MappingHeatmap_Input_list.xlsx")
+    df_numbers.to_excel("MappingHeatmap_"+list_name+".xlsx")
     
     return df_numbers
         
@@ -702,8 +702,20 @@ def run_similarity_from_vocabulary():
     ind_list = list(test_ontology.individuals())
     #prefList = [[str(i.prefLabel[0]),i.altLabel] for i in ind_list]
     prefList = [str(i.prefLabel[0]) for i in ind_list]
-    Similarity_Search_from_List(prefList)
+    Similarity_Search_from_List(prefList,"input_list")
+####
 
+
+
+
+with open('combinedVocabulary_nextcloud.txt', 'r') as file:
+    # Read the contents of the file
+    contents = file.read()
+
+    # Split the contents into individual elements to create a list
+    my_list = contents.split(',')
+    
+Similarity_Search_from_List(my_list,"concept_collection_")
 
 ####
 #print out ontologies without proper URLs -> 
