@@ -16,8 +16,8 @@ sys.setrecursionlimit(100000)
 
 def ontology_classes_loader(ontology):
     # Create sets of class labels for each ontology
-    ## using label depending on ontology!
- 
+    # using label depending on ontology!
+    
     # iris
     try:
         onto1_iris = list([cls.iri for cls in ontology.classes()])
@@ -56,48 +56,14 @@ def ontology_classes_loader(ontology):
                                    "altLabel": class_altLabel,
                                    "name": class_name,
                                    }
-        
-    
-    """ 
-    
-    # label
-    try:
-        onto1_labels = set([cls.label.first() for cls in ontology.classes()])
-    except:
-        print("Class labels of ontology " + onto_name + " not (well) defined and could not be read!")
-        onto1_labels= set()
-    
-    # prefLabel
-    try:
-        onto1_prefLabels = set([cls.prefLabel.first() for cls in ontology.classes()])
-    except:
-        print("Class prefLabels of ontology " + onto_name + " not (well) defined and could not be read!")
-        onto1_prefLabels= set()
-        
-    # altLabel
-    try:
-        onto1_altLabels = set([cls.altLabel.first() for cls in ontology.classes()])
-    except:
-        print("Class altLabels of ontology " + onto_name + " not (well) defined and could not be read!")
-        onto1_altLabels= set()
-        
-    # name
-    try:
-        onto1_names = set([cls.name for cls in ontology.classes()])
-    except:
-        print("Class names of ontology " + onto_name + " not (well) defined and could not be read!")
-        onto1_names= set()
-
-        
-    
-    # Concatenate prefLabels, labels, names and altLabels
-    onto_combined = (((onto1_labels.union(onto1_prefLabels)).union(onto1_altLabels)).union(onto1_names)).union(onto1_iris)
-    """
     return iri_dict
 
 
+####
 
 def ontology_comparison(onto1, onto2):
+    ### DEPRECATED FUNCTION!
+    
     # Load the two ontologies
     #onto1 = get_ontology("file://./ontology_files/" + onto_name1).load()
     #onto2 = get_ontology("file://./ontology_files/" + onto_name2).load()
@@ -374,43 +340,11 @@ def ontology_comparison(onto1, onto2):
                                     del temp_dict_out[str(i)]
                                     key_set = set(list(temp_dict_out.keys()))
                             except:
-                                pass
-                            
-                        """             
-                        else:
-                            for i in throw_list[1:]:
-                                del temp_dict_cleaned[str(i)]
-                                key_set = set(list(temp_dict_cleaned.keys()))
-                        """
-    
-    """
-    temp_dict = dict(temp_dict_cleaned)
-    for i in list(temp_dict_cleaned.keys()):
-        for dicts in temp_dict_cleaned[i][onto_name1]:
-            if dicts["label"] != None:
-                try: 
-                    temp_dict[dicts["label"]] = temp_dict_cleaned[dicts["prefLabel"]]
-                    del temp_dict[dicts["prefLabel"]]
-                    
-                except:
-                    
-                    try:
-                        temp_dict[dicts["label"]] = temp_dict_cleaned[dicts["altLabel"]]
-                        del temp_dict[dicts["altLabel"]]
-                    except:
-                        try:
-                            temp_dict[dicts["label"]] = temp_dict_cleaned[dicts["name"]]
-                            del temp_dict[dicts["name"]]
-                        except:    
-                            pass
-      """              
-                #onto_class = onto1.search_one(label = str(i))
-                #if onto_class == None:
-                #    print("class '{}' not existent in AFO.owl".format(i))
-        
+                                pass        
     
     return onto1_classes, common_labels, temp_dict_out, result_dict
 
+####
 
 
 ####
@@ -687,7 +621,14 @@ def Ontology_Mapping():
                     if value_dict:        
                         if label_list1[i] != None: #try to insert label of first ontology
                             append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
-                        else: # iri has no label, thus, no label is inserted
+                        elif prefLabel_list1[i] != None: #try to insert prefLabel of first ontology
+                            append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}]) 
+                        elif altLabel_list1[i] != None: #try to insert altLabel of first ontology
+                            append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
+                        elif name_list1[i] != None: #try to insert name of first ontology
+                            append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:onto_dict1[iri_list_dict_1_cleaned[i]]}}, {comb[1]:value_dict}])
+                            
+                        else: # iri has no label, thus, no label is inserted but the value of the string list
                             append_dict.append([{comb[0]:{iri_list_dict_1_cleaned[i]:{value}}}, {comb[1]:value_dict}])
            
             if append_dict:
@@ -697,10 +638,71 @@ def Ontology_Mapping():
         
         df_numbers[comb[0]][comb[1]] = len(match_list)
     
-    print(df_numbers)
+    #print(df_numbers)
     df_numbers.to_excel("MappingHeatmap.xlsx")
+    
+    return df_numbers
+####
 
 ####
+def run():
+    df = Ontology_Mapping()
+####
+
+####
+def Similarity_Search_from_List(input_list):
+    # Uses list of strings as input to output matching classes from ontology 
+    # collection.
+    onto_URLs = get_ontology_URLs()
+    ontoNameList = list(onto_URLs.keys())
+    ontoNameList_output = list(onto_URLs.keys())
+    
+    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+    
+    ontoNameList_output.remove("CHEMINF")
+    ontoNameList_output.remove("EMMO")
+    
+    #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
+    df_numbers = pd.DataFrame(index = ['input_list'], columns = ontoNameList_output)
+
+    
+    with open("./iriDictionary.json") as f: 
+        iri_dictionary = json.load(f)
+    
+    for ontology in ontoNameList_output:
+        onto_dict1 = iri_dictionary[ontology]
+        
+        comb = ('input_list', ontology)
+        
+        match_list = []
+       
+        #search for same preflabels, labels, altlabels, names
+      
+        for value in input_list:
+            append_dict = []  
+            value_dict = search_value_in_nested_dict(onto_dict1,value)
+            if value_dict:
+                append_dict.append([{comb[0]:{'no IRI':{value}}}, {comb[1]:value_dict}])                        
+       
+            if append_dict:
+                match_list.append(append_dict)
+        
+        store_similarities(comb,match_list)
+        
+        df_numbers[comb[1]][comb[0]] = len(match_list)
+    
+    #print(df_numbers)
+    df_numbers.to_excel("MappingHeatmap_Input_list.xlsx")
+    
+    return df_numbers
+        
+####
+def run_similarity_from_vocabulary(): 
+    test_ontology = get_ontology('./ontologies/Photocatalysis_LIKAT_template043_final.owl').load()
+    ind_list = list(test_ontology.individuals())
+    prefList = [str(i.prefLabel[0]) for i in ind_list]
+    Similarity_Search_from_List(prefList)
+
 
 ####
 #print out ontologies without proper URLs -> 
@@ -709,6 +711,9 @@ def Ontology_Mapping():
 #for i in onto_URLs:
 #    onto_format_validation(i, onto_URLs[i])   
 ####
+
+
+
 
     
         
