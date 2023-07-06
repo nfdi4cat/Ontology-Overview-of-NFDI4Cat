@@ -706,6 +706,12 @@ def run_similarity_from_vocabulary():
 ####
 
 
+"""
+df = pd.read_excel("CombinedConcepts_condensed_09-2022_Test_AB.xlsx", sheet_name = "Concepts")
+
+column_data = list(df["Preferred Label*"])
+
+numbers = Similarity_Search_from_List(column_data,"CombinedConcepts_condensed_09-2022_")
 
 
 with open('combinedVocabulary_nextcloud.txt', 'r') as file:
@@ -716,6 +722,10 @@ with open('combinedVocabulary_nextcloud.txt', 'r') as file:
     my_list = contents.split(',')
     
 Similarity_Search_from_List(my_list,"concept_collection_")
+"""
+
+#https://github.com/pysemtec/semantic-python-overview
+#https://arrow.apache.org/docs/python/index.html
 
 ####
 #print out ontologies without proper URLs -> 
