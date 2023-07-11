@@ -285,6 +285,7 @@ def DomainSpiderPlotter():
     )
     
     fig.write_html("testplot.html")
+    fig.write_image("testplot.svg")
     
 ####
 
