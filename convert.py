@@ -2,6 +2,8 @@ import pandas as pd
 import json
 import os
 from tabulate import tabulate
+import plotly.graph_objects as go
+
 
 def ConvertExcelToMD(PathToExcel):
     
@@ -146,6 +148,9 @@ def UpdateMainReadme():
     print('================================================================')
 
 ####
+
+
+####
 def Heatmap_to_Markdown():
     # Read the Excel file
     df = pd.read_excel('MappingHeatmap.xlsx')
@@ -188,6 +193,101 @@ def Mappings_to_Markdown():
         del df['Unnamed: 0']
         df.to_markdown('./mapping/' + file.replace('xlsx','md'))
 ####
+
+####
+####
+def DomainSpiderPlotter():
+    ####
+    # List the most appropiate ontologies for each domain of interest by filtering
+    # out only the entries without missing.
+    md_dict = load_ontologies_metadata()
+    key_dom_interest = "Domain of Interest Represented (contained, related: broader/narrower, missing)"
+
+    #list the domains of interest used in the first key of md_dict, assuming 
+    #every sheet in the template requests the same domains of interest
+    domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+    # contained domains
+    domain_dict_c = {}
+    # contained and narrower related domains
+    domain_dict_c_n = {}
+    # contained, narrower and broader related domains
+    domain_dict_c_n_b = {}
+
+    for domain in domains_of_interest:
+        # contained ontologies
+        onto_list_c = []
+        # contained and narrower related ontologies
+        onto_list_c_n = []
+        # contained, narrower and broader related ontologies
+        onto_list_c_n_b = []
+        
+        for onto_abbrev in md_dict:
+            dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
+            
+            if ("contained" in dict_entry):
+                onto_list_c.append(onto_abbrev) 
+                
+            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+                onto_list_c_n.append(onto_abbrev) 
+                
+            if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
+                onto_list_c_n_b.append(onto_abbrev) 
+        
+        domain_dict_c[domain] = onto_list_c
+        domain_dict_c_n[domain] = onto_list_c_n
+        domain_dict_c_n_b[domain] = onto_list_c_n_b
+    # domain_dict now contains all domains of interest and the respective ontologies
+    # that contain this domain or are at least narrow related to the domain.
+    ##
+    
+    plotlist_c = [len(domain_dict_c[i]) for i in domains_of_interest]
+    plotlist_c_n = [len(domain_dict_c_n[i]) for i in domains_of_interest]
+    plotlist_c_n_b = [len(domain_dict_c_n_b[i]) for i in domains_of_interest]
+    
+    fig = go.Figure()
+    
+
+    fig.add_trace(go.Scatterpolar(
+          r=plotlist_c_n_b,
+          theta=domains_of_interest,
+          fill='toself',
+          name='contained, related: narrower, and related: broader'
+    ))
+    
+    fig.add_trace(go.Scatterpolar(
+          r=plotlist_c_n,
+          theta=domains_of_interest,
+          fill='toself',
+          name='contained and related: narrower'
+    ))
+
+    fig.add_trace(go.Scatterpolar(
+          r=plotlist_c,
+          theta=domains_of_interest,
+          fill='toself',
+          name='contained'
+    ))
+    
+    #fig.add_trace(go.Scatterpolar(
+    #      r=[4, 3, 2.5, 1, 2],
+    #      theta=domains_of_interest,
+    #      fill='toself',
+    #      name='Product B'
+    #))
+    
+    fig.update_layout(
+      polar=dict(
+        radialaxis=dict(
+          visible=True,
+          range=[0, max(plotlist_c_n_b)]
+        )),
+      showlegend=True
+    )
+    
+    fig.write_html("testplot.html")
+    
+####
+
 
 def run():    
     Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'
