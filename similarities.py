@@ -388,7 +388,7 @@ def ttl_to_owl(url):
 ####
 
 ####
-def load_ontology_from_URL(onto_name):
+def load_ontology_from_name(onto_name):
     ## Tries to load in the ontology by accessing the URL to an owl-file
     #  
     onto_URLs = get_ontology_URLs()
@@ -492,7 +492,7 @@ def class_description_loader():
     
     for ontologyname in ontoNameList_output:
         ontology = None
-        ontology = load_ontology_from_URL(ontologyname)
+        ontology = load_ontology_from_name(ontologyname)
         iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
     
     with open('iriDictionary.json', 'w') as fp:
@@ -522,7 +522,13 @@ def store_similarities(onto_combination, match_list):
     onto2_data1 = []
     onto2_data2 = []
     
-   # iterate through match_list
+    #get ontology URLs Dictionary
+    onto_URLs = get_ontology_URLs()
+    
+    #load second ontology
+   # ALEX onto2 = 
+    
+    # iterate through match_list
     for entry in match_list:
         if type(entry[0]) == list:
             onto1_entry1 = list(entry[0][0].get(onto_combination[0]).keys())[0]
