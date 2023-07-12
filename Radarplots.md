@@ -49,34 +49,35 @@
 | 15 |                |                          |                        | [RXNO]                        |                     | [VIMMP]            |                  |                 |                    |                         |                                    |                                        | [SBO]                |
 | 16 |                |                          |                        | [SBO]                         |                     |                    |                  |                 |                    |                         |                                    |                                        | [VIMMP]              |
 | 17 |                |                          |                        | [VIMMP]                       |                     |                    |                  |                 |                    |                         |                                    |                                        |                      |
+
 [AFO]: ./ontology_metadata/AFO.md
-                    [BAO]: ./ontology_metadata/BAO.md
-                    [BFO]: ./ontology_metadata/BFO.md
-                    [CAO]: ./ontology_metadata/CAO.md
-                    [ChEBI]: ./ontology_metadata/ChEBI.md
-                    [CHEMINF]: ./ontology_metadata/CHEMINF.md
-                    [CHMO]: ./ontology_metadata/CHMO.md
-                    [CIF]: ./ontology_metadata/CIF.md
-                    [DOLCE]: http://www.loa.istc.cnr.it/dolce/overview.html
-                    [EDAM]: ./ontology_metadata/EDAM.md
-                    [EMMO]: ./ontology_metadata/EMMO.md
-                    [ENVO]: ./ontology_metadata/ENVO.md
-                    [ISO 15926]: https://en.wikipedia.org/wiki/ISO_15926
-                    [ISO 15926-14]: https://en.wikipedia.org/wiki/ISO_15926
-                    [M3]: ./ontology_metadata/M3.md
-                    [metadata4ing]: ./ontology_metadata/metadata4ing.md
-                    [MOP]: ./ontology_metadata/MOP.md
-                    [MS]: ./ontology_metadata/MS.md
-                    [OBI]: ./ontology_metadata/OBI.md
-                    [OFM]: ./ontology_metadata/OFM.md
-                    [OM]: ./ontology_metadata/OM.md
-                    [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
-                    [OntoCompChem]: http://www.theworldavatar.com/ontology/ontocompchem/ontocompchem.owl
-                    [OntoKin]: https://pubs.acs.org/doi/abs/10.1021/acs.jcim.9b00960
-                    [OSMO]: ./ontology_metadata/OSMO.md
-                    [PIMS-II]: ./ontology_metadata/PIMS-II.md
-                    [REX]: ./ontology_metadata/REX.md
-                    [RXNO]: ./ontology_metadata/RXNO.md
-                    [SBO]: ./ontology_metadata/SBO.md
-                    [VIMMP]: ./ontology_metadata/VIMMP.md
-                    
+[BAO]: ./ontology_metadata/BAO.md
+[BFO]: ./ontology_metadata/BFO.md
+[CAO]: ./ontology_metadata/CAO.md
+[ChEBI]: ./ontology_metadata/ChEBI.md
+[CHEMINF]: ./ontology_metadata/CHEMINF.md
+[CHMO]: ./ontology_metadata/CHMO.md
+[CIF]: ./ontology_metadata/CIF.md
+[DOLCE]: http://www.loa.istc.cnr.it/dolce/overview.html
+[EDAM]: ./ontology_metadata/EDAM.md
+[EMMO]: ./ontology_metadata/EMMO.md
+[ENVO]: ./ontology_metadata/ENVO.md
+[ISO 15926]: https://en.wikipedia.org/wiki/ISO_15926
+[ISO 15926-14]: https://en.wikipedia.org/wiki/ISO_15926
+[M3]: ./ontology_metadata/M3.md
+[metadata4ing]: ./ontology_metadata/metadata4ing.md
+[MOP]: ./ontology_metadata/MOP.md
+[MS]: ./ontology_metadata/MS.md
+[OBI]: ./ontology_metadata/OBI.md
+[OFM]: ./ontology_metadata/OFM.md
+[OM]: ./ontology_metadata/OM.md
+[OntoCAPE]: ./ontology_metadata/OntoCAPE.md
+[OntoCompChem]: http://www.theworldavatar.com/ontology/ontocompchem/ontocompchem.owl
+[OntoKin]: https://pubs.acs.org/doi/abs/10.1021/acs.jcim.9b00960
+[OSMO]: ./ontology_metadata/OSMO.md
+[PIMS-II]: ./ontology_metadata/PIMS-II.md
+[REX]: ./ontology_metadata/REX.md
+[RXNO]: ./ontology_metadata/RXNO.md
+[SBO]: ./ontology_metadata/SBO.md
+[VIMMP]: ./ontology_metadata/VIMMP.md
+    
