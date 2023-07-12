@@ -140,7 +140,7 @@ def UpdateMainReadme():
     with open('./Main_Readme_Update.txt', 'a') as f:
         f.write("\n## Map of Ontologies for Catalysis Research Domains .\n")
         f.write("\n The ontologies are classified with regards to their research domain [here](./Radarplots.md).\n")
-        f.write("\n [Here](./Radarplots.html) you can find the Radar plot as interactive plot.\n")
+        f.write("\n [Here](./Radarplot.html) you can find the Radar plot as interactive plot.\n")
         f.write("\n ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)\n")
                 #<img src="./controllers_brief.svg">[Here](./Fig2-OntoMap.svg) you can find the Radar plot as an interactive plot.\n")
 

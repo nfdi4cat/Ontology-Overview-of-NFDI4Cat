@@ -39,7 +39,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
 
-## Map of Ontologies for Catalysis Research Domains .
+## Map of Ontologies for Catalysis Research Domains
 
  The ontologies are classified with regards to their research domain [here](./Radarplots.md).
 
