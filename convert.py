@@ -196,6 +196,137 @@ def Mappings_to_Markdown():
 
 ####
 ####
+def DomainSpiderPlotter_all_ontologies():
+    ####
+    # List the most appropiate ontologies for each domain of interest by filtering
+    # out only the entries without missing.
+    md_dict = load_ontologies_metadata()
+    key_dom_interest = "Domain of Interest Represented (contained, related: broader/narrower, missing)"
+
+    #list the domains of interest used in the first key of md_dict, assuming 
+    #every sheet in the template requests the same domains of interest
+    domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+    # contained domains
+    domain_dict_c = {}
+    # contained and narrower related domains
+    domain_dict_c_n = {}
+    # contained, narrower and broader related domains
+    domain_dict_c_n_b = {}
+
+    for domain in domains_of_interest:
+        # contained ontologies
+        onto_list_c = []
+        # contained and narrower related ontologies
+        onto_list_c_n = []
+        # contained, narrower and broader related ontologies
+        onto_list_c_n_b = []
+        
+        for onto_abbrev in md_dict:
+            dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
+            
+            if ("contained" in dict_entry):
+                onto_list_c.append(onto_abbrev) 
+                
+            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+                onto_list_c_n.append(onto_abbrev) 
+                
+            if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
+                onto_list_c_n_b.append(onto_abbrev) 
+        
+        domain_dict_c[domain] = onto_list_c
+        domain_dict_c_n[domain] = onto_list_c_n
+        domain_dict_c_n_b[domain] = onto_list_c_n_b
+    # domain_dict now contains all domains of interest and the respective ontologies
+    # that contain this domain or are at least narrow related to the domain.
+    ##
+    
+    plotlist_c = [len(domain_dict_c[i]) for i in domains_of_interest]
+    plotlist_c_n = [len(domain_dict_c_n[i]) for i in domains_of_interest]
+    plotlist_c_n_b = [len(domain_dict_c_n_b[i]) for i in domains_of_interest]
+    
+    
+    # Store domain dictionaries
+    df_c = pd.DataFrame.from_dict(domain_dict_c, orient='index').transpose()    
+    df_c_n = pd.DataFrame.from_dict(domain_dict_c_n, orient='index').transpose()    
+    df_c_n_b = pd.DataFrame.from_dict(domain_dict_c_n_b, orient='index').transpose()    
+
+    # add [ and ] to ontology name to get link to md file automatically in md
+    df_c = df_c.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
+    df_c_n = df_c_n.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
+    df_c_n_b = df_c_n_b.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
+    
+    markdown_table_c = tabulate(df_c, headers='keys', tablefmt='pipe')
+    markdown_table_c_n = tabulate(df_c_n, headers='keys', tablefmt='pipe')
+    markdown_table_c_n_b = tabulate(df_c_n_b, headers='keys', tablefmt='pipe')
+    
+    # Append markdown to Main_Readme_Update
+    with open('./Spiderplots.txt', 'w') as f:
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge.\n")
+        f.write(markdown_table_c)
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
+        f.write(markdown_table_c_n)
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related or are broader related to them.\n")
+        f.write(markdown_table_c_n_b)
+    
+    ## DELETING TOP-LEVEL-ONTOLOGIES
+    del domains_of_interest[-1]
+    del plotlist_c_n_b[-1]
+    del plotlist_c_n[-1]
+    del plotlist_c[-1]
+    #
+    
+    # Extending the list by the first entries to close the radar plots:
+    plotlist_c.extend([plotlist_c[0]])
+    plotlist_c_n.extend([plotlist_c_n[0]])
+    plotlist_c_n_b.extend([plotlist_c_n_b[0]])
+    domains_of_interest.extend([domains_of_interest[0]])
+    
+    
+    fig = go.Figure()
+    
+    fig.add_trace(go.Scatterpolar(
+          r= plotlist_c_n_b,
+          theta=domains_of_interest,
+          fill='toself',
+          #line_close=True,
+          name='contained, related: narrower, and related: broader'
+    ))
+      
+    fig.add_trace(go.Scatterpolar(
+          r=plotlist_c_n,
+          theta=domains_of_interest,
+          fill='toself',
+          name='contained and related: narrower'
+    ))
+
+    fig.add_trace(go.Scatterpolar(
+          r=plotlist_c,
+          theta=domains_of_interest,
+          fill='toself',
+          name='contained'
+    ))
+      
+    #fig.add_trace(go.Scatterpolar(
+    #      r=[4, 3, 2.5, 1, 2],
+    #      theta=domains_of_interest,
+    #      fill='toself',
+    #      name='Product B'
+    #))
+    
+    fig.update_layout(
+      polar=dict(
+        radialaxis=dict(
+          visible=True,
+          range=[0, max(plotlist_c_n_b)]
+        )),
+      showlegend=True
+    )
+    
+    fig.write_html("testplot2.html")
+    fig.write_image("testplot2.svg")
+    
+####
+
 def DomainSpiderPlotter():
     ####
     # List the most appropiate ontologies for each domain of interest by filtering
@@ -302,6 +433,7 @@ def DomainSpiderPlotter():
 ####
 
 
+####
 def run():    
     Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'
     ConvertExcelToMD(Master_Table)
