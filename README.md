@@ -10,6 +10,16 @@ In the subdirectory [json](./json), the information contained for each ontology 
 
 Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Software Collection from NFDI4Cat">alexander.behr@tu-dortmund.de</a>
 
+
+## Map of Ontologies for Catalysis Research Domains
+
+ The ontologies are classified with regards to their research domain [here](./Radarplots.md).
+
+ [Here](./Radarplot.html) you can find the radar plot shown below as interactive plot (download html file and open it locally).
+
+ ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)
+
+
 ## Ontology Metadata files
 These are the ontologies and links to the ontology markdown files, NFDI4Cat deems as relevant:
 
@@ -39,13 +49,6 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
 
-## Map of Ontologies for Catalysis Research Domains
-
- The ontologies are classified with regards to their research domain [here](./Radarplots.md).
-
- [Here](./Radarplot.html) you can find the radar plot shown below as interactive plot (download html file and open it locally).
-
- ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)
 
 ## Mappings
 Here, you can see a mapping that lists the amount of common ontology classes for each ontology, focusing on IRI, label, prefLabel, altLabel and name of the classes.
