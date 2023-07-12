@@ -43,7 +43,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 
  The ontologies are classified with regards to their research domain [here](./Radarplots.md).
 
- [Here](./Radarplots.html) you can find the Radar plot as interactive plot.
+ [Here](./Radarplot.html) you can find the radar plot shown below as interactive plot (download html file and open it locally).
 
  ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)
 
