@@ -125,19 +125,27 @@ def UpdateMainReadme():
     # that contain this domain or are at least narrow related to the domain.
     ##
 
-    df = pd.DataFrame.from_dict(domain_dict, orient='index').transpose()    
-
-    with open("./json/ontology_domains.json", "w") as f:
-         json.dump(domain_dict,f)
+    #df = pd.DataFrame.from_dict(domain_dict, orient='index').transpose()    
+    
+    DomainRadarPlotter_all_ontologies()
+    
+    #with open("./json/ontology_domains.json", "w") as f:
+    #     json.dump(domain_dict,f)
 
     # add [ and ] to ontology name to get link to md file automatically in md
-    df = df.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
+    #df = df.applymap(lambda onto: '[' + onto + ']' if type(onto)==str else None)
     # Format df to markdown
-    markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
+    #markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
     # Append markdown to Main_Readme_Update
     with open('./Main_Readme_Update.txt', 'a') as f:
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
-        f.write(markdown_table)
+        f.write("\n## Map of Ontologies for Catalysis Research Domains .\n")
+        f.write("\n The ontologies are classified with regards to their research domain [here](./Radarplots.md).\n")
+        f.write("\n [Here](./Radarplots.html) you can find the Radar plot as interactive plot.\n")
+        f.write("\n ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)\n")
+                #<img src="./controllers_brief.svg">[Here](./Fig2-OntoMap.svg) you can find the Radar plot as an interactive plot.\n")
+
+        
+        #f.write(markdown_table)
 
    
     
@@ -196,7 +204,7 @@ def Mappings_to_Markdown():
 
 ####
 ####
-def DomainSpiderPlotter_all_ontologies():
+def DomainRadarPlotter_all_ontologies():
     ####
     # List the most appropiate ontologies for each domain of interest by filtering
     # out only the entries without missing.
@@ -260,7 +268,7 @@ def DomainSpiderPlotter_all_ontologies():
     markdown_table_c_n_b = tabulate(df_c_n_b, headers='keys', tablefmt='pipe')
     
     # Append markdown to Main_Readme_Update
-    with open('./Spiderplots.txt', 'w') as f:
+    with open('./Radarplots.md', 'w') as f:
         f.write("\n## The ontologies in this table contain the respective domain of knowledge.\n")
         f.write(markdown_table_c)
         f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
@@ -322,12 +330,12 @@ def DomainSpiderPlotter_all_ontologies():
       showlegend=True
     )
     
-    fig.write_html("testplot2.html")
-    fig.write_image("testplot2.svg")
+    fig.write_html("Radarplot.html")
+    fig.write_image("Radarplot.svg")
     
 ####
 
-def DomainSpiderPlotter():
+def DomainRadarPlotter():
     ####
     # List the most appropiate ontologies for each domain of interest by filtering
     # out only the entries without missing.
@@ -427,8 +435,8 @@ def DomainSpiderPlotter():
       showlegend=True
     )
     
-    fig.write_html("testplot2.html")
-    fig.write_image("testplot2.svg")
+    fig.write_html("SpiderplotX.html")
+    fig.write_image("SpiderplotX.svg")
     
 ####
 
