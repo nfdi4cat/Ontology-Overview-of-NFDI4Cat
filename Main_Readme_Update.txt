@@ -52,10 +52,10 @@
 [SBO]: ./ontology_metadata/SBO.md
 [VIMMP]: ./ontology_metadata/VIMMP.md
 
-## Map of Ontologies for Catalysis Research Domains .
+## Map of Ontologies for Catalysis Research Domains
 
  The ontologies are classified with regards to their research domain [here](./Radarplots.md).
 
- [Here](./Radarplots.html) you can find the Radar plot as interactive plot.
+ [Here](./Radarplot.html) you can find the Radar plot as interactive plot.
 
  ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)
