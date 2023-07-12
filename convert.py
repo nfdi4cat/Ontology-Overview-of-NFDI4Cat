@@ -244,16 +244,28 @@ def DomainSpiderPlotter():
     plotlist_c_n = [len(domain_dict_c_n[i]) for i in domains_of_interest]
     plotlist_c_n_b = [len(domain_dict_c_n_b[i]) for i in domains_of_interest]
     
+    # Extending the list by the first entries to close the radar plots:
+    
+    del domains_of_interest[-1]
+    del plotlist_c_n_b[-1]
+    del plotlist_c_n[-1]
+    del plotlist_c[-1]
+    plotlist_c.extend([plotlist_c[0]])
+    plotlist_c_n.extend([plotlist_c_n[0]])
+    plotlist_c_n_b.extend([plotlist_c_n_b[0]])
+    domains_of_interest.extend([domains_of_interest[0]])
+    
+    
     fig = go.Figure()
     
-
     fig.add_trace(go.Scatterpolar(
-          r=plotlist_c_n_b,
+          r= plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
+          #line_close=True,
           name='contained, related: narrower, and related: broader'
     ))
-    
+      
     fig.add_trace(go.Scatterpolar(
           r=plotlist_c_n,
           theta=domains_of_interest,
@@ -267,7 +279,7 @@ def DomainSpiderPlotter():
           fill='toself',
           name='contained'
     ))
-    
+      
     #fig.add_trace(go.Scatterpolar(
     #      r=[4, 3, 2.5, 1, 2],
     #      theta=domains_of_interest,
@@ -284,8 +296,8 @@ def DomainSpiderPlotter():
       showlegend=True
     )
     
-    fig.write_html("testplot.html")
-    fig.write_image("testplot.svg")
+    fig.write_html("testplot2.html")
+    fig.write_image("testplot2.svg")
     
 ####
 
