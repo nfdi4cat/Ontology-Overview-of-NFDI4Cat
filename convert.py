@@ -367,7 +367,7 @@ def DomainRadarPlotter_all_ontologies():
     
 ####
 
-def DomainRadarPlotter():
+def DomainRadarPlotter(ontology_name):
     ####
     # List the most appropiate ontologies for each domain of interest by filtering
     # out only the entries without missing.
