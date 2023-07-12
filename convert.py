@@ -138,7 +138,7 @@ def UpdateMainReadme():
     #markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
     # Append markdown to Main_Readme_Update
     with open('./Main_Readme_Update.txt', 'a') as f:
-        f.write("\n## Map of Ontologies for Catalysis Research Domains .\n")
+        f.write("\n## Map of Ontologies for Catalysis Research Domains\n")
         f.write("\n The ontologies are classified with regards to their research domain [here](./Radarplots.md).\n")
         f.write("\n [Here](./Radarplot.html) you can find the Radar plot as interactive plot.\n")
         f.write("\n ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)\n")
