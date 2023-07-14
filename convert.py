@@ -376,7 +376,7 @@ def DomainRadarPlotter(ontology_name):
 
     #list the domains of interest used in the first key of md_dict, assuming 
     #every sheet in the template requests the same domains of interest
-    domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+    domains_of_interest = list(md_dict[ontology_name][key_dom_interest].keys())
     # contained domains
     domain_dict_c = {}
     # contained and narrower related domains
@@ -392,18 +392,24 @@ def DomainRadarPlotter(ontology_name):
         # contained, narrower and broader related ontologies
         onto_list_c_n_b = []
         
-        for onto_abbrev in md_dict:
-            dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
-            
-            if ("contained" in dict_entry):
-                onto_list_c.append(onto_abbrev) 
-                
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
-                onto_list_c_n.append(onto_abbrev) 
-                
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
-                onto_list_c_n_b.append(onto_abbrev) 
+        #for onto_abbrev in md_dict:
+        dict_entry = md_dict[ontology_name][key_dom_interest][domain]
         
+        if ("contained" in dict_entry):
+            onto_list_c = 3
+        else:
+            onto_list_c = 0
+            
+        if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+            onto_list_c_n = 2
+        else:
+            onto_list_c_n = 0
+            
+        if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
+            onto_list_c_n_b = 1
+        else:
+            onto_list_c_n_b = 0
+    
         domain_dict_c[domain] = onto_list_c
         domain_dict_c_n[domain] = onto_list_c_n
         domain_dict_c_n_b[domain] = onto_list_c_n_b
@@ -411,9 +417,9 @@ def DomainRadarPlotter(ontology_name):
     # that contain this domain or are at least narrow related to the domain.
     ##
     
-    plotlist_c = [len(domain_dict_c[i]) for i in domains_of_interest]
-    plotlist_c_n = [len(domain_dict_c_n[i]) for i in domains_of_interest]
-    plotlist_c_n_b = [len(domain_dict_c_n_b[i]) for i in domains_of_interest]
+    plotlist_c = [domain_dict_c[i] for i in domains_of_interest]
+    plotlist_c_n = [domain_dict_c_n[i] for i in domains_of_interest]
+    plotlist_c_n_b = [domain_dict_c_n_b[i] for i in domains_of_interest]
     
     # Extending the list by the first entries to close the radar plots:
     
@@ -430,25 +436,25 @@ def DomainRadarPlotter(ontology_name):
     fig = go.Figure()
     
     fig.add_trace(go.Scatterpolar(
-          r= plotlist_c_n_b,
+          r= plotlist_c,
           theta=domains_of_interest,
           fill='toself',
           #line_close=True,
-          name='contained, related: narrower, and related: broader'
+          name='3 = contained'
     ))
       
     fig.add_trace(go.Scatterpolar(
           r=plotlist_c_n,
           theta=domains_of_interest,
           fill='toself',
-          name='contained and related: narrower'
+          name='2 = contained and related: narrower'
     ))
 
     fig.add_trace(go.Scatterpolar(
-          r=plotlist_c,
+          r=plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
-          name='contained'
+          name='1 = contained, related: narrower, and related: broader'
     ))
       
     #fig.add_trace(go.Scatterpolar(
@@ -462,13 +468,13 @@ def DomainRadarPlotter(ontology_name):
       polar=dict(
         radialaxis=dict(
           visible=True,
-          range=[0, max(plotlist_c_n_b)]
+          range=[0, 3]
         )),
       showlegend=True
     )
     
-    fig.write_html("SpiderplotX.html")
-    fig.write_image("SpiderplotX.svg")
+    fig.write_html("./radarplots/Radarplot_{}.html".format(ontology_name))
+    fig.write_image("./radarplots/Radarplot_{}.svg".format(ontology_name))
     
 ####
 
