@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology OBI](../radarplots/Radarplot_OBI.svg) 
+ ![Radarplot for Domains of ontology OBI](../radarplots/Radarplot_OBI.svg) 
 
 
 ## Ontology

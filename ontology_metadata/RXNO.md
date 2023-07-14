@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology RXNO](../radarplots/Radarplot_RXNO.svg) 
+ ![Radarplot for Domains of ontology RXNO](../radarplots/Radarplot_RXNO.svg) 
 
 
 ## Ontology

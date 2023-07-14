@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg) 
+ ![Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg) 
 
 
 ## Ontology

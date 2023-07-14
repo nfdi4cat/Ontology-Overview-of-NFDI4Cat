@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology EDAM](../radarplots/Radarplot_EDAM.svg) 
+ ![Radarplot for Domains of ontology EDAM](../radarplots/Radarplot_EDAM.svg) 
 
 
 ## Ontology

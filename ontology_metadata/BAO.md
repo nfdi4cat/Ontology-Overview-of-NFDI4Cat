@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology BAO](../radarplots/Radarplot_BAO.svg) 
+ ![Radarplot for Domains of ontology BAO](../radarplots/Radarplot_BAO.svg) 
 
 
 ## Ontology

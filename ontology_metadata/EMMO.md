@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology EMMO](../radarplots/Radarplot_EMMO.svg) 
+ ![Radarplot for Domains of ontology EMMO](../radarplots/Radarplot_EMMO.svg) 
 
 
 ## Ontology

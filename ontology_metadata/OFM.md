@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology OFM](../radarplots/Radarplot_OFM.svg) 
+ ![Radarplot for Domains of ontology OFM](../radarplots/Radarplot_OFM.svg) 
 
 
 ## Ontology

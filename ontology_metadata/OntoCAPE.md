@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology OntoCAPE](../radarplots/Radarplot_OntoCAPE.svg) 
+ ![Radarplot for Domains of ontology OntoCAPE](../radarplots/Radarplot_OntoCAPE.svg) 
 
 
 ## Ontology

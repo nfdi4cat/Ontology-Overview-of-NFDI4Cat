@@ -49,7 +49,7 @@ def ConvertExcelToMD(PathToExcel):
         
         DomainRadarPlotter(onto_name)
         
-        outstring += "\n [Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n\n\n".format(onto_name,onto_name)
+        outstring += "\n ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n\n\n".format(onto_name,onto_name)
         
         table_string = "|Aspect |Description| \n |:---|:---|\n"
         

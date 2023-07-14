@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology REX](../radarplots/Radarplot_REX.svg) 
+ ![Radarplot for Domains of ontology REX](../radarplots/Radarplot_REX.svg) 
 
 
 ## Ontology

@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology PIMS-II](../radarplots/Radarplot_PIMS-II.svg) 
+ ![Radarplot for Domains of ontology PIMS-II](../radarplots/Radarplot_PIMS-II.svg) 
 
 
 ## Ontology

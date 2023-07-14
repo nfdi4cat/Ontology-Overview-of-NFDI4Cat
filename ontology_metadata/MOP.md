@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology MOP](../radarplots/Radarplot_MOP.svg) 
+ ![Radarplot for Domains of ontology MOP](../radarplots/Radarplot_MOP.svg) 
 
 
 ## Ontology

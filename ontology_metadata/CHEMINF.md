@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology CHEMINF](../radarplots/Radarplot_CHEMINF.svg) 
+ ![Radarplot for Domains of ontology CHEMINF](../radarplots/Radarplot_CHEMINF.svg) 
 
 
 ## Ontology

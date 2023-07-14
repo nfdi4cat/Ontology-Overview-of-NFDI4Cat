@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology MS](../radarplots/Radarplot_MS.svg) 
+ ![Radarplot for Domains of ontology MS](../radarplots/Radarplot_MS.svg) 
 
 
 ## Ontology

@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology VIMMP](../radarplots/Radarplot_VIMMP.svg) 
+ ![Radarplot for Domains of ontology VIMMP](../radarplots/Radarplot_VIMMP.svg) 
 
 
 ## Ontology

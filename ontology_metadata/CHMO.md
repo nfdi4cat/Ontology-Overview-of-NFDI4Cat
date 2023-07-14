@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology CHMO](../radarplots/Radarplot_CHMO.svg) 
+ ![Radarplot for Domains of ontology CHMO](../radarplots/Radarplot_CHMO.svg) 
 
 
 ## Ontology

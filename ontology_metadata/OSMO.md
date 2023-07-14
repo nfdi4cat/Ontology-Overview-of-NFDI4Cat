@@ -2,7 +2,7 @@
 
 
 
- [Radarplot for Domains of ontology OSMO](../radarplots/Radarplot_OSMO.svg) 
+ ![Radarplot for Domains of ontology OSMO](../radarplots/Radarplot_OSMO.svg) 
 
 
 ## Ontology
