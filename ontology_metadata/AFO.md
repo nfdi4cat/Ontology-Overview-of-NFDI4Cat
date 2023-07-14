@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology AFO](../radarplots/Radarplot_AFO.svg 
+ [Radarplot for Domains of ontology AFO](../radarplots/Radarplot_AFO.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Allotrope Foundation Ontology |

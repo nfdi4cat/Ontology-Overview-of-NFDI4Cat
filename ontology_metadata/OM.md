@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology OM](../radarplots/Radarplot_OM.svg 
+ [Radarplot for Domains of ontology OM](../radarplots/Radarplot_OM.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Ontology of units of Measure |

@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg 
+ [Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |

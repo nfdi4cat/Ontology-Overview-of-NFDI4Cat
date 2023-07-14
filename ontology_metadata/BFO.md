@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology BFO](../radarplots/Radarplot_BFO.svg 
+ [Radarplot for Domains of ontology BFO](../radarplots/Radarplot_BFO.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Basic Formal Ontology |

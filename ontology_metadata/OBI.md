@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology OBI](../radarplots/Radarplot_OBI.svg 
+ [Radarplot for Domains of ontology OBI](../radarplots/Radarplot_OBI.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Ontology for Biomedical Investigations |

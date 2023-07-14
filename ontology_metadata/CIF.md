@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology CIF](../radarplots/Radarplot_CIF.svg 
+ [Radarplot for Domains of ontology CIF](../radarplots/Radarplot_CIF.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Crystallographic Information Framework Ontology |

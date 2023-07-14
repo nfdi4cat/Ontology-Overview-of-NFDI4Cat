@@ -2,10 +2,10 @@
 
 
 
- [Radarplot for Domains of ontology ChEBI](../radarplots/Radarplot_ChEBI.svg 
+ [Radarplot for Domains of ontology ChEBI](../radarplots/Radarplot_ChEBI.svg) 
 
 
-)## Ontology
+## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Entities of Biological Interest |
