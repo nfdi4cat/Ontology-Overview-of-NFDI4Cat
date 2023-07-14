@@ -1,10 +1,7 @@
 ## MS - Mass Spectrometry Ontology
 
-
-
- ![Radarplot for Domains of ontology MS](../radarplots/Radarplot_MS.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_MS.html) ![Radarplot for Domains of ontology MS](../radarplots/Radarplot_MS.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

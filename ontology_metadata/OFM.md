@@ -1,10 +1,7 @@
 ## OFM - Ontology for Manufacturing and Logistics
 
-
-
- ![Radarplot for Domains of ontology OFM](../radarplots/Radarplot_OFM.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_OFM.html) ![Radarplot for Domains of ontology OFM](../radarplots/Radarplot_OFM.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

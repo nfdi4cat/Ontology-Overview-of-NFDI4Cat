@@ -1,10 +1,7 @@
 ## VIMMP - Virtual Materials Marketplace Ontology
 
-
-
- ![Radarplot for Domains of ontology VIMMP](../radarplots/Radarplot_VIMMP.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_VIMMP.html) ![Radarplot for Domains of ontology VIMMP](../radarplots/Radarplot_VIMMP.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

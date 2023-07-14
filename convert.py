@@ -45,11 +45,11 @@ def ConvertExcelToMD(PathToExcel):
             translator_dict = json.load(f)
             
             
-        outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n\n\n"   
+        outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n"   
         
         DomainRadarPlotter(onto_name)
         
-        outstring += "\n ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n\n\n".format(onto_name,onto_name)
+        outstring += "\n ## Radarplot \n [HTML-Version](../radarplots/Radarplot_{}.html) ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n".format(onto_name,onto_name,onto_name,onto_name)
         
         table_string = "|Aspect |Description| \n |:---|:---|\n"
         

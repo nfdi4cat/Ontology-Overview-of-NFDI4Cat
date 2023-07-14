@@ -1,10 +1,7 @@
 ## EDAM - EDAM - Bioscientific data analysis ontology
 
-
-
- ![Radarplot for Domains of ontology EDAM](../radarplots/Radarplot_EDAM.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_EDAM.html) ![Radarplot for Domains of ontology EDAM](../radarplots/Radarplot_EDAM.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

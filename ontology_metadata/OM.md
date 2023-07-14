@@ -1,10 +1,7 @@
 ## OM - Ontology of units of Measure
 
-
-
- ![Radarplot for Domains of ontology OM](../radarplots/Radarplot_OM.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_OM.html) ![Radarplot for Domains of ontology OM](../radarplots/Radarplot_OM.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

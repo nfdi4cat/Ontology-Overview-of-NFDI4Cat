@@ -1,10 +1,7 @@
 ## RXNO - RXNO: name reaction ontology
 
-
-
- ![Radarplot for Domains of ontology RXNO](../radarplots/Radarplot_RXNO.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_RXNO.html) ![Radarplot for Domains of ontology RXNO](../radarplots/Radarplot_RXNO.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

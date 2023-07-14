@@ -1,10 +1,7 @@
 ## OSMO - Ontology for Simulation, Modelling, and Optimization
 
-
-
- ![Radarplot for Domains of ontology OSMO](../radarplots/Radarplot_OSMO.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_OSMO.html) ![Radarplot for Domains of ontology OSMO](../radarplots/Radarplot_OSMO.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

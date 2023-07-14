@@ -1,10 +1,7 @@
 ## metadata4ing - Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.
 
-
-
- ![Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_metadata4ing.html) ![Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

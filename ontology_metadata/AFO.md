@@ -1,10 +1,7 @@
 ## AFO - Allotrope Foundation Ontology
 
-
-
- ![Radarplot for Domains of ontology AFO](../radarplots/Radarplot_AFO.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_AFO.html) ![Radarplot for Domains of ontology AFO](../radarplots/Radarplot_AFO.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

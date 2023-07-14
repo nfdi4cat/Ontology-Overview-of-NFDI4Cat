@@ -1,10 +1,7 @@
 ## CIF - Crystallographic Information Framework Ontology
 
-
-
- ![Radarplot for Domains of ontology CIF](../radarplots/Radarplot_CIF.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_CIF.html) ![Radarplot for Domains of ontology CIF](../radarplots/Radarplot_CIF.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

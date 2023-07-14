@@ -1,10 +1,7 @@
 ## OntoCAPE - Ontology for the domain of Computer Aided Process Engineering
 
-
-
- ![Radarplot for Domains of ontology OntoCAPE](../radarplots/Radarplot_OntoCAPE.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_OntoCAPE.html) ![Radarplot for Domains of ontology OntoCAPE](../radarplots/Radarplot_OntoCAPE.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|

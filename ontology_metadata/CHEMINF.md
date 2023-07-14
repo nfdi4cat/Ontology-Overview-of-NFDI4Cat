@@ -1,10 +1,7 @@
 ## CHEMINF - Chemical Information Ontology
 
-
-
- ![Radarplot for Domains of ontology CHEMINF](../radarplots/Radarplot_CHEMINF.svg) 
-
-
+ ## Radarplot 
+ [HTML-Version](../radarplots/Radarplot_CHEMINF.html) ![Radarplot for Domains of ontology CHEMINF](../radarplots/Radarplot_CHEMINF.svg) 
 ## Ontology
 |Aspect |Description| 
  |:---|:---|
