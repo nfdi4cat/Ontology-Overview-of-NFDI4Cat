@@ -1,7 +1,11 @@
 ## CAO - Chemical Analysis Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology CAO](../radarplots/Radarplot_CAO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Analysis Ontology |

@@ -1,7 +1,11 @@
 ## REX - Physico-chemical process
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology REX](../radarplots/Radarplot_REX.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Physico-chemical process |

@@ -1,7 +1,11 @@
 ## CHMO - Chemical Methods Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology CHMO](../radarplots/Radarplot_CHMO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Methods Ontology |

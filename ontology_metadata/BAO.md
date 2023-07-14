@@ -1,7 +1,11 @@
 ## BAO - BioAssay Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology BAO](../radarplots/Radarplot_BAO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | BioAssay Ontology |

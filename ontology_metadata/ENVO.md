@@ -1,7 +1,11 @@
 ## ENVO - Environmental Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology ENVO](../radarplots/Radarplot_ENVO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Environmental Ontology |

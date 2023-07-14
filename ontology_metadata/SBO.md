@@ -1,7 +1,11 @@
 ## SBO - Systems Biology Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology SBO](../radarplots/Radarplot_SBO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Systems Biology Ontology |

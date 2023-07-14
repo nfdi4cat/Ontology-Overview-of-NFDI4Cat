@@ -1,7 +1,11 @@
 ## OBI - Ontology for Biomedical Investigations
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology OBI](../radarplots/Radarplot_OBI.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Ontology for Biomedical Investigations |

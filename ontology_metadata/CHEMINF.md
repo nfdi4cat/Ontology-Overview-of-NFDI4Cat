@@ -1,7 +1,11 @@
 ## CHEMINF - Chemical Information Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology CHEMINF](../radarplots/Radarplot_CHEMINF.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Information Ontology |

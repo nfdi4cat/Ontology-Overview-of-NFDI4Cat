@@ -1,7 +1,11 @@
 ## PIMS-II - Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology PIMS-II](../radarplots/Radarplot_PIMS-II.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |

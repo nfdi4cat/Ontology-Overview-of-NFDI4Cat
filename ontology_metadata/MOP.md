@@ -1,7 +1,11 @@
 ## MOP - Molecular Process Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology MOP](../radarplots/Radarplot_MOP.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Molecular Process Ontology |

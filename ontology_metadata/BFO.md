@@ -1,7 +1,11 @@
 ## BFO - Basic Formal Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology BFO](../radarplots/Radarplot_BFO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Basic Formal Ontology |

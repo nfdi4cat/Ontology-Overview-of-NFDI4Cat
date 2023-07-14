@@ -1,7 +1,11 @@
 ## ChEBI - Chemical Entities of Biological Interest
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology ChEBI](../radarplots/Radarplot_ChEBI.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Entities of Biological Interest |

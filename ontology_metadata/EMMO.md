@@ -1,7 +1,11 @@
 ## EMMO - Elementary Multiperspective Material Ontology
 
 
-## Ontology
+
+ [Radarplot for Domains of ontology EMMO](../radarplots/Radarplot_EMMO.svg 
+
+
+)## Ontology
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Elementary Multiperspective Material Ontology |
