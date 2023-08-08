@@ -17,7 +17,7 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
  [Here](./Radarplot.html) you can find the radar plot shown below as interactive plot (download html file and open it locally).
 
- ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)
+ ![Map of Ontologies for Catalysis Research Domains](./Radarplot.svg)
 
 
 ## Ontology Metadata files
