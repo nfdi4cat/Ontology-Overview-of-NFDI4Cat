@@ -218,6 +218,10 @@ def DomainRadarPlotter_all_ontologies():
     #list the domains of interest used in the first key of md_dict, assuming 
     #every sheet in the template requests the same domains of interest
     domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+    
+    # Remove Top Level Ontology
+    domains_of_interest.remove("Top Level Ontology")
+    
     # contained domains
     domain_dict_c = {}
     # contained and narrower related domains
@@ -313,10 +317,10 @@ def DomainRadarPlotter_all_ontologies():
 [VIMMP]: ./ontology_metadata/VIMMP.md
     """)
     ## DELETING TOP-LEVEL-ONTOLOGIES
-    del domains_of_interest[-1]
-    del plotlist_c_n_b[-1]
-    del plotlist_c_n[-1]
-    del plotlist_c[-1]
+    #del domains_of_interest[-1]
+    #del plotlist_c_n_b[-1]
+    #del plotlist_c_n[-1]
+    #del plotlist_c[-1]
     #
     
     # Extending the list by the first entries to close the radar plots:
@@ -369,13 +373,6 @@ def DomainRadarPlotter_all_ontologies():
       showlegend=True
     )
     
-    layout = go.Layout(
-                    autosize=False,
-                    width=1000,
-                    height=500
-                    )
-    
-   # fig(layout = layout)
     
     fig.write_html("Radarplot.html")
     fig.write_image("Radarplot.svg")
@@ -439,10 +436,10 @@ def DomainRadarPlotter(ontology_name):
     
     # Extending the list by the first entries to close the radar plots:
     
-    del domains_of_interest[-1]
-    del plotlist_c_n_b[-1]
-    del plotlist_c_n[-1]
-    del plotlist_c[-1]
+   # del domains_of_interest[-1]
+   # del plotlist_c_n_b[-1]
+   # del plotlist_c_n[-1]
+   # del plotlist_c[-1]
     plotlist_c.extend([plotlist_c[0]])
     plotlist_c_n.extend([plotlist_c_n[0]])
     plotlist_c_n_b.extend([plotlist_c_n_b[0]])
