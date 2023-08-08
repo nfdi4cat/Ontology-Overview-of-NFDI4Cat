@@ -358,7 +358,10 @@ def DomainRadarPlotter_all_ontologies():
     #))
     
     fig.update_layout(
-      polar=dict(
+       autosize=False,
+       width=1000,
+       height=500,
+       polar=dict(
         radialaxis=dict(
           visible=True,
           range=[0, max(plotlist_c_n_b)]
@@ -366,8 +369,17 @@ def DomainRadarPlotter_all_ontologies():
       showlegend=True
     )
     
+    layout = go.Layout(
+                    autosize=False,
+                    width=1000,
+                    height=500
+                    )
+    
+   # fig(layout = layout)
+    
     fig.write_html("Radarplot.html")
     fig.write_image("Radarplot.svg")
+
     
 ####
 
@@ -469,6 +481,9 @@ def DomainRadarPlotter(ontology_name):
     #))
     
     fig.update_layout(
+      autosize=False,
+      width=1000,
+      height=500,
       polar=dict(
         radialaxis=dict(
           visible=True,
