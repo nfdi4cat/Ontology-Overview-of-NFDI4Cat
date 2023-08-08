@@ -455,6 +455,13 @@ def run_similarity_from_vocabulary():
     Similarity_Search_from_List(prefList,"input_list")
 ####
 
+
+with open("PhotoCatVocabulary.txt") as file:
+    lines = [line.rstrip("\n") for line in file]
+    
+    
+
+"""
 t = time.time()
 
 df = pd.read_excel("Combined Cleaned Vocabulary.xlsx", sheet_name = "Concepts", skiprows=1)
@@ -464,7 +471,7 @@ data_frame_numbers = Similarity_Search_from_List(column_data,"Combined Cleaned V
 elapsed = time.time() - t
 
 print(elapsed)
-
+"""
 
 """
 df = pd.read_excel("CombinedConcepts_condensed_09-2022_Test_AB.xlsx", sheet_name = "Concepts")
