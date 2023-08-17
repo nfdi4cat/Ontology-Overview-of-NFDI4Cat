@@ -336,6 +336,9 @@ def DomainRadarPlotter_all_ontologies():
           r= plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'red',
+          #opacity = 0.5,
+          marker = dict(color = 'lightcoral'),
           #line_close=True,
           name='contained, related: narrower, and related: broader'
     ))
@@ -344,6 +347,8 @@ def DomainRadarPlotter_all_ontologies():
           r=plotlist_c_n,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'blue',
+          marker = dict(color = 'gold'),
           name='contained and related: narrower'
     ))
 
@@ -351,6 +356,8 @@ def DomainRadarPlotter_all_ontologies():
           r=plotlist_c,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'green',
+          marker = dict(color = 'seagreen'),
           name='contained'
     ))
       
@@ -452,6 +459,8 @@ def DomainRadarPlotter(ontology_name):
           r= plotlist_c,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'green',
+          marker = dict(color = 'seagreen'),
           #line_close=True,
           name='3 = contained'
     ))
@@ -460,6 +469,8 @@ def DomainRadarPlotter(ontology_name):
           r=plotlist_c_n,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'blue',
+          marker = dict(color = 'gold'),
           name='2 = contained and related: narrower'
     ))
 
@@ -467,6 +478,8 @@ def DomainRadarPlotter(ontology_name):
           r=plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'red',
+          marker = dict(color = 'lightcoral'),
           name='1 = contained, related: narrower, and related: broader'
     ))
       
