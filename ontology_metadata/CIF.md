@@ -15,7 +15,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/emmo-repo/CIF-ontology |
-| Persistent URI of Ontology File | http://emmo.info/domain-crystallography/cif_top |
+| Persistent URI of Ontology File | https://raw.githubusercontent.com/emmo-repo/domain-crystallography/master/crystallography.ttl |
 | Link to Documentation | https://github.com/emmo-repo/CIF-ontology |
 | Link to Version directory | https://github.com/emmo-repo/CIF-ontology |
 | Optional links (Papers, Repos,...) | - |

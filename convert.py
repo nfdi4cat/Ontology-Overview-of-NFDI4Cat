@@ -122,7 +122,7 @@ def UpdateMainReadme():
         onto_list = []
         for onto_abbrev in md_dict:
             dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+            if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")):
                 onto_list.append(onto_abbrev) 
         domain_dict[domain] = onto_list
     # domain_dict now contains all domains of interest and the respective ontologies
@@ -243,10 +243,10 @@ def DomainRadarPlotter_all_ontologies():
             if ("contained" in dict_entry):
                 onto_list_c.append(onto_abbrev) 
                 
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+            if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")):
                 onto_list_c_n.append(onto_abbrev) 
                 
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
+            if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")) or ("related:broader" in dict_entry.replace(" ","")):
                 onto_list_c_n_b.append(onto_abbrev) 
         
         domain_dict_c[domain] = onto_list_c
@@ -413,12 +413,12 @@ def DomainRadarPlotter(ontology_name):
         else:
             onto_list_c = 0
             
-        if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+        if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")):
             onto_list_c_n = 2
         else:
             onto_list_c_n = 0
             
-        if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
+        if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")) or ("related:broader" in dict_entry.replace(" ","")):
             onto_list_c_n_b = 1
         else:
             onto_list_c_n_b = 0
