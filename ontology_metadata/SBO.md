@@ -29,7 +29,7 @@
 | Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 11 ms |
 | Aligned with Top Level Ontology | OBO |
-| Imports Ontology(ies) | Prefixes used |
+| Imports Ontology(ies) | - |
 | Prefixes used | daml; mathml |
 | Class annotation types | rdfs:label, rdfs:comment |
 

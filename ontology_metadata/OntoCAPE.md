@@ -27,9 +27,9 @@
 | Degree of Inference/Composition | non-inferred; non-compacted |
 | License | GNU General Public 3 |
 | Validated Resoning with | RacerPro is supposed to work, but is an deprecated reasoner |
-| Shortest reasoning time | Aligned with Top Level Ontology (BFO, OBO or EMMO ?) |
+| Shortest reasoning time | - |
 | Aligned with Top Level Ontology | No, includes own TLO |
-| Imports Ontology(ies) | Prefixes used |
+| Imports Ontology(ies) | - |
 | Prefixes used | dcterms; rdfs |
 | Class annotation types | label via class IRI; definition via rdfs:comment |
 

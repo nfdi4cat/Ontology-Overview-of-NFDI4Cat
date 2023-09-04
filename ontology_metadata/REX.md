@@ -25,11 +25,11 @@
  |:---|:---|
 | Ontology Formats Provided | owl |
 | Degree of Inference/Composition | non inferred |
-| License | Reasonable with |
+| License | - |
 | Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 33ms |
 | Aligned with Top Level Ontology | OBO 1.0 (deprecated) |
-| Imports Ontology(ies) | Prefixes used |
+| Imports Ontology(ies) | - |
 | Prefixes used | obo |
 | Class annotation types | rdfs:label, definition : OBO/IAO_0000115 |
 
