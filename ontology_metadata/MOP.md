@@ -36,19 +36,21 @@
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | related: narrower |
+| Material Modeling | missing |
+| Chemical Substance Modeling | contained |
+| Photocatalysis | missing |
+| Electrocatalysis | related: broader |
 | Heterogenous catalysis | related: narrower |
 | Homogenous catalysis | related: narrower |
-| Chemical Substance Modeling | contained |
-| Material Modeling | missing |
-| Process Modeling | related: narrower |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
 |Aspect |Description| 
