@@ -340,7 +340,7 @@ def DomainRadarPlotter_all_ontologies():
           #opacity = 0.5,
           marker = dict(color = 'lightcoral'),
           #line_close=True,
-          name='contained, related: narrower, and related: broader'
+          name='related: broader'
     ))
       
     fig.add_trace(go.Scatterpolar(
@@ -349,7 +349,7 @@ def DomainRadarPlotter_all_ontologies():
           fill='toself',
           #fillcolor = 'blue',
           marker = dict(color = 'gold'),
-          name='contained and related: narrower'
+          name='related: narrower'
     ))
 
     fig.add_trace(go.Scatterpolar(
@@ -371,12 +371,18 @@ def DomainRadarPlotter_all_ontologies():
     fig.update_layout(
        autosize=False,
        width=1000,
-       height=500,
+       height=800,
        polar=dict(
         radialaxis=dict(
           visible=True,
           range=[0, max(plotlist_c_n_b)]
         )),
+       legend=dict(
+           yanchor="bottom",
+           y = -0.2,
+           xanchor="center",
+           x =0.5
+           ),
       showlegend=True
     )
     
@@ -416,7 +422,7 @@ def DomainRadarPlotter(ontology_name):
         dict_entry = md_dict[ontology_name][key_dom_interest][domain]
         
         if ("contained" in dict_entry):
-            onto_list_c = 3
+            onto_list_c = 1
         else:
             onto_list_c = 0
             
@@ -426,7 +432,7 @@ def DomainRadarPlotter(ontology_name):
             onto_list_c_n = 0
             
         if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")) or ("related:broader" in dict_entry.replace(" ","")):
-            onto_list_c_n_b = 1
+            onto_list_c_n_b = 3
         else:
             onto_list_c_n_b = 0
     
@@ -456,14 +462,14 @@ def DomainRadarPlotter(ontology_name):
     fig = go.Figure()
     
     fig.add_trace(go.Scatterpolar(
-          r= plotlist_c,
+          r=plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
-          #fillcolor = 'green',
-          marker = dict(color = 'seagreen'),
-          #line_close=True,
-          name='3 = contained'
+          #fillcolor = 'red',
+          marker = dict(color = 'lightcoral'),
+          name='3 = related: broader'
     ))
+       
       
     fig.add_trace(go.Scatterpolar(
           r=plotlist_c_n,
@@ -471,18 +477,18 @@ def DomainRadarPlotter(ontology_name):
           fill='toself',
           #fillcolor = 'blue',
           marker = dict(color = 'gold'),
-          name='2 = contained and related: narrower'
+          name='2 = related: narrower'
     ))
 
     fig.add_trace(go.Scatterpolar(
-          r=plotlist_c_n_b,
+          r= plotlist_c,
           theta=domains_of_interest,
           fill='toself',
-          #fillcolor = 'red',
-          marker = dict(color = 'lightcoral'),
-          name='1 = contained, related: narrower, and related: broader'
+          #fillcolor = 'green',
+          marker = dict(color = 'seagreen'),
+          #line_close=True,
+          name='1 = contained'
     ))
-      
     #fig.add_trace(go.Scatterpolar(
     #      r=[4, 3, 2.5, 1, 2],
     #      theta=domains_of_interest,
@@ -493,12 +499,18 @@ def DomainRadarPlotter(ontology_name):
     fig.update_layout(
       autosize=False,
       width=1000,
-      height=500,
+      height=800,
       polar=dict(
         radialaxis=dict(
           visible=True,
           range=[0, 3]
         )),
+       legend=dict(
+           yanchor="bottom",
+           y = -0.2,
+           xanchor="center",
+           x =0.5
+           ),
       showlegend=True
     )
     
