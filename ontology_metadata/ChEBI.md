@@ -1,8 +1,11 @@
 ## ChEBI - Chemical Entities of Biological Interest
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_ChEBI.html) ![Radarplot for Domains of ontology ChEBI](../radarplots/Radarplot_ChEBI.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Entities of Biological Interest |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | ChEBI curation team |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.ebi.ac.uk/chebi/init.do |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | Hastings J, Owen G, Dekker A, Ennis M, Kale N, Muthukrishnan V, Turner S, Swainston N, Mendes P, Steinbeck C. (2016). ChEBI in 2016: Improved services and an expanding collection of metabolites. Nucleic Acids Res. More info on available formats etc.: https://www.ebi.ac.uk/chebi/downloadsForward.do |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | sdf; owl; obo; flat file; Oracle binary table dump; SQL table dump |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:Label, obo:Definition (IAO_0000115) |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | related: broader |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 2928713 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 37 |
 
 ## Comments
+
 contains plenty of substance names and short definition as string, as well as additional information on molecules like Average Mass, aligned partially to NIST,IUPAC, NC-IUBMB

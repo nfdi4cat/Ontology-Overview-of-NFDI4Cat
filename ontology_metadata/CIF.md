@@ -1,8 +1,11 @@
 ## CIF - Crystallographic Information Framework Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_CIF.html) ![Radarplot for Domains of ontology CIF](../radarplots/Radarplot_CIF.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Crystallographic Information Framework Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/emmo-repo/CIF-ontology |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,6 +39,7 @@
 | Class annotation types | skos:PrefLabel, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 216 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 0 |
 
 ## Comments
+
 Since the ontology is still in development (and looks as well as feels like being under development) no final comment can be made, however currently several Pitfall as defined by https://oops.linkeddata.es/ are inside the ontology as well as no good link to the "latest" version of the Ontology is currently provided, therefore the Ontology is not recommended to be used

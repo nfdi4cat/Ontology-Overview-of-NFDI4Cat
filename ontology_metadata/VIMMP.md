@@ -1,8 +1,11 @@
 ## VIMMP - Virtual Materials Marketplace Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_VIMMP.html) ![Radarplot for Domains of ontology VIMMP](../radarplots/Radarplot_VIMMP.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Virtual Materials Marketplace Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | terminated consortium of the EMMC |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.vimmp.eu/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/4411422 |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:label, qudt:description, skos:prefLabel as Dataproperty? |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 10812 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 19 |
 
 ## Comments
+
 Ontology with is developed to combine several marketplaces, such as Material handling/transport/aso as well as simulations/compotations/aso. As it is not well defined/annotated and lacks a good documentation for how to add data, it is quiet complicated to make use of it outside of the propriatarilly developed tools. Reasonning erorrs and the termination of further development/alignment to the EMMO make it nearly unuseable accept as a organ donor. As such the Ontology has a lot of good concepts and is well developed.

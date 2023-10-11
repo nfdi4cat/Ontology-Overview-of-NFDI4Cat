@@ -1,8 +1,11 @@
 ## CHMO - Chemical Methods Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_CHMO.html) ![Radarplot for Domains of ontology CHMO](../radarplots/Radarplot_CHMO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Methods Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | single maintainer |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/rsc-ontologies/rsc-cmo |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl; obo |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:Label, obo:Definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 27840 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 37 |
 
 ## Comments
+
 The CHMO is a better Taxonomy implementing a lot of process chemistry related terms into the obo, but with only minimal relations between each other. Mainly used as a graph used for ELN-like tools

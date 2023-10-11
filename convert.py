@@ -45,21 +45,21 @@ def ConvertExcelToMD(PathToExcel):
             translator_dict = json.load(f)
             
             
-        outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n"   
+        outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n\n"   
         
         DomainRadarPlotter(onto_name)
         
-        outstring += "\n ## Radarplot \n [HTML-Version](../radarplots/Radarplot_{}.html) ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n".format(onto_name,onto_name,onto_name,onto_name)
+        outstring += "\n ## Radarplot \n\n [HTML-Version](../radarplots/Radarplot_{}.html) ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n".format(onto_name,onto_name,onto_name,onto_name)
         
         table_string = "|Aspect |Description| \n |:---|:---|\n"
         
         for key in translator_dict:
             if key == "Comments":
-                outstring += "## Comments\n"
+                outstring += "## Comments\n\n"
                 for i in ontodata_dict[key]:
                     outstring += str(i) + "\n"
             else:
-                outstring += "## "+ key + "\n"
+                outstring += "## "+ key + "\n\n"
                 outstring += table_string
                 for dict_list in translator_dict[key]:
                     outstring += "| " + str(list(dict_list.values())[0]) + " | "+ str(ontodata_dict[key][list(dict_list.keys())[0]]) + " |\n"
@@ -142,7 +142,7 @@ def UpdateMainReadme():
     #markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
     # Append markdown to Main_Readme_Update
     with open('./Main_Readme_Update.txt', 'a') as f:
-        f.write("\n## Map of Ontologies for Catalysis Research Domains\n")
+        f.write("\n## Map of Ontologies for Catalysis Research Domains\n\n")
         f.write("\n The ontologies are classified with regards to their research domain [here](./Radarplots.md).\n")
         f.write("\n [Here](./Radarplot.html) you can find the Radar plot as interactive plot.\n")
         f.write("\n ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)\n")
@@ -277,11 +277,11 @@ def DomainRadarPlotter_all_ontologies():
     
     # Append markdown to Main_Readme_Update
     with open('./Radarplots.md', 'w') as f:
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge.\n")
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge.\n\n")
         f.write(markdown_table_c)
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n\n")
         f.write(markdown_table_c_n)
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related or are broader related to them.\n")
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related or are broader related to them.\n\n")
         f.write(markdown_table_c_n_b)
         f.write("\n")
         f.write("""

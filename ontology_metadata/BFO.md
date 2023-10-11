@@ -1,8 +1,11 @@
 ## BFO - Basic Formal Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_BFO.html) ![Radarplot for Domains of ontology BFO](../radarplots/Radarplot_BFO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Basic Formal Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | ISO Standard |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://basic-formal-ontology.org/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://github.com/BFO-ontology/BFO |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl, obo |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:label, Definition: obo:IAO_0000115 (http://purl.obolibrary.org/obo/IAO_0000115)  |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | contained |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 575 |
@@ -65,6 +72,7 @@
 | Annotation Property count | 24 |
 
 ## Comments
+
 Please see the project site https://github.com/BFO-ontology/BFO, the bfo2 owl discussion group http://groups.google.com/group/bfo-owl-devel, the bfo2 discussion group http://groups.google.com/group/bfo-devel, the tracking google doc http://goo.gl/IlrEE, and the current version of the bfo2 reference http://purl.obolibrary.org/obo/bfo/dev/bfo2-reference.docx. This ontology is generated from a specification at https://github.com/BFO-ontology/BFO/tree/master/src/ontology/owl-group/specification/ and with the code that generates the OWL version in https://github.com/BFO-ontology/BFO/tree/master/src/tools/. A very early version of BFO version 2 in CLIF is at http://purl.obolibrary.org/obo/bfo/dev/bfo.clif.
 This BFO 2.0 version represents a major update to BFO and is not strictly backwards compatible with BFO 1.1. The previous OWL version of BFO, version 1.1.1 will remain available at http://ifomis.org/bfo/1.1 and will no longer be updated. The BFO 2.0 OWL is a classes-only specification. The incorporation of core relations has been held over for a later version.
 No object properties contained in BFO

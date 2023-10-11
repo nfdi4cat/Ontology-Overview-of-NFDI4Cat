@@ -1,8 +1,11 @@
 ## MS - Mass Spectrometry Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_MS.html) ![Radarplot for Domains of ontology MS](../radarplots/Radarplot_MS.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Mass Spectrometry Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.psidev.info/groups/controlled-vocabularies |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://github.com/HUPO-PSI/psi-ms-CV  |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | rdf/xml; ttl |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:Label, "IAO:000015": textual definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | related: broader |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 175485 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 249 |
 
 ## Comments
+
 well implemented and structured ontology. A structured controlled vocabulary for the annotation of experiments concerned with proteomics mass spectrometry.

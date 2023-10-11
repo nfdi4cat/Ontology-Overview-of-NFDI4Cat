@@ -1,8 +1,11 @@
 ## BAO - BioAssay Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_BAO.html) ![Radarplot for Domains of ontology BAO](../radarplots/Radarplot_BAO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | BioAssay Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | University of Miami, Ontology is still actively maintained |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | http://bioassayontology.org/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | doi:10.1186/2041-1480-5-S1-S5 ; doi:10.1371/journal.pone.0049198  ; doi:10.1186/1471-2105-12-257 |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:label, OBO:IAO_0000115 for textual definitions |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | missing |
@@ -53,6 +59,7 @@
 | Biocatalysis | related:narrower |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 92149 |
@@ -65,5 +72,6 @@
 | Annotation Property count | 100 |
 
 ## Comments
+
 Describes chemical biology screening assays and their results including high-throughput screening (HTS) data for the purpose of categorizing assays and data analysis.
 Quite applied and in active development, see also here: http://bioassayontology.org/bao-bioportal/ 

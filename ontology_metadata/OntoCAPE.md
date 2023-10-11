@@ -1,8 +1,11 @@
 ## OntoCAPE - Ontology for the domain of Computer Aided Process Engineering
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_OntoCAPE.html) ![Radarplot for Domains of ontology OntoCAPE](../radarplots/Radarplot_OntoCAPE.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Ontology for the domain of Computer Aided Process Engineering |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | University |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.avt.rwth-aachen.de/cms/AVT/Forschung/Sonstiges/Software/~ipts/OntoCape/?lidx=1 |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | http://www.springer.com/chemistry/book/978-3-642-04654-4 |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl |
@@ -34,6 +39,7 @@
 | Class annotation types | label via class IRI; definition via rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | contained |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 5019 |
@@ -65,6 +72,7 @@
 | Annotation Property count | 4 |
 
 ## Comments
+
 Looks like not maintained anymore since 2009. Modular setup of subontologies in separate files and linkage to ontology files via C:/OntoCAPE/ as base instead of an actual URI makes it difficult to reason and to reuse.
 While it contains good ideas on process modeling (special focus on ASPEN), it does not fit to current standards (Top Level, IRIs pointing to local files, mutliple ontology module files instead of one large file containing the whole ontology...)
 Additionally, reasoning gets very complicated because of the modular setup of the sub-ontologies. [AB] was not yet able to run a reasoner (tried Fact++ and HermiT) without error. Even reasoning just the heat exchanger module produced non resolvable reasoning errors.

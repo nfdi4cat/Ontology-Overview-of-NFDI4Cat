@@ -1,8 +1,11 @@
 ## SBO - Systems Biology Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_SBO.html) ![Radarplot for Domains of ontology SBO](../radarplots/Radarplot_SBO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Systems Biology Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Maintained by community via GitHub |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.ebi.ac.uk/ols/ontologies/sbo |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://github.com/EBI-BioModels/SBO/ |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl, obo |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:label, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | contained |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 2982 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 4 |
 
 ## Comments
+
 Controlled vocabulary for Systems Biology and computational modeling in Systems Biology.

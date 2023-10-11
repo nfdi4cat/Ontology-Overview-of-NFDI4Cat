@@ -1,5 +1,6 @@
 [<img src="./logo_NFDI4Cat.jpg" width="300" />](https://nfdi4cat.org/)
 # Ontology World Map of NFDI4Cat
+
 Repository which lists ontologies relevant for catalysis research.
 
 For remarks, additions, or general questions either use the issues or contact the responsible person (see below).
@@ -21,6 +22,7 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
 
 ## Ontology Metadata files
+
 These are the ontologies and links to the ontology markdown files, NFDI4Cat deems as relevant:
 
 | Link to Markdown | Ontology Name |
@@ -51,6 +53,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 
 
 ## Mappings
+
 Here, you can see a mapping that lists the amount of common ontology classes for each ontology, focusing on IRI, label, prefLabel, altLabel and name of the classes.
 
 |                | [AFO]                              | [BAO]                             | [BFO]                             | [CAO]                             | [ChEBI]                             | [CHMO]                             | [EDAM]                             | [ENVO]                             | [metadata4Ing]                        | [MOP]                        | [MS]                        | [OBI]                        | [OFM]                        | [OSMO]                        | [PIMS-II]                       | [REX]                      | [RXNO]                      | [SBO]                      | [VIMMP]   |

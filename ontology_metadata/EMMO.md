@@ -1,8 +1,11 @@
 ## EMMO - Elementary Multiperspective Material Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_EMMO.html) ![Radarplot for Domains of ontology EMMO](../radarplots/Radarplot_EMMO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Elementary Multiperspective Material Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://emmc.eu/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;  |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | rdf/xml; ttl |
@@ -34,6 +39,7 @@
 | Class annotation types | skos:PrefLabel, rdfs:Definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | contained |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 7382 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 32 |
 
 ## Comments
+
 -

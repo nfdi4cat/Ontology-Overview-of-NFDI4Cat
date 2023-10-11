@@ -1,8 +1,11 @@
 ## RXNO - RXNO: name reaction ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_RXNO.html) ![Radarplot for Domains of ontology RXNO](../radarplots/Radarplot_RXNO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | RXNO: name reaction ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Multiple maintainers |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/rsc-ontologies/rxno |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://en.wikipedia.org/wiki/RXNO_Ontology |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl, obo |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:label, OBO:IAO_0000115 for textual definitions |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | related: narrower |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 8342 |
@@ -65,4 +72,5 @@
 | Annotation Property count | 35 |
 
 ## Comments
+
 Good conceptual description of reactions. Strongly connected with the MOP. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization. The documentation also contains a good overview on how to reuse the classes contained in this ontology.

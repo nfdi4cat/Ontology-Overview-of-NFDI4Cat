@@ -1,8 +1,11 @@
 ## REX - Physico-chemical process
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_REX.html) ![Radarplot for Domains of ontology REX](../radarplots/Radarplot_REX.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Physico-chemical process |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | - |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | - |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl |
@@ -34,6 +39,7 @@
 | Class annotation types | rdfs:label, definition : OBO/IAO_0000115 |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
 | Top Level Ontology | missing |
@@ -53,6 +59,7 @@
 | Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 3609 |
@@ -65,5 +72,6 @@
 | Annotation Property count | 12 |
 
 ## Comments
+
 Orphaned ontology! Contains plenty of reaction classes, also catalytic ones. Only classifies broadly and does not contain many relations.
 However, some catalysis classifications are contained.
