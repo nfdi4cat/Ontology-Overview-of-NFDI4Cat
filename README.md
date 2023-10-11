@@ -75,40 +75,6 @@ Here, you can see a mapping that lists the amount of common ontology classes for
 | [SBO]          | [41](/mapping/AFO_SBO.md)          | [27](/mapping/BAO_SBO.md)         | [2](/mapping/BFO_SBO.md)          | [7](/mapping/CAO_SBO.md)          | [13](/mapping/ChEBI_SBO.md)         | [3](/mapping/CHMO_SBO.md)          | [7](/mapping/EDAM_SBO.md)          | [16](/mapping/ENVO_SBO.md)         | [1](/mapping/metadata4Ing_SBO.md)     | [19](/mapping/MOP_SBO.md)    | [9](/mapping/MS_SBO.md)     | [13](/mapping/OBI_SBO.md)    | [3](/mapping/OFM_SBO.md)     | [1](/mapping/OSMO_SBO.md)     | [2](/mapping/PIMS-II_SBO.md)    | [11](/mapping/REX_SBO.md)  | [7](/mapping/RXNO_SBO.md)   | 694                        |           |
 | [VIMMP]        | [83](/mapping/AFO_VIMMP.md)        | [12](/mapping/BAO_VIMMP.md)       | [3](/mapping/BFO_VIMMP.md)        | [19](/mapping/CAO_VIMMP.md)       | [3](/mapping/ChEBI_VIMMP.md)        | [5](/mapping/CHMO_VIMMP.md)        | [15](/mapping/EDAM_VIMMP.md)       | [21](/mapping/ENVO_VIMMP.md)       | [6](/mapping/metadata4Ing_VIMMP.md)   | [1](/mapping/MOP_VIMMP.md)   | [12](/mapping/MS_VIMMP.md)  | [24](/mapping/OBI_VIMMP.md)  | [8](/mapping/OFM_VIMMP.md)   | [172](/mapping/OSMO_VIMMP.md) | [18](/mapping/PIMS-II_VIMMP.md) | [0](/mapping/REX_VIMMP.md) | [2](/mapping/RXNO_VIMMP.md) | [9](/mapping/SBO_VIMMP.md) | 1082      |
 
-## Ontologies considered in NFDI4Cat
-| Ontology Name | Considered in NFDI4Cat? |
-|:---------------:|:-------------------------:|
-| [AFO]           | yes                       |
-| [BAO]           | yes                        |
-| [BFO]           | yes                       |
-| [CAO]           | yes                       |
-| [ChEBI]         | yes                       |
-| [CHEMINF]       | yes                       |
-| [CHMO]          | yes                       |
-| [CIF]  		  | yes        					|                
-| [DOLCE]         | no                       |
-| [EDAM]          | yes                        |
-| [EMMO]          | yes                       |
-| [ENVO]          | yes                       |
-| [ISO 15926]     | no                       |
-| [ISO 15926-14]  | no                       |
-| [M3]            | yes                        |
-| [MOP]           | yes						|
-| [MS]            | yes                        |
-| [metadata4ing]      | yes                        |
-| [OBI] | yes |
-| [OFM]           | no                        |
-| [OM]            | yes                       |
-| [OntoCAPE]      | yes                       |
-| [OntoCompChem]  | no                       |
-| [OntoKin]       | no                       |
-| [OSMO]          | yes                       |
-| [PIMS-II]       | no                        |
-| [REX]           | yes                       |
-| [RXNO]          | yes                        |
-| [SBO]           | yes                       |
-| [VIMMP]         | yes                       |
-
 
 [AFO]: ./ontology_metadata/AFO.md
 [BAO]: ./ontology_metadata/BAO.md
