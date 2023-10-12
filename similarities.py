@@ -188,6 +188,7 @@ def load_ontology_from_name(onto_name):
     #  
     onto_URLs = get_ontology_URLs()
     URL = onto_URLs[onto_name]
+    onto_loaded = None
     
     if onto_name == 'CHEMINF': 
         #contains deprecated classes and object properties, thus needs to be cleaned
@@ -288,16 +289,10 @@ def search_value_in_nested_dict(dictionary, value, keys=None, path=None):
 
 def class_description_loader():
     onto_URLs = get_ontology_URLs()
-    ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
-    
-    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
-    
-   # ontoNameList_output.remove("CHEMINF")
+       
+    ontoNameList_output.remove("OntoCAPE")
    # ontoNameList_output.remove("EMMO")
-    
-    onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
-    df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
     
     iri_dictionary = {}
     
@@ -386,9 +381,9 @@ def Ontology_Mapping():
     ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
     
-    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+    #[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    #ontoNameList_output.remove("CHEMINF")
+    ontoNameList_output.remove("OntoCAPE")
     #ontoNameList_output.remove("EMMO")
     
     onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
@@ -464,7 +459,7 @@ def Ontology_Mapping():
 
 ####
 def run():
-    class_description_loader()
+    #class_description_loader()
     df = Ontology_Mapping()
 ####
 
@@ -476,9 +471,9 @@ def Similarity_Search_from_List(input_list,list_name):
     ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
     
-    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+    #[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    #ontoNameList_output.remove("CHEMINF")
+    ontoNameList_output.remove("OntoCAPE")
     #ontoNameList_output.remove("EMMO")
     
     #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
