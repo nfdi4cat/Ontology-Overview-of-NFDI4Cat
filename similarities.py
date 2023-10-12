@@ -22,7 +22,7 @@ def ontology_classes_loader(ontology):
     try:
         onto1_iris = list([cls.iri for cls in ontology.classes()])
     except:
-        print("IRIs of ontology " + onto_name + " not (well) defined and could not be read!")
+        print("IRIs of ontology " + ontology.name + " not (well) defined and could not be read!")
         onto1_iris=[]
         return None
     
