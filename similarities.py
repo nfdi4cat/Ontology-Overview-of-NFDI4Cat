@@ -36,11 +36,11 @@ def ontology_classes_loader(ontology):
             class_label = None
         
         try: 
-       # if type(onto1.search_one(iri = iri).prefLabel.first()) == locstr:
-            #print(onto1.search_one(iri = iri).prefLabel.first())
-       #     class_prefLabel = "test" #onto1.search_one(iri = iri).prefLabel.first().split().first()
-       # else:
-            class_prefLabel = ontology.search_one(iri = iri).prefLabel.first()
+            if type(ontology.search_one(iri = iri).prefLabel.first()) == locstr:
+                #print(onto1.search_one(iri = iri).prefLabel.first())
+                class_prefLabel = ontology.search_one(iri = iri).prefLabel.first().split()[0]
+            else:
+                class_prefLabel = ontology.search_one(iri = iri).prefLabel.first()
         except:
             class_prefLabel = None
         
