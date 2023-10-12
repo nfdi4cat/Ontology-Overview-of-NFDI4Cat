@@ -31,22 +31,26 @@ def ontology_classes_loader(ontology):
     for iri in onto1_iris:
        
         try:
-            class_label = onto1.search_one(iri = iri).label.first()
+            class_label = ontology.search_one(iri = iri).label.first()
         except:
             class_label = None
         
         try: 
-            class_prefLabel = onto1.search_one(iri = iri).prefLabel.first()
+       # if type(onto1.search_one(iri = iri).prefLabel.first()) == locstr:
+            #print(onto1.search_one(iri = iri).prefLabel.first())
+       #     class_prefLabel = "test" #onto1.search_one(iri = iri).prefLabel.first().split().first()
+       # else:
+            class_prefLabel = ontology.search_one(iri = iri).prefLabel.first()
         except:
             class_prefLabel = None
         
         try:
-            class_altLabel = onto1.search_one(iri = iri).altLabel.first()
+            class_altLabel = ontology.search_one(iri = iri).altLabel.first()
         except:
             class_altLabel = None
             
         try:
-            class_name = onto1.search_one(iri = iri).name
+            class_name = ontology.search_one(iri = iri).name
         except:
             class_name = None
         
@@ -110,8 +114,14 @@ def ttl_to_owl(url):
     #  Output: File name of ontology downloaded into subdirectory ./ontologies/ as str
     ##
     filename = url.rpartition('/')[-1] # gets last bit of URL after / to obtain "filename.ttl"
-    onto_name = filename.split('.')[0]
-    ontology_output_filename = onto_name + '.owl'
+    onto_name = filename.split('.')[0]   
+    ##
+    # Finds ontology abbreviation based on URL of ontology in ontology URL dictionary
+    onto_URLs = get_ontology_URLs()
+    onto_abbrev = list(onto_URLs.keys())[list(onto_URLs.values()).index(url)]
+    ##
+    
+    ontology_output_filename = onto_abbrev + '.owl'
     
     # if isfile == true, owl file is already contained in ./ontologies/ and no reload or 
     # conversion of ttl-ontology from web is necessary. So only if no owl file is 
@@ -137,7 +147,19 @@ def load_ontology_from_name(onto_name):
     onto_URLs = get_ontology_URLs()
     URL = onto_URLs[onto_name]
     
-    if URL.endswith('.owl'):
+    if onto_name == 'CHEMINF': 
+        #contains deprecated classes and object properties, thus needs to be cleaned
+        # and loaded manually, else owlready2 will crash
+        try: 
+            print("Loading Ontology: {}".format(onto_name))
+            onto_loaded = get_ontology("./ontologies/"+onto_name+'.owl').load()
+            print("Successfully loaded Ontology: {}".format(onto_name))
+        except:
+            print("Need to place file here: ./ontologies/{}.owl".format(onto_name))
+            onto_loaded = None
+            pass        
+    
+    elif URL.endswith('.owl'):
         try: 
             print("Loading Ontology: {}".format(onto_name))
             onto_loaded = get_ontology(URL).load()
@@ -225,8 +247,8 @@ def class_description_loader():
     
     [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    ontoNameList_output.remove("CHEMINF")
-    ontoNameList_output.remove("EMMO")
+   # ontoNameList_output.remove("CHEMINF")
+   # ontoNameList_output.remove("EMMO")
     
     onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
     df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
