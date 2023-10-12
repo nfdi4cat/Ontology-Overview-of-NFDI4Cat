@@ -31,13 +31,17 @@ def ontology_classes_loader(ontology):
     for iri in onto1_iris:
        
         try:
-            class_label = ontology.search_one(iri = iri).label.first()
+            if type(ontology.search_one(iri = iri).label.first()) == locstr: 
+                # some ontologies use locstrings to account for different languages
+                class_label = ontology.search_one(iri = iri).label.first().split()[0]
+            else:
+                class_label = ontology.search_one(iri = iri).label.first()
         except:
             class_label = None
         
         try: 
-            if type(ontology.search_one(iri = iri).prefLabel.first()) == locstr:
-                #print(onto1.search_one(iri = iri).prefLabel.first())
+            if type(ontology.search_one(iri = iri).prefLabel.first()) == locstr: 
+                # some ontologies use locstrings to account for different languages
                 class_prefLabel = ontology.search_one(iri = iri).prefLabel.first().split()[0]
             else:
                 class_prefLabel = ontology.search_one(iri = iri).prefLabel.first()
@@ -45,7 +49,11 @@ def ontology_classes_loader(ontology):
             class_prefLabel = None
         
         try:
-            class_altLabel = ontology.search_one(iri = iri).altLabel.first()
+            if type(ontology.search_one(iri = iri).altLabel.first()) == locstr:
+                # some ontologies use locstrings to account for different languages
+                class_altLabel = ontology.search_one(iri = iri).altLabel.first().split()[0]
+            else:
+                class_altLabel = ontology.search_one(iri = iri).altLabel.first()
         except:
             class_altLabel = None
             
