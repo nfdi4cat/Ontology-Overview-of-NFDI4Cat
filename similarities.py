@@ -149,6 +149,40 @@ def ttl_to_owl(url):
 ####
 
 ####
+def rdf_to_owl(url):
+    ## Conversion of ttl-ontology to owl-ontology with ROBOT
+    #  Input: URL of ontology file
+    #  Output: File name of ontology downloaded into subdirectory ./ontologies/ as str
+    ##
+    filename = url.rpartition('/')[-1] # gets last bit of URL after / to obtain "filename.ttl"
+    onto_name = filename.split('.')[0]   
+    ##
+    # Finds ontology abbreviation based on URL of ontology in ontology URL dictionary
+    onto_URLs = get_ontology_URLs()
+    onto_abbrev = list(onto_URLs.keys())[list(onto_URLs.values()).index(url)]
+    ##
+    
+    ontology_output_filename = onto_abbrev + '.owl'
+    
+    # if isfile == true, owl file is already contained in ./ontologies/ and no reload or 
+    # conversion of ttl-ontology from web is necessary. So only if no owl file is 
+    # contained, the merge and convert is executed.
+    if not os.path.isfile('./ontologies/' + ontology_output_filename): 
+        onto_txt = urllib.request.urlopen(url)
+        onto_txt = onto_txt.read()#readlines()
+    
+        with open('./ontologies/'+onto_name+'.rdf', 'wb') as onto_file:
+            onto_file.write(onto_txt)
+        
+        #os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
+        #os.system(".\\robot\\robot merge --input .\\ontologies\\{} --output .\\ontologies\\{}".format(filename,filename))
+        os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(onto_name+'.rdf', ontology_output_filename))
+        
+    return ontology_output_filename
+####
+
+
+####
 def load_ontology_from_name(onto_name):
     ## Tries to load in the ontology by accessing the URL to an owl-file
     #  
@@ -159,7 +193,7 @@ def load_ontology_from_name(onto_name):
         #contains deprecated classes and object properties, thus needs to be cleaned
         # and loaded manually, else owlready2 will crash
         try: 
-            print("Loading Ontology: {}".format(onto_name))
+            print("Loading Ontology: {} from local path ./ontologies/".format(onto_name))
             onto_loaded = get_ontology("./ontologies/"+onto_name+'.owl').load()
             print("Successfully loaded Ontology: {}".format(onto_name))
         except:
@@ -186,14 +220,18 @@ def load_ontology_from_name(onto_name):
     else:
         #TODO: try to load from ./ontologies/ if there is a manual added version of the OWL, such as for OntoCAPE.
         print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}\n".format(onto_name, URL))
-              #searching for ontology owl-file in subdirectory ./ontologies/".format(onto_name, URL))
-        #try:
-        #    onto_loaded = get_ontology('./ontologies/' + onto_name + '.owl').load()
-        #   print("Ontology-file found and loaded.")
-        #except:
-        #    print("... failed")
-        onto_loaded = None   
-    
+        try:
+            """
+            print("Trying to load ontology {} from local path ./ontologies/".format(onto_name))
+            onto_loaded = get_ontology("./ontologies/"+onto_name+'.owl').load()
+            print("Successfully loaded Ontology: {}".format(onto_name))
+            """
+            ontology_in_owl = rdf_to_owl(URL)
+            onto_loaded = get_ontology('./ontologies./' + ontology_in_owl).load()
+        except:
+            print("Something went wrong, ontology name: ".format(onto_name))
+            onto_loaded = None
+            pass
     
     return onto_loaded
 ####
@@ -350,8 +388,8 @@ def Ontology_Mapping():
     
     [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    ontoNameList_output.remove("CHEMINF")
-    ontoNameList_output.remove("EMMO")
+    #ontoNameList_output.remove("CHEMINF")
+    #ontoNameList_output.remove("EMMO")
     
     onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
     df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
