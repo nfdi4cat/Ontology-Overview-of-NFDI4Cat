@@ -464,6 +464,7 @@ def Ontology_Mapping():
 
 ####
 def run():
+    class_description_loader()
     df = Ontology_Mapping()
 ####
 
@@ -477,8 +478,8 @@ def Similarity_Search_from_List(input_list,list_name):
     
     [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    ontoNameList_output.remove("CHEMINF")
-    ontoNameList_output.remove("EMMO")
+    #ontoNameList_output.remove("CHEMINF")
+    #ontoNameList_output.remove("EMMO")
     
     #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
     df_numbers = pd.DataFrame(index = [list_name], columns = ontoNameList_output)
