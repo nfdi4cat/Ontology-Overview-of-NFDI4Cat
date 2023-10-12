@@ -294,15 +294,20 @@ def class_description_loader():
     ontoNameList_output.remove("OntoCAPE")
    # ontoNameList_output.remove("EMMO")
     
-    iri_dictionary = {}
+    iri_dictionary = {}    
     
     for ontologyname in ontoNameList_output:
         ontology = None
+        print(ontologyname)
         ontology = load_ontology_from_name(ontologyname)
-        iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+        
+        if ontology != None:
+            iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+        else:
+            print(ontologyname + " was empty!")
     
-    with open('iriDictionary.json', 'w') as fp:
-        json.dump(iri_dictionary, fp)
+        with open('iriDictionary.json', 'w') as fp:
+            json.dump(iri_dictionary, fp)
     
     return iri_dictionary
 ####
