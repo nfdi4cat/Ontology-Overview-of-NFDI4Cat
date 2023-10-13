@@ -1,2 +1,15 @@
-| ENVO_IRI   | ENVO_DESC   | OSMO_IRI   | OSMO_DESC   |
-|------------|-------------|------------|-------------|
+|    | ENVO_IRI                                     | ENVO_DESC                                                                           | OSMO_IRI                                           | OSMO_DESC            | OSMO_DEF   |
+|---:|:---------------------------------------------|:------------------------------------------------------------------------------------|:---------------------------------------------------|:---------------------|:-----------|
+|  0 | http://purl.obolibrary.org/obo/ENVO_01000785 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01000785'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  1 | http://purl.obolibrary.org/obo/ENVO_03000043 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_03000043'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  2 | http://purl.obolibrary.org/obo/ENVO_03000010 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_03000010'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  3 | http://purl.obolibrary.org/obo/ENVO_03000009 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_03000009'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  4 | http://purl.obolibrary.org/obo/ENVO_03000016 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_03000016'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  5 | http://purl.obolibrary.org/obo/ENVO_01001510 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001510'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  6 | http://purl.obolibrary.org/obo/ENVO_01001274 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001274'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  7 | http://purl.obolibrary.org/obo/ENVO_01003013 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01003013'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  8 | http://purl.obolibrary.org/obo/ENVO_01001348 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001348'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+|  9 | http://purl.obolibrary.org/obo/ENVO_01001349 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001349'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+| 10 | http://purl.obolibrary.org/obo/ENVO_01001612 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001612'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+| 11 | http://purl.obolibrary.org/obo/ENVO_01001615 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001615'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |
+| 12 | http://purl.obolibrary.org/obo/ENVO_01001644 | {'label': 'material', 'prefLabel': None, 'altLabel': None, 'name': 'ENVO_01001644'} | https://emmc.eu/semantics/evmpo/evmpo.ttl#material | {'name': 'material'} | []         |

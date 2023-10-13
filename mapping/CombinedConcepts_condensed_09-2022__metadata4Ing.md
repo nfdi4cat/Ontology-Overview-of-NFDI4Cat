@@ -1,0 +1,13 @@
+|    | CombinedConcepts_condensed_09-2022__IRI   | CombinedConcepts_condensed_09-2022__DESC   | metadata4Ing_IRI                                      | metadata4Ing_DESC                                         |
+|---:|:------------------------------------------|:-------------------------------------------|:------------------------------------------------------|:----------------------------------------------------------|
+|  0 | no IRI                                    | {'Activity'}                               | http://www.w3.org/ns/prov#Activity                    | {'prefLabel': 'Activity', 'name': 'Activity'}             |
+|  1 | no IRI                                    | {'distribution'}                           | http://www.w3.org/ns/dcat#Distribution                | {'name': 'distribution'}                                  |
+|  2 | no IRI                                    | {'group'}                                  | http://xmlns.com/foaf/0.1/Group                       | {'label': 'group', 'prefLabel': 'group', 'name': 'group'} |
+|  3 | no IRI                                    | {'method'}                                 | http://w3id.org/nfdi4ing/metadata4ing#Method          | {'name': 'method'}                                        |
+|  4 | no IRI                                    | {'Process'}                                | http://purl.obolibrary.org/obo/BFO_0000015            | {'label': 'Process', 'prefLabel': 'Process'}              |
+|  5 | no IRI                                    | {'project'}                                | https://schema.org/Project                            | {'prefLabel': 'project', 'name': 'project'}               |
+|  6 | no IRI                                    | {'property'}                               | http://www.molmod.info/semantics/pims-ii.ttl#Property | {'name': 'property'}                                      |
+|  7 | no IRI                                    | {'role'}                                   | http://www.w3.org/ns/prov#Role                        | {'prefLabel': 'role', 'name': 'role'}                     |
+|  8 | no IRI                                    | {'tool'}                                   | http://w3id.org/nfdi4ing/metadata4ing#Tool            | {'prefLabel': 'tool', 'name': 'tool'}                     |
+|  9 | no IRI                                    | {'value'}                                  | http://www.molmod.info/semantics/pims-ii.ttl#Value    | {'prefLabel': 'value', 'name': 'value'}                   |
+| 10 | no IRI                                    | {'variable'}                               | http://www.molmod.info/semantics/pims-ii.ttl#Variable | {'prefLabel': 'variable', 'name': 'variable'}             |

@@ -1,0 +1,177 @@
+|     | concept_collection__IRI   | concept_collection__DESC         | CAO_IRI                                                       | CAO_DESC                                                       |
+|----:|:--------------------------|:---------------------------------|:--------------------------------------------------------------|:---------------------------------------------------------------|
+|   0 | no IRI                    | {'laboratory glassware'}         | http://champ-project.org/images/ontology/cao.owl#CAO_000073   | {'label': 'laboratory glassware'}                              |
+|   1 | no IRI                    | {'mixture'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000156   | {'label': 'mixture'}                                           |
+|   2 | no IRI                    | {'IUPAC name'}                   | http://semanticscience.org/resource/CHEMINF_000107            | {'label': 'IUPAC name'}                                        |
+|   3 | no IRI                    | {'density'}                      | http://purl.obolibrary.org/obo/PATO_0001019                   | {'altLabel': 'density'}                                        |
+|   4 | no IRI                    | {'mass'}                         | http://champ-project.org/images/ontology/cao.owl#PATO_0000125 | {'label': 'mass'}                                              |
+|   5 | no IRI                    | {'solvent'}                      | http://purl.obolibrary.org/obo/CHEBI_46787                    | {'label': 'solvent'}                                           |
+|   6 | no IRI                    | {'unit'}                         | http://purl.obolibrary.org/obo/UO_0000000                     | {'label': 'unit'}                                              |
+|   7 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|   8 | no IRI                    | {'equipment'}                    | http://champ-project.org/images/ontology/cao.owl#CAO_000115   | {'label': 'equipment'}                                         |
+|   9 | no IRI                    | {'molecular entity'}             | http://purl.obolibrary.org/obo/CHEBI_23367                    | {'label': 'molecular entity', 'prefLabel': 'molecular entity'} |
+|  10 | no IRI                    | {'atom'}                         | http://purl.obolibrary.org/obo/CHEBI_33250                    | {'label': 'atom'}                                              |
+|  11 | no IRI                    | {'ion'}                          | http://purl.obolibrary.org/obo/CHEBI_24870                    | {'label': 'ion'}                                               |
+|  12 | no IRI                    | {'polymer'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000164   | {'label': 'polymer'}                                           |
+|  13 | no IRI                    | {'macromolecule'}                | http://purl.obolibrary.org/obo/CHEBI_33839                    | {'label': 'macromolecule'}                                     |
+|  14 | no IRI                    | {'homogeneous mixture'}          | http://champ-project.org/images/ontology/cao.owl#CAO_000127   | {'label': 'homogeneous mixture'}                               |
+|  15 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+|  16 | no IRI                    | {'reagent role'}                 | http://purl.obolibrary.org/obo/OBI_0000086                    | {'label': 'reagent role', 'prefLabel': 'reagent role'}         |
+|  17 | no IRI                    | {'catalyst role'}                | http://purl.obolibrary.org/obo/INO_0000069                    | {'label': 'catalyst role'}                                     |
+|  18 | no IRI                    | {'reactant role'}                | http://champ-project.org/images/ontology/cao.owl#CAO_000178   | {'label': 'reactant role'}                                     |
+|  19 | no IRI                    | {'product role'}                 | http://purl.obolibrary.org/obo/REO_0000865                    | {'label': 'product role'}                                      |
+|  20 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+|  21 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|  22 | no IRI                    | {'quality'}                      | http://www.ifomis.org/bfo/1.1/snap#Quality                    | {'label': 'quality', 'name': 'quality'}                        |
+|  23 | no IRI                    | {'length'}                       | http://purl.obolibrary.org/obo/PATO_0000122                   | {'altLabel': 'length'}                                         |
+|  24 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|  25 | no IRI                    | {'Physical quantity'}            | http://champ-project.org/images/ontology/cao.owl#CAO_000165   | {'label': 'Physical quantity'}                                 |
+|  26 | no IRI                    | {'Mass'}                         | http://champ-project.org/images/ontology/cao.owl#PATO_0000125 | {'label': 'Mass'}                                              |
+|  27 | no IRI                    | {'Length'}                       | http://purl.obolibrary.org/obo/PATO_0000122                   | {'altLabel': 'Length'}                                         |
+|  28 | no IRI                    | {'Volume'}                       | http://purl.obolibrary.org/obo/PATO_0000918                   | {'altLabel': 'Volume'}                                         |
+|  29 | no IRI                    | {'Pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'Pressure'}                                       |
+|  30 | no IRI                    | {'heating'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000125   | {'label': 'heating'}                                           |
+|  31 | no IRI                    | {'Mixing'}                       | http://purl.obolibrary.org/obo/CHMO_0001685                   | {'label': 'Mixing'}                                            |
+|  32 | no IRI                    | {'sieving'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000193   | {'label': 'sieving'}                                           |
+|  33 | no IRI                    | {'filtration'}                   | http://purl.obolibrary.org/obo/CHMO_0001640                   | {'label': 'filtration'}                                        |
+|  34 | no IRI                    | {'rotary evaporation'}           | http://purl.obolibrary.org/obo/CHMO_0001576                   | {'label': 'rotary evaporation'}                                |
+|  35 | no IRI                    | {'centrifugation'}               | http://purl.obolibrary.org/obo/CHMO_0001047                   | {'label': 'centrifugation'}                                    |
+|  36 | no IRI                    | {'Volume'}                       | http://purl.obolibrary.org/obo/PATO_0000918                   | {'altLabel': 'Volume'}                                         |
+|  37 | no IRI                    | {'Temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'Temperature'}                                    |
+|  38 | no IRI                    | {'Temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'Temperature'}                                    |
+|  39 | no IRI                    | {'conductivity'}                 | http://purl.obolibrary.org/obo/PATO_0001757                   | {'altLabel': 'conductivity'}                                   |
+|  40 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|  41 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+|  42 | no IRI                    | {'unit of measure'}              | http://champ-project.org/images/ontology/cao.owl#CAO_000209   | {'label': 'unit of measure'}                                   |
+|  43 | no IRI                    | {'solvent'}                      | http://purl.obolibrary.org/obo/CHEBI_46787                    | {'label': 'solvent'}                                           |
+|  44 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+|  45 | no IRI                    | {'reagent role'}                 | http://purl.obolibrary.org/obo/OBI_0000086                    | {'label': 'reagent role', 'prefLabel': 'reagent role'}         |
+|  46 | no IRI                    | {'catalyst role'}                | http://purl.obolibrary.org/obo/INO_0000069                    | {'label': 'catalyst role'}                                     |
+|  47 | no IRI                    | {'reactant role'}                | http://champ-project.org/images/ontology/cao.owl#CAO_000178   | {'label': 'reactant role'}                                     |
+|  48 | no IRI                    | {'product role'}                 | http://purl.obolibrary.org/obo/REO_0000865                    | {'label': 'product role'}                                      |
+|  49 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+|  50 | no IRI                    | {'quality'}                      | http://www.ifomis.org/bfo/1.1/snap#Quality                    | {'label': 'quality', 'name': 'quality'}                        |
+|  51 | no IRI                    | {'homogeneous mixture'}          | http://champ-project.org/images/ontology/cao.owl#CAO_000127   | {'label': 'homogeneous mixture'}                               |
+|  52 | no IRI                    | {'molecular entity'}             | http://purl.obolibrary.org/obo/CHEBI_23367                    | {'label': 'molecular entity', 'prefLabel': 'molecular entity'} |
+|  53 | no IRI                    | {'atom'}                         | http://purl.obolibrary.org/obo/CHEBI_33250                    | {'label': 'atom'}                                              |
+|  54 | no IRI                    | {'ion'}                          | http://purl.obolibrary.org/obo/CHEBI_24870                    | {'label': 'ion'}                                               |
+|  55 | no IRI                    | {'polymer'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000164   | {'label': 'polymer'}                                           |
+|  56 | no IRI                    | {'macromolecule'}                | http://purl.obolibrary.org/obo/CHEBI_33839                    | {'label': 'macromolecule'}                                     |
+|  57 | no IRI                    | {'equipment'}                    | http://champ-project.org/images/ontology/cao.owl#CAO_000115   | {'label': 'equipment'}                                         |
+|  58 | no IRI                    | {'sample'}                       | http://champ-project.org/images/ontology/cao.owl#CAO_000189   | {'label': 'sample'}                                            |
+|  59 | no IRI                    | {'heating'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000125   | {'label': 'heating'}                                           |
+|  60 | no IRI                    | {'volume'}                       | http://purl.obolibrary.org/obo/PATO_0000918                   | {'altLabel': 'volume'}                                         |
+|  61 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+|  62 | no IRI                    | {'length'}                       | http://purl.obolibrary.org/obo/PATO_0000122                   | {'altLabel': 'length'}                                         |
+|  63 | no IRI                    | {'sensitivity'}                  | http://champ-project.org/images/ontology/cao.owl#CAO_000019   | {'label': 'sensitivity'}                                       |
+|  64 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+|  65 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|  66 | no IRI                    | {'density'}                      | http://purl.obolibrary.org/obo/PATO_0001019                   | {'altLabel': 'density'}                                        |
+|  67 | no IRI                    | {'conductivity'}                 | http://purl.obolibrary.org/obo/PATO_0001757                   | {'altLabel': 'conductivity'}                                   |
+|  68 | no IRI                    | {'position'}                     | http://purl.obolibrary.org/obo/PATO_0000140                   | {'altLabel': 'position'}                                       |
+|  69 | no IRI                    | {'mixing'}                       | http://purl.obolibrary.org/obo/CHMO_0001685                   | {'label': 'mixing'}                                            |
+|  70 | no IRI                    | {'IUPAC name'}                   | http://semanticscience.org/resource/CHEMINF_000107            | {'label': 'IUPAC name'}                                        |
+|  71 | no IRI                    | {'mixture'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000156   | {'label': 'mixture'}                                           |
+|  72 | no IRI                    | {'mixing'}                       | http://purl.obolibrary.org/obo/CHMO_0001685                   | {'label': 'mixing'}                                            |
+|  73 | no IRI                    | {'solvent'}                      | http://purl.obolibrary.org/obo/CHEBI_46787                    | {'label': 'solvent'}                                           |
+|  74 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+|  75 | no IRI                    | {'rotary evaporation'}           | http://purl.obolibrary.org/obo/CHMO_0001576                   | {'label': 'rotary evaporation'}                                |
+|  76 | no IRI                    | {'centrifugation'}               | http://purl.obolibrary.org/obo/CHMO_0001047                   | {'label': 'centrifugation'}                                    |
+|  77 | no IRI                    | {'unit of measure'}              | http://champ-project.org/images/ontology/cao.owl#CAO_000209   | {'label': 'unit of measure'}                                   |
+|  78 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|  79 | no IRI                    | {'heating'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000125   | {'label': 'heating'}                                           |
+|  80 | no IRI                    | {'mixing'}                       | http://purl.obolibrary.org/obo/CHMO_0001685                   | {'label': 'mixing'}                                            |
+|  81 | no IRI                    | {'sieving'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000193   | {'label': 'sieving'}                                           |
+|  82 | no IRI                    | {'filtration'}                   | http://purl.obolibrary.org/obo/CHMO_0001640                   | {'label': 'filtration'}                                        |
+|  83 | no IRI                    | {'conductivity'}                 | http://purl.obolibrary.org/obo/PATO_0001757                   | {'altLabel': 'conductivity'}                                   |
+|  84 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+|  85 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+|  86 | no IRI                    | {'Sample'}                       | http://champ-project.org/images/ontology/cao.owl#CAO_000189   | {'label': 'Sample'}                                            |
+|  87 | no IRI                    | {'Solvent'}                      | http://purl.obolibrary.org/obo/CHEBI_46787                    | {'label': 'Solvent'}                                           |
+|  88 | no IRI                    | {'Polymer'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000164   | {'label': 'Polymer'}                                           |
+|  89 | no IRI                    | {'functional group'}             | http://purl.obolibrary.org/obo/CHEBI_24433                    | {'label': 'functional group'}                                  |
+|  90 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+|  91 | no IRI                    | {'stock solution'}               | http://champ-project.org/images/ontology/cao.owl#CAO_000205   | {'label': 'stock solution'}                                    |
+|  92 | no IRI                    | {'IUPAC name'}                   | http://semanticscience.org/resource/CHEMINF_000107            | {'label': 'IUPAC name'}                                        |
+|  93 | no IRI                    | {'density'}                      | http://purl.obolibrary.org/obo/PATO_0001019                   | {'altLabel': 'density'}                                        |
+|  94 | no IRI                    | {'Storage condition'}            | http://champ-project.org/images/ontology/cao.owl#CAO_000038   | {'label': 'Storage condition'}                                 |
+|  95 | no IRI                    | {'mixture'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000156   | {'label': 'mixture'}                                           |
+|  96 | no IRI                    | {'molecular entity'}             | http://purl.obolibrary.org/obo/CHEBI_23367                    | {'label': 'molecular entity', 'prefLabel': 'molecular entity'} |
+|  97 | no IRI                    | {'atom'}                         | http://purl.obolibrary.org/obo/CHEBI_33250                    | {'label': 'atom'}                                              |
+|  98 | no IRI                    | {'ion'}                          | http://purl.obolibrary.org/obo/CHEBI_24870                    | {'label': 'ion'}                                               |
+|  99 | no IRI                    | {'polymer'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000164   | {'label': 'polymer'}                                           |
+| 100 | no IRI                    | {'macromolecule'}                | http://purl.obolibrary.org/obo/CHEBI_33839                    | {'label': 'macromolecule'}                                     |
+| 101 | no IRI                    | {'homogeneous mixture'}          | http://champ-project.org/images/ontology/cao.owl#CAO_000127   | {'label': 'homogeneous mixture'}                               |
+| 102 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+| 103 | no IRI                    | {'reagent role'}                 | http://purl.obolibrary.org/obo/OBI_0000086                    | {'label': 'reagent role', 'prefLabel': 'reagent role'}         |
+| 104 | no IRI                    | {'catalyst role'}                | http://purl.obolibrary.org/obo/INO_0000069                    | {'label': 'catalyst role'}                                     |
+| 105 | no IRI                    | {'reactant role'}                | http://champ-project.org/images/ontology/cao.owl#CAO_000178   | {'label': 'reactant role'}                                     |
+| 106 | no IRI                    | {'product role'}                 | http://purl.obolibrary.org/obo/REO_0000865                    | {'label': 'product role'}                                      |
+| 107 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+| 108 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+| 109 | no IRI                    | {'quality'}                      | http://www.ifomis.org/bfo/1.1/snap#Quality                    | {'label': 'quality', 'name': 'quality'}                        |
+| 110 | no IRI                    | {'length'}                       | http://purl.obolibrary.org/obo/PATO_0000122                   | {'altLabel': 'length'}                                         |
+| 111 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+| 112 | no IRI                    | {'mixing'}                       | http://purl.obolibrary.org/obo/CHMO_0001685                   | {'label': 'mixing'}                                            |
+| 113 | no IRI                    | {'sieving'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000193   | {'label': 'sieving'}                                           |
+| 114 | no IRI                    | {'dialysis'}                     | http://purl.obolibrary.org/obo/CHMO_0001522                   | {'label': 'dialysis'}                                          |
+| 115 | no IRI                    | {'stirring'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000204   | {'label': 'stirring'}                                          |
+| 116 | no IRI                    | {'filtration'}                   | http://purl.obolibrary.org/obo/CHMO_0001640                   | {'label': 'filtration'}                                        |
+| 117 | no IRI                    | {'filtration'}                   | http://purl.obolibrary.org/obo/CHMO_0001640                   | {'label': 'filtration'}                                        |
+| 118 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+| 119 | no IRI                    | {'solvent'}                      | http://purl.obolibrary.org/obo/CHEBI_46787                    | {'label': 'solvent'}                                           |
+| 120 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+| 121 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+| 122 | no IRI                    | {'volume'}                       | http://purl.obolibrary.org/obo/PATO_0000918                   | {'altLabel': 'volume'}                                         |
+| 123 | no IRI                    | {'density'}                      | http://purl.obolibrary.org/obo/PATO_0001019                   | {'altLabel': 'density'}                                        |
+| 124 | no IRI                    | {'mass'}                         | http://champ-project.org/images/ontology/cao.owl#PATO_0000125 | {'label': 'mass'}                                              |
+| 125 | no IRI                    | {'height'}                       | http://purl.obolibrary.org/obo/PATO_0000119                   | {'label': 'height'}                                            |
+| 126 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+| 127 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+| 128 | no IRI                    | {'application'}                  | http://purl.obolibrary.org/obo/CHEBI_33232                    | {'label': 'application'}                                       |
+| 129 | no IRI                    | {'volume'}                       | http://purl.obolibrary.org/obo/PATO_0000918                   | {'altLabel': 'volume'}                                         |
+| 130 | no IRI                    | {'mixture'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000156   | {'label': 'mixture'}                                           |
+| 131 | no IRI                    | {'property'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000173   | {'label': 'property'}                                          |
+| 132 | no IRI                    | {'site'}                         | http://purl.obolibrary.org/obo/BFO_0000029                    | {'label': 'site', 'prefLabel': 'site'}                         |
+| 133 | no IRI                    | {'density'}                      | http://purl.obolibrary.org/obo/PATO_0001019                   | {'altLabel': 'density'}                                        |
+| 134 | no IRI                    | {'mass'}                         | http://champ-project.org/images/ontology/cao.owl#PATO_0000125 | {'label': 'mass'}                                              |
+| 135 | no IRI                    | {'atom'}                         | http://purl.obolibrary.org/obo/CHEBI_33250                    | {'label': 'atom'}                                              |
+| 136 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+| 137 | no IRI                    | {'sample'}                       | http://champ-project.org/images/ontology/cao.owl#CAO_000189   | {'label': 'sample'}                                            |
+| 138 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+| 139 | no IRI                    | {'role'}                         | http://purl.obolibrary.org/obo/CHEBI_50906                    | {'label': 'role'}                                              |
+| 140 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+| 141 | no IRI                    | {'range'}                        | http://purl.obolibrary.org/obo/STATO_0000035                  | {'label': 'range'}                                             |
+| 142 | no IRI                    | {'group'}                        | http://xmlns.com/foaf/0.1/Group                               | {'label': 'group', 'name': 'group'}                            |
+| 143 | no IRI                    | {'alloy'}                        | http://champ-project.org/images/ontology/cao.owl#CAO_000074   | {'label': 'alloy'}                                             |
+| 144 | no IRI                    | {'concept'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000047   | {'label': 'concept'}                                           |
+| 145 | no IRI                    | {'unit'}                         | http://purl.obolibrary.org/obo/UO_0000000                     | {'label': 'unit'}                                              |
+| 146 | no IRI                    | {'term'}                         | http://semanticscience.org/resource/SIO_000275                | {'label': 'term'}                                              |
+| 147 | no IRI                    | {'ion'}                          | http://purl.obolibrary.org/obo/CHEBI_24870                    | {'label': 'ion'}                                               |
+| 148 | no IRI                    | {'sensitivity'}                  | http://champ-project.org/images/ontology/cao.owl#CAO_000019   | {'label': 'sensitivity'}                                       |
+| 149 | no IRI                    | {'length'}                       | http://purl.obolibrary.org/obo/PATO_0000122                   | {'altLabel': 'length'}                                         |
+| 150 | no IRI                    | {'position'}                     | http://purl.obolibrary.org/obo/PATO_0000140                   | {'altLabel': 'position'}                                       |
+| 151 | no IRI                    | {'conductivity'}                 | http://purl.obolibrary.org/obo/PATO_0001757                   | {'altLabel': 'conductivity'}                                   |
+| 152 | no IRI                    | {'waste'}                        | http://purl.obolibrary.org/obo/ENVO_00002264                  | {'label': 'waste'}                                             |
+| 153 | no IRI                    | {'heating'}                      | http://champ-project.org/images/ontology/cao.owl#CAO_000125   | {'label': 'heating'}                                           |
+| 154 | no IRI                    | {'cation'}                       | http://purl.obolibrary.org/obo/CHEBI_36916                    | {'label': 'cation'}                                            |
+| 155 | no IRI                    | {'configuration'}                | http://champ-project.org/images/ontology/cao.owl#CAO_000058   | {'label': 'configuration'}                                     |
+| 156 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+| 157 | no IRI                    | {'coefficient of determination'} | http://purl.obolibrary.org/obo/OBCS_0000144                   | {'label': 'coefficient of determination'}                      |
+| 158 | no IRI                    | {'concentration'}                | http://purl.obolibrary.org/obo/CHMO_0002820                   | {'label': 'concentration'}                                     |
+| 159 | no IRI                    | {'contact'}                      | http://purl.obolibrary.org/obo/ARG_2000379                    | {'label': 'contact'}                                           |
+| 160 | no IRI                    | {'density'}                      | http://purl.obolibrary.org/obo/PATO_0001019                   | {'altLabel': 'density'}                                        |
+| 161 | no IRI                    | {'experimental design'}          | http://purl.obolibrary.org/obo/OBI_0500000                    | {'label': 'experimental design'}                               |
+| 162 | no IRI                    | {'height'}                       | http://purl.obolibrary.org/obo/PATO_0000119                   | {'label': 'height'}                                            |
+| 163 | no IRI                    | {'length'}                       | http://purl.obolibrary.org/obo/PATO_0000122                   | {'altLabel': 'length'}                                         |
+| 164 | no IRI                    | {'mass'}                         | http://champ-project.org/images/ontology/cao.owl#PATO_0000125 | {'label': 'mass'}                                              |
+| 165 | no IRI                    | {'mixing'}                       | http://purl.obolibrary.org/obo/CHMO_0001685                   | {'label': 'mixing'}                                            |
+| 166 | no IRI                    | {'pressure'}                     | http://purl.obolibrary.org/obo/PATO_0001025                   | {'altLabel': 'pressure'}                                       |
+| 167 | no IRI                    | {'sample'}                       | http://champ-project.org/images/ontology/cao.owl#CAO_000189   | {'label': 'sample'}                                            |
+| 168 | no IRI                    | {'solution'}                     | http://champ-project.org/images/ontology/cao.owl#CAO_000194   | {'label': 'solution'}                                          |
+| 169 | no IRI                    | {'solvent'}                      | http://purl.obolibrary.org/obo/CHEBI_46787                    | {'label': 'solvent'}                                           |
+| 170 | no IRI                    | {'standard deviation'}           | http://purl.obolibrary.org/obo/STATO_0000237                  | {'label': 'standard deviation'}                                |
+| 171 | no IRI                    | {'temperature'}                  | http://purl.obolibrary.org/obo/PATO_0000146                   | {'altLabel': 'temperature'}                                    |
+| 172 | no IRI                    | {'Volume'}                       | http://purl.obolibrary.org/obo/PATO_0000918                   | {'altLabel': 'Volume'}                                         |
+| 173 | no IRI                    | {'Equipment'}                    | http://champ-project.org/images/ontology/cao.owl#CAO_000115   | {'label': 'Equipment'}                                         |
+| 174 | no IRI                    | {'Location'}                     | http://www.w3.org/2006/vcard/ns#Location                      | {'label': 'Location', 'name': 'Location'}                      |

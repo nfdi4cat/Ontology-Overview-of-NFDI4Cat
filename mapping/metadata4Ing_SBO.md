@@ -1,3 +1,3 @@
-|    | metadata4Ing_IRI                           | metadata4Ing_DESC                                                                     | SBO_IRI                              | SBO_DESC             |
-|---:|:-------------------------------------------|:--------------------------------------------------------------------------------------|:-------------------------------------|:---------------------|
-|  0 | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'process', 'prefLabel': 'process', 'altLabel': None, 'name': 'BFO_0000015'} | http://biomodels.net/SBO/SBO_0000375 | {'label': 'process'} |
+|    | metadata4ing_IRI                           | metadata4ing_DESC                                                                     | SBO_IRI                              | SBO_DESC             | SBO_DEF   |
+|---:|:-------------------------------------------|:--------------------------------------------------------------------------------------|:-------------------------------------|:---------------------|:----------|
+|  0 | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'process', 'prefLabel': 'process', 'altLabel': None, 'name': 'BFO_0000015'} | http://biomodels.net/SBO/SBO_0000375 | {'label': 'process'} | []        |
