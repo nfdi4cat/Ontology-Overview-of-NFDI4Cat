@@ -62,14 +62,14 @@
 
 |Aspect |Description| 
  |:---|:---|
-| Axioms | 216 |
-| Logical | 65 |
-| Declaration | 51 |
-| Class count | 32 |
-| Object property count | 2 |
-| Data property count | 7 |
-| Individual count | 18 |
-| Annotation Property count | 0 |
+| Axioms | 15178 |
+| Logical | 3718 |
+| Declaration | 1896 |
+| Class count | 1806 |
+| Object property count | 47 |
+| Data property count | 9 |
+| Individual count | 1 |
+| Annotation Property count | 42 |
 
 ## Comments
 
