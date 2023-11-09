@@ -525,12 +525,12 @@ def run_similarity_from_vocabulary():
 ####
 
 
-with open("PhotoCatVocabulary.txt") as file:
-    lines = [line.rstrip("\n") for line in file]
-    
     
 
 """
+with open("PhotoCatVocabulary.txt") as file:
+    lines = [line.rstrip("\n") for line in file]
+
 t = time.time()
 
 df = pd.read_excel("Combined Cleaned Vocabulary.xlsx", sheet_name = "Concepts", skiprows=1)
