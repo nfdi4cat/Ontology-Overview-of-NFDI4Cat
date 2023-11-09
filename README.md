@@ -4,17 +4,22 @@
 Repository which lists ontologies relevant for catalysis research.
 
 For remarks, additions, or general questions either use the issues or contact the responsible person (see below).
-For contributions please download the [markdown file](./General_Template.md) called [General Template] and contact us either via mail, issue or pull request with your updated markdown file. 
-A condensed view on the data provided in the markdown-files is given in [master_table](./master_table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx).
+A condensed view on the data provided in the markdown-files is given in [master_table](./master_table/MT_OntoWorldMap_2023-10-11.xlsx).
+For contributions please either refer to the entries in this table or download and fill in the [markdown file](./General_Template.md) called [General Template] and contact us either via mail, issue or pull request.
 The respective markdown files for each ontology listed in the table below are located in [ontology_metadata](./ontology_metadata).
 In the subdirectory [json](./json), the information contained for each ontology is stored in json-format for an ease in access of the data presented in markdown.
 
 Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Software Collection from NFDI4Cat">alexander.behr@tu-dortmund.de</a>
 
+### Remarks on Code Execution 
+To obtain the radar plots and interactive markdown files from the Excel file contained in the subdirectory `./master_table/` one has to run the `convert.py` code located in the main directory and execute the `run()` function. Make sure to have the latest name of the master table listed in the function call `ConvertExcelToMD()`.
+To reproduce the mappings, run the [`similarities.py`](./similarities.py) code located in the main directory and execute the `run()` function. 
+For runtime performance reasons, IRIs and labels from the classes of all ontologies are stored in `iriDictionary.json`, which is loaded by the function called with `run()`. 
+If you want to reproduce (or update) this `.json` file, please execute `class_description_loader()`. 
+
 
 ## Map of Ontologies for Catalysis Research Domains
-
- The ontologies are classified with regards to their research domain [here](./Radarplots.md).
+ The ontologies are classified with regards to their research domain in a list [here](./Radarplots.md).
 
  [Here](./Radarplot.html) you can find the radar plot shown below as interactive plot (download html file and open it locally).
 
