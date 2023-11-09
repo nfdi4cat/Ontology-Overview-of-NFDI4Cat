@@ -207,7 +207,6 @@ def Mappings_to_Markdown():
 ####
 
 ####
-####
 def DomainRadarPlotter_all_ontologies():
     ####
     # List the most appropiate ontologies for each domain of interest by filtering
@@ -360,13 +359,7 @@ def DomainRadarPlotter_all_ontologies():
           name='contained'
     ))
       
-    #fig.add_trace(go.Scatterpolar(
-    #      r=[4, 3, 2.5, 1, 2],
-    #      theta=domains_of_interest,
-    #      fill='toself',
-    #      name='Product B'
-    #))
-    
+
     fig.update_layout(
        autosize=False,
        width=1000,
@@ -447,11 +440,6 @@ def DomainRadarPlotter(ontology_name):
     plotlist_c_n_b = [domain_dict_c_n_b[i] for i in domains_of_interest]
     
     # Extending the list by the first entries to close the radar plots:
-    
-   # del domains_of_interest[-1]
-   # del plotlist_c_n_b[-1]
-   # del plotlist_c_n[-1]
-   # del plotlist_c[-1]
     plotlist_c.extend([plotlist_c[0]])
     plotlist_c_n.extend([plotlist_c_n[0]])
     plotlist_c_n_b.extend([plotlist_c_n_b[0]])
@@ -488,12 +476,7 @@ def DomainRadarPlotter(ontology_name):
           #line_close=True,
           name='1 = contained'
     ))
-    #fig.add_trace(go.Scatterpolar(
-    #      r=[4, 3, 2.5, 1, 2],
-    #      theta=domains_of_interest,
-    #      fill='toself',
-    #      name='Product B'
-    #))
+
     
     fig.update_layout(
       autosize=False,

@@ -16,11 +16,9 @@
 | [MOP] |Molecular Process Ontology |
 | [MS] |Mass Spectrometry Ontology |
 | [OBI] |Ontology for Biomedical Investigations |
-| [OFM] |Ontology for Manufacturing and Logistics |
 | [OM] |Ontology of units of Measure |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
-| [PIMS-II] |Physicalistic Interpretation of Modelling and Simulation - Interoperability Infrastructure |
 | [REX] |Physico-chemical process |
 | [RXNO] |RXNO: name reaction ontology |
 | [SBO] |Systems Biology Ontology |
@@ -42,17 +40,16 @@
 [MOP]: ./ontology_metadata/MOP.md
 [MS]: ./ontology_metadata/MS.md
 [OBI]: ./ontology_metadata/OBI.md
-[OFM]: ./ontology_metadata/OFM.md
 [OM]: ./ontology_metadata/OM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
 [OSMO]: ./ontology_metadata/OSMO.md
-[PIMS-II]: ./ontology_metadata/PIMS-II.md
 [REX]: ./ontology_metadata/REX.md
 [RXNO]: ./ontology_metadata/RXNO.md
 [SBO]: ./ontology_metadata/SBO.md
 [VIMMP]: ./ontology_metadata/VIMMP.md
 
 ## Map of Ontologies for Catalysis Research Domains
+
 
  The ontologies are classified with regards to their research domain [here](./Radarplots.md).
 
