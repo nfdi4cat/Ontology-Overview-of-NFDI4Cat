@@ -13,8 +13,9 @@ Contact: <a href="mailto:alexander.behr@tu-dortmund.de?subject=Contact for Softw
 
 
 ## Map of Ontologies for Catalysis Research Domains
+ To obtain the radar plots and interactive markdown files from the Excel file contained in the subdirectory ´./master_table/´ one has to run the ´convert.py´ code located in the main directory and execute the ´run()´ function. Make sure to have the latest name of the master table listed in the function call ´ConvertExcelToMD()´.
 
- The ontologies are classified with regards to their research domain [here](./Radarplots.md).
+ The ontologies are classified with regards to their research domain in a list [here](./Radarplots.md).
 
  [Here](./Radarplot.html) you can find the radar plot shown below as interactive plot (download html file and open it locally).
 
