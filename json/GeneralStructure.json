@@ -41,7 +41,9 @@
 			"Characterisation Data":[],
 			"Heat, Transport and Kinetic Data":[],
 			"Process Design, Energy and Cost Data":[],
-			"Top Level Ontology":[]
+			"Top Level Ontology":[],
+			"Electrocatalysis":[],
+			"Photocatalysis":[]
 		},
 	"Ontology Characteristics":
 		{

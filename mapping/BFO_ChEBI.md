@@ -1,3 +1,3 @@
-|    | BFO_IRI                                    | BFO_DESC                                                                        | ChEBI_IRI                                  | ChEBI_DESC        |
-|---:|:-------------------------------------------|:--------------------------------------------------------------------------------|:-------------------------------------------|:------------------|
-|  0 | http://purl.obolibrary.org/obo/BFO_0000023 | {'label': 'role', 'prefLabel': 'role', 'altLabel': None, 'name': 'BFO_0000023'} | http://purl.obolibrary.org/obo/CHEBI_50906 | {'label': 'role'} |
+|    | BFO_IRI                                    | BFO_DESC                                                                        | ChEBI_IRI                                  | ChEBI_DESC        | ChEBI_DEF   |
+|---:|:-------------------------------------------|:--------------------------------------------------------------------------------|:-------------------------------------------|:------------------|:------------|
+|  0 | http://purl.obolibrary.org/obo/BFO_0000023 | {'label': 'role', 'prefLabel': 'role', 'altLabel': None, 'name': 'BFO_0000023'} | http://purl.obolibrary.org/obo/CHEBI_50906 | {'label': 'role'} | []          |

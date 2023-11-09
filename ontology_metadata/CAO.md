@@ -1,8 +1,11 @@
 ## CAO - Chemical Analysis Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_CAO.html) ![Radarplot for Domains of ontology CAO](../radarplots/Radarplot_CAO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Chemical Analysis Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | terminated consortium of the EMMC |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://champ.stuchalk.domains.unf.edu/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/4411422 |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,23 +39,27 @@
 | Class annotation types | rdfs:label, rdf datatype(definition) |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | related: broader |
+| Characterisation Data | related: broader |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | related: broader |
+| Process Modeling | related: broader |
+| Material Modeling | related: broader |
+| Chemical Substance Modeling | related: narrower |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: narrower |
-| Material Modeling | related: broader |
-| Process Modeling | related: broader |
-| Synthesis Data | related: broader |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | related: broader |
-| Heat, Transport and Kinetic Data | related: broader |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 2646 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 27 |
 
 ## Comments
+
 Not really usable, not FAIR

@@ -1,8 +1,11 @@
 ## CIF - Crystallographic Information Framework Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_CIF.html) ![Radarplot for Domains of ontology CIF](../radarplots/Radarplot_CIF.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Crystallographic Information Framework Ontology |
@@ -12,15 +15,17 @@
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/emmo-repo/CIF-ontology |
-| Persistent URI of Ontology File | http://emmo.info/domain-crystallography/cif_top |
+| Persistent URI of Ontology File | https://raw.githubusercontent.com/emmo-repo/domain-crystallography/master/crystallography.ttl |
 | Link to Documentation | https://github.com/emmo-repo/CIF-ontology |
 | Link to Version directory | https://github.com/emmo-repo/CIF-ontology |
 | Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,33 +39,38 @@
 | Class annotation types | skos:PrefLabel, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | related: broader |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | missing |
+| Material Modeling | related: broader |
+| Chemical Substance Modeling | related: broader |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | related: broader |
-| Process Modeling | missing |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | related: broader |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
-| Axioms | 216 |
-| Logical | 65 |
-| Declaration | 51 |
-| Class count | 32 |
-| Object property count | 2 |
-| Data property count | 7 |
-| Individual count | 18 |
-| Annotation Property count | 0 |
+| Axioms | 15178 |
+| Logical | 3718 |
+| Declaration | 1896 |
+| Class count | 1806 |
+| Object property count | 47 |
+| Data property count | 9 |
+| Individual count | 1 |
+| Annotation Property count | 42 |
 
 ## Comments
+
 Since the ontology is still in development (and looks as well as feels like being under development) no final comment can be made, however currently several Pitfall as defined by https://oops.linkeddata.es/ are inside the ontology as well as no good link to the "latest" version of the Ontology is currently provided, therefore the Ontology is not recommended to be used

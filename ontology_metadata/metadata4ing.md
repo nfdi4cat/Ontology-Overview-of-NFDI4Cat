@@ -1,8 +1,11 @@
 ## metadata4ing - Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_metadata4ing.html) ![Radarplot for Domains of ontology metadata4ing](../radarplots/Radarplot_metadata4ing.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | NFDI4ng, Ontology is still actively maintained |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://nfdi4ing.de/special-interest-groups-sig/metadata-ontologies/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/5957104 ; https://tuprints.ulb.tu-darmstadt.de/20946/1/Vortrag%20NFDI4Ing%20%282%29.pdf |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl, rdf/xml, json-LD, nt |
@@ -34,23 +39,27 @@
 | Class annotation types | skos:prefLabel, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | missing |
+| Process Design, Energy and Cost Data | related: broader |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | contained |
+| Material Modeling | missing |
+| Chemical Substance Modeling | missing |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | missing |
-| Material Modeling | missing |
-| Process Modeling | contained |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | related: broader |
-| Top Level Ontology | missing |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 1086 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 35 |
 
 ## Comments
+
 Aiming for the definition of processes, Metadata4Ing defines classes and properties or reuses such classes and properties from other ontologies to describe research processes and research data management in NFDI4Ing. 

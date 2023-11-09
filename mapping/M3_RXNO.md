@@ -1,0 +1,3 @@
+|    | M3_IRI                                                     | M3_DESC                                                                                 | RXNO_IRI                                   | RXNO_DESC            | RXNO_DEF   |
+|---:|:-----------------------------------------------------------|:----------------------------------------------------------------------------------------|:-------------------------------------------|:---------------------|:-----------|
+|  0 | http://sensormeasurement.appspot.com/m3#AlcoholLevelSensor | {'label': 'Alcohol', 'prefLabel': None, 'altLabel': None, 'name': 'AlcoholLevelSensor'} | http://purl.obolibrary.org/obo/CHEBI_30879 | {'label': 'Alcohol'} | []         |

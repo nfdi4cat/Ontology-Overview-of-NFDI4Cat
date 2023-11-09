@@ -45,21 +45,21 @@ def ConvertExcelToMD(PathToExcel):
             translator_dict = json.load(f)
             
             
-        outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n"   
+        outstring = "## " + onto_name + " - " + ontodata_dict["Ontology"]["Ontology Name"] + "\n\n"   
         
         DomainRadarPlotter(onto_name)
         
-        outstring += "\n ## Radarplot \n [HTML-Version](../radarplots/Radarplot_{}.html) ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n".format(onto_name,onto_name,onto_name,onto_name)
+        outstring += "\n ## Radarplot \n\n [HTML-Version](../radarplots/Radarplot_{}.html) ![Radarplot for Domains of ontology {}](../radarplots/Radarplot_{}.svg) \n".format(onto_name,onto_name,onto_name,onto_name)
         
         table_string = "|Aspect |Description| \n |:---|:---|\n"
         
         for key in translator_dict:
             if key == "Comments":
-                outstring += "## Comments\n"
+                outstring += "## Comments\n\n"
                 for i in ontodata_dict[key]:
                     outstring += str(i) + "\n"
             else:
-                outstring += "## "+ key + "\n"
+                outstring += "## "+ key + "\n\n"
                 outstring += table_string
                 for dict_list in translator_dict[key]:
                     outstring += "| " + str(list(dict_list.values())[0]) + " | "+ str(ontodata_dict[key][list(dict_list.keys())[0]]) + " |\n"
@@ -122,7 +122,7 @@ def UpdateMainReadme():
         onto_list = []
         for onto_abbrev in md_dict:
             dict_entry = md_dict[onto_abbrev][key_dom_interest][domain]
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+            if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")):
                 onto_list.append(onto_abbrev) 
         domain_dict[domain] = onto_list
     # domain_dict now contains all domains of interest and the respective ontologies
@@ -142,7 +142,7 @@ def UpdateMainReadme():
     #markdown_table = tabulate(df, headers='keys', tablefmt='pipe')
     # Append markdown to Main_Readme_Update
     with open('./Main_Readme_Update.txt', 'a') as f:
-        f.write("\n## Map of Ontologies for Catalysis Research Domains\n")
+        f.write("\n## Map of Ontologies for Catalysis Research Domains\n\n")
         f.write("\n The ontologies are classified with regards to their research domain [here](./Radarplots.md).\n")
         f.write("\n [Here](./Radarplot.html) you can find the Radar plot as interactive plot.\n")
         f.write("\n ![Map of Ontologies for Catalysis Research Domains](./Fig2-OntoMap.svg)\n")
@@ -218,6 +218,10 @@ def DomainRadarPlotter_all_ontologies():
     #list the domains of interest used in the first key of md_dict, assuming 
     #every sheet in the template requests the same domains of interest
     domains_of_interest = list(md_dict[list(md_dict.keys())[0]][key_dom_interest].keys())
+    
+    # Remove Top Level Ontology
+    domains_of_interest.remove("Top Level Ontology")
+    
     # contained domains
     domain_dict_c = {}
     # contained and narrower related domains
@@ -239,10 +243,10 @@ def DomainRadarPlotter_all_ontologies():
             if ("contained" in dict_entry):
                 onto_list_c.append(onto_abbrev) 
                 
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+            if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")):
                 onto_list_c_n.append(onto_abbrev) 
                 
-            if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
+            if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")) or ("related:broader" in dict_entry.replace(" ","")):
                 onto_list_c_n_b.append(onto_abbrev) 
         
         domain_dict_c[domain] = onto_list_c
@@ -273,11 +277,11 @@ def DomainRadarPlotter_all_ontologies():
     
     # Append markdown to Main_Readme_Update
     with open('./Radarplots.md', 'w') as f:
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge.\n")
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge.\n\n")
         f.write(markdown_table_c)
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n")
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related to them.\n\n")
         f.write(markdown_table_c_n)
-        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related or are broader related to them.\n")
+        f.write("\n## The ontologies in this table contain the respective domain of knowledge or are narrower related or are broader related to them.\n\n")
         f.write(markdown_table_c_n_b)
         f.write("\n")
         f.write("""
@@ -300,7 +304,6 @@ def DomainRadarPlotter_all_ontologies():
 [MOP]: ./ontology_metadata/MOP.md
 [MS]: ./ontology_metadata/MS.md
 [OBI]: ./ontology_metadata/OBI.md
-[OFM]: ./ontology_metadata/OFM.md
 [OM]: ./ontology_metadata/OM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
 [OntoCompChem]: http://www.theworldavatar.com/ontology/ontocompchem/ontocompchem.owl
@@ -313,10 +316,10 @@ def DomainRadarPlotter_all_ontologies():
 [VIMMP]: ./ontology_metadata/VIMMP.md
     """)
     ## DELETING TOP-LEVEL-ONTOLOGIES
-    del domains_of_interest[-1]
-    del plotlist_c_n_b[-1]
-    del plotlist_c_n[-1]
-    del plotlist_c[-1]
+    #del domains_of_interest[-1]
+    #del plotlist_c_n_b[-1]
+    #del plotlist_c_n[-1]
+    #del plotlist_c[-1]
     #
     
     # Extending the list by the first entries to close the radar plots:
@@ -332,21 +335,28 @@ def DomainRadarPlotter_all_ontologies():
           r= plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'red',
+          #opacity = 0.5,
+          marker = dict(color = 'lightcoral'),
           #line_close=True,
-          name='contained, related: narrower, and related: broader'
+          name='related: broader'
     ))
       
     fig.add_trace(go.Scatterpolar(
           r=plotlist_c_n,
           theta=domains_of_interest,
           fill='toself',
-          name='contained and related: narrower'
+          #fillcolor = 'blue',
+          marker = dict(color = 'gold'),
+          name='related: narrower'
     ))
 
     fig.add_trace(go.Scatterpolar(
           r=plotlist_c,
           theta=domains_of_interest,
           fill='toself',
+          #fillcolor = 'green',
+          marker = dict(color = 'seagreen'),
           name='contained'
     ))
       
@@ -358,16 +368,27 @@ def DomainRadarPlotter_all_ontologies():
     #))
     
     fig.update_layout(
-      polar=dict(
+       autosize=False,
+       width=1000,
+       height=800,
+       polar=dict(
         radialaxis=dict(
           visible=True,
           range=[0, max(plotlist_c_n_b)]
         )),
+       legend=dict(
+           yanchor="bottom",
+           y = -0.2,
+           xanchor="center",
+           x =0.5
+           ),
       showlegend=True
     )
     
+    
     fig.write_html("Radarplot.html")
     fig.write_image("Radarplot.svg")
+
     
 ####
 
@@ -400,17 +421,17 @@ def DomainRadarPlotter(ontology_name):
         dict_entry = md_dict[ontology_name][key_dom_interest][domain]
         
         if ("contained" in dict_entry):
-            onto_list_c = 3
+            onto_list_c = 1
         else:
             onto_list_c = 0
             
-        if ("contained" in dict_entry) or ("related: narrower" in dict_entry):
+        if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")):
             onto_list_c_n = 2
         else:
             onto_list_c_n = 0
             
-        if ("contained" in dict_entry) or ("related: narrower" in dict_entry) or ("related: broader" in dict_entry):
-            onto_list_c_n_b = 1
+        if ("contained" in dict_entry) or ("related:narrower" in dict_entry.replace(" ","")) or ("related:broader" in dict_entry.replace(" ","")):
+            onto_list_c_n_b = 3
         else:
             onto_list_c_n_b = 0
     
@@ -427,10 +448,10 @@ def DomainRadarPlotter(ontology_name):
     
     # Extending the list by the first entries to close the radar plots:
     
-    del domains_of_interest[-1]
-    del plotlist_c_n_b[-1]
-    del plotlist_c_n[-1]
-    del plotlist_c[-1]
+   # del domains_of_interest[-1]
+   # del plotlist_c_n_b[-1]
+   # del plotlist_c_n[-1]
+   # del plotlist_c[-1]
     plotlist_c.extend([plotlist_c[0]])
     plotlist_c_n.extend([plotlist_c_n[0]])
     plotlist_c_n_b.extend([plotlist_c_n_b[0]])
@@ -440,27 +461,33 @@ def DomainRadarPlotter(ontology_name):
     fig = go.Figure()
     
     fig.add_trace(go.Scatterpolar(
-          r= plotlist_c,
+          r=plotlist_c_n_b,
           theta=domains_of_interest,
           fill='toself',
-          #line_close=True,
-          name='3 = contained'
+          #fillcolor = 'red',
+          marker = dict(color = 'lightcoral'),
+          name='3 = related: broader'
     ))
+       
       
     fig.add_trace(go.Scatterpolar(
           r=plotlist_c_n,
           theta=domains_of_interest,
           fill='toself',
-          name='2 = contained and related: narrower'
+          #fillcolor = 'blue',
+          marker = dict(color = 'gold'),
+          name='2 = related: narrower'
     ))
 
     fig.add_trace(go.Scatterpolar(
-          r=plotlist_c_n_b,
+          r= plotlist_c,
           theta=domains_of_interest,
           fill='toself',
-          name='1 = contained, related: narrower, and related: broader'
+          #fillcolor = 'green',
+          marker = dict(color = 'seagreen'),
+          #line_close=True,
+          name='1 = contained'
     ))
-      
     #fig.add_trace(go.Scatterpolar(
     #      r=[4, 3, 2.5, 1, 2],
     #      theta=domains_of_interest,
@@ -469,11 +496,20 @@ def DomainRadarPlotter(ontology_name):
     #))
     
     fig.update_layout(
+      autosize=False,
+      width=1000,
+      height=800,
       polar=dict(
         radialaxis=dict(
           visible=True,
           range=[0, 3]
         )),
+       legend=dict(
+           yanchor="bottom",
+           y = -0.2,
+           xanchor="center",
+           x =0.5
+           ),
       showlegend=True
     )
     
@@ -485,6 +521,6 @@ def DomainRadarPlotter(ontology_name):
 
 ####
 def run():    
-    Master_Table = './master_table/MT_OntoWorldMap_2023-06-13.xlsx'
+    Master_Table = './master_table/MT_OntoWorldMap_2023-10-11.xlsx'
     ConvertExcelToMD(Master_Table)
     UpdateMainReadme()

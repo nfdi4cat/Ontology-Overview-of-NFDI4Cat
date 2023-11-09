@@ -1,8 +1,11 @@
 ## AFO - Allotrope Foundation Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_AFO.html) ![Radarplot for Domains of ontology AFO](../radarplots/Radarplot_AFO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Allotrope Foundation Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Industrial Consortium |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.allotrope.org/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://www.allotrope.org/resources |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,23 +39,27 @@
 | Class annotation types | skos:PrefLabel, rdfs:Definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | contained |
+| Performance Data | related: broader |
+| Operando Data | missing |
+| Synthesis Data | related: broader |
+| Process Modeling | related: narrower |
+| Material Modeling | contained |
+| Chemical Substance Modeling | related: narrower |
+| Photocatalysis | related:narrower |
+| Electrocatalysis | related: broader |
 | Heterogenous catalysis | related: broader |
 | Homogenous catalysis | related: broader |
-| Chemical Substance Modeling | related: narrower |
-| Material Modeling | contained |
-| Process Modeling | related: narrower |
-| Synthesis Data | related: broader |
-| Operando Data | missing |
-| Performance Data | related: broader |
-| Characterisation Data | contained |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 24686 |
@@ -63,6 +72,7 @@
 | Annotation Property count | 116 |
 
 ## Comments
+
 No persistant URL to ontology-file available, thus a copy of the ontology is hosted in this github-repo in subdirectory ./ontologies/ 
 No reasoning possible with FacT++ , as problems with xml:date persist.
 

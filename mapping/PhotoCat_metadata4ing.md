@@ -1,0 +1,2 @@
+| PhotoCat_IRI   | PhotoCat_DESC   | metadata4ing_IRI   | metadata4ing_DESC   | metadata4ing_DEF   |
+|----------------|-----------------|--------------------|---------------------|--------------------|

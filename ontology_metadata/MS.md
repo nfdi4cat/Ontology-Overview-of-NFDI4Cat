@@ -1,8 +1,11 @@
 ## MS - Mass Spectrometry Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_MS.html) ![Radarplot for Domains of ontology MS](../radarplots/Radarplot_MS.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Mass Spectrometry Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.psidev.info/groups/controlled-vocabularies |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://github.com/HUPO-PSI/psi-ms-CV  |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | rdf/xml; ttl |
@@ -34,23 +39,27 @@
 | Class annotation types | rdfs:Label, "IAO:000015": textual definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | related: broader |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | related: broader |
+| Characterisation Data | contained |
+| Performance Data | related: broader |
+| Operando Data | related: broader |
+| Synthesis Data | missing |
+| Process Modeling | missing |
+| Material Modeling | missing |
+| Chemical Substance Modeling | missing |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | missing |
-| Material Modeling | missing |
-| Process Modeling | missing |
-| Synthesis Data | missing |
-| Operando Data | related: broader |
-| Performance Data | related: broader |
-| Characterisation Data | contained |
-| Heat, Transport and Kinetic Data | related: broader |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | related: broader |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 175485 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 249 |
 
 ## Comments
+
 well implemented and structured ontology. A structured controlled vocabulary for the annotation of experiments concerned with proteomics mass spectrometry.

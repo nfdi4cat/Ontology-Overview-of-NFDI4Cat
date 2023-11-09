@@ -22,7 +22,7 @@ def ontology_classes_loader(ontology):
     try:
         onto1_iris = list([cls.iri for cls in ontology.classes()])
     except:
-        print("IRIs of ontology " + onto_name + " not (well) defined and could not be read!")
+        print("IRIs of ontology " + ontology.name + " not (well) defined and could not be read!")
         onto1_iris=[]
         return None
     
@@ -31,22 +31,34 @@ def ontology_classes_loader(ontology):
     for iri in onto1_iris:
        
         try:
-            class_label = onto1.search_one(iri = iri).label.first()
+            if type(ontology.search_one(iri = iri).label.first()) == locstr: 
+                # some ontologies use locstrings to account for different languages
+                class_label = ontology.search_one(iri = iri).label.first().split()[0]
+            else:
+                class_label = ontology.search_one(iri = iri).label.first()
         except:
             class_label = None
         
         try: 
-            class_prefLabel = onto1.search_one(iri = iri).prefLabel.first()
+            if type(ontology.search_one(iri = iri).prefLabel.first()) == locstr: 
+                # some ontologies use locstrings to account for different languages
+                class_prefLabel = ontology.search_one(iri = iri).prefLabel.first().split()[0]
+            else:
+                class_prefLabel = ontology.search_one(iri = iri).prefLabel.first()
         except:
             class_prefLabel = None
         
         try:
-            class_altLabel = onto1.search_one(iri = iri).altLabel.first()
+            if type(ontology.search_one(iri = iri).altLabel.first()) == locstr:
+                # some ontologies use locstrings to account for different languages
+                class_altLabel = ontology.search_one(iri = iri).altLabel.first().split()[0]
+            else:
+                class_altLabel = ontology.search_one(iri = iri).altLabel.first()
         except:
             class_altLabel = None
             
         try:
-            class_name = onto1.search_one(iri = iri).name
+            class_name = ontology.search_one(iri = iri).name
         except:
             class_name = None
         
@@ -110,8 +122,14 @@ def ttl_to_owl(url):
     #  Output: File name of ontology downloaded into subdirectory ./ontologies/ as str
     ##
     filename = url.rpartition('/')[-1] # gets last bit of URL after / to obtain "filename.ttl"
-    onto_name = filename.split('.')[0]
-    ontology_output_filename = onto_name + '.owl'
+    onto_name = filename.split('.')[0]   
+    ##
+    # Finds ontology abbreviation based on URL of ontology in ontology URL dictionary
+    onto_URLs = get_ontology_URLs()
+    onto_abbrev = list(onto_URLs.keys())[list(onto_URLs.values()).index(url)]
+    ##
+    
+    ontology_output_filename = onto_abbrev + '.owl'
     
     # if isfile == true, owl file is already contained in ./ontologies/ and no reload or 
     # conversion of ttl-ontology from web is necessary. So only if no owl file is 
@@ -131,13 +149,60 @@ def ttl_to_owl(url):
 ####
 
 ####
+def rdf_to_owl(url):
+    ## Conversion of ttl-ontology to owl-ontology with ROBOT
+    #  Input: URL of ontology file
+    #  Output: File name of ontology downloaded into subdirectory ./ontologies/ as str
+    ##
+    filename = url.rpartition('/')[-1] # gets last bit of URL after / to obtain "filename.ttl"
+    onto_name = filename.split('.')[0]   
+    ##
+    # Finds ontology abbreviation based on URL of ontology in ontology URL dictionary
+    onto_URLs = get_ontology_URLs()
+    onto_abbrev = list(onto_URLs.keys())[list(onto_URLs.values()).index(url)]
+    ##
+    
+    ontology_output_filename = onto_abbrev + '.owl'
+    
+    # if isfile == true, owl file is already contained in ./ontologies/ and no reload or 
+    # conversion of ttl-ontology from web is necessary. So only if no owl file is 
+    # contained, the merge and convert is executed.
+    if not os.path.isfile('./ontologies/' + ontology_output_filename): 
+        onto_txt = urllib.request.urlopen(url)
+        onto_txt = onto_txt.read()#readlines()
+    
+        with open('./ontologies/'+onto_name+'.rdf', 'wb') as onto_file:
+            onto_file.write(onto_txt)
+        
+        #os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(filename, ontology_output_filename))
+        #os.system(".\\robot\\robot merge --input .\\ontologies\\{} --output .\\ontologies\\{}".format(filename,filename))
+        os.system(".\\robot\\robot convert --input .\\ontologies\\{} --format owl --output .\\ontologies\\{}".format(onto_name+'.rdf', ontology_output_filename))
+        
+    return ontology_output_filename
+####
+
+
+####
 def load_ontology_from_name(onto_name):
     ## Tries to load in the ontology by accessing the URL to an owl-file
     #  
     onto_URLs = get_ontology_URLs()
     URL = onto_URLs[onto_name]
+    onto_loaded = None
     
-    if URL.endswith('.owl'):
+    if onto_name == 'CHEMINF': 
+        #contains deprecated classes and object properties, thus needs to be cleaned
+        # and loaded manually, else owlready2 will crash
+        try: 
+            print("Loading Ontology: {} from local path ./ontologies/".format(onto_name))
+            onto_loaded = get_ontology("./ontologies/"+onto_name+'.owl').load()
+            print("Successfully loaded Ontology: {}".format(onto_name))
+        except:
+            print("Need to place file here: ./ontologies/{}.owl".format(onto_name))
+            onto_loaded = None
+            pass        
+    
+    elif URL.endswith('.owl'):
         try: 
             print("Loading Ontology: {}".format(onto_name))
             onto_loaded = get_ontology(URL).load()
@@ -156,14 +221,18 @@ def load_ontology_from_name(onto_name):
     else:
         #TODO: try to load from ./ontologies/ if there is a manual added version of the OWL, such as for OntoCAPE.
         print("Unknown file-ending for ontology {}, please check the URL!\n    URL: {}\n".format(onto_name, URL))
-              #searching for ontology owl-file in subdirectory ./ontologies/".format(onto_name, URL))
-        #try:
-        #    onto_loaded = get_ontology('./ontologies/' + onto_name + '.owl').load()
-        #   print("Ontology-file found and loaded.")
-        #except:
-        #    print("... failed")
-        onto_loaded = None   
-    
+        try:
+            """
+            print("Trying to load ontology {} from local path ./ontologies/".format(onto_name))
+            onto_loaded = get_ontology("./ontologies/"+onto_name+'.owl').load()
+            print("Successfully loaded Ontology: {}".format(onto_name))
+            """
+            ontology_in_owl = rdf_to_owl(URL)
+            onto_loaded = get_ontology('./ontologies./' + ontology_in_owl).load()
+        except:
+            print("Something went wrong, ontology name: ".format(onto_name))
+            onto_loaded = None
+            pass
     
     return onto_loaded
 ####
@@ -220,26 +289,25 @@ def search_value_in_nested_dict(dictionary, value, keys=None, path=None):
 
 def class_description_loader():
     onto_URLs = get_ontology_URLs()
-    ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
+       
+    ontoNameList_output.remove("OntoCAPE")
+   # ontoNameList_output.remove("EMMO")
     
-    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
-    
-    ontoNameList_output.remove("CHEMINF")
-    ontoNameList_output.remove("EMMO")
-    
-    onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
-    df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
-    
-    iri_dictionary = {}
+    iri_dictionary = {}    
     
     for ontologyname in ontoNameList_output:
         ontology = None
+        print(ontologyname)
         ontology = load_ontology_from_name(ontologyname)
-        iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+        
+        if ontology != None:
+            iri_dictionary[ontologyname] = ontology_classes_loader(ontology)
+        else:
+            print(ontologyname + " was empty!")
     
-    with open('iriDictionary.json', 'w') as fp:
-        json.dump(iri_dictionary, fp)
+        with open('iriDictionary.json', 'w') as fp:
+            json.dump(iri_dictionary, fp)
     
     return iri_dictionary
 ####
@@ -318,10 +386,10 @@ def Ontology_Mapping():
     ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
     
-    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+    #[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    ontoNameList_output.remove("CHEMINF")
-    ontoNameList_output.remove("EMMO")
+    ontoNameList_output.remove("OntoCAPE")
+    #ontoNameList_output.remove("EMMO")
     
     onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
     df_numbers = pd.DataFrame(index = ontoNameList_output, columns = ontoNameList_output)
@@ -396,6 +464,7 @@ def Ontology_Mapping():
 
 ####
 def run():
+    #class_description_loader()
     df = Ontology_Mapping()
 ####
 
@@ -407,10 +476,10 @@ def Similarity_Search_from_List(input_list,list_name):
     ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
     
-    [ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
+    #[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
-    ontoNameList_output.remove("CHEMINF")
-    ontoNameList_output.remove("EMMO")
+    ontoNameList_output.remove("OntoCAPE")
+    #ontoNameList_output.remove("EMMO")
     
     #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
     df_numbers = pd.DataFrame(index = [list_name], columns = ontoNameList_output)
@@ -455,6 +524,13 @@ def run_similarity_from_vocabulary():
     Similarity_Search_from_List(prefList,"input_list")
 ####
 
+
+with open("PhotoCatVocabulary.txt") as file:
+    lines = [line.rstrip("\n") for line in file]
+    
+    
+
+"""
 t = time.time()
 
 df = pd.read_excel("Combined Cleaned Vocabulary.xlsx", sheet_name = "Concepts", skiprows=1)
@@ -464,7 +540,7 @@ data_frame_numbers = Similarity_Search_from_List(column_data,"Combined Cleaned V
 elapsed = time.time() - t
 
 print(elapsed)
-
+"""
 
 """
 df = pd.read_excel("CombinedConcepts_condensed_09-2022_Test_AB.xlsx", sheet_name = "Concepts")

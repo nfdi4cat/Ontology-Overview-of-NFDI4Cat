@@ -1,8 +1,11 @@
 ## MOP - Molecular Process Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_MOP.html) ![Radarplot for Domains of ontology MOP](../radarplots/Radarplot_MOP.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Molecular Process Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Multiple maintainers |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/rsc-ontologies/rxno |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://en.wikipedia.org/wiki/RXNO_Ontology |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl, obo |
@@ -34,23 +39,27 @@
 | Class annotation types | rdfs:label, OBO:IAO_0000115 for textual definitions |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | related: narrower |
+| Material Modeling | missing |
+| Chemical Substance Modeling | contained |
+| Photocatalysis | missing |
+| Electrocatalysis | related: broader |
 | Heterogenous catalysis | related: narrower |
 | Homogenous catalysis | related: narrower |
-| Chemical Substance Modeling | contained |
-| Material Modeling | missing |
-| Process Modeling | related: narrower |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 22843 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 29 |
 
 ## Comments
+
 Good conceptual description of reactions. Strongly connected with the RXNO. It contains the underlying molecular processes, for example cyclization, methylation and demethylation.

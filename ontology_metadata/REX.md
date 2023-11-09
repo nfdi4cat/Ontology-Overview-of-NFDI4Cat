@@ -1,8 +1,11 @@
 ## REX - Physico-chemical process
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_REX.html) ![Radarplot for Domains of ontology REX](../radarplots/Radarplot_REX.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Physico-chemical process |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | - |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | - |
@@ -21,36 +25,41 @@
 | Optional links (Papers, Repos,...) | - |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl |
 | Degree of Inference/Composition | non inferred |
-| License | Reasonable with |
+| License | - |
 | Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 33ms |
 | Aligned with Top Level Ontology | OBO 1.0 (deprecated) |
-| Imports Ontology(ies) | Prefixes used |
+| Imports Ontology(ies) | - |
 | Prefixes used | obo |
 | Class annotation types | rdfs:label, definition : OBO/IAO_0000115 |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | missing |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | missing |
+| Material Modeling | missing |
+| Chemical Substance Modeling | related: broader |
+| Photocatalysis | related:narrower |
+| Electrocatalysis | related: narrower |
 | Heterogenous catalysis | related: narrower |
 | Homogenous catalysis | related: narrower |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | missing |
-| Process Modeling | missing |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | missing |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 3609 |
@@ -63,5 +72,6 @@
 | Annotation Property count | 12 |
 
 ## Comments
+
 Orphaned ontology! Contains plenty of reaction classes, also catalytic ones. Only classifies broadly and does not contain many relations.
 However, some catalysis classifications are contained.

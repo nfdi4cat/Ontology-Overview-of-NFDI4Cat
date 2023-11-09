@@ -1,8 +1,11 @@
 ## ENVO - Environmental Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_ENVO.html) ![Radarplot for Domains of ontology ENVO](../radarplots/Radarplot_ENVO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Environmental Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | small group |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://sites.google.com/site/environmentontology/home |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-4-43; https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0097-6 |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | rdf/xml; ttl; json; owl; obo |
@@ -34,23 +39,27 @@
 | Class annotation types | rdfs:Label, obo:Definition, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | missing |
+| Material Modeling | related: broader |
+| Chemical Substance Modeling | related: broader |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | related: broader |
-| Process Modeling | missing |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 49216 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 103 |
 
 ## Comments
+
 While it  sounds like the Ontology should describe Environemnts and its relations, such as 'Lake' 'canBePoisonedBy' 'CopperSalt' or 'Windturbine' 'generates('NoisePolution' 'some' 'dB')', it is more of a "biome-ontology", descriptions of local/abstract environments end a e.g. Wastefills.

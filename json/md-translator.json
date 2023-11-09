@@ -29,19 +29,21 @@
 		],
 	"Domain of Interest Represented (contained, related: broader/narrower, missing)":
 		[
-			{"Biocatalysis":"Biocatalysis"},
+			{"Top Level Ontology":"Top Level Ontology"},
+			{"Process Design, Energy and Cost Data":"Process Design, Energy and Cost Data"},
+			{"Heat, Transport and Kinetic Data":"Heat, Transport and Kinetic Data"},
+			{"Characterisation Data":"Characterisation Data"},
+			{"Performance Data":"Performance Data"},
+			{"Operando Data":"Operando Data"},
+			{"Synthesis Data":"Synthesis Data"},
+			{"Process Modeling":"Process Modeling"},
+			{"Material Modeling":"Material Modeling"},
+			{"Chemical Substance Modeling":"Chemical Substance Modeling"},
+			{"Photocatalysis":"Photocatalysis"},
+			{"Electrocatalysis":"Electrocatalysis"},
 			{"Heterogenous catalysis":"Heterogenous catalysis"},
 			{"Homogenous catalysis":"Homogenous catalysis"},
-			{"Chemical Substance Modeling":"Chemical Substance Modeling"},
-			{"Material Modeling":"Material Modeling"},
-			{"Process Modeling":"Process Modeling"},
-			{"Synthesis Data":"Synthesis Data"},
-			{"Operando Data":"Operando Data"},
-			{"Performance Data":"Performance Data"},
-			{"Characterisation Data":"Characterisation Data"},
-			{"Heat, Transport and Kinetic Data":"Heat, Transport and Kinetic Data"},
-			{"Process Design, Energy and Cost Data":"Process Design, Energy and Cost Data"},
-			{"Top Level Ontology":"Top Level Ontology"}
+			{"Biocatalysis":"Biocatalysis"}
 		],
 	"Ontology Characteristics":
 		[

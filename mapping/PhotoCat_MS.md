@@ -1,0 +1,3 @@
+|    | PhotoCat_IRI   | PhotoCat_DESC         | MS_IRI                                    | MS_DESC                        | MS_DEF   |
+|---:|:---------------|:----------------------|:------------------------------------------|:-------------------------------|:---------|
+|  0 | no IRI         | {'mass spectrometry'} | http://purl.obolibrary.org/obo/MS_1000268 | {'label': 'mass spectrometry'} | []       |

@@ -1,0 +1,4 @@
+|    | EDAM_IRI                            | EDAM_DESC                                                                    | M3_IRI                                            | M3_DESC                         | M3_DEF   |
+|---:|:------------------------------------|:-----------------------------------------------------------------------------|:--------------------------------------------------|:--------------------------------|:---------|
+|  0 | http://edamontology.org/data_2151   | {'label': 'Color', 'prefLabel': None, 'altLabel': None, 'name': 'data_2151'} | http://sensormeasurement.appspot.com/m3#ColorLEDs | {'label': 'Color'}              | []       |
+|  1 | http://edamontology.org/format_3596 | {'label': 'ppm', 'prefLabel': None, 'altLabel': None, 'name': 'format_3596'} | http://sensormeasurement.appspot.com/m3#PPM       | {'label': 'ppm', 'name': 'ppm'} | []       |

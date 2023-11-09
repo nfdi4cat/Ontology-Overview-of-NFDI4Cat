@@ -1,8 +1,11 @@
 ## EMMO - Elementary Multiperspective Material Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_EMMO.html) ![Radarplot for Domains of ontology EMMO](../radarplots/Radarplot_EMMO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Elementary Multiperspective Material Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Standardization Body |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://emmc.eu/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | GitHub.com: https://github.com/emmo-repo/EMMO; EMMOpy: https://github.com/emmo-repo/EMMOntoPy;  |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | rdf/xml; ttl |
@@ -34,23 +39,27 @@
 | Class annotation types | skos:PrefLabel, rdfs:Definition |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | contained |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | missing |
+| Operando Data | missing |
+| Synthesis Data | missing |
+| Process Modeling | related: narrower |
+| Material Modeling | contained |
+| Chemical Substance Modeling | related: broader |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | contained |
-| Process Modeling | related: narrower |
-| Synthesis Data | missing |
-| Operando Data | missing |
-| Performance Data | missing |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | contained |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 7382 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 32 |
 
 ## Comments
+
 -

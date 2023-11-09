@@ -1,8 +1,11 @@
 ## EDAM - EDAM - Bioscientific data analysis ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_EDAM.html) ![Radarplot for Domains of ontology EDAM](../radarplots/Radarplot_EDAM.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | EDAM - Bioscientific data analysis ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Group of MaintainersMaintainer |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://github.com/edamontology/edamontology |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://doi.org/10.7490/f1000research.1118900.1  |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,23 +39,27 @@
 | Class annotation types | rdfs:Label; rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | related: narrower |
+| Top Level Ontology | missing |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | contained |
+| Performance Data | related: narrower |
+| Operando Data | missing |
+| Synthesis Data | related: broader |
+| Process Modeling | missing |
+| Material Modeling | missing |
+| Chemical Substance Modeling | related: broader |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | missing |
-| Process Modeling | missing |
-| Synthesis Data | related: broader |
-| Operando Data | missing |
-| Performance Data | related: narrower |
-| Characterisation Data | contained |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | missing |
+| Biocatalysis | related: narrower |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 34927 |
@@ -63,5 +72,6 @@
 | Annotation Property count | 70 |
 
 ## Comments
+
 An Ontology consisting of several Terms relevant for DANN and Enzymatic activity. Imports OBO Ontology terms and classes while not being alligned to an Ontology. Good representation for description of proteins and enzyme kinetics.
 EDAM is a domain ontology of data analysis and data management in bio- and other sciences, and science-based applications. It comprises concepts related to analysis, modelling, optimisation, and data life-cycle. 

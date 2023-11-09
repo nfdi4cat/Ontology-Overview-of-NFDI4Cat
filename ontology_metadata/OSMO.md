@@ -1,8 +1,11 @@
 ## OSMO - Ontology for Simulation, Modelling, and Optimization
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_OSMO.html) ![Radarplot for Domains of ontology OSMO](../radarplots/Radarplot_OSMO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Ontology for Simulation, Modelling, and Optimization |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | terminated consortium of the EMMC |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.vimmp.eu/ |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://zenodo.org/record/5084394 |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | ttl |
@@ -34,23 +39,27 @@
 | Class annotation types | skos:label, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | missing |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | related: broader |
+| Heat, Transport and Kinetic Data | related: broader |
+| Characterisation Data | related: broader |
+| Performance Data | contained |
+| Operando Data | contained |
+| Synthesis Data | related: broader |
+| Process Modeling | contained |
+| Material Modeling | contained |
+| Chemical Substance Modeling | related: broader |
+| Photocatalysis | missing |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | related: broader |
-| Material Modeling | contained |
-| Process Modeling | contained |
-| Synthesis Data | related: broader |
-| Operando Data | contained |
-| Performance Data | contained |
-| Characterisation Data | related: broader |
-| Heat, Transport and Kinetic Data | related: broader |
-| Process Design, Energy and Cost Data | related: broader |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | missing |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 1786 |
@@ -63,5 +72,6 @@
 | Annotation Property count | 12 |
 
 ## Comments
+
 A sub ontology not really useable as a standalone ontology but more as a metadata framework, as such refers to the VIMMP to see its surrounding Ontology
 High reasoning time

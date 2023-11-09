@@ -1,3 +1,3 @@
-|    | OSMO_IRI                                             | OSMO_DESC      | SBO_IRI                              | SBO_DESC                |
-|---:|:-----------------------------------------------------|:---------------|:-------------------------------------|:------------------------|
-|  0 | https://emmc.eu/semantics/evmpo/evmpo.ttl#annotation | {'annotation'} | http://biomodels.net/SBO/SBO_0000550 | {'label': 'annotation'} |
+|    | OSMO_IRI                                             | OSMO_DESC                                                                  | SBO_IRI                              | SBO_DESC                | SBO_DEF   |
+|---:|:-----------------------------------------------------|:---------------------------------------------------------------------------|:-------------------------------------|:------------------------|:----------|
+|  0 | https://emmc.eu/semantics/evmpo/evmpo.ttl#annotation | {'label': None, 'prefLabel': None, 'altLabel': None, 'name': 'annotation'} | http://biomodels.net/SBO/SBO_0000550 | {'label': 'annotation'} | []        |

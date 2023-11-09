@@ -1,0 +1,22 @@
+|    | CombinedConcepts_condensed_09-2022__IRI   | CombinedConcepts_condensed_09-2022__DESC   | MOP_IRI                                    | MOP_DESC                                                       |
+|---:|:------------------------------------------|:-------------------------------------------|:-------------------------------------------|:---------------------------------------------------------------|
+|  0 | no IRI                                    | {'alkylation'}                             | http://purl.obolibrary.org/obo/MOP_0000369 | {'label': 'alkylation'}                                        |
+|  1 | no IRI                                    | {'bromination'}                            | http://purl.obolibrary.org/obo/MOP_0000551 | {'label': 'bromination'}                                       |
+|  2 | no IRI                                    | {'carboxylation'}                          | http://purl.obolibrary.org/obo/MOP_0000591 | {'label': 'carboxylation'}                                     |
+|  3 | no IRI                                    | {'catalysis'}                              | http://purl.obolibrary.org/obo/MOP_0000781 | {'label': 'catalysis'}                                         |
+|  4 | no IRI                                    | {'chain reaction'}                         | http://purl.obolibrary.org/obo/MOP_0000635 | {'label': 'chain reaction'}                                    |
+|  5 | no IRI                                    | {'dehydrogenation'}                        | http://purl.obolibrary.org/obo/MOP_0000590 | {'label': 'dehydrogenation'}                                   |
+|  6 | no IRI                                    | {'Electron transfer'}                      | http://purl.obolibrary.org/obo/MOP_0000615 | {'label': 'Electron transfer'}                                 |
+|  7 | no IRI                                    | {'elimination reaction'}                   | http://purl.obolibrary.org/obo/MOP_0000656 | {'label': 'elimination reaction'}                              |
+|  8 | no IRI                                    | {'endothermic reaction'}                   | http://purl.obolibrary.org/obo/MOP_0000767 | {'label': 'endothermic reaction'}                              |
+|  9 | no IRI                                    | {'exothermic reaction'}                    | http://purl.obolibrary.org/obo/MOP_0000768 | {'label': 'exothermic reaction'}                               |
+| 10 | no IRI                                    | {'functional group'}                       | http://purl.obolibrary.org/obo/CHEBI_24433 | {'label': 'functional group'}                                  |
+| 11 | no IRI                                    | {'hydrogenation'}                          | http://purl.obolibrary.org/obo/MOP_0000589 | {'label': 'hydrogenation'}                                     |
+| 12 | no IRI                                    | {'hydrolysis'}                             | http://purl.obolibrary.org/obo/MOP_0000619 | {'label': 'hydrolysis'}                                        |
+| 13 | no IRI                                    | {'Lewis Acid'}                             | http://purl.obolibrary.org/obo/CHEBI_39143 | {'label': 'Lewis Acid'}                                        |
+| 14 | no IRI                                    | {'ligand'}                                 | http://purl.obolibrary.org/obo/CHEBI_52214 | {'label': 'ligand'}                                            |
+| 15 | no IRI                                    | {'macromolecule'}                          | http://purl.obolibrary.org/obo/CHEBI_33839 | {'label': 'macromolecule'}                                     |
+| 16 | no IRI                                    | {'molecular entity'}                       | http://purl.obolibrary.org/obo/CHEBI_23367 | {'label': 'molecular entity', 'prefLabel': 'molecular entity'} |
+| 17 | no IRI                                    | {'oxidation'}                              | http://purl.obolibrary.org/obo/MOP_0000568 | {'label': 'oxidation'}                                         |
+| 18 | no IRI                                    | {'Process'}                                | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'Process', 'prefLabel': 'Process'}                   |
+| 19 | no IRI                                    | {'reduction'}                              | http://purl.obolibrary.org/obo/MOP_0000569 | {'label': 'reduction'}                                         |

@@ -1,8 +1,11 @@
 ## SBO - Systems Biology Ontology
 
+
  ## Radarplot 
+
  [HTML-Version](../radarplots/Radarplot_SBO.html) ![Radarplot for Domains of ontology SBO](../radarplots/Radarplot_SBO.svg) 
 ## Ontology
+
 |Aspect |Description| 
  |:---|:---|
 | Full Name | Systems Biology Ontology |
@@ -12,6 +15,7 @@
 | Nature of Organisational Structure | Maintained by community via GitHub |
 
 ## References
+
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.ebi.ac.uk/ols/ontologies/sbo |
@@ -21,6 +25,7 @@
 | Optional links (Papers, Repos,...) | https://github.com/EBI-BioModels/SBO/ |
 
 ## Ontology Modeling And Availability
+
 |Aspect |Description| 
  |:---|:---|
 | Ontology Formats Provided | owl, obo |
@@ -29,28 +34,32 @@
 | Validated Resoning with | HermiT, FaCT++ |
 | Shortest reasoning time | 11 ms |
 | Aligned with Top Level Ontology | OBO |
-| Imports Ontology(ies) | Prefixes used |
+| Imports Ontology(ies) | - |
 | Prefixes used | daml; mathml |
 | Class annotation types | rdfs:label, rdfs:comment |
 
 ## Domain of Interest Represented (contained, related: broader/narrower, missing)
+
 |Aspect |Description| 
  |:---|:---|
-| Biocatalysis | contained |
+| Top Level Ontology | related: narrower |
+| Process Design, Energy and Cost Data | missing |
+| Heat, Transport and Kinetic Data | missing |
+| Characterisation Data | missing |
+| Performance Data | related:narrower |
+| Operando Data | missing |
+| Synthesis Data | related: broader |
+| Process Modeling | contained: broader |
+| Material Modeling | contained: broader |
+| Chemical Substance Modeling | contained: narrower |
+| Photocatalysis | related:broader |
+| Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Chemical Substance Modeling | contained: narrower |
-| Material Modeling | contained: broader |
-| Process Modeling | contained: broader |
-| Synthesis Data | related: broader |
-| Operando Data | missing |
-| Performance Data | related:narrower |
-| Characterisation Data | missing |
-| Heat, Transport and Kinetic Data | missing |
-| Process Design, Energy and Cost Data | missing |
-| Top Level Ontology | related: narrower |
+| Biocatalysis | contained |
 
 ## Ontology Characteristics
+
 |Aspect |Description| 
  |:---|:---|
 | Axioms | 2982 |
@@ -63,4 +72,5 @@
 | Annotation Property count | 4 |
 
 ## Comments
+
 Controlled vocabulary for Systems Biology and computational modeling in Systems Biology.

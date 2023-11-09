@@ -1,3 +1,3 @@
-|    | metadata4Ing_IRI                   | metadata4Ing_DESC   | MS_IRI                                     | MS_DESC               |
-|---:|:-----------------------------------|:--------------------|:-------------------------------------------|:----------------------|
-|  0 | http://www.w3.org/ns/prov#Activity | {'Activity'}        | http://purl.obolibrary.org/obo/NCIT_C43431 | {'label': 'Activity'} |
+|    | metadata4ing_IRI                   | metadata4ing_DESC                                                              | MS_IRI                                     | MS_DESC               | MS_DEF   |
+|---:|:-----------------------------------|:-------------------------------------------------------------------------------|:-------------------------------------------|:----------------------|:---------|
+|  0 | http://www.w3.org/ns/prov#Activity | {'label': None, 'prefLabel': 'Activity', 'altLabel': None, 'name': 'Activity'} | http://purl.obolibrary.org/obo/NCIT_C43431 | {'label': 'Activity'} | []       |
