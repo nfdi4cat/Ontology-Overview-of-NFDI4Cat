@@ -1,0 +1,180 @@
+absorption
+adsorption
+apparent quantum yield
+atomic force microscopy
+bandgap energy
+batch mode
+blank experiment
+borosilicate glass
+Brunauer-Emmett-Teller surface area analysis
+calcination dwelling time
+calcination final temperature
+calcination heating rate
+calcination initial temperature
+calcination step
+categories of semiconductors
+ceramic substrate
+characterization
+charge recombination
+charge separation
+chemical substance for synthesis
+concentration chemical substance for synthesis
+conduction band
+crystallinity
+cyclic voltammetry
+deposited sample
+deposition technique
+desorption
+dielectric-barrier discharge ionization detector
+differential scanning calorimetry
+doctor blading
+doping
+electron energy loss spectroscopy
+electronic state
+evaluation
+excited state
+experiment duration
+experiment final pressure
+experiment final temperature
+experiment initial pressure
+experiment initial temperature
+experiment pressure
+experiment pressure drop
+experiment temperature
+Fermi level
+flame ionization detector
+flow mode
+fluorine doped tin oxide coated glass
+fourier transform infrared spectroscopy
+gas chromatograph calibration
+gas chromatograph detector
+gas chromatograph sensitivity
+gas chromatography
+gas feed
+gas flow controller and monitor
+gas flow rate in calcination
+gaseous environment in calcination
+glass substrate
+ground state
+indium tin oxide coated glass
+infrared
+irradiation duration
+irradiation system
+light emitting diode
+light intensity
+light operation current
+light operation voltage
+light power output
+light source
+light source distance
+light source property
+light wavelength
+liquid chromatography
+literature collection
+literature organization
+literature research
+mass flow controller
+mass of chemical substance for synthesis
+mass spectrometer calibration
+mass spectrometer detector
+mass spectrometer sensitivity
+mass spectrometry
+maximum operation pressure
+maximum operation temperature
+mercury-xenon lamp
+metal oxide
+metallic substrate
+minimum operation pressure
+minimum operation temperature
+modification technique
+Mott-Schottky analysis
+nuclear magnetic resonance spectroscopy
+operation mode
+operation parameters
+operation pressure
+operation temperature
+optical window
+optical window diameter
+optical window dimensions
+optical window material
+optical window thickness
+oxidation
+photocatalysis
+photocatalyst
+photocatalytic CO2 reduction
+photocatalytic experiment
+photocatalytic process
+photoexcitation
+photoinduced charge generation
+photoinduced electron transfer
+photoinduced hole transfer
+photoluminescence
+photoreactor design
+plasmid preparation
+pore size distribution
+powder mass
+powdered photocatalyst
+pressure controller and monitor
+product concentration
+product identification method
+purging duration
+quartz glass
+Raman spectroscopy
+reactant
+reactant concentration
+reactant flow rate
+reactant purity
+reaction chamber
+reaction chamber dimension
+reaction chamber material
+reaction chamber shape
+reaction chamber volume
+reduction
+sacrificial acceptor
+sacrificial donor
+sacrificial reagant
+sample form
+sample pre-treatment
+sampling interval
+scanning electron microscopy
+selectivity
+semiconductor
+semiconductor property
+specific surface area
+spin coating
+spray coating
+substrate
+substrate area
+substrate depth
+substrate dimension
+substrate material
+substrate thickness
+substrate width
+synthesis
+synthesis duration
+synthesis equipment
+synthesis pH
+synthesis pressure
+synthesis procedure
+synthesis temperature
+temperature controller and monitor
+thermal conductivity detector
+thermogravimetric analysis
+thin film
+thin film area
+thin film depth
+thin film dimension
+thin film mass
+thin film thickness
+thin film width
+transmission electron microscopy
+ultraviolet
+ultraviolet-visible spectroscopy
+vacuum pump
+valence band
+visible light
+volume chemical substance for synthesis
+xenon lamp
+X-ray diffraction
+X-ray fluorescence
+X-ray photoelectron spectroscopy
