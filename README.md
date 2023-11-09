@@ -4,8 +4,8 @@
 Repository which lists ontologies relevant for catalysis research.
 
 For remarks, additions, or general questions either use the issues or contact the responsible person (see below).
-For contributions please download the [markdown file](./General_Template.md) called [General Template] and contact us either via mail, issue or pull request with your updated markdown file. 
-A condensed view on the data provided in the markdown-files is given in [master_table](./master_table/Possible_Template_TF_OntoWorldMap_2023-03-28_10-52.xlsx).
+A condensed view on the data provided in the markdown-files is given in [master_table](./master_table/MT_OntoWorldMap_2023-10-11.xlsx).
+For contributions please either refer to the entries in this table or download and fill in the [markdown file](./General_Template.md) called [General Template] and contact us either via mail, issue or pull request.
 The respective markdown files for each ontology listed in the table below are located in [ontology_metadata](./ontology_metadata).
 In the subdirectory [json](./json), the information contained for each ontology is stored in json-format for an ease in access of the data presented in markdown.
 
