@@ -19,7 +19,7 @@
 |Aspect |Description| 
  |:---|:---|
 | Organisational Website | https://www.allotrope.org/ |
-| Persistent URI of Ontology File | https://raw.githubusercontent.com/nfdi4cat/Ontology-Overview-of-NFDI4Cat/main/ontologies/AFO.ttl |
+| Persistent URI of Ontology File | http://purl.allotrope.org/voc/afo/merged/REC/2023/09/merged-without-qudt-and-inferred.ttl |
 | Link to Documentation | https://www.allotrope.org/resources  |
 | Link to Version directory | https://allotrope.jfrog.io/ui/repos/tree/General/AFO-release-public |
 | Optional links (Papers, Repos,...) | https://www.allotrope.org/resources |
