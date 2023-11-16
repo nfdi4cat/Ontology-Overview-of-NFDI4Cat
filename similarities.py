@@ -14,6 +14,8 @@ import sys
 sys.setrecursionlimit(100000)
 
 
+#"C:\Program Files\Java\jdk-11.0.2\bin\javaw.exe"
+
 def ontology_classes_loader(ontology):
     # Create sets of class labels for each ontology
     # using label depending on ontology!
@@ -216,7 +218,7 @@ def load_ontology_from_name(onto_name):
         print("Ontology {} is provided as ttl, searching for owl verison of ontology in subdir ./ontologies/ and converting ontology from ttl to owl if not found".format(URL))
         ontology_in_owl = ttl_to_owl(URL)
         
-        onto_loaded = get_ontology('./ontologies./' + ontology_in_owl).load()
+        onto_loaded = get_ontology('./ontologies/' + ontology_in_owl).load()
 
     else:
         #TODO: try to load from ./ontologies/ if there is a manual added version of the OWL, such as for OntoCAPE.
@@ -228,7 +230,7 @@ def load_ontology_from_name(onto_name):
             print("Successfully loaded Ontology: {}".format(onto_name))
             """
             ontology_in_owl = rdf_to_owl(URL)
-            onto_loaded = get_ontology('./ontologies./' + ontology_in_owl).load()
+            onto_loaded = get_ontology('./ontologies/' + ontology_in_owl).load()
         except:
             print("Something went wrong, ontology name: ".format(onto_name))
             onto_loaded = None
