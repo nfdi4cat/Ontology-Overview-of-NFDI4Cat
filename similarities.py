@@ -317,7 +317,7 @@ def class_description_loader():
 ####
 
 #TODO: Code aufraeumen!
-def store_similarities(onto_combination, match_list):
+def store_similarities(onto_combination, match_list,export_str="xlsx"):
     # onto_combination = tuple of ontology names
     # match_list = Nested list of dictionaries, where each list entry contains 
     # a dictionary with a key for each ontology contained in onto_combination.
@@ -367,8 +367,14 @@ def store_similarities(onto_combination, match_list):
     # Create DataFrame from the data
     df = pd.DataFrame({onto_combination[0]+'_IRI': onto1_data1, onto_combination[0]+'_DESC':onto1_data2, onto_combination[1]+'_IRI': onto2_data1, onto_combination[1]+'_DESC':onto2_data2,onto_combination[1]+'_DEF':def_list})
     
-    df.to_excel("./mapping/"+onto_combination[0]+"_"+onto_combination[1]+".xlsx")
+    if export_str == "xlsx":
+        df.to_excel("./mapping/"+onto_combination[0]+"_"+onto_combination[1]+".xlsx")
     
+    elif export_str == "json":
+        
+        df.to_json("./mapping/"+onto_combination[0]+"_"+onto_combination[1]+".json")
+    else:
+        print("Error: No export Style chosen for Mapping")
     return df
 
 ####
@@ -471,7 +477,7 @@ def run():
 ####
 
 ####
-def Similarity_Search_from_List(input_list,list_name):
+def Similarity_Search_from_List(input_list,list_name, export_str="xlsx"):
     # Uses list of strings as input to output matching classes from ontology 
     # collection.
     onto_URLs = get_ontology_URLs()
@@ -508,13 +514,17 @@ def Similarity_Search_from_List(input_list,list_name):
             if append_dict:
                 match_list.append(append_dict)
         
-        store_similarities(comb,match_list)
+        store_similarities(comb,match_list,export_str)
         
         df_numbers[comb[1]][comb[0]] = len(match_list)
     
     #print(df_numbers)
-    df_numbers.to_excel("MappingHeatmap_"+list_name+".xlsx")
-    
+    if export_str == "xlsx":
+        df_numbers.to_excel("MappingHeatmap_"+list_name+".xlsx")
+    elif export_str == "json":
+        df_numbers.to_json("MappingHeatmap_"+list_name+".json")
+    else:
+        print("Error: No export Style chosen for Mapping")
     return df_numbers
         
 ####
