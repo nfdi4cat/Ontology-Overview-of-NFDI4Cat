@@ -555,7 +555,13 @@ def run_similarity_from_vocabulary():
 ####
 
 
+
+#TODO
+## Similarity_Search_from_List -> store_similarities -> rewrite this function 
+#  to not search ontologies but iridict json instead
+
 """
+## py Script for simple execution
 import similarities_search_only
 concept_list = ["catalyst","reaction","chemical reaction"]
 concept_list_name = "Concept_List_Arbitrary_Name"
