@@ -210,10 +210,19 @@ def load_ontology_from_name(onto_name):
             onto_loaded = get_ontology(URL).load()
             print("Successfully loaded Ontology: {}".format(onto_name))
         except:
-            print("Something went wrong, ontology name: ".format(onto_name))
-            onto_loaded = None
-            pass
-        
+            print("Something went wrong, ontology name: {}".format(onto_name))
+            try:
+                try: 
+                    print("Trying to load Ontology: {} from local path ./ontologies/".format(onto_name))
+                    onto_loaded = get_ontology("./ontologies/"+onto_name+'.owl').load()
+                    print("Successfully loaded Ontology: {}".format(onto_name))
+                except:
+                    print("Something went wrong, you need to place the owl-file here: ./ontologies/{}.owl".format(onto_name))
+                    onto_loaded = None
+                    pass
+            except:
+                pass
+            
     elif URL.endswith('.ttl'):
         print("Ontology {} is provided as ttl, searching for owl verison of ontology in subdir ./ontologies/ and converting ontology from ttl to owl if not found".format(URL))
         ontology_in_owl = ttl_to_owl(URL)
@@ -232,7 +241,7 @@ def load_ontology_from_name(onto_name):
             ontology_in_owl = rdf_to_owl(URL)
             onto_loaded = get_ontology('./ontologies/' + ontology_in_owl).load()
         except:
-            print("Something went wrong, ontology name: {}".format(onto_name))
+            print("Something went wrong, ontology name: ".format(onto_name))
             onto_loaded = None
             pass
     
