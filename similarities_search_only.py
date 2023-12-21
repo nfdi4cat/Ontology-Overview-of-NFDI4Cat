@@ -338,9 +338,82 @@ def class_description_loader():
     return iri_dictionary
 ####
 
+#TODO reshape for iriDictionary.json search 
+def store_similarities_json(onto_combination, match_list, iriDict_onto, export_str="xlsx"):
+    # onto_combination = tuple of ontology names
+    # match_list = Nested list of dictionaries, where each list entry contains 
+    # a dictionary with a key for each ontology contained in onto_combination.
+    # The values of these keys contain themselves information on mapped classes 
+    # in form of IRI:{label:<label>, prefLabel:<prefLabel>, altLabel:<altLabel>, name:<name>}
+    #
+    # export_str = specifier if the output should be as XLSX or JSON file
+    # Output: Dataframe or json with first two columns containing IRI and 
+    # {label, prefLabel, altLabel, name} of each mapped class within the first ontology.
+    # The other two columns contain the same information (IRI and labeling of 
+    # classes) for the second ontology.
+    
+    # Initialize lists to store the data
+    onto1_data1 = []
+    onto1_data2 = []
+    
+    onto2_data1 = []
+    onto2_data2 = []
+    
+    def_list = []
+    
+    #load second ontology
+    onto2 = load_ontology_from_name(onto_combination[1])
+    
+    # load iriDictionary
+    with open("./iriDictionary.json") as f: 
+        iri_dictionary = json.load(f)
+    
+    diciri_dictionary[onto_combination[1]]
+    
+    # iterate through match_list
+    for entry in match_list:
+        if type(entry[0]) == list:
+            onto1_entry1 = list(entry[0][0].get(onto_combination[0]).keys())[0]
+            onto1_entry2 = list(entry[0][0].get(onto_combination[0]).values())[0]
+        else: 
+            onto1_entry1 = list(entry[0].get(onto_combination[0]).keys())[0]
+            onto1_entry2 = list(entry[0].get(onto_combination[0]).values())[0]
+      
+        if type(entry[0]) == list:
+            onto2_entry1 = list(entry[0][1].get(onto_combination[1]).keys())[0]
+            onto2_entry2 = list(entry[0][1].get(onto_combination[1]).values())[0]
+        else:
+            onto2_entry1 = list(entry[1].get(onto_combination[1]).keys())[0]
+            onto2_entry2 = list(entry[1].get(onto_combination[1]).values())[0]
+    
+        onto1_data1.append(onto1_entry1)
+        onto1_data2.append(onto1_entry2)
+        
+        onto2_data1.append(onto2_entry1)
+        onto2_data2.append(onto2_entry2)
+        
+        ##BANANA
+        class_def = json_dict[onto2_entry1]
+        class_def = class_definition_readin(onto2.search_one(iri = onto2_entry1))
+        def_list.append(class_def)
+    # Create DataFrame from the data
+    df = pd.DataFrame({onto_combination[0]+'_IRI': onto1_data1, onto_combination[0]+'_DESC':onto1_data2, onto_combination[1]+'_IRI': onto2_data1, onto_combination[1]+'_DESC':onto2_data2,onto_combination[1]+'_DEF':def_list})
+    
+    if export_str.lower() == "xlsx":
+        df.to_excel("./mapping/"+onto_combination[0]+"_"+onto_combination[1]+".xlsx")
+    
+    elif export_str.lower() == "json":
+        
+        df.to_json("./mapping/"+onto_combination[0]+"_"+onto_combination[1]+".json")
+    else:
+        print("Error: No export Style chosen for Mapping")
+    return df
+
 ####
 
-#TODO reshape for iriDictionary.json search 
+
+####
+
 def store_similarities(onto_combination, match_list,export_str="xlsx"):
     # onto_combination = tuple of ontology names
     # match_list = Nested list of dictionaries, where each list entry contains 
@@ -504,6 +577,8 @@ def run():
 def Similarity_Search_from_List(input_list,list_name, export_str="xlsx"):
     # Uses list of strings as input to output matching classes from ontology 
     # collection.
+   
+    """
     onto_URLs = get_ontology_URLs()
     ontoNameList = list(onto_URLs.keys())
     ontoNameList_output = list(onto_URLs.keys())
@@ -511,19 +586,23 @@ def Similarity_Search_from_List(input_list,list_name, export_str="xlsx"):
     #[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
     ontoNameList_output.remove("OntoCAPE")
-    #ontoNameList_output.remove("EMMO")
-    
+    ontoNameList_output.remove("CAO")
+    """
     #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
-    df_numbers = pd.DataFrame(index = [list_name], columns = ontoNameList_output)
 
     
     with open("./iriDictionary.json") as f: 
         iri_dictionary = json.load(f)
+
+    ontoNameList_output = list(iri_dictionary.keys())
+    
+    df_numbers = pd.DataFrame(index = [list_name], columns = ontoNameList_output)
     
     for ontology in ontoNameList_output:
         onto_dict1 = iri_dictionary[ontology]
         
         comb = (list_name, ontology)
+        onto_dict2 = iri_dictionary[comb[1]]
         
         match_list = []
        
@@ -577,6 +656,16 @@ similarities_search_only.Similarity_Search_from_List(concept_list, concept_list_
 """    
 
 """
+t = time.time()
+concept_list = ["catalyst","reaction","chemical reaction"]
+concept_list_name = "Concept_List_Arbitrary_Name"
+output_format = "json"
+Similarity_Search_from_List(concept_list, concept_list_name, output_format)
+elapsed = time.time()-t
+print(elapsed)
+
+
+
 t = time.time()
 concept_list = [
     "Homogeneous catalysis",
