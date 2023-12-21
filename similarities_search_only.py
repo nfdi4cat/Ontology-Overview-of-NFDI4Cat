@@ -227,9 +227,6 @@ def load_ontology_from_name(onto_name):
             print("Need to place file here: ./ontologies/{}.owl".format(onto_name))
             onto_loaded = None
             pass        
-        
-    elif onto_name == 'OntoCAPE':
-        
     
     elif URL.endswith('.owl'):
         try: 
