@@ -232,7 +232,7 @@ def load_ontology_from_name(onto_name):
             ontology_in_owl = rdf_to_owl(URL)
             onto_loaded = get_ontology('./ontologies/' + ontology_in_owl).load()
         except:
-            print("Something went wrong, ontology name: ".format(onto_name))
+            print("Something went wrong, ontology name: {}".format(onto_name))
             onto_loaded = None
             pass
     

@@ -234,7 +234,7 @@ def load_ontology_from_name(onto_name):
             onto_loaded = get_ontology(URL).load()
             print("Successfully loaded Ontology: {}".format(onto_name))
         except:
-            print("Something went wrong, ontology name: ".format(onto_name))
+            print("Something went wrong, ontology name: {}".format(onto_name))
             onto_loaded = None
             pass
         
@@ -332,7 +332,7 @@ def class_description_loader():
         else:
             print(ontologyname + " was empty!")
     
-        with open('iriDictionary.json', 'w') as fp:
+        with open('iriDictionary_.json', 'w') as fp:
             json.dump(iri_dictionary, fp)
     
     return iri_dictionary
