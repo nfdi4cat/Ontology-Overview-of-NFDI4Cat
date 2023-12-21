@@ -63,12 +63,18 @@ def ontology_classes_loader(ontology):
         except:
             class_name = None
         
+        ##
+        try:
+            class_def = class_definition_readin(ontology.search_one(iri = iri))
+        except:
+            class_def = None
         
+        ##
         iri_dict[str(iri)] = {"label": class_label,
                                    "prefLabel": class_prefLabel,
                                    "altLabel": class_altLabel,
                                    "name": class_name,
-                                   }
+                                   "definition":class_def}
     return iri_dict
 
 
@@ -334,7 +340,7 @@ def class_description_loader():
 
 ####
 
-#TODO: Code aufraeumen!
+#TODO reshape for iriDictionary.json search 
 def store_similarities(onto_combination, match_list,export_str="xlsx"):
     # onto_combination = tuple of ontology names
     # match_list = Nested list of dictionaries, where each list entry contains 
@@ -569,6 +575,37 @@ output_format = "json"
 similarities_search_only.Similarity_Search_from_List(concept_list, concept_list_name, output_format)
 
 """    
+
+"""
+t = time.time()
+concept_list = [
+    "Homogeneous catalysis",
+    "Heterogeneous catalysis",
+    "Enzyme catalysis",
+    "Biocatalysis",
+    "Photocatalysis",
+    "Electrocatalysis",
+    "Nanocatalysis",
+    "Chiral catalysis",
+    "Surface catalysis",
+    "Industrial catalysis",
+    "Organocatalysis",
+    "Catalyst",
+    "Catalyst poisoning",
+    "Catalyst regeneration",
+    "Catalyst characterization",
+    "Computational catalysis",
+    "reaction",
+    "chemical reaction",
+    "Catalyst stability",
+    "Catalyst selectivity"
+]
+concept_list_name = "Concept_List_Arbitrary_Name"
+output_format = "json"
+Similarity_Search_from_List(concept_list, concept_list_name, output_format)
+elapsed = time.time()-t
+print(elapsed)
+"""
 
 """
 with open("PhotoCatVocabulary.txt") as file:
