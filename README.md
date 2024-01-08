@@ -1,4 +1,5 @@
-[<img src="./logo_NFDI4Cat.jpg" width="300" />](https://nfdi4cat.org/)
+[![DOI](https://zenodo.org/badge/619984088.svg)](https://zenodo.org/doi/10.5281/zenodo.10470987)
+[<img src="./logo_NFDI4Cat.jpg" width="150" />](https://nfdi4cat.org/)
 # Ontology World Map of NFDI4Cat
 
 Repository which lists ontologies relevant for catalysis research.
