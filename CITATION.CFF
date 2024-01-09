@@ -9,6 +9,6 @@ authors:
   orcid: "https://orcid.org/0000-0001-5886-7860"
 title: "Ontology Overview of NFDI4Cat"
 version: 2.0.4
-doi: Tbd
+doi: https://zenodo.org/doi/10.5281/zenodo.10470987
 date-released: 2023-10-25
 url: "https://github.com/nfdi4cat/Ontology-Overview-of-NFDI4Cat"
