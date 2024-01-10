@@ -18,7 +18,7 @@
 
 |Aspect |Description| 
  |:---|:---|
-| Organisational Website | https://github.com/egonw/semanticchemistry |
+| Organisational Website | https://github.com/semanticchemistry/semanticchemistry |
 | Persistent URI of Ontology File | http://semanticchemistry.github.io/semanticchemistry/ontology/cheminf.owl |
 | Link to Documentation | - |
 | Link to Version directory | - |
