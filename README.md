@@ -1,5 +1,8 @@
 [![DOI](https://zenodo.org/badge/619984088.svg)](https://zenodo.org/doi/10.5281/zenodo.10470987)
 
+The methods and codes in this repository are described in more detail here: 
+Behr, A.S., Borgelt, H. & Kockmann, N. Ontologies4Cat: investigating the landscape of ontologies for catalysis research data management. J Cheminform 16, 16 (2024).[https://doi.org/10.1186/s13321-024-00807-2](https://doi.org/10.1186/s13321-024-00807-2)
+
 [<img src="./logo_NFDI4Cat.jpg" width="150" />](https://nfdi4cat.org/)
 # Ontology World Map of NFDI4Cat
 
