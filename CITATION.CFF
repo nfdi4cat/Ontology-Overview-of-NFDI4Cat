@@ -7,8 +7,11 @@ authors:
 - family-names: "Borgelt"
   given-names: "Hendrik"
   orcid: "https://orcid.org/0000-0001-5886-7860"
-title: "Ontology Overview of NFDI4Cat"
+- family-names: "Kockmann"
+  given-names: "Norbert"
+  orcid: "https://orcid.org/0000-0002-2367-1988"
+title: "Ontologies4Cat: investigating the landscape of ontologies for catalysis research data management"
 version: 2.0.4
-doi: https://zenodo.org/doi/10.5281/zenodo.10470987
-date-released: 2023-10-25
+doi: https://doi.org/10.1186/s13321-024-00807-2
+date-released: 2024-02-07
 url: "https://github.com/nfdi4cat/Ontology-Overview-of-NFDI4Cat"
