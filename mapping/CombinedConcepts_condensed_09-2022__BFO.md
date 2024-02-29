@@ -1,8 +1,0 @@
-|    | CombinedConcepts_condensed_09-2022__IRI   | CombinedConcepts_condensed_09-2022__DESC   | BFO_IRI                                    | BFO_DESC                                       |
-|---:|:------------------------------------------|:-------------------------------------------|:-------------------------------------------|:-----------------------------------------------|
-|  0 | no IRI                                    | {'entity'}                                 | http://purl.obolibrary.org/obo/BFO_0000001 | {'label': 'entity', 'prefLabel': 'entity'}     |
-|  1 | no IRI                                    | {'function'}                               | http://purl.obolibrary.org/obo/BFO_0000034 | {'label': 'function', 'prefLabel': 'function'} |
-|  2 | no IRI                                    | {'Process'}                                | http://purl.obolibrary.org/obo/BFO_0000015 | {'label': 'Process', 'prefLabel': 'Process'}   |
-|  3 | no IRI                                    | {'quality'}                                | http://purl.obolibrary.org/obo/BFO_0000019 | {'label': 'quality', 'prefLabel': 'quality'}   |
-|  4 | no IRI                                    | {'role'}                                   | http://purl.obolibrary.org/obo/BFO_0000023 | {'label': 'role', 'prefLabel': 'role'}         |
-|  5 | no IRI                                    | {'site'}                                   | http://purl.obolibrary.org/obo/BFO_0000029 | {'label': 'site', 'prefLabel': 'site'}         |

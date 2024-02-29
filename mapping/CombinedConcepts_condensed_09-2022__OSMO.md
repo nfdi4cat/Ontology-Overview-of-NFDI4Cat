@@ -1,9 +1,0 @@
-|    | CombinedConcepts_condensed_09-2022__IRI   | CombinedConcepts_condensed_09-2022__DESC   | OSMO_IRI                                                | OSMO_DESC              |
-|---:|:------------------------------------------|:-------------------------------------------|:--------------------------------------------------------|:-----------------------|
-|  0 | no IRI                                    | {'condition'}                              | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#condition | {'name': 'condition'}  |
-|  1 | no IRI                                    | {'material'}                               | https://emmc.eu/semantics/evmpo/evmpo.ttl#material      | {'name': 'material'}   |
-|  2 | no IRI                                    | {'model'}                                  | https://emmc.eu/semantics/evmpo/evmpo.ttl#model         | {'name': 'model'}      |
-|  3 | no IRI                                    | {'section'}                                | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#section   | {'name': 'section'}    |
-|  4 | no IRI                                    | {'simulation'}                             | https://emmc.eu/semantics/evmpo/evmpo.ttl#simulation    | {'name': 'simulation'} |
-|  5 | no IRI                                    | {'software'}                               | https://purl.vimmp.eu/semantics/osmo/osmo.ttl#software  | {'name': 'software'}   |
-|  6 | no IRI                                    | {'unit'}                                   | https://purl.vimmp.eu/semantics/vivo/vivo.ttl#unit      | {'name': 'unit'}       |
