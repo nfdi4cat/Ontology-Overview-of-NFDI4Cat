@@ -94,13 +94,13 @@ def class_definition_readin(ontology_class):
                 sys.exit(1)
         except:
             try:
-                if getattr(b,'IAO_0000115'):
-                    definition_string = getattr(b,'IAO_0000115')
+                if getattr(ontology_class,'IAO_0000115'):
+                    definition_string = getattr(ontology_class,'IAO_0000115')
                 else:
                     sys.exit(1)                           
             except:
                 try:
-                    if ontology_class.comment:
+                    if definition_string == []:
                         definition_string = ontology_class.comment
                     else:
                         sys.exit(1)        
@@ -227,6 +227,17 @@ def load_ontology_from_name(onto_name):
             print("Need to place file here: ./ontologies/{}.owl".format(onto_name))
             onto_loaded = None
             pass        
+    elif onto_name == 'M3': 
+        #contains deprecated classes and object properties, thus needs to be cleaned
+        # and loaded manually, else owlready2 will crash
+        try: 
+            print("Loading Ontology: {} from local path ./ontologies/".format(onto_name))
+            onto_loaded = get_ontology("./ontologies/M3.owl").load()
+            print("Successfully loaded Ontology: {}".format(onto_name))
+        except:
+            print("Need to place file here: ./ontologies/{}.owl".format(onto_name))
+            onto_loaded = None
+            pass     
     
     elif URL.endswith('.owl'):
         try: 
@@ -341,7 +352,7 @@ def class_description_loader():
         else:
             print(ontologyname + " was empty!")
     
-        with open('iriDictionary_.json', 'w') as fp:
+        with open('iriDictionary.json', 'w') as fp:
             json.dump(iri_dictionary, fp)
     
     return iri_dictionary
@@ -591,7 +602,7 @@ def Similarity_Search_from_List(input_list,list_name, export_str="xlsx"):
     #[ontoNameList_output.remove(key) for key in ontoNameList if not onto_format_validation(key,onto_URLs[key])]
     
     ontoNameList_output.remove("OntoCAPE")
-    #ontoNameList_output.remove("EMMO")
+    ontoNameList_output.remove("M3")
     
     #onto_combinations = list(itertools.combinations(ontoNameList_output, 2))
     df_numbers = pd.DataFrame(index = [list_name], columns = ontoNameList_output)
