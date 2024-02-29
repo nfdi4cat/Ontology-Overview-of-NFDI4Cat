@@ -94,8 +94,8 @@ def class_definition_readin(ontology_class):
                 sys.exit(1)
         except:
             try:
-                if getattr(b,'IAO_0000115'):
-                    definition_string = getattr(b,'IAO_0000115')
+                if getattr(ontology_class,'IAO_0000115'):
+                    definition_string = getattr(ontology_class,'IAO_0000115')
                 else:
                     sys.exit(1)                           
             except:
