@@ -507,3 +507,6 @@ def run():
     Master_Table = './master_table/MT_OntoWorldMap_2023-10-11.xlsx'
     ConvertExcelToMD(Master_Table)
     UpdateMainReadme()
+####
+if __name__ == "__main__":
+    run()
