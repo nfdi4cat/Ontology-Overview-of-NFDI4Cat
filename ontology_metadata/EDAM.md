@@ -11,7 +11,7 @@
 | Full Name | EDAM - Bioscientific data analysis ontology |
 | Synonyms/Alternative Names | - |
 | Ontology Acronym | EDAM |
-| Creator(s) & Issuing Organisation | Melissa Black, Lucie Lamothe, Hager Eldakroury, Mads Kierkegaard, Ankita Priya, Anne Machinda, Uttam Singh Khanduja, Drashti Patoliya, Rashika Rathi, Tawah Peggy Che Nico, Gloria Umutesi, Claudia Blankenburg, Anita Op, Precious Chieke, Omodolapo Babatunde, Steve Laurie, Steffen Neumann, Veit Schw‰mmle, Ivan Kuzmin, Chris Hunter, Jonathan Karr, Jon Ison, Alban Gaignard, Bryan Brancotte, HervÈ MÈnager, Mat˙ö Kalaö  |
+| Creator(s) & Issuing Organisation | Melissa Black, Lucie Lamothe, Hager Eldakroury, Mads Kierkegaard, Ankita Priya, Anne Machinda, Uttam Singh Khanduja, Drashti Patoliya, Rashika Rathi, Tawah Peggy Che Nico, Gloria Umutesi, Claudia Blankenburg, Anita Op, Precious Chieke, Omodolapo Babatunde, Steve Laurie, Steffen Neumann, Veit Schw√§mmle, Ivan Kuzmin, Chris Hunter, Jonathan Karr, Jon Ison, Alban Gaignard, Bryan Brancotte, Herv√© M√©nager, Mat√∫≈° Kala≈°  |
 | Nature of Organisational Structure | Group of MaintainersMaintainer |
 
 ## References
@@ -33,8 +33,8 @@
 | License | GNU LGPL v3.0 |
 | Validated Resoning with | Fact++ |
 | Shortest reasoning time | 1910 ms |
-| Aligned with Top Level Ontology | None |
-| Imports Ontology(ies) | None |
+| Aligned with Top Level Ontology | Imports Ontology(ies) |
+| Imports Ontology(ies) | Prefixes used |
 | Prefixes used | - |
 | Class annotation types | rdfs:Label; rdfs:comment |
 

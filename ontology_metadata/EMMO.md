@@ -11,7 +11,7 @@
 | Full Name | Elementary Multiperspective Material Ontology |
 | Synonyms/Alternative Names | previously European Material Modeling Ontology |
 | Ontology Acronym | EMMO |
-| Creator(s) & Issuing Organisation | EMMC ASBL, European Materials Modelling Council, Silversquare Stéphanie, Avenue Louise 54, 1050 Brussels, CBE no: 0731 621 312; Creators:Emanuele Ghedini, University of Bologne; Gerhard Goldbeck, Goldbeck Consulting; Jesper Friis, SINTEF; Adham Hashibon, Fraunhofer IWM; Georg Schmitz, ACCESS |
+| Creator(s) & Issuing Organisation | EMMC ASBL, European Materials Modelling Council, Silversquare StÃ©phanie, Avenue Louise 54, 1050 Brussels, CBE no:Â 0731 621 312; Creators:Emanuele Ghedini, University of Bologne; Gerhard Goldbeck, Goldbeck Consulting; Jesper Friis, SINTEF; Adham Hashibon, Fraunhofer IWM; Georg Schmitz, ACCESS |
 | Nature of Organisational Structure | Standardization Body |
 
 ## References

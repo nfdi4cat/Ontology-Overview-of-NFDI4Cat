@@ -73,4 +73,4 @@
 
 ## Comments
 
-Good conceptual description of reactions. Strongly connected with the MOP. It contains more than 500 classes representing organic reactions such as the Diels–Alder cyclization. The documentation also contains a good overview on how to reuse the classes contained in this ontology.
+Good conceptual description of reactions. Strongly connected with the MOP. It contains more than 500 classes representing organic reactions such as the Dielsâ€“Alder cyclization. The documentation also contains a good overview on how to reuse the classes contained in this ontology.

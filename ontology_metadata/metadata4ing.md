@@ -11,7 +11,7 @@
 | Full Name | Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
 | Synonyms/Alternative Names | - |
 | Ontology Acronym | metadata4ing |
-| Creator(s) & Issuing Organisation | Metadata4Ing Workgroup: Ashish Karmacharya, Benjamin Farnbacher, Cord Wiljes, Dorothea Iglezakis, Džulia Terzijska, Giacomo Lanza, Johanna Hickmann, Johannes Theissen-Lipp, Johannes Munke, Jürgen Windeck, Marc Fuhrmans, Martin Thomas Horsch, Nils Hoppe, Sophia Leimer, Stephan Hachinger, Susanne Arndt,  |
+| Creator(s) & Issuing Organisation | Metadata4Ing Workgroup: Ashish Karmacharya, Benjamin Farnbacher, Cord Wiljes, Dorothea Iglezakis, DÅ¾ulia Terzijska, Giacomo Lanza, Johanna Hickmann, Johannes Theissen-Lipp, Johannes Munke, JÃ¼rgen Windeck, Marc Fuhrmans, Martin Thomas Horsch, Nils Hoppe, Sophia Leimer, Stephan Hachinger, Susanne Arndt,  |
 | Nature of Organisational Structure | NFDI4ng, Ontology is still actively maintained |
 
 ## References
