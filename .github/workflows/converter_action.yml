@@ -1,0 +1,47 @@
+name: Update Sidebar
+
+on:
+  push:
+    branches:
+      - main
+    #paths:
+      #- 'master_table/'
+
+jobs:
+  update_sidebar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Install pandas
+        run: pip install pandas
+
+      - name: Install tabulate
+        run: pip install tabulate
+
+      - name: Install plotly
+        run: pip install plotly
+
+      - name: Install openpyxl
+        run: pip install openpyxl
+
+      - name: Install kaleido
+        run: pip install kaleido
+        
+
+      - name: Run Automation Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.automated_md_converter_token }}
+        run: python convert.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "AleSteB"
+          git config --global url.https://${{ secrets.automated_md_converter_token}}@github.com/.insteadOf https://github.com/
+          git add .
+          git commit -m "Update main readme and ontology metadata"
+          git push
+
