@@ -42,6 +42,6 @@ jobs:
           git config --global user.name "AleSteB"
           git config --global url.https://${{ secrets.automated_md_converter_token}}@github.com/.insteadOf https://github.com/
           git add .
-          git commit -m "Update main readme and ontology metadata"
+          git commit -m "Automated update of ontology metadata"
           git push
 
