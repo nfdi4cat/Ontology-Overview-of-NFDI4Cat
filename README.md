@@ -57,6 +57,7 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
 | [REX] |Physico-chemical process |
+| [RO]  | OBO Relations Ontology |
 | [RXNO] |RXNO: name reaction ontology |
 | [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
