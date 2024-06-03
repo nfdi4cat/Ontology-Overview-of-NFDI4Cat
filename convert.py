@@ -504,7 +504,7 @@ def DomainRadarPlotter(ontology_name):
 
 ####
 def run():    
-    Master_Table = './master_table/MT_OntoWorldMap_2023-10-11.xlsx'
+    Master_Table = './master_table/MT_OntoWorldMap_2024-06-03.xlsx'
     ConvertExcelToMD(Master_Table)
     UpdateMainReadme()
 ####
