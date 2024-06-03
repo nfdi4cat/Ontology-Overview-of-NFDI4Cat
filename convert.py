@@ -303,6 +303,7 @@ def DomainRadarPlotter_all_ontologies():
 [MOP]: ./ontology_metadata/MOP.md
 [MS]: ./ontology_metadata/MS.md
 [OBI]: ./ontology_metadata/OBI.md
+[OBO-RO]: ./ontology_metadata/OBO-RO.md
 [OM]: ./ontology_metadata/OM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
 [OntoCompChem]: http://www.theworldavatar.com/ontology/ontocompchem/ontocompchem.owl
