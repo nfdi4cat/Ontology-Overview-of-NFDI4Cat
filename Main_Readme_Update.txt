@@ -8,6 +8,7 @@
 | [CAO] |Chemical Analysis Ontology |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [RXNO] |RXNO: name reaction ontology |
+| [RO] |OBO Relations Ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
 | [BFO] |Basic Formal Ontology |
 | [ChEBI] |Chemical Entities of Biological Interest |
@@ -32,6 +33,7 @@
 [CAO]: ./ontology_metadata/CAO.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
 [RXNO]: ./ontology_metadata/RXNO.md
+[RO]: ./ontology_metadata/RO.md
 [EMMO]: ./ontology_metadata/EMMO.md
 [BFO]: ./ontology_metadata/BFO.md
 [ChEBI]: ./ontology_metadata/ChEBI.md
