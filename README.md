@@ -119,6 +119,7 @@ Here, you can see a mapping that lists the amount of common ontology classes for
 [OSMO]: ./ontology_metadata/OSMO.md
 [PIMS-II]: ./ontology_metadata/PIMS-II.md
 [REX]: ./ontology_metadata/REX.md
+[RO]: ./ontology_metadata/RO.md
 [RXNO]: ./ontology_metadata/RXNO.md
 [SBO]: ./ontology_metadata/SBO.md
 [VIMMP]: ./ontology_metadata/VIMMP.md
