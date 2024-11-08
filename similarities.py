@@ -192,7 +192,7 @@ def load_ontology_from_name(onto_name):
     URL = onto_URLs[onto_name]
     onto_loaded = None
     
-    if onto_name == 'CHEMINF': 
+    if onto_name in ['CHEMINF','M3']: 
         #contains deprecated classes and object properties, thus needs to be cleaned
         # and loaded manually, else owlready2 will crash
         try: 
@@ -203,6 +203,8 @@ def load_ontology_from_name(onto_name):
             print("Need to place file here: ./ontologies/{}.owl".format(onto_name))
             onto_loaded = None
             pass        
+    
+    
     
     elif URL.endswith('.owl'):
         try: 
