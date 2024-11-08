@@ -3,6 +3,7 @@
 | [CAO] |Chemical Analysis Ontology |
 | [MOP] |Molecular Process Ontology |
 | [BFO] |Basic Formal Ontology |
+| [ENMO] |eNanoMapper Ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
 | [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
 | [SBO] |Systems Biology Ontology |
@@ -30,6 +31,7 @@
 [CAO]: ./ontology_metadata/CAO.md
 [MOP]: ./ontology_metadata/MOP.md
 [BFO]: ./ontology_metadata/BFO.md
+[ENMO]: ./ontology_metadata/ENMO.md
 [EMMO]: ./ontology_metadata/EMMO.md
 [metadata4ing]: ./ontology_metadata/metadata4ing.md
 [SBO]: ./ontology_metadata/SBO.md

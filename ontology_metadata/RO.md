@@ -56,7 +56,7 @@
 | Electrocatalysis | missing |
 | Heterogenous catalysis | missing |
 | Homogenous catalysis | missing |
-| Biocatalysis | related:broader |
+| Biocatalysis | related: broader |
 
 ## Ontology Characteristics
 
