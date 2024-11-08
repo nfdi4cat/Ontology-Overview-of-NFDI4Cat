@@ -13,6 +13,7 @@
 | [AFO] |Allotrope Foundation Ontology |
 | [ENVO] |Environmental Ontology |
 | [CHEMINF] |Chemical Information Ontology |
+| [eNanoMapper] |OBO Relations Ontology |
 | [RO] |OBO Relations Ontology |
 | [ChEBI] |Chemical Entities of Biological Interest |
 | [REX] |Physico-chemical process |
@@ -23,6 +24,7 @@
 | [RXNO] |RXNO: name reaction ontology |
 | [OBI] |Ontology for Biomedical Investigations |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
+| [OEO] |Open Energy Ontology |
 | [EDAM] |EDAM - Bioscientific data analysis ontology |
 
 [CAO]: ./ontology_metadata/CAO.md
@@ -38,6 +40,7 @@
 [AFO]: ./ontology_metadata/AFO.md
 [ENVO]: ./ontology_metadata/ENVO.md
 [CHEMINF]: ./ontology_metadata/CHEMINF.md
+[eNanoMapper]: ./ontology_metadata/eNanoMapper.md
 [RO]: ./ontology_metadata/RO.md
 [ChEBI]: ./ontology_metadata/ChEBI.md
 [REX]: ./ontology_metadata/REX.md
@@ -48,6 +51,7 @@
 [RXNO]: ./ontology_metadata/RXNO.md
 [OBI]: ./ontology_metadata/OBI.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
+[OEO]: ./ontology_metadata/OEO.md
 [EDAM]: ./ontology_metadata/EDAM.md
 
 ## Map of Ontologies for Catalysis Research Domains
