@@ -1,54 +1,54 @@
 | Link to Markdown | Ontology Name |
  |:---:|:---|
-| [M3] |Machine to Machine Measurements Ontology |
-| [EDAM] |EDAM - Bioscientific data analysis ontology |
-| [CIF] |Crystallographic Information Framework Ontology |
-| [BAO] |BioAssay Ontology |
-| [AFO] |Allotrope Foundation Ontology |
 | [CAO] |Chemical Analysis Ontology |
-| [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
-| [RXNO] |RXNO: name reaction ontology |
-| [RO] |OBO Relations Ontology |
-| [EMMO] |Elementary Multiperspective Material Ontology |
-| [BFO] |Basic Formal Ontology |
-| [ChEBI] |Chemical Entities of Biological Interest |
-| [CHEMINF] |Chemical Information Ontology |
-| [OSMO] |Ontology for Simulation, Modelling, and Optimization |
-| [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
-| [OBI] |Ontology for Biomedical Investigations |
 | [MOP] |Molecular Process Ontology |
+| [BFO] |Basic Formal Ontology |
+| [EMMO] |Elementary Multiperspective Material Ontology |
+| [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
 | [SBO] |Systems Biology Ontology |
-| [MS] |Mass Spectrometry Ontology |
-| [REX] |Physico-chemical process |
-| [CHMO] |Chemical Methods Ontology |
+| [M3] |Machine to Machine Measurements Ontology |
 | [OM] |Ontology of units of Measure |
+| [CHMO] |Chemical Methods Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
+| [AFO] |Allotrope Foundation Ontology |
 | [ENVO] |Environmental Ontology |
+| [CHEMINF] |Chemical Information Ontology |
+| [RO] |OBO Relations Ontology |
+| [ChEBI] |Chemical Entities of Biological Interest |
+| [REX] |Physico-chemical process |
+| [BAO] |BioAssay Ontology |
+| [MS] |Mass Spectrometry Ontology |
+| [CIF] |Crystallographic Information Framework Ontology |
+| [OSMO] |Ontology for Simulation, Modelling, and Optimization |
+| [RXNO] |RXNO: name reaction ontology |
+| [OBI] |Ontology for Biomedical Investigations |
+| [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
+| [EDAM] |EDAM - Bioscientific data analysis ontology |
 
-[M3]: ./ontology_metadata/M3.md
-[EDAM]: ./ontology_metadata/EDAM.md
-[CIF]: ./ontology_metadata/CIF.md
-[BAO]: ./ontology_metadata/BAO.md
-[AFO]: ./ontology_metadata/AFO.md
 [CAO]: ./ontology_metadata/CAO.md
-[OntoCAPE]: ./ontology_metadata/OntoCAPE.md
-[RXNO]: ./ontology_metadata/RXNO.md
-[RO]: ./ontology_metadata/RO.md
-[EMMO]: ./ontology_metadata/EMMO.md
-[BFO]: ./ontology_metadata/BFO.md
-[ChEBI]: ./ontology_metadata/ChEBI.md
-[CHEMINF]: ./ontology_metadata/CHEMINF.md
-[OSMO]: ./ontology_metadata/OSMO.md
-[metadata4ing]: ./ontology_metadata/metadata4ing.md
-[OBI]: ./ontology_metadata/OBI.md
 [MOP]: ./ontology_metadata/MOP.md
+[BFO]: ./ontology_metadata/BFO.md
+[EMMO]: ./ontology_metadata/EMMO.md
+[metadata4ing]: ./ontology_metadata/metadata4ing.md
 [SBO]: ./ontology_metadata/SBO.md
-[MS]: ./ontology_metadata/MS.md
-[REX]: ./ontology_metadata/REX.md
-[CHMO]: ./ontology_metadata/CHMO.md
+[M3]: ./ontology_metadata/M3.md
 [OM]: ./ontology_metadata/OM.md
+[CHMO]: ./ontology_metadata/CHMO.md
 [VIMMP]: ./ontology_metadata/VIMMP.md
+[AFO]: ./ontology_metadata/AFO.md
 [ENVO]: ./ontology_metadata/ENVO.md
+[CHEMINF]: ./ontology_metadata/CHEMINF.md
+[RO]: ./ontology_metadata/RO.md
+[ChEBI]: ./ontology_metadata/ChEBI.md
+[REX]: ./ontology_metadata/REX.md
+[BAO]: ./ontology_metadata/BAO.md
+[MS]: ./ontology_metadata/MS.md
+[CIF]: ./ontology_metadata/CIF.md
+[OSMO]: ./ontology_metadata/OSMO.md
+[RXNO]: ./ontology_metadata/RXNO.md
+[OBI]: ./ontology_metadata/OBI.md
+[OntoCAPE]: ./ontology_metadata/OntoCAPE.md
+[EDAM]: ./ontology_metadata/EDAM.md
 
 ## Map of Ontologies for Catalysis Research Domains
 
