@@ -47,17 +47,19 @@ These are the ontologies and links to the ontology markdown files, NFDI4Cat deem
 | [CIF] |Crystallographic Information Framework Ontology |
 | [EDAM] |EDAM - Bioscientific data analysis ontology |
 | [EMMO] |Elementary Multiperspective Material Ontology |
+| [ENMO] |eNanoMapper Ontology |
 | [ENVO] |Environmental Ontology |
 | [M3] |Machine to Machine Measurements Ontology |
 | [metadata4ing] |Metadata4Ing: An ontology for describing the generation of research data within a scientific activity. |
 | [MOP] |Molecular Process Ontology |
 | [MS] |Mass Spectrometry Ontology |
 | [OBI] |Ontology for Biomedical Investigations |
+| [OEO] |Open Energy Ontology |
 | [OM] |Ontology of units of Measure |
 | [OntoCAPE] |Ontology for the domain of Computer Aided Process Engineering |
 | [OSMO] |Ontology for Simulation, Modelling, and Optimization |
 | [REX] |Physico-chemical process |
-| [RO]  | OBO Relations Ontology |
+| [RO] |OBO Relations Ontology |
 | [RXNO] |RXNO: name reaction ontology |
 | [SBO] |Systems Biology Ontology |
 | [VIMMP] |Virtual Materials Marketplace Ontology |
@@ -103,6 +105,7 @@ Here, you can see a mapping that lists the amount of common ontology classes for
 [DOLCE]: http://www.loa.istc.cnr.it/dolce/overview.html
 [EDAM]: ./ontology_metadata/EDAM.md
 [EMMO]: ./ontology_metadata/EMMO.md
+[ENMO]: ./ontology_metadata/ENMO.md
 [ENVO]: ./ontology_metadata/ENVO.md
 [ISO 15926]: https://en.wikipedia.org/wiki/ISO_15926
 [ISO 15926-14]: https://en.wikipedia.org/wiki/ISO_15926
@@ -111,6 +114,7 @@ Here, you can see a mapping that lists the amount of common ontology classes for
 [MOP]: ./ontology_metadata/MOP.md
 [MS]: ./ontology_metadata/MS.md
 [OBI]: ./ontology_metadata/OBI.md
+[OEO]: ./ontology_metadata/OEO.md
 [OFM]: ./ontology_metadata/OFM.md
 [OM]: ./ontology_metadata/OM.md
 [OntoCAPE]: ./ontology_metadata/OntoCAPE.md
