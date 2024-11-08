@@ -73,5 +73,3 @@
 
 ## Comments
 
-The OBO Relations Ontology (RO) is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies.
-Version: 2024-04-24
